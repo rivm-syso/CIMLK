@@ -1,0 +1,10 @@
+
+/* Style for an "Unofficial Draft" */
+
+@import "base.css";
+
+body {
+  background: url(https://www.archixl.nl/test/UD.png) no-repeat fixed;
+  background-image: url(https://www.archixl.nl/test/UD.png);
+  background-color: var(--bg);
+}
