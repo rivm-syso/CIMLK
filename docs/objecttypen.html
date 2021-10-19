@@ -479,47 +479,6 @@
 </table>
 </section>
 </section>
-<section id="NEN3610ID">
-<h2>NEN3610ID</h1>
-<table>
-<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td></td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Unieke identificatie van het object binnen het domein van NEN 3610.</td></tr>
-</table>
-<section id="NEN3610ID.namespace">
-<h3>namespace</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke verwijzing naar een registratie van objecten.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘namespace’ is een unieke verwijzing naar de registratie die de identificatie uitdeelt. Deze lijst van registraties wordt beheerd binnen de context van NEN 3610. Binnen Nederland zal deze namespace vrijwel altijd met ‘NL’ beginnen. De volgende karakters mogen in een namespaceaanduiding voorkomen: {“A”… “Z”, “a”… “z”, “0”… “9”, “_”, “-”, “,”, “.”}</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="NEN3610ID.lokaalID">
-<h3>lokaalID</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatiecode binnen een registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>‘lokaalID’ is de identificatiecode die een object heeft binnen een (lokale) registratie.De volgende karakters mogen in een lokaal ID voorkomen: {“A”… “Z”, “a”… “z”, “0”… “9”, “_”, “-”, “,”, “.”}</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="NEN3610ID.versie">
-<h3>versie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Versie-aanduiding van een object.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘versie’ maakt geen deel uit van de identificatie van het object maar kan worden gebruikt om verschillende versies van hetzelfde object te identificeren.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-</section>
 <section id="Overdrachtslijn">
 <h2>Overdrachtslijn</h1>
 <table>
@@ -862,42 +821,6 @@
 </table>
 </section>
 </section>
-<section id="Scherm">
-<h2>Scherm</h1>
-<table>
-<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een scheiding aan de kant van de weg die invloed heeft op luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een wal of scherm.</td></tr>
-</table>
-<section id="Scherm.afstand">
-<h3>afstand</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De afstand tussen de wegas van een SRM2-wegsgement en het (geluids)scherm. </td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Alleen schermen tot een afstand van 50 meter hebben effect in berekening. Zie beschrijving in bijlage II van de Rbl.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
-<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>50</td></tr>
-</table>
-</section>
-<section id="Scherm.hoogte">
-<h3>hoogte</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De hoogte van het (geluids)scherm langs een SRM2-Wegdeel.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De maximale rekenhoogte van een scherm is 6 meter. Hogere waarden worden in de berekening behandeld als een scherm van 6 meter volgens de Rbl. Zie beschrijving in bijlage II van de Rbl.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
-<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>12</td></tr>
-</table>
-</section>
-</section>
 <section id="Stal">
 <h2>Stal</h1>
 <table>
@@ -1095,61 +1018,6 @@
 <tr border="0"><td width=200px><b>Doel</b></td><td>Veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
-</table>
-</section>
-</section>
-<section id="VerkeersgegevensWeg">
-<h2>VerkeersgegevensWeg</h1>
-<table>
-<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een specificatie van het karakteristieken van het verkeer dat over een wegdeel gaat.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het betreft karakteristieken zoals verkeersintensiteiten, stagnaties per voertuigtype en maximumsnelheid.</td></tr>
-</table>
-<section id="VerkeersgegevensWeg.voertuigtype">
-<h3>voertuigtype</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Soort voertuig.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>WegverkeerVoertuigtype</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="VerkeersgegevensWeg.maximumSnelheid">
-<h3>maximumSnelheid</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Maximale snelheid in kilometer per uur.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>kilometer/uur</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-</table>
-</section>
-<section id="VerkeersgegevensWeg.stagnatieFactor">
-<h3>stagnatieFactor</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Of een bepaald deel van de verkeersintensiteit van het verkeer op het Wegdeel te maken heeft met stagnatie of files.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Voorbeeld: er komt gedurende een bepaalde, beperkte, periode van de dag stagnatie voor. Het betreft de etmaalgemiddelde fractie van de verkeersintensiteit van licht verkeer dat stagneert. De stagnatiefactor geeft een verfijning van de gemiddelde snelheid.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
-<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
-</table>
-</section>
-<section id="VerkeersgegevensWeg.intensiteit">
-<h3>intensiteit</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Intensiteit van het verkeer (aantal motorvoertuigen per etmaal, jaargemiddeld).</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het kan voorkomen dat op een wegvak een dynamische maximum snelheid geldt. In dat geval kunnen twee objecten worden aangemaakt elk met hun eigen maximum snelheid en de bijbehorende verkeersintensiteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>mvt/etm</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
 </section>
