@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset='utf-8'>
+    <title>Informatiemodel Monitoring Luchtkwaliteit</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src='rivm-respec-w3c-v26.13.4.js' class='remove'></script>
+    <script class='remove'>
+      // All config options at https://respec.org/docs/
+      var respecConfig = {
+        // Working Groups ids at https://respec.org/w3c/groups/
+        group: "webapps", 
+		github: "https://github.com/rivm-syso/CIMLK",
+        specStatus: "unofficial",
+		shortName: "IMLK",
+		inLanguage: "nl",
+        editors: [{
+			name: "Danny Greefhorst",
+			company: "RIVM",
+        }],
+        authors: [
+			{
+			name: "Michiel Geijer",
+			company: "RIVM",
+			},
+			{
+			name: "Suzanne Visser",
+			company: "RIVM",
+			}
+		],
+        license: "cc0",
+        isPreview: false,
+        lint: true,
+        logos: [
+          {
+            src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATsAAACgCAMAAABE1DvBAAAAyVBMVEX///8BWI4AAAAAU4tgi67v9PgAS4cATonM2eSfuM38/Pz5+fn19fXo6Ojj4+P39/fv7+/S0tLCwsLLy8va2tp1dXROTk2pqamPj46FhYS0tLS6urrl5eXV1dWampp0dHRoaGdGRkWgoJ88PDslJSNhYWCsrKuLi4osLCpaWll+fn0zMzIAR4UAQIEaGhc6Ojnf5+4ODgu4y9qHpsAfY5UTExAAN31NfaU6cJ17nLmyx9d0l7aUs8oAK3fV4erH1eEubZtVg6likrSMKklGAAAP5UlEQVR4nO2cCWOaTBPHJ+sVAZH7VAQUFTR4psYkb0z6/T/UO4M2NVefhqRJj/23iQjLsT9mdmeHJQBcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFx/sJbNV0j87Kv9vXRXb/y0prXPvtrfS9XKyU+rwtk9EGdXXpxdeXF25cXZlRdnV16cXXlxduXF2ZUXZ1denF15cXblxdmVF2dXXpxdeXF25cXZlRdnV16cXXlxduXF2ZUXZ1denF15cXblxdmVF2dXXpxdeXF25cXZlRdnV16cXXlxduXF2ZUXZ1denF15cXblxdmVF2dXXpxdeXF25cXZlRdnV17Ps3seKGf3UM+ya6zqnN1/6zl2lery+jmknN1DPcOuUmnsLirPMeXsHugpu8rFXUXcrp+D+iK7riZ8zOVKugodrfW6nWgHVXu6XnjjZT9B1GgIl9vl3en8avp40xG7lqGrVAN9IoA7Aod9P6I8Vp6e5tmVPyVDlfGXfti9FfVAY89w+JE05gvm+fEavU+/BZe1S15VocfsGvNVrVJvXnw5vZ4/3nbETmfJiI0A1BTAiUE5YteypKenka2yV2kzD2DEvqGPTYDJK9lBX4Pu4HiFnhQfHfamN9GfsKt92c7voHl587/l15fZwcAHld37Tusbu+/XsvcGET+G8X6NZh5Wf3cUw9oXxX+C8H13UTg6xtgGCOJvG4Pent19aUEE2lU48j7hIRGB2Kn37I4u0XhfdpXqzaa22Z2IF8vLxg/au4GHxtaRrBz0wahgNx6Cny/6kDDBmKQJ6ysgpjlTNRZZBq1kk1QPF6IYzcBDt3OYLLFBOiSfSgR54II+7uc+Vi6Z5CYI6dhlBtFCvn0ZjEl/Mbxn56TQ6ud48+KZZfVjyPp5APbAisZtCAaTqIWm6o5ZgPuPJhGeTc1Nlqt4tybRTFEi9FnF6s/O34VdpVLfo5ru5sUBb+CwoX7f5T6yO3uCxr8A6DnEjr4xCQxcFsCOJGnmguOA1ILUlkDGlabTBgM/tRmW1PGnA3Eo0slCF/FILUSl4o+FbQHuLDNNJu+XmSiNQcI9ZPwp2OlUNPWhJel405IYjwMiawUKRLiMFzLKAc6Hgo+uHqSFz6KTCGFEpcANQYsOd/892FWqq11zukd02HJdsKxXTy+v1k/ZTUIzbB+xGyboNAzda88uRAsJwYk6uCL1oGCXoRU8YCdTnUlIwEioTgBR0MEiaJi4y7fbpPkOxBExNgt2szhCg0xDJEv7xBbkQ9Ugk/XQMxfo0QqyXXRBwA+y3YPP6gPwJoYanxM7PX+v9q5xKbR380YF7e9ke9uY1tfVDdlb/Xpeq908w25sp9TeEjuT2I0d+pazeM8OtyEXIWSRUrAjZr34Cbsg2x9toY50sOgQoaOxPc17dk7WM6BHJUdJwS6aUTepWCyBIRqZFQBzAyeQoY2gCBtC6x7YSegLR+yCGRa0iR0Sfyd2a1xsXm+qjavNyfZyudtdXlfXq5Pb6uorbllVnvFZCTl9Z6dQd0j2ohyxwwpGGUT+3u7u2WHNKcxAn/3GzjHRrELEAue+Sszi2Xd2xjnCHlGvEgUHn7WKflLObUij1NwfDmXiokjLMjrrnp2Id+iInZ0XBZHdcEwu8i7tHS4ub6vrO4ArsXYD8zltXJ5dnTRrz7JjPgzReA7sMEbRmCoPqQWhfoN8FtkF2Lg4kGZKh0CYqYJm4CkOVsMKFRVtIx4rKh2tRd5OK4Z4POw1WkXr9u1cuUPQdTwFdgSIZ6yLGB+N2mBpclL0uA7rKpqBjaXitlwMOVO8J2h/5LNWKsnYyRzYKWykyDGxU5jd9ljZqPOIXWWFi7tt5QYu8d9X2K3XwgqXanebJl7b6RN2Xp62IGNqOPGJXYaBRDA2IhapuByLffxM+7LHkAN68lihAsY4N/DGR16/A0Z/HPQQdf9gMUVM6I/PE6yMki4oCjHHo8PJHOpu9ck5nlLpR4Y2CDFc8x02xgZiMeuPXYLHeuD0whAbwdGCYA8HJgLLQEqYi31WghfqjjU8MZvokM407NXHntV9I7sL+pM7Tfoy327Qebfzm2VlDWtYTZvEFGpnjUb9dv3SmMx03nIBb5NmGl2VGs/PULXSWGJvcLG9oW9X9Vu4vNoJl+sLWMKqcVaUWd1eYo/x4ni2P/y4y32sGbalMHjl+Pa9hHZXuapWLr/UajBfXSC7NiybdYzyTueremO1gxpcXH09uT6pvMDOYc+MwT5KHgvDVw/R3ktFe1dZX06rmyv026sTqM1r1WYTVsvaaj2H0+1mW79b1SsnL9md9EEplOclGvKnnXvP7vTkgq5jdwM7uNqsTq+/nC6RG9R21N82zy6rL7P7d0VQGsvNdEmIzqZ3aERfxe3VCgHSmumXDY7TT85uXsNOAN1Rjwfdf6mIXX1emVIrV7us1Ku4Dn31+gI5NSvTq9p8i4W+3FxUfsxOs6nVFuy4BQEDBYe7cjGS/5tF7CpbWvqKZOZrjFGEXRNjvVsKiSly2dDGXeM/7E5hFKPrDGMtA/tdywcx+NsNr2jIGlM0t+Z0JeAvEVYXN6I4v72BKnrwcn2L44v69PG4AmQaELQkwTh0FTl1d1mKsZ7UKtgJReSgd9B5sTmXPq9J/2Uq7O6OBl676tnp/KxemNnyWpwjx7NrOFmT7TWvH7d3YdLL0cyiyfl+XKNYTogDTtuEztgq2PUwdpFzJ48hZNCO8s+o3a9VYXf1Guw20wrGJ9vl+uQSOTZhfjddNZdwVamvrwXYPGLnpcjHhgzHjeMiLWykBoOu6yeHbX6RzRuolFahEa42+bQq/jLtfRaWX/Bzs9kB3CGsJcyrGNHNQdh8xZD47A62j9glSRBEIzBHRfoOpYbAVEelHMlwz05k7RZzgoC1OsjO/1vZ1aF5eUsM727XlXp9+uX27Aw/Lk6+Ukxcud6i+T1kNxup9KDsOzvfBdPtF3mV7+y6TFdVVZD/YnaVOwpIsCddb5vLmzmOXVHz+c3ucoW+WsF+RGg+YheGxUd2zy52sPXLAB33iJ20D1Pkv9lnK3fVi7tpY3rzdPu6Xq9UN9vGo37WYK4eDCHB9i5xaUXmFMlgFRs5So/PhtjQoV0yT+tJbeZq4dvSjL+lDvm7C0oVV29ALOyNdEoGiM1fE5e39Se5T6OXBiCbriJmLna0nV7WgYASwLGQZUbXHIlxhnGenYY6Noa9kex+YsbgF2nPrrFP391dberHWl99LTbUGk/Ycd2zW+6Wu5rQht3x5DFq6Wri6XI3X3N2z+jbM0a0sum6er15+Kj7ensxJQN8+pyM69G8gMrjmWONBys4u4fi843L6+3s/G/BR5EdeCTB/8nraKWZYrk/W9bsRvb9V6nIuWezD+/Iy7LTKPaQEw3DuG8ZkiR8enj9R2GdntggZIe9bBOc0ctlHyg2IfHuv9kL+t1iLxb/VSptdwyDYYeu+vvEukM26sETvx9Ou5t5xey9QmYMpv2jwkfCgv0jIy9ujx795M7vp7Ls5EEC0B8IUmALgQ2BD5ojg+7GEJx7LRzeGoYj+zquB9XFXx3HgKCLHu7Eoh2AXTyXDJH/QAI7QxCWBpYOI1EIXCymOnEHhMBpK0Hs6SA5I6k4Dbmn7uQq5O1iWp83wvPgzWoF6U86/G/AzrZzrOBCoDkxXmq6jCbS6Gk3VExrCI4bM4iymepmoFkaPYWMYspYpYHPoDvJgsLTgx7lX5IRzW3IZchbOu7l+y4EYZd1YaxZQW/ksI640Mw+eElvxNpgZjjwE8duwFRwR8GYcmH6TE29F+v4u7ELOwshk7E1i13wmagwHPvjiAz2U2iRK9YJB7vmEBY4nkVvdh3I/KEJxhgHwzIUc0b9CEy1O0bj0ynbx+S+QjN8wKC5fMJwhI4swtAFN6B8Ap4Gj6RbNPtFQnC5gefR+hCpWBj6b5oe8aHscrBUC9AMemRlYOTQWtBMGewyNLQQdWzAAk3L0jsL2SIHDVyYCFjBYQa+RUkWKBIsE3ACmp3TykFg1GSRRY5iQpx6diSAci7QbDMsikfoTsD0APHhZqQ97OkTA5iip7jzx+caSrJrWeAgEvQ1bLQzD7wQfZM6uxjGMm2SEA/WhinqeVx0xLZr9MioejHlq8jY6AGRFkAyxIpL2NQbs0gv4FEn6qUwMal1s2i2WQvUCfR88BOYqDTzzA/pXhXnQSuMM+h8fDdblp0foAu1BWSB9cLqOQ7YNH0Oq4w8C9/FuiE/QT08qNB6CTmktNAgiwkCaYBBWc+hPnKI8NNuAWBhhEOwemiMxW4YwDGDulY8zSiAmQ6TgCIa3Mmh6XvdAcQ9GPXRjD/Y9O6m9Z/W2VHOPaA56gpD01PpfxiCm0qp39egn2oGszNPPSen7AhsFFAXaNBsscRysT+kzqRfBDRRQjO1vUkLHCQRghU6cdAHO+8FGO4NPEtmoRl1M4tmaZ7rNL3RmZhZQgnrYS6obGj6Gk0Dx84H70z8sexuTl+h+5kngueDaEDL08BXQZfA8KDjCR4GFtCyZVAxmKBZiYJnQCcuekCFrEixQfOh28I9i1GATu6sxwruNZRkGSS7G9NIZKgEGL54sSxrvo3MPToEncYHwZZUTzA6oHgK6AHGL0MMiVTF61CM889LR1rp6zlo2S+4lj9NfY+il1fr70vql5CcWMFnXwPXH6FPnb/4Z8s/TFcXXAXcN827/wcUM794BUpj++Rmvp9rpzBFYS/NnLYHi/EHXd7vLdYFnQUg7V+tlNh/Oy0l2NKnqz84nv0dNKZ3UlwY4tis36PRpGeFPTU0BQz9e2Yr3aeAzb6vWrodUY6DBmpiK4n9PgbE8SQU5NR3PGuQvend6T9RYYzhawKRouEI1tAs/BZPaDiLi3rq+oUhWpqWQ9rzk2LcWbh3nHphRu9L9R0ww0zN3M4n1+TjNXK6sWoJFuBYlEk2Df4jA3AkZWcwPN+/BG9E4CWQx5QpAHoXwkZLDMFH2iKN34vZLJ/1csQnatgbdYy+NsQOI/IpM0LQIPQoT4moujTtKU6DSKK8SrLvUHymUzLEDw1sJYMMJujK+b9ndtjyh6BMQqnFdLFIsik5eumsS/h6GqIFevuYJhqz+14Y0FvzFoxsem068YgqfOZLQZ+lDr2Lz5Afa4MC4y6kBsgYotBipJP1FW9ug2KwfZK4i7aX2IAkWVulpLkgELd/kV3xLjlFxOkkDIEFGhvnDJhHuVB0zTASiG840XUGxXvJOhulPWixEaU0+1ZfpT8EADAZf/wzmk+XfPiBLkJsKYoiG23oKG0EogggFc2YpCogomEVfzOh08WgWU9bRSTYRUsUaAAi/u0vsLxC3fMfbh5+/FPUP0bG7MfZo8z8oAv5AzX8j2kRvs0zLlxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXO+p/wOWs3Q7ddn+wgAAAABJRU5ErkJggg==",
+            url: "https://rivm.nl",
+            alt: "RIVM",
+            width: 300,
+            height: 150,
+            id: "rivm-logo",
+          },
+        ],
+        // See https://respec.org/docs/#xref for usage.
+        xref: "web-platform",
+      };
+    </script>
+    
+    <style>
+      * {
+        --heading-text: #154273;
+      }
+
+      code {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
+	<h2 id="subtitle">19 oktober 2021</h2>
+
+    <section id='abstract'>
+      <p>
+        Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.
+      </p>
+    </section>
+	    <section id='sotd' class="override">
+		<h2></h2>
+      <p class="copyright">Dit informatiemodel is opgesteld door het RIVM</p>
+    </section>
+	<section id='inleiding'>
+	<h2>Inleiding</h2>
+	<section>
+	<h3>Context</h3>
+	<p>
+	Om de luchtkwaliteit in Nederland te monitoren en te verbeteren is het Nationaal Samenwerkingsprogramma Luchtkwaliteit (NSL) in 2009 van kracht geworden (VROM, 2009). Met de uitvoering van het NSL beogen het Ministerie van Infrastructuur en Waterstaat (IenW) en de participerende overheden de luchtkwaliteit te verbeteren ten behoeve van de volksgezondheid, en ruimte te bieden voor en bij te dragen aan de onderbouwing van ruimtelijke projecten. In het Besluit tweede verlenging NSL is vastgelegd dat de periode waarop het NSL betrekking heeft, verlengd is tot het moment van inwerkingtreding van de Omgevingswet (IenM, 2016). In de Omgevingswet (Ow) blijft de luchtkwaliteit gemonitord worden. Dit zal beperkt worden tot een aantal gedefinieerde aandachtsgebieden en langs rijkswegen. </p><p>
+	In 2020 is het Schone Lucht Akkoord (SLA) vastgesteld (IenW, 2020). Hierin streven IenW en decentrale overheden naar een permanente verbetering van de luchtkwaliteit. Aan de hand van een pakket aan maatregelen wordt beoogd een reductiedoelstelling te halen in 2030. Binnen het SLA zal de ontwikkeling van de luchtkwaliteit en de voortgang van maatregelen gemonitord worden.</p><p>
+	Het NSL-monitoringtool fungert sinds 2013 als centraal punt waarop overheden de benodigde gegevens voor verkeer, veehouderijen en voortgangsformulieren kunnen inzien, doorrekenen en bijwerken. Omdat het tool technisch is verouderd zal het worden vervangen door een nieuw systeem: het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Het maakt de monitoring van en rekenen aan luchtkwaliteit mogelijk, en ondersteunt  de wet- en regelgeving voor luchtkwaliteit. Het zorgt dat de uitwisseling van monitoringsgegevens luchtkwaliteit eenvoudig blijft. Het zorgt dat gegevens over voor de luchtkwaliteit relevante bronnen beschikbaar zijn ten behoeve van luchtkwaliteitonderzoeken en dat monitoringsgegevens eenvoudig zijn in te zien. </p>
+	</section>
+	<section>
+	<h3>Informatiemodel</h3>
+	<p>Het Informatiemodel Monitoring Luchtkwaliteit (IMLK) ondersteunt de uitwisseling van gegevens met het CIMLK. Het standaardiseert de structuur en betekenis van de gegevens die het instrument ontvangt en verstrekt. Het geeft invulling aan de informatiebehoeften die voortvloeien uit de Omgevingswet en het SLA. Het model voldoet aan de landelijke standaarden zoals het Metamodel voor Informatiemodellen (MIM) en NEN3610. Het model is afgestemd op gerelateerde informatiemodellen zoals het informatiemodel IMAER zoals gehanteerd door Aerius en het informatiemodel geluid zoals gehanteerd door de Centrale Voorziening Geluidgegevens.
+	</p>
+	<p>Het informatiemodel bestaat uit een conceptueel model en een logisch model. Het conceptueel model geeft inzicht in de belangrijkste begrippen, hun betekenis en hun onderlinge relatie. Het logisch model is de uitwerking van een conceptueel model in een ontwerp. Dit ontwerp is nog vrij van de te gebruiken technologie, maar bevat al wel keuzes over hoe gegevens gestructureerd worden.</p>
+	<p>Het logisch model werkt de begrippen in het conceptueel model uit tot objecttypen en gegevensgroeptypen met attributen (ook wel: attribuutsoorten). Een objecttype is een logische clustering van gegevens. Een gegevensgroeptype is een verzamelingen van attributen die geen eigen bestaansrecht heeft. Een gegevensgroeptype kan in meerdere objecttypen gebruikt worden. Attributen zijn een representatie van de eigenschappen van concepten op gegevensniveau.</p>
+	<p>Het logisch model beschrijft ook enumeraties en referentielijsten waarin mogelijke waarden voor attributen zijn voorgedefinieerd. Een enumeratie is een waardelijst waarbij alle waarden zijn voorgedefinieerd in het informatiemodel zelf. Referentielijsten zijn waardelijsten die buiten het informatiemodel worden beheerd.<p>
+	<p>Merk op dat het conceptueel model een andere focus heeft dan het logisch model, waardoor niet elk begrip in het conceptueel model ook tot een objecttype in het logisch model leidt.</p>
+	<p>
+	</p>
+	</section>
+	<section>
+	<h3>Conventies</h3>
+	Deze paragraaf beschrijft een aantal conventies zoals deze worden gehanteerd in het informatiemodel, zoals de gebruikt modelleertechnieken en wijze van beschrijving. Het informatiemodel is beschreven en gevisualiseerd in de Unified Modeling Language (UML). Verder wordt aangesloten bij het Metamodel voor Informatiemodellering 1.1. Dat betekent dat de terminologie en metadata-eigenschappen uit die standaard zijn overgenomen. Er is wel gekozen voor het beperken van de eigenschappen, om de leesbaarheid te maximaliseren.</p>
+	<p>Het logisch model beschrijft op het hoogste niveau de objecttypen, gegevensgroeptypen en referentielijsten. Attributen worden getoond bij de objecttypen en gegevensgroeptypen waarbij ze gebruikt worden. Enumeraties worden getoond bij het attribuut waarbij ze worden gebruikt.</p>
+	<p>Voor alle elementen zijn er bepaalde metadata-eigenschappen, gebaseerd op het Metamodel voor Informatiemodellering.  Elementen zijn zoveel mogelijk voorzien van een definitie die een duiding geeft van de betekenis en waar relevant ook van een verdere toelichting. Attributen zijn het meest uitgebreid beschreven en hebben aanvullend de volgende metadata-eigenschappen:
+	<ul>
+	<li><b>Type:</b> het soort gegevens waar het attribuut betrekking op heeft (datatype).</li>
+	<li><b>Kardinaliteit:</b> het minimaal en maximaal aantal voorkomens van het attribuut. De kardinaliteit is weergegeven tussen vierkante haken en bevat “..” tussen de ondergrens en bovengrens. Het teken ”*” betekent “nul of meer”.</li>
+	<li><b>Mogelijk geen waarde:</b> of een attribuut mogelijk geen waarde heeft. In dat geval is "afwezig" (ook wel: nill) een geldige waarde. Er is dan bij voorkeur wel een reden vastgelegd waarom de waarde afwezig is.</li>
+	<li><b>Patroon:</b> een verdere tekstuele beschrijving van het soort waarden dat het attribuut kan aannemen, zoals het maximaal aantal cijfers achter de komma.</li>
+	<li><b>Eenheid: </b>De eenheid waarin getallen zijn uitgedrukt. Dit is alleen relevant voor attributen van het type Integer of Real.</li>
+	<li><b>Minimale waarde: </b>De minimale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.</li>
+	<li><b>Maximale waarde: </b>De maximale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.</li>
+	</ul>
+	</p>
+	<p>
+	Voor een aantal enumeraties geldt dat er codes zijn voor bepaalde waarden die moeten worden ingevuld. Deze codes zijn tussen haakjes weergegeven achter de naam van de waarde. Referentielijsten zijn opgevoerd als aparte datatypes en hebben een locatie eigenschap die verwijst naar de plaats waar de lijst te vinden is.
+	</p>
+	<p>
+	Er wordt in het informatiemodel gebruik gemaakt van de volgende datatypen:
+	<ul>
+	<li><b>Integer: </b> een geheel getal</li>
+	<li><b>Real: </b>een reëel getal</li>
+	<li><b>CharacterString: </b>een tekst</li>
+	<li><b>Boolean: </b>waar (true) of onwaar (false)</li>
+	<li><b>Date: </b>een bepaalde dag van de kalender</li>
+	<li><b>DateTime: </b>een bepaalde dag van de kalender in combinatie met een specifiek moment in tijd.</li>
+	<li><b>GM_Point: </b>een geografisch gedefinieerd punt</li>
+	<li><b>GM_Curve: </b>een geografisch gedefinieerde lijn</li>
+	<li><b>GM_Surface: </b>een geografisch gedefinieerd vlak</li>
+	</ul>
+	</p>
+	</section>
+	<section>
+	<h3>NEN3610</h3>
+	<p>Er is voor gekozen om aan te sluiten bij de NEN3610 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Hierdoor hebben alle objecttypen een NEN3610ID om ze uniek te identificeren. Een dergelijk NEN3610ID is als volgt opgebouwd:
+	<ul>
+	<li>namespace: unieke identificatie van het informatiemodel</li>
+	<li>lokaalID: een unieke identificatie van het object</li>
+	<li>versienummer: een identificatie van een specifieke versie van het object</li>
+	</ul>
+	Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Het lokaalID zal bestaat uit een combinatie van het KvK-nummer van de bronhouder, een punt (".") en de identiticatie die de bronhouder er zelf aan heeft gegeven. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
+	</p>
+	<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Dat zou bijvoorbeeld een letter kunnen zijn. Er zal nog een suggestie worden gedaan voor standaard letters voor elk objecttype in dit informatiemodel.</p>
+	</section>
+	<section>
+	<h3>Coördinaatreferentiesyteem</h3>
+	Er wordt vooralsnog uitgegaan van het CRS RD New (EPSG:28992). RD New is een geprojecteerd CRS dat voor het laatst is herzien op 26 oktober 2019. Het is geschikt voor gebruik in Nederland, op land inclusief de Waddenzee, de Waddeneilanden en 12 mijl uit de kust. RD New vervangt EPSG28991 (RD Oud). 
+	</section>
+	<section>
+	<h3>Uitwisselbestanden</h3>
+	<p>
+	Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden en in de toekomst ook via API's. Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. Denk bijvoorbeeld aan het niet volledig uitschrijven van de NEN3610ID's; deze worden door het CIMLK zelf verrijkt bij het ontvangen van de gegevens.
+	</p>
+	<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel. Ook de NEN3610ID's zullen in dit formaat volledig moeten worden opgenomen. De GML-id's zullen overeenkomen met het NEN3610ID, waarbij de namespace en de lokaalID van elkaar gescheiden zijn door een punt (".").
+	</p>
+	<p>De beschrijving van het formaat van de uitwisselbestanden is strikt genomen geen onderdeel van het informatiemodel zelf. De informatie is echter wel beschikbaar en zal in de toekomst ook beschikbaar worden gesteld.
+	</p>
+	</section>
+	</section>
+	<section>
+	<h2>Conceptueel model</h2>
+	<p>Het conceptueel model beschrijft de belangrijkste begrippen die worden gehanteerd in de context van de monitoring van de luchtkwaliteit onder de Omgevingswet en het Schone Lucht Akkoord en bij het uitvoeren van luchtkwaliteitberekeningen. De volgende figuur de samenhang van een aantal kernconcepten zien. De blokjes in de figuur zijn de begrippen en de lijnen geven aan welke relaties deze begrippen hebben.
+	<section>
+	<h3>Diagram</h3>
+	<img src="conceptueel_model.png"><p>
+	</section>
+	<section>
+	<h3>Begrippen</h3>
+	<section>
+	<h4>Luchtkwaliteitberekening</h4>
+	<p>Het bepalen van de concentraties van stoffen op rekenpunten als gevolg van de emissies van die stoffen door objecten en de verspreiding hiervan in de fysieke leefomgeving.</p>
+	<p>In een luchtkwaliteitberekening worden alle objecten meegenomen die invloed hebben op de verspreiding van de emissies van de emissieobjecten, zoals meteo, ruwheid en emissiefactoren, en op het berekende niveau van de luchtkwaliteit op de locatie waarvoor de berekening uitgevoerd wordt, zoals achtergrondconcentratie, correctiegebieden en relevante maatregelen. Het resultaat van een berekening is de jaargemiddelde concentratie per stof op de receptoren die door de gebruiker in het betreffende project aangegeven zijn. Voor PM10 worden ook aantallen overschrijdingsdagen berekend.</p>
+	</section>
+	<section>
+	<h4>Monitoringsronde</h4>
+	<p>Jaarlijkse cyclus van het actualiseren van gegevens en het uitvoeren van luchtkwaliteit-berekeningen op voor de monitoring relevante rekenpunten.</p>
+	<p>In een monitoringsronde worden emissieobjecten en alle gegevens voor een luchtkwaliteitberekening geactualiseerd voor het gepasseerde jaar en één of meerdere toekomstjaren. Hierbij wordt tevens de voortgang van SLA-maatregelen in beeld gebracht om de doelstellingen uit het SLA te monitoren.</p>
+	</section>
+	<section>
+	<h4>Project</h4>
+	<p>Het geheel van activiteiten in de fysieke leefomgeving waarvan het effect op de luchtkwaliteit bepaald wordt op rekenpunten.</p>
+	<p>Een project is bijvoorbeeld de aanleg van een nieuwe weg tussen reeds bestaande wegen of de bouw van een nieuwe stal bij een reeds bestaande veehouderij. De activiteiten op de nieuwe weg (het wegverkeer) of in de nieuwe stal (de dieren) leiden tot emissies van luchtverontreinigende stoffen. De effecten van deze emissies op de luchtkwaliteit worden onderzocht op locaties in de fysieke leefomgeving (receptoren), zoals op een afstand van de weg of op de perceelgrens van een woonobject.</p>
+	</section>
+	<section>
+	<h4>Maatregel</h4>
+	<p>Het geheel van activiteiten in de fysieke leefomgeving om de uitstoot en verspreiding van en de blootstelling van de bevolking aan luchtverontreinigende stoffen te beperken.</p>
+	<p>Een maatregel betreft bijvoorbeeld de bouw van een geluidscherm of het instellen van een milieuzone in een stadscentrum. Een geluidscherm heeft effect op de verspreiding van emissies van luchtverontreinigende stoffen van verkeer naar de locatie waar de luchtkwaliteit bepaald wordt. De emissies verspreiden zich minder naar de omgeving dan zonder het scherm het geval is. Een milieuzone sluit bepaalde voertuigtypen uit, waardoor de emissiefactoren in dit gebied afwijken van de landelijk vastgestelde emissiefactoren. Dit heeft effect op de hoeveelheid emissie in dit gebied en daarmee op de concentraties luchtverontreinigende stoffen die op locaties bepaald worden met een berekening.</p>
+	</section>
+	<section>
+	<h4>Voortgang maatregel</h4>
+	<p>De fase van een maatregel om de doelstelling van het beleidsdossier luchtkwaliteit te bereiken.</p>
+	<p>Binnen een monitoringronde wordt de voortgang van SLA-maatregelen in beeld gebracht. Hierbij wordt onderscheid gemaakt tussen fases van de maatregel, zoals aanbesteding, uitvoering of afgerond. Ook wordt aangegeven of de effecten van de maatregel, zoals een milieuzone, opgenomen zijn in de activiteitgegevens in de monitoringronde.</p>
+	</section>
+	<section>
+	<h4>Emissieobject</h4>
+	<p>Onderdeel van een luchtkwaliteitbron die stoffen emitteert.</p>
+	<p>Allerlei objecten stoten luchtverontreinigende stoffen uit. Voorbeelden hiervan zijn het verkeer op een weg of dieren in een stal van een veehouderij.</p>
+	<h4>Receptor</h4>
+	<p>De locatie waar de luchtkwaliteit bepaald wordt.</p>
+	<p>Dit hangt af van het project en wordt daarom per project opgenomen in een luchtkwaliteitberekening. Er wordt onderscheid gemaakt tussen toetspunten en rekenpunten. Op receptoren die aangeduid zijn als toetspunten, wordt onderzocht of de berekende concentraties voldoen aan de grenswaarden. Op receptoren die aangeduid zijn als rekenpunten, vindt geen toetsing van de rekenresultaten aan de grenswaarden plaats.</p>
+	</section>
+	<section>
+	<h4>Stof</h4>
+	<p>(Luchtverontreinigende) stof in de fysieke leefomgeving.</p>
+	<p>Luchtkwaliteitberekeningen worden veelal uitgevoerd voor in de EU-richtlijnen benoemde stoffen, zoals stikstofdioxide (NO2), fijnstof (PM10 of PM2.5) en elementair koolstof (EC). De rekensoftware voor berekeningen langs wegen ondersteunt deze stoffen. De monitoring vindt (vooralsnog) plaats op NO2 en fijnstof.</p>
+	</section>
+	<section>
+	<h4>Maatregelgebied</h4>
+	<p>Een gebied waar een maatregel betrekking op heeft.</p>
+	<p>Een geografisch afgebakend gebied waar een handeling plaatsvindt om de concentraties luchtverontreinigende stoffen te reduceren. Een voorbeeld van een maatregelgebied is een milieuzone. Binnen een milieuzone gelden afwijkende (lagere) emissiefactoren dan de landelijk vastgestelde emissiefactoren, aangezien een afwijkende samenstelling van het gemiddelde landelijke wagenpark zich in dit gebied mag begeven.</p>
+	</section>
+	<section>
+	<h4>Correcties</h4>
+	<p>Een correctie op de totale concentratie.</p>
+	<p>Correcties kunnen betrekking hebben op één of enkele receptoren of op een geografisch afgebakend gebied waar aangepaste achtergrondconcentraties toegepast worden in een berekening dan de grootschalige achtergrondconcentraties. Een voorbeeld van een correctiegebied is het IJmondgebied. De grootschalige achtergrondconcentraties worden normaal gesproken op 1x1 km2 in een luchtkwaliteitberekening meegenomen. In dit gebied is echter sprake van specifieke emissies van luchtverontreinigende stoffen op een kleiner schaalniveau. Een correctiegebied met achtergrondconcentraties op een kleiner schaalniveau maakt een gedetailleerdere berekening van luchtverontreinigende stoffen mogelijk.Bij correcties op één of enkele receptoren is sprake van een bijzondere situatie waar de standaard rekenmethoden beperkt op van toepassing zijn. Aan de hand van windtunnelonderzoek wordt een gedetailleerdere analyse uitgevoerd van de concentraties luchtverontreinigende stoffen. De berekende concentraties worden hierop gecorrigeerd.
+	</p>
+	</section>
+	<section>
+	<h4>Concentratie</h4>
+	<p>De hoeveelheid gas of deeltjes per kubieke meter lucht. </p>
+	<p>Met een luchtkwaliteitberekening worden jaargemiddelde concentraties luchtverontreinigende stoffen bepaald op de receptoren. Een gebruikelijke eenheid is microgram per kubieke meter (µg/m3).</p>
+	</section>
+	<section>
+	<h4>Grootschalige concentratie</h4>
+	<p>De concentratie die is berekend met een algemene methode op een schaal van 1x1 kilometer en op basis van alle emissieobjecten in binnen- en buitenland.</p>
+	<p>De grootschalige concentraties en bijbehorende dubbeltellingscorrecties op 1x1 km2 worden jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat, zoals beschreven in artikel 66 van de Regeling beoordeling luchtkwaliteit 2007. Dubbeltelling kan ontstaan als de lokale invloed van een bestaand object apart wordt berekend en bij de grootschalige bijdrage wordt opgeteld.</p>
+	</section>
+	<section>
+	<h4>Emissiefactor</h4>
+	<p>De hoeveelheid luchtverontreiniging (van een bepaalde stof) die uitgeworpen wordt per eenheid van activiteit.</p>
+	<p>Voor emissies van verkeer worden emissiefactoren typisch in gram per voertuigtype per kilometer (g/km) weergegeven. Voor emissies van veehouderijen is dit typisch gram per dier per jaar (g/dier/jaar). De emissiefactoren worden jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat, zoals beschreven in artikel 66 van de Regeling beoordeling luchtkwaliteit 2007.</p>
+	</section>
+	<section>
+	<h4>Meteorologische gegevens</h4>
+	<p>De meteorologische gegevens die relevant zijn voor een luchtkwaliteitberekening.</p>
+	<p>Meteorologische gegevens betreffen onder meer de windrichting, windsnelheid, temperatuur en de hoeveelheid bewolking. Deze gegevens worden jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat, zoals beschreven in artikel 66 van de Regeling beoordeling luchtkwaliteit 2007. </p>
+	</section>
+	<section>
+	<h4>Ruwheid</h4>
+	<p>De grootheid om de mate van variatie in een oppervlakte met uitstekende delen, punten en onregelmatigheden uit te drukken.</p>
+	<p>De verspreiding van luchtverontreinigende stoffen tussen het emissieobject en de receptor wordt onder andere beïnvloed door de ruwheid van het landoppervlakte. De verspreiding over het open veld wijkt sterk af van die over een bosgebied of in een stad. De ruwheidskaart wordt jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat, zoals beschreven in artikel 66 van de Regeling beoordeling luchtkwaliteit 2007.</p>
+	</section>
+	</section>
+	</section>
+	<section>
+		<h2>Logisch model</h2>
+		<p>Het logisch model is de uitwerking van een conceptueel model in een ontwerp. Dit ontwerp is nog vrij van de te gebruiken technologie, maar bevat al wel keuzes over hoe gegevens gestructureerd worden. Het werkt de begrippen uit tot objecttypen met attributen (ook wel: attribuutsoorten). Een objecttype is een logische clustering van gegevens. Attributen zijn een representatie van de eigenschappen van concepten op gegevensniveau. Merk op dat het conceptueel model een andere focus heeft dan het logisch model, waardoor niet elk begrip in het conceptueel model ook tot een objecttype in het logisch model leidt. </p>
+		<section>
+			<h3>Diagrammen</h3>
+			<section>
+			<h4>Wegverkeer</h4>
+			<img src="diagram1.png" usemap="#image-map1"><br>
+			Klik op het diagram om naar een specifiek objecttype toe te springen.
+			<map name="image-map1">
+				<area href="#Wegdeel" coords="310,199,9,8" shape="rect">
+				<area href="#VerkeersgegevensWeg" coords="436,6,737,126" shape="rect">
+				<area href="#WegdeelSRM1" coords="6,283,311,348" shape="rect">
+				<area href="#WegdeelSRM2" coords="436,283,736,396" shape="rect">
+				<area href="#Overdrachtslijn" coords="9,445,310,527" shape="rect">
+				<area href="#Scherm" coords="436,444,738,524" shape="rect">
+				<area href="#ReceptorWegverkeer" coords="7,606,309,799" shape="rect">
+				<area href="#Correctiegebied" coords="436,609,740,799" shape="rect">
+				<area href="#MaatregelgebiedSRM1" coords="8,856,311,1028" shape="rect">
+				<area href="#MaatregelSRM1" coords="436,858,738,976" shape="rect">
+			</map>
+			</section>
+			<section>
+			<h4>Veehouderijen</h4>
+			<img src="diagram2.png" usemap="#image-map2"><br>
+			Klik op het diagram om naar een specifiek objecttype toe te springen.
+			<map name="image-map2">
+				<area href="#Veehouderij" coords="187,7,442,143" shape="rect">
+				<area href="#Stal" coords="8,227,266,404" shape="rect">
+				<area href="#ReceptorVeehouderij" coords="378,225,634,358" shape="rect">
+				<area href="#EmissiebronVeehouderij" coords="8,493,265,665" shape="rect">
+				<area href="#Emissiespecificatie" coords="378,493,635,645" shape="rect">
+				<area href="#RavFactor" coords="8,772,265,888" shape="rect">
+				<area href="#RavMaatregel" coords="380,774,638,889" shape="rect">
+			</map>
+			</section>
+		</section>
+	</section>
+	
