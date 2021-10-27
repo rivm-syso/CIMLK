@@ -152,6 +152,355 @@
 	</p>
 	<p>De beschrijving van het formaat van de uitwisselbestanden is strikt genomen geen onderdeel van het informatiemodel zelf. De informatie is echter wel beschikbaar en zal in de toekomst ook beschikbaar worden gesteld.
 	</p>
+	<section>
+	<h4>Wegverkeer (CSV)</h4>
+	Er zijn 4 uitwisselbestanden in CSV formaat voor Wegeverkeer.
+	<section>
+	<h5>Receptoren</h5>
+	<table>
+		<tr>
+			<th>Volgorde</th>
+			<th>Kolomnaam</th>
+			<th>Opmerking</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="#Receptor.identificatie">identificatie</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="#Wegdeel">wegdeel</a></td>
+			<td>Legt de relatie met een Wegdeel waarvoor een SRM1 berekening kan worden uitgevoerd</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><a href="#Receptor.identificatieOverheid">identificatieOverheid</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>naamOverheid</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>naam</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td><a href="#Overdrachtslijn.wegtype">wegtype</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td><a href="#Overdrachtslijn.boomfactor">boomfactor</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>afstand</td>
+			<td>De berekende afstand tussen het SRM1 Wegdeel en de Receptor</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td><a href="#Receptor.indicatieToetspunt">indicatieToetspunt</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td><a href="#Receptor.grondslag">grondslag</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>opmerking</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>datumActualisatie</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td><a href="#Receptor.geometrie">geometrie</a></td>
+			<td>Puntgeometrie</td>
+		</tr>
+	</table>
+	</section>
+	<section>
+	<h5>Wegdelen</h5>
+	<table>
+		<tr>
+			<th>Volgorde</th>
+			<th>Kolomnaam</th>
+			<th>Opmerking</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="#Wegdeel.identificatie">identificatie</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="#Wegdeel.identificatieOverheid">identificatieOverheid</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>naamOverheid</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>typeOverheid</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>naam</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td><a href="#Wegdeel.hoogte">hoogte</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>rekenmethode</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td><a href="#Wegdeel.wegsoort">wegsoort</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td><a href="#Wegdeel.tunnelfactor">tunnelfactor</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td><a href="#Overdrachtsobject.afstand">overdrachtsobjectLinksAfstand</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td><a href="#Overdrachtsobject.hoogte">overdrachtsobjectLinksHoogte</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>walLinks</td>
+			<td>Geeft aan of het een wal of een scherm betreft</td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td><a href="#Overdrachtsobject.afstand">overdrachtsobjectRechtsAfstand</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td><a href="#Overdrachtsobject.hoogte">overdrachtsobjectRechtsHoogte</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>walRechts</td>
+			<td>Geeft aan of het een wal of een scherm betreft</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td><a href="#VerkeersgegevensWeg.maximumsnelheid">maximumsnelheidLichtVerkeer</a></td>
+			<td>Voertuigtype licht verkeer (l)</td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td><a href="#VerkeersgegevensWeg.maximumsnelheid">maximumsnelheidLichtVerkeerDynamisch</a></td>
+			<td>Voertuigtype licht verkeer (l)</td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td><a href="#VerkeersgegevensWeg.intensiteit">intensiteitLichtVerkeer</a></td>
+			<td>Voertuigtype licht verkeer (l)</td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td><a href="#VerkeersgegevensWeg.intensiteit">intensiteitLichtVerkeerDynamisch</a></td>
+			<td>Voertuigtype licht verkeer (l)</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td><a href="#VerkeersgegevensWeg.intensiteit">intensiteitMiddelzwaarVerkeer</a></td>
+			<td>Voertuigtype middelzwaar verkeer (m)</td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td><a href="#VerkeersgegevensWeg.intensiteit">intensiteitZwaarVerkeer</a></td>
+			<td>Voertuigtype zwaar verkeer (z)</td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td><a href="#VerkeersgegevensWeg.intensiteit">intensiteitBusVerkeer</a></td>
+			<td>Voertuigtype bus verkeer (b)</td>
+		</tr>
+		<tr>
+			<td>23</td>
+			<td><a href="#VerkeersgegevensWeg.stagnatiefactor">stagnatiefactorLichtVerkeer</a></td>
+			<td>Voertuigtype licht verkeer (l)</td>
+		</tr>
+		<tr>
+			<td>24</td>
+			<td><a href="#VerkeersgegevensWeg.stagnatiefactor">stagnatiefactorMiddelzwaarVerkeer</a></td>
+			<td>Voertuigtype middelzwaar verkeer (m)</td>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td><a href="#VerkeersgegevensWeg.stagnatiefactor">stagnatiefactorZwaarVerkeer</a></td>
+			<td>Voertuigtype zwaar verkeer (z)</td>
+		</tr>
+		<tr>
+			<td>26</td>
+			<td><a href="#VerkeersgegevensWeg.stagnatiefactor">stagnatiefactorBusVerkeer</a></td>
+			<td>Voertuigtype bus verkeer (b)</td>
+		</tr>
+		<tr>
+			<td>27</td>
+			<td>opmerking</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>28</td>
+			<td>datumActualisatie</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>29</td>
+			<td><a href="#Wegdeel.geometrie">geometrie</a></td>
+			<td>Lijngeometrie</td>
+		</tr>
+	</table>
+	</section>
+	<section>
+	<h5>Maatregelen</h5>
+	<table>
+		<tr>
+			<th>Volgorde</th>
+			<th>Kolomnaam</th>
+			<th>Opmerking</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="#Maatregel.identificatie">identificatie</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="#Maatregel.identificatieOverheid">identificatieOverheid</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>naamOverheid</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>naam</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td><a href="#Maatregelfactor.stof">stof</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td><a href="#Maatregelfactor.schalingsfactor">schalingsfactor</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td><a href="#Maatregelfactor.voertuigtype">voertuigtype</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td><a href="#Maatregelfactor.wegsoort">wegsoort</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>datumActualisatie</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td><a href="#Maatregel.geometrie">geometrie</a></td>
+			<td>Vlakgeometrie</td>
+		</tr>
+	</table>
+	</section>
+	<section>
+	<h5>Correcties</h5>
+	<table>
+		<tr>
+			<th>Volgorde</th>
+			<th>Kolomnaam</th>
+			<th>Opmerking</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="#Correctie.identificatie">identificatie</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="#Receptor">receptor</a></td>
+			<td>Legt de relatie naar de Receptor waarvoor de Maatregel geldt</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><a href="#Correctie.identificatieOverheid">identificatieOverheid</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>naamOverheid</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>naam</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td><a href="#Correctieterm.stof">stof</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td><a href="#Correctieterm.correctie">correctie</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>datumActualisatie</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td><a href="#Correctie.geometrie">geometrie</a></td>
+			<td>Vlakgeometrie</td>
+		</tr>
+	</table>
+	</section>
+	</section>
 	</section>
 	</section>
 	<section>
