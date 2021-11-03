@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">1 november 2021</h2>
+		<h2 id="subtitle">3 november 2021</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -173,7 +173,7 @@
 					</ul>
 					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Het lokaalID zal bestaat uit een combinatie van het KvK-nummer van de bronhouder, een punt (".") en de identiticatie die de bronhouder er zelf aan heeft gegeven. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Dat zou bijvoorbeeld een letter kunnen zijn. Er zal nog een suggestie worden gedaan voor standaard letters voor elk objecttype in dit informatiemodel.</p>
+				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Dat zou bijvoorbeeld een letter kunnen zijn. Er zal nog een suggestie worden gedaan voor standaard letters voor elk objecttype in dit informatiemodel. Het NEN3610ID heeft dan de volgende structuur: NL.imlk.[LetterObjecttype].[KvK]_[identificatie]</p>
 			</section>
 			<section>
 				<h3>Coördinaatreferentiesyteem</h3>
