@@ -104,20 +104,28 @@
 							of een attribuut mogelijk geen waarde heeft. In dat geval is "afwezig" (ook wel: nill) een geldige waarde. Er is dan bij voorkeur wel een reden vastgelegd waarom de waarde afwezig is.
 						</li>
 						<li>
+							<b>Formeel patroon:</b>
+							een reguliere expressie die exact specificeert hoe de waarde is opgebouwd.
+						</li>
+						<li>
 							<b>Patroon:</b>
 							een verdere tekstuele beschrijving van het soort waarden dat het attribuut kan aannemen, zoals het maximaal aantal cijfers achter de komma.
 						</li>
 						<li>
 							<b>Eenheid:</b>
-							De eenheid waarin getallen zijn uitgedrukt. Dit is alleen relevant voor attributen van het type Integer of Real.
+							de eenheid waarin getallen zijn uitgedrukt. Dit is alleen relevant voor attributen van het type Integer of Real.
 						</li>
 						<li>
 							<b>Minimale waarde:</b>
-							De minimale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
+							de minimale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
 						</li>
 						<li>
 							<b>Maximale waarde:</b>
-							De maximale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
+							de maximale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
+						</li>
+						<li>
+							<b>Regels:</b>
+							de beperkingen die gelden voor de mogelijke waarden.
 						</li>
 					</ul>
 				</p>
@@ -268,9 +276,9 @@
 					<map name="image-map1">
 						<area href="#Wegdeel" coords="8,6,307,296" shape="rect"/>
 						<area href="#VerkeersgegevensWeg" coords="436,6,737,126" shape="rect"/>
-						<area href="#Overdrachtslijn" coords="9,372,304,453" shape="rect"/>
+						<area href="#Overdrachtskenmerken" coords="9,372,305,471" shape="rect"/>
 						<area href="#Overdrachtsobject" coords="436,204,725,282" shape="rect"/>
-						<area href="#Receptor" coords="4,547,309,736" shape="rect"/>
+						<area href="#Receptor" coords="4,547,309,772" shape="rect"/>
 						<area href="#Correctieterm" coords="426,373,726,455" shape="rect"/>
 						<area href="#Correctie" coords="428,550,729,737" shape="rect"/>
 						<area href="#Maatregel" coords="8,821,311,989" shape="rect"/>
@@ -290,6 +298,15 @@
 						<area href="#Emissiespecificatie" coords="378,493,635,645" shape="rect"/>
 						<area href="#RavFactor" coords="8,772,265,888" shape="rect"/>
 						<area href="#RavMaatregel" coords="380,774,638,889" shape="rect"/>
+					</map>
+				</section>
+				<section>
+					<h4>Generiek</h4>
+					<img src="diagram3.png" usemap="#image-map3"/>
+					<br/>
+					Klik op het diagram om naar een specifiek objecttype toe te springen.
+					<map name="image-map3">
+						<area href="#Organisatie" coords="6,6,262,143" shape="rect"/>
 					</map>
 				</section>
 			</section>
@@ -348,7 +365,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -360,7 +376,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Numerieke waardes voor de correcties voor specifieke stoffen. </td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Correctieterm">Correctieterm</a></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
 </table>
@@ -441,7 +456,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -472,7 +486,6 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een bestuurlijke organisatie die gegevens aanlevert voor wegverkeer en/of veehouderijen.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td></td></tr>
 </table>
 <section id="Organisatie.kvkNummer">
 <h3>kvkNummer</h3>
@@ -480,6 +493,7 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het KvK-nummer van de overheidsorganisatie die bronhouder is van de gegevens.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{8}$</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -499,7 +513,7 @@
 <h3>naam</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een correctie te duiden.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De naam van de organisatie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
@@ -519,7 +533,7 @@
 <h3>geometrie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging en vorm van het overheidsgebied beschrijft.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De bestuurlijke grens van de organisatie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Surface</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
@@ -632,7 +646,7 @@
 <h2>Receptor</h1>
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>aaLocatie waarop de concentratie wordt berekend als gevolg van emissies.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Locatie waarop de concentratie wordt berekend als gevolg van emissies.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De emissie van een bron verspreidt zich over de omgeving en genereert daar een concentratiebijdrage. Op de receptor wordt de totale concentratie berekend als gevolg van de grootschalige concentratie en de concentratiebijdrage.</td></tr>
 </table>
 <section id="Receptor.identificatie">
@@ -672,7 +686,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een receptor te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -703,9 +716,8 @@
 <h3>opmerking</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td></td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Opmerkingen die betrekking hebben op de ingevulde waarden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -716,7 +728,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -729,6 +740,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Overdrachtslijn</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..*]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (grondslag in ["0","1","2","3"]) DAN (overdrachtslijnen != NULL) ANDERS (overdrachtslijnen == NULL).</td></tr>
 </table>
 </section>
 <section id="Receptor.geometrie">
@@ -759,7 +771,6 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een inrichting waarbinnen zich vee bevindt.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td></td></tr>
 </table>
 <section id="Stal.identificatie">
 <h3>identificatie</h3>
@@ -802,7 +813,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De kleinste afmeting van een als rechthoek gedefinieerde stal.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfer achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -842,7 +853,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -875,7 +885,6 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een bedrijf waar men vee houdt.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td></td></tr>
 </table>
 <section id="Veehouderij.identificatie">
 <h3>identificatie</h3>
@@ -924,7 +933,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -1005,7 +1013,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -1048,7 +1055,6 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een deel van een weg waarvan de eigenschappen, die van invloed zijn op de concentraties luchtverontreinigende stoffen, gelijk blijven.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td></td></tr>
 </table>
 <section id="Wegdeel.identificatie">
 <h3>identificatie</h3>
@@ -1077,7 +1083,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een wegdeel te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -1094,6 +1099,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
+<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1') DAN (hoogte == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.monitoringsjaar">
@@ -1112,7 +1118,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of SRM1 of SRM2 van toepassing is op het wegdeel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -1125,6 +1130,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1') DAN (wegsoort IN ["b", "c", "d","e"]) ANDERS (wegsoort IN ["92", "93", "94"]).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.tunnelfactor">
@@ -1146,7 +1152,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td></td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -1157,7 +1162,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
@@ -1181,6 +1185,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1') DAN (overdrachtsobjectLinks == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.overdrachtsobjectRechts">
@@ -1192,6 +1197,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1') DAN (overdrachtsobjectRechts == NULL)</td></tr>
 </table>
 </section>
 <section id="Wegdeel.geometrie">
@@ -1305,6 +1311,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (eigenEmissiefactor == true) DAN (eigenFactorToeliching != NULL)</td></tr>
 </table>
 </section>
 <section>
@@ -1428,7 +1435,6 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Kenmerken die voor een SRM1 berekening worden gedefinieerd. </td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 </table>
 <section id="Overdrachtskenmerken.wegtype">
 <h3>wegtype</h3>
@@ -1458,7 +1464,7 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De afstand tussen de receptor en het wegdeel die gebruik wordt in SRM1 berekening.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
