@@ -124,7 +124,7 @@
 							de maximale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
 						</li>
 						<li>
-							<b>Regels:</b>
+							<b>Constraints:</b>
 							de beperkingen die gelden voor de mogelijke waarden.
 						</li>
 					</ul>
@@ -743,7 +743,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Overdrachtslijn</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..*]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (grondslag in ["0","1","2","3"]) DAN (overdrachtslijnen != NULL) ANDERS (overdrachtslijnen == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslag in ["0","1","2","3"]) DAN (overdrachtslijnen != NULL) ANDERS (overdrachtslijnen == NULL).</td></tr>
 </table>
 </section>
 <section id="Receptor.geometrie">
@@ -1105,7 +1105,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
-<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1") DAN (hoogte == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (hoogte == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.monitoringsjaar">
@@ -1136,7 +1136,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1") DAN (wegsoort IN ["b","c","d","e"]) ANDERS (wegsoort IN ["92","93","94"]).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (wegsoort IN ["b","c","d","e"]) ANDERS (wegsoort IN ["92","93","94"]).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.tunnelfactor">
@@ -1192,7 +1192,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectLinks == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectLinks == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.overdrachtsobjectRechts">
@@ -1204,7 +1204,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectRechts == NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectRechts == NULL)</td></tr>
 </table>
 </section>
 <section id="Wegdeel.geometrie">
@@ -1318,7 +1318,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Regels</b></td><td>ALS (eigenEmissiefactor == true) DAN (eigenFactorToeliching != NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (eigenEmissiefactor == true) DAN (eigenFactorToeliching != NULL)</td></tr>
 </table>
 </section>
 <section>
