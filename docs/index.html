@@ -270,7 +270,7 @@
 				<h3>Diagrammen</h3>
 				<section>
 					<h4>Wegverkeer</h4>
-					<img src="diagram1.png" usemap="#image-map1"/>
+					<img src="diagram-wegverkeer.png" usemap="#image-map1"/>
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map1">
@@ -287,7 +287,7 @@
 				</section>
 				<section>
 					<h4>Veehouderijen</h4>
-					<img src="diagram2.png" usemap="#image-map2"/>
+					<img src="diagram-veehouderijen.png" usemap="#image-map2"/>
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map2">
@@ -302,7 +302,7 @@
 				</section>
 				<section>
 					<h4>Generiek</h4>
-					<img src="diagram3.png" usemap="#image-map3"/>
+					<img src="diagram-generiek.png" usemap="#image-map3"/>
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map3">
@@ -389,6 +389,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Surface</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (receptor == NULL) DAN (geometrie != NULL) ANDERS (geometrie == NULL).</td></tr>
 </table>
 </section>
 <section>
@@ -712,6 +713,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#ReceptorGrondslag">ReceptorGrondslag</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..2]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (veehouderij != NULL) DAN (grondslag in ["4","5","6","7","8"]) ANDERS (grondslag in ["0","1","2","3"]).</td></tr>
 </table>
 </section>
 <section id="Receptor.opmerking">
@@ -735,15 +737,15 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 </table>
 </section>
-<section id="Receptor.overdrachtslijnen">
-<h3>overdrachtslijnen</h3>
+<section id="Receptor.overdrachtskenmerken">
+<h3>overdrachtskenmerken</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een virtuele lijn waarmee de overdrachtskenmerken voor een SRM1 berekening worden gedefinieerd. </td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Overdrachtslijn</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verzamling kenmerken behorende bij de virtuele lijn tussen het wegdeel en de receptor zoals die voor een SRM1 berekening worden gedefinieerd. </td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtskenmerken">Overdrachtskenmerken</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..*]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslag in ["0","1","2","3"]) DAN (overdrachtslijnen != NULL) ANDERS (overdrachtslijnen == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (!(grondslag in ["0","1","2","3"])) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == "SRM1").</td></tr>
 </table>
 </section>
 <section id="Receptor.geometrie">
@@ -1105,7 +1107,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (hoogte == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.monitoringsjaar">
@@ -1123,6 +1125,7 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of SRM1 of SRM2 van toepassing is op het wegdeel.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Om een SRM1 berekening uit te kunnen voeren, is altijd een koppeling met een receptor vereist. De wettelijke onderlinge afstand tussen receptoren is gesteld op 100 meter. Voor wegdelen is geen minimale lengte vastgesteld en om deze reden zijn wegdelen met rekenmethode SRM1 waarbij een koppeling met een receptorontbreekt wel toegestaan.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
@@ -1308,6 +1311,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (ravMaatregel == "Overig") DAN (eigenReductiefactor != NULL) ANDERS (eigenReductiefactor == NULL)</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.eigenFactorToelichting">
@@ -1318,7 +1322,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (eigenEmissiefactor == true) DAN (eigenFactorToeliching != NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (eigenEmissiefactor != NULL OF eigenReductiefactor != NULL) DAN (eigenFactorToeliching != NULL)</td></tr>
 </table>
 </section>
 <section>
@@ -1443,12 +1447,12 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Kenmerken die voor een SRM1 berekening worden gedefinieerd. </td></tr>
 </table>
-<section id="Overdrachtskenmerken.wegtype">
-<h3>wegtype</h3>
+<section id="Overdrachtskenmerken.bebouwingstype">
+<h3>bebouwingstype</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Wegtype van de koppeling (overdrachtslijn) voor SRM1 berekening.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het wegtype is voor de overdrachtslijn en daarmee voor de SRM1-bijdrage bepalend in de berekening. De canyon kan wijzigen over de lengte van het wegdeel. Daarom wordt dit attribuut aan de overdrachtslijn gekoppeld.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De mate van bebouwing op de virtuele lijn tussen wegdeel en receptor voor een SRM1 berekening.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De mate van bebouwing tussen de receptor en het wegdeel is bepalend voor de SRM1-bijdrage in de berekening. De canyon kan wijzigen over de lengte van het wegdeel. Daarom wordt dit overdrachtskenmerk aan de receptor gekoppeld.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Bebouwingstype">Bebouwingstype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
@@ -1459,7 +1463,7 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De mate waarin bomen aanwezig zijn rondom het wegdeel.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit kan wijzigen over de lengte van het wegdeel.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit kan wijzigen over de lengte van het wegdeel daarom wordt dit overdrachtskenmerk aan de receptor gekoppeld.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerBoomFactor">WegverkeerBoomFactor</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
@@ -1538,6 +1542,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (Voertuigclassificatie != "b").</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.maximumsnelheid">
@@ -1545,10 +1550,12 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Wettelijke maximumsnelheid op het wegdeel.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De maximumsnelheid wordt niet gebruikt voor een SRM1 berekening. In dat geval dient de waarde voor toetsing aan de werkelijkheid.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>kilometer/uur</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (maximumsnelheid != NULL) ANDERS (maximumsnelheid == NULL).</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.stagnatiefactor">
@@ -1641,8 +1648,8 @@
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>Buitenweg algemeen (b): Typisch buitenwegverkeer, een gemiddelde snelheid van ongeveer 60 km/h, gemiddeld ca. 0,2 stops per afgelegde km.</li>
 <li>Normaal stadsverkeer  (c): Typisch stadsverkeer met een redelijke mate van congestie, een gemiddelde snelheid tussen de 15 en 30 km/h, gemiddeld ca. 2 stops per afgelegde km.</li>
-<li>Stadsverkeer met minder congestie (e): Stadsverkeer met een relatief groter aandeel “free-flow” rijgedrag, een gemiddelde snelheid tussen de 30 en 45 km/h, gemiddeld ca. 1,5 stop per afgelegde km.</li>
 <li>Stagnerend stadsverkeer (d): Stadsverkeer met een grote mate van congestie, een gemiddelde snelheid kleiner dan 15 km/h, gemiddeld ca. 10 stops per afgelegde km.</li>
+<li>Stadsverkeer met minder congestie (e): Stadsverkeer met een relatief groter aandeel “free-flow” rijgedrag, een gemiddelde snelheid tussen de 30 en 45 km/h, gemiddeld ca. 1,5 stop per afgelegde km.</li>
 <li>Buitenweg (92): Weg van het onderliggende wegennet met een breed profiel.</li>
 <li>Snelweg (93): (snel)weg van het hoofdwegennet met een breed profiel.</li>
 <li>Snelweg met strikte handhaving (94):  (snel)weg van het hoofdwegennet met een breed profiel en toepassing van strikte handhaving op de snelheid.</li>
@@ -1749,9 +1756,9 @@
 					</tr>
 					<tr>
 						<td>6</td>
-						<td>wegtype</td>
+						<td>bebouwingstype</td>
 						<td>
-							<a href="#Overdrachtskenmerken.wegtype">Overdrachtskenmerken.wegtype</a>
+							<a href="#Overdrachtskenmerken.bebouwingstype">Overdrachtskenmerken.bebouwingstype</a>
 						</td>
 					</tr>
 					<tr>
