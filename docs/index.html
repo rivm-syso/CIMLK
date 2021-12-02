@@ -359,17 +359,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
 </section>
-<section id="Correctie.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-</table>
-</section>
 <section id="Correctie.correctietermen">
 <h3>correctietermen</h3>
 <table width=100%>
@@ -379,6 +368,17 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Correctieterm">Correctieterm</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+</table>
+</section>
+<section id="Correctie.tijdstipRegistratie">
+<h3>tijdstipRegistratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 </table>
 </section>
 <section id="Correctie.geometrie">
@@ -452,6 +452,16 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
 </section>
+<section id="Maatregel.maatregelen">
+<h3>maatregelen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van de combinaties van voertuigtype en snelheidstype waarvoor een maatregel geldt.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Maatregelfactor">Maatregelfactor</a></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+</table>
+</section>
 <section id="Maatregel.tijdstipRegistratie">
 <h3>tijdstipRegistratie</h3>
 <table width=100%>
@@ -461,16 +471,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-</table>
-</section>
-<section id="Maatregel.maatregelen">
-<h3>maatregelen</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van de combinaties van voertuigtype en snelheidstype waarvoor een maatregel geldt.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Maatregelfactor">Maatregelfactor</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
 </table>
 </section>
 <section id="Maatregel.geometrie">
@@ -723,17 +723,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Opmerkingen die betrekking hebben op de ingevulde waarden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="Receptor.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 </table>
 </section>
@@ -746,6 +735,17 @@
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..*]</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (!(grondslag in ["0","1","2","3"])) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == "SRM1").</td></tr>
+</table>
+</section>
+<section id="Receptor.tijdstipRegistratie">
+<h3>tijdstipRegistratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 </table>
 </section>
 <section id="Receptor.geometrie">
@@ -1014,6 +1014,16 @@
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>15</td></tr>
 </table>
 </section>
+<section id="Veehouderijbron.emissiespecificaties">
+<h3>emissiespecificaties</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling kenmerken van een veehouderijbron die relevant is om de hoeveelheid emissie van die  veehouderijbron te bepalen.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Emissiespecificatie">Emissiespecificatie</a></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+</table>
+</section>
 <section id="Veehouderijbron.tijdstipRegistratie">
 <h3>tijdstipRegistratie</h3>
 <table width=100%>
@@ -1023,16 +1033,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
-</table>
-</section>
-<section id="Veehouderijbron.emissiespecificaties">
-<h3>emissiespecificaties</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling kenmerken van een veehouderijbron die relevant is om de hoeveelheid emissie van die  veehouderijbron te bepalen.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Emissiespecificatie">Emissiespecificatie</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
 </table>
 </section>
 <section id="Veehouderijbron.geometrie">
@@ -1075,6 +1075,16 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
 </section>
+<section id="Wegdeel.monitoringsjaar">
+<h3>monitoringsjaar</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+</table>
+</section>
 <section id="Wegdeel.monitoringsronde">
 <h3>monitoringsronde</h3>
 <table width=100%>
@@ -1095,6 +1105,17 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
 </section>
+<section id="Wegdeel.rekenmethode">
+<h3>rekenmethode</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of SRM1 of SRM2 van toepassing is op het wegdeel.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Om een SRM1 berekening uit te kunnen voeren, is altijd een koppeling met een receptor vereist. De wettelijke onderlinge afstand tussen receptoren is gesteld op 100 meter. Voor wegdelen is geen minimale lengte vastgesteld en om deze reden zijn wegdelen met rekenmethode SRM1 waarbij een koppeling met een receptorontbreekt wel toegestaan.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+</table>
+</section>
 <section id="Wegdeel.hoogte">
 <h3>hoogte</h3>
 <table width=100%>
@@ -1108,27 +1129,6 @@
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
-</table>
-</section>
-<section id="Wegdeel.monitoringsjaar">
-<h3>monitoringsjaar</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="Wegdeel.rekenmethode">
-<h3>rekenmethode</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of SRM1 of SRM2 van toepassing is op het wegdeel.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Om een SRM1 berekening uit te kunnen voeren, is altijd een koppeling met een receptor vereist. De wettelijke onderlinge afstand tussen receptoren is gesteld op 100 meter. Voor wegdelen is geen minimale lengte vastgesteld en om deze reden zijn wegdelen met rekenmethode SRM1 waarbij een koppeling met een receptorontbreekt wel toegestaan.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
 </table>
 </section>
 <section id="Wegdeel.wegsoort">
@@ -1161,17 +1161,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td></td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="Wegdeel.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 </table>
@@ -1208,6 +1197,17 @@
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectRechts == NULL)</td></tr>
+</table>
+</section>
+<section id="Wegdeel.tijdstipRegistratie">
+<h3>tijdstipRegistratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
 </table>
 </section>
 <section id="Wegdeel.geometrie">
@@ -1265,16 +1265,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
-</table>
-</section>
-<section id="Emissiespecificatie.monitoringsjaar">
-<h3>monitoringsjaar</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
