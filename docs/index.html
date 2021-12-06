@@ -181,7 +181,19 @@
 					</ul>
 					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Het lokaalID zal bestaat uit een combinatie van het KvK-nummer van de bronhouder, een punt (".") en de identiticatie die de bronhouder er zelf aan heeft gegeven. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Dat zou bijvoorbeeld een letter kunnen zijn. Er zal nog een suggestie worden gedaan voor standaard letters voor elk objecttype in dit informatiemodel. Het NEN3610ID heeft dan de volgende structuur: NL.imlk.[LetterObjecttype].[KvK]_[identificatie]</p>
+				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Er worden per objecttype standaard letters gehanteerd. Het NEN3610ID heeft dan de volgende structuur: NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</p>
+				<p>De volgende standaard letters worden gehanteerd:
+				<ul>
+				<li><b>W</b>: Wegdeel</li>
+				<li><b>RW</b>: Receptor wegverkeer</li>
+				<li><b>RV</b>: Receptor veehouderij</li>
+				<li><b>C</b>: Correctie</li>
+				<li><b>MW</b>: Maatregel</li>
+				<li><b>V</b>: Veehouderij</li>
+				<li><b>S</b>: Stal</li>
+				<li><b>B</b>: Veehouderijbron</li>
+				</ul>
+				</p>
 			</section>
 			<section>
 				<h3>Coördinaatreferentiesyteem</h3>
