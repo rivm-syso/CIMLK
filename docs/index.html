@@ -326,7 +326,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een correctiegebied.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Correctie.monitoringsronde">
@@ -336,7 +336,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Correctie.monitoringsjaar">
@@ -346,7 +346,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Correctie.naam">
@@ -356,7 +356,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een correctie te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Correctie.correctietermen">
@@ -367,7 +367,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Correctieterm">Correctieterm</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
 </table>
 </section>
 <section id="Correctie.tijdstipRegistratie">
@@ -378,7 +378,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Correctie.geometrie">
@@ -388,7 +388,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging en vorm van het correctiegebied beschrijft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Surface</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (receptor == NULL) DAN (geometrie != NULL) ANDERS (geometrie == NULL).</td></tr>
 </table>
 </section>
@@ -419,7 +419,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een maatregelgebied voor wegverkeer.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregel.monitoringsronde">
@@ -429,7 +429,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregel.monitoringsjaar">
@@ -439,7 +439,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregel.naam">
@@ -449,7 +449,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een maatregel te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregel.maatregelen">
@@ -459,7 +459,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van de combinaties van voertuigtype en snelheidstype waarvoor een maatregel geldt.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Maatregelfactor">Maatregelfactor</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
 </table>
 </section>
 <section id="Maatregel.tijdstipRegistratie">
@@ -470,7 +470,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Maatregel.geometrie">
@@ -480,7 +480,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging en vorm van het maatregelgebied beschrijft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Surface</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -498,7 +498,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{8}$</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Organisatie.identificatieOverheid">
@@ -509,7 +509,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Voor gemeenten is dit de CBS-code van de gemeente.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Organisatie.naam">
@@ -519,7 +519,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De naam van de organisatie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Organisatie.typeOverheid">
@@ -529,7 +529,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een code die aangeeft of de organisatie een gemeente, provincie, waterschap of rijksoverheidsorganisatie is.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Jurisdictietype">Jurisdictietype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Organisatie.geometrie">
@@ -539,7 +539,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De bestuurlijke grens van de organisatie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Surface</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -558,7 +558,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>RAV factorcodes worden door de rijksoverheid gedefinieerd.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#RavFactorLijst">RavFactorLijst</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="RavFactor.monitoringsronde">
@@ -568,7 +568,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="RavFactor.omschrijving">
@@ -578,7 +578,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een beschrijving van het staltype op basis van de RAV factor code.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="RavFactor.emissiefactor">
@@ -589,7 +589,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>g/dier/jaar</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
@@ -608,7 +608,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een code die een RAV maatregel uniek identificeert.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#RavMaatregelLijst">RavMaatregelLijst</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="RavMaatregel.monitoringsronde">
@@ -618,7 +618,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="RavMaatregel.omschrijving">
@@ -628,7 +628,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een beschrijving van de RAV maatregel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="RavMaatregel.reductiefactor">
@@ -639,7 +639,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit wijkt af van de rekenwijze zoals gehanteerd bij schalingsfactoren (onderdeel van maatregelfactor).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
 </table>
@@ -659,7 +659,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
 </table>
 </section>
@@ -670,7 +670,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Receptor.monitoringsjaar">
@@ -680,7 +680,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Receptor.naam">
@@ -690,7 +690,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een receptor te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Receptor.indicatieToetspunt">
@@ -701,7 +701,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Deze informatie is alleen van belang voor het uitvoeren van de monitoring, niet voor het uitvoeren van een losse berekening.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Boolean</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Receptor.grondslag">
@@ -712,7 +712,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Waarde laat zien op welke grond dit punt is gekwalificeerd als rekenpunt in plaats van toetspunt.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#ReceptorGrondslag">ReceptorGrondslag</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..2]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..2</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (veehouderij != NULL) DAN (grondslag in ["4","5","6","7","8"]) ANDERS (grondslag in ["0","1","2","3"]).</td></tr>
 </table>
 </section>
@@ -723,7 +723,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Opmerkingen die betrekking hebben op de ingevulde waarden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Receptor.overdrachtskenmerken">
@@ -733,7 +733,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verzamling kenmerken behorende bij de virtuele lijn tussen het wegdeel en de receptor zoals die voor een SRM1 berekening worden gedefinieerd. </td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtskenmerken">Overdrachtskenmerken</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..*]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..*</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (!(grondslag in ["0","1","2","3"])) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == "SRM1").</td></tr>
 </table>
 </section>
@@ -745,7 +745,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Receptor.geometrie">
@@ -755,7 +755,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging van de receptor beschrijft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section>
@@ -784,7 +784,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een stal van een veehouderij.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Stal.monitoringsronde">
@@ -794,7 +794,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Stal.lengte">
@@ -806,7 +806,7 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfer achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>100</td></tr>
 </table>
@@ -820,7 +820,7 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfer achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>100</td></tr>
 </table>
@@ -834,7 +834,7 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfer achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>100</td></tr>
 </table>
@@ -847,7 +847,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>graden</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>180</td></tr>
 </table>
@@ -860,7 +860,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Stal.geometrie">
@@ -870,7 +870,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die het middelpunt (centro&#239de) van de stal beschrijft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section>
@@ -899,7 +899,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een veehouderij.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Veehouderij.monitoringsronde">
@@ -909,7 +909,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Veehouderij.adres">
@@ -920,7 +920,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Straatnaam en nummer van het bedrijf.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Veehouderij.datumVergunning">
@@ -930,7 +930,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De datum waarop de verstrekte milieuvergunning is afgegeven.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Date</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Veehouderij.tijdstipRegistratie">
@@ -941,7 +941,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 </section>
@@ -959,7 +959,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een emissiebron van een veehouderij.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Veehouderijbron.monitoringsronde">
@@ -969,7 +969,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Veehouderijbron.hoogte">
@@ -981,7 +981,7 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfer achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
@@ -995,7 +995,7 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>1 cijfer achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
@@ -1008,7 +1008,7 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>m/s</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>2 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Standaardwaarde</b></td><td>4</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0,1</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>15</td></tr>
@@ -1021,7 +1021,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling kenmerken van een veehouderijbron die relevant is om de hoeveelheid emissie van die  veehouderijbron te bepalen.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Emissiespecificatie">Emissiespecificatie</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
 </table>
 </section>
 <section id="Veehouderijbron.tijdstipRegistratie">
@@ -1032,7 +1032,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Veehouderijbron.geometrie">
@@ -1042,7 +1042,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging van de emissiebron beschrijft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section>
@@ -1072,7 +1072,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Gemeentelijke en provinciale wegen hebben meestal een vijf-cijferige code en rijkswegen een zeven-cijferige code.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.monitoringsjaar">
@@ -1082,7 +1082,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.monitoringsronde">
@@ -1092,7 +1092,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.naam">
@@ -1102,7 +1102,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een wegdeel te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.rekenmethode">
@@ -1113,7 +1113,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Om een SRM1 berekening uit te kunnen voeren, is altijd een koppeling met een receptor vereist. De wettelijke onderlinge afstand tussen receptoren is gesteld op 100 meter. Voor wegdelen is geen minimale lengte vastgesteld en om deze reden zijn wegdelen met rekenmethode SRM1 waarbij een koppeling met een receptorontbreekt wel toegestaan.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.hoogte">
@@ -1125,7 +1125,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
@@ -1138,7 +1138,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het soort weg vanuit het perspectief van snelheid en doorstroming.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (wegsoort IN ["b","c","d","e"]) ANDERS (wegsoort IN ["92","93","94"]).</td></tr>
 </table>
 </section>
@@ -1150,7 +1150,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit is een correctie voor opbouw van emissies in een tunnel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Standaardwaarde</b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
@@ -1162,7 +1162,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td></td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.verkeergegevens">
@@ -1172,7 +1172,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van alle voor luchtkwaliteit relevante kenmerken van het verkeer dat over een wegdeel gaat.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#VerkeersgegevensWeg">VerkeersgegevensWeg</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..*]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
 </table>
 </section>
 <section id="Wegdeel.overdrachtsobjectLinks">
@@ -1183,7 +1183,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectLinks == NULL).</td></tr>
 </table>
 </section>
@@ -1195,7 +1195,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectRechts == NULL)</td></tr>
 </table>
 </section>
@@ -1207,7 +1207,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Wegdeel.geometrie">
@@ -1217,7 +1217,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging  van het Wegdeel beschrijft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Curve</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -1238,7 +1238,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Geeft aan op welke stof het correctiegebied betrekking heeft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Correctieterm.correctie">
@@ -1249,7 +1249,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -1267,7 +1267,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.aantalDieren">
@@ -1277,7 +1277,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Aantal dieren dat met het geselecteerde staltype in de stal gehouden wordt.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.eigenEmissiefactor">
@@ -1288,7 +1288,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>g/dier/jaar</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.eigenReductiefactor">
@@ -1298,7 +1298,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde reductiefactor indien deze niet met de standaard RAV maatregelen kan worden bepaald.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (ravMaatregel == "Overig") DAN (eigenReductiefactor != NULL) ANDERS (eigenReductiefactor == NULL)</td></tr>
@@ -1311,7 +1311,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een beschrijving die aangeeft hoe de reductiefactor is bepaald.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[0..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (eigenEmissiefactor != NULL OF eigenReductiefactor != NULL) DAN (eigenFactorToeliching != NULL)</td></tr>
 </table>
 </section>
@@ -1354,7 +1354,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Type voertuig waar schalingsfactor invloed op heeft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.wegsoort">
@@ -1364,7 +1364,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het soort weg vanuit het perspectief van snelheid en doorstroming.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.stof">
@@ -1374,7 +1374,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De stof waar de maatregel effect op heeft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.schalingsfactor">
@@ -1385,7 +1385,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Deze factor wordt gebruikt voor emissies van de genoemde stof, voertuigen en snelheid.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
@@ -1405,7 +1405,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘namespace’ is een unieke verwijzing naar de registratie die de identificatie uitdeelt. Deze lijst van registraties wordt beheerd binnen de context van NEN 3610. Binnen Nederland zal deze namespace vrijwel altijd met ‘NL’ beginnen. De volgende karakters mogen in een namespaceaanduiding voorkomen: {“A”… “Z”, “a”… “z”, “0”… “9”, “_”, “-”, “,”, “.”}</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="NEN3610ID.lokaalID">
@@ -1416,7 +1416,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>‘lokaalID’ is de identificatiecode die een object heeft binnen een (lokale) registratie.De volgende karakters mogen in een lokaal ID voorkomen: {“A”… “Z”, “a”… “z”, “0”… “9”, “_”, “-”, “,”, “.”}</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="NEN3610ID.versie">
@@ -1427,7 +1427,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘versie’ maakt geen deel uit van de identificatie van het object maar kan worden gebruikt om verschillende versies van hetzelfde object te identificeren.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -1445,7 +1445,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De mate van bebouwing tussen de receptor en het wegdeel is bepalend voor de SRM1-bijdrage in de berekening. De canyon kan wijzigen over de lengte van het wegdeel. Daarom wordt dit overdrachtskenmerk aan de receptor gekoppeld.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Bebouwingstype">Bebouwingstype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Overdrachtskenmerken.bomenfactor">
@@ -1456,7 +1456,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit kan wijzigen over de lengte van het wegdeel daarom wordt dit overdrachtskenmerk aan de receptor gekoppeld.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerBoomFactor">WegverkeerBoomFactor</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Overdrachtskenmerken.afstand">
@@ -1467,7 +1467,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
 <section>
@@ -1498,7 +1498,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>50</td></tr>
 </table>
@@ -1511,7 +1511,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>12</td></tr>
 </table>
@@ -1531,7 +1531,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Eén van de vier typen voertuigen: licht, middelzwaar, zwaar of bus.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (Voertuigclassificatie != "b").</td></tr>
 </table>
 </section>
@@ -1544,7 +1544,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>kilometer/uur</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (maximumsnelheid != NULL) ANDERS (maximumsnelheid == NULL).</td></tr>
 </table>
 </section>
@@ -1556,7 +1556,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Er komt gedurende een bepaalde, beperkte, periode van de dag stagnatie voor. Het betreft de etmaalgemiddelde fractie van de verkeersintensiteit van het voertuigtype dat stagneert. De stagnatiefactor geeft een verfijning van de gemiddelde snelheid.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
 </table>
@@ -1570,7 +1570,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>mvt/etm</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>[1..1]</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
