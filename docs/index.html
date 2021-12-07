@@ -716,16 +716,28 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Receptor.grondslag">
-<h3>grondslag</h3>
+<section id="Receptor.grondslagWegverkeer">
+<h3>grondslagWegverkeer</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor wegverkeer.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Waarde laat zien op welke grond dit punt is gekwalificeerd als rekenpunt in plaats van toetspunt.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#ReceptorGrondslag">ReceptorGrondslag</a></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#ReceptorGrondslagWegverkeer">ReceptorGrondslagWegverkeer</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..2</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (veehouderij != NULL) DAN (grondslag in ["4","5","6","7","8"]) ANDERS (grondslag IN ["0","1","2","3"]).</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (overdrachtskenmerken != NULL) DAN (grondslagWegverkeer != NULL)</td></tr>
+</table>
+</section>
+<section id="Receptor.grondslagVeehouderij">
+<h3>grondslagVeehouderij</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor veehouderijen.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Waarde laat zien op welke grond dit punt is gekwalificeerd als rekenpunt in plaats van toetspunt.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#ReceptorGrondslagVeehouderij">ReceptorGrondslagVeehouderij</a></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (veehouderij != NULL) DAN (grondslagVeehouderij != NULL) ANDERS (grondslagVeehouderij == NULL)</td></tr>
 </table>
 </section>
 <section id="Receptor.opmerking">
@@ -738,6 +750,19 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
+<section id="Receptor.identificatiePandBAG">
+<h3>identificatiePandBAG</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslagVeehouderij != NULL) DAN (identificatiePandBAG != NULL)</td></tr>
+</table>
+</section>
 <section id="Receptor.overdrachtskenmerken">
 <h3>overdrachtskenmerken</h3>
 <table width=100%>
@@ -746,7 +771,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtskenmerken">Overdrachtskenmerken</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..*</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslag NIET IN ["0","1","2","3"]) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == "SRM1").</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslagWegverkeer == NULL) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == "SRM1").</td></tr>
 </table>
 </section>
 <section id="Receptor.tijdstipRegistratie">
@@ -1614,20 +1639,27 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <li>R (Rijkswaterstaat)</li>
 </ul></td></tr></table>
 </section>
-<section id="ReceptorGrondslag">
-<h2>ReceptorGrondslag</h2>
+<section id="ReceptorGrondslagVeehouderij">
+<h2>ReceptorGrondslagVeehouderij</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
-<li>0 (Wegverkeer: NSL-toetspunt): NSL-toetspunt waarop getoetst wordt aan de normwaarden</li>
-<li>1 (Wegverkeer: Toepasbaarheidbeginsel): Het toepasbaarheidsbeginsel stelt dat niet getoetst hoeft te worden op plaatsen waar geen mensen mogen en kunnen komen, terreinen met &#233;&#233;n of meer inrichtingen  waar al regels gelden voor de gezondheid en veiligheid van werknemers en op de weginrichting zelf (rijbanen en middenberm).</li>
-<li>2 (Wegverkeer: Blootstellingcriterium): Het blootstellingscriterium stelt dat getoetst moet worden op punten waar een persoon kan worden blootgesteld gedurende een periode die in vergelijking met de middelingstijd van de betreffende luchtkwaliteitseis significant is.</li>
-<li>3 (Wegverkeer: Overig): Overige reden waarom dit geen toetspunt is. De reden kan onder 'opmerking' worden opgegeven.</li>
-<li>4 (Veehouderij: Burgerwoning): Burgerwoning waarop getoetst moet worden</li>
-<li>5 (Veehouderij: Eigen bedrijfswoning): Bedrijfswoning op terrein van de eigen veehouderij</li>
-<li>6 (Veehouderij: Bedrijfswoning van naastgelegen inrichting): De bedrijfswoning van een (naastgelegen) veehouderij wordt wel beschermd tegen de belasting van fijnstof afkomstig van de veehouderijen in de omgeving maar niet beschermd tegen de belasting van fijnstof afkomstig van de eigen veehouderij.</li>
-<li>7 (Veehouderij: Plattelandswoning): Plattelandswoningen als bedoeld in de Wet plattelandswoningen zijn planologisch onderdeel van het bedrijfsterrein, maar mogen worden bewoond door personen die geen binding hebben met het bedrijf. De plattelandswoning krijgt geen bescherming tegen de veehouderij op het bedrijfsterrein, met uitzondering van fijnstof.</li>
-<li>8 (Veehouderij: Overig): Overig pand die niet tot de andere categorien behoort</li>
+<li>1 (Burgerwoning): Burgerwoning waarop getoetst moet worden</li>
+<li>2 (Eigen bedrijfswoning): Bedrijfswoning op terrein van de eigen veehouderij</li>
+<li>3 (Bedrijfswoning van naastgelegen inrichting): De bedrijfswoning van een (naastgelegen) veehouderij wordt wel beschermd tegen de belasting van fijnstof afkomstig van de veehouderijen in de omgeving maar niet beschermd tegen de belasting van fijnstof afkomstig van de eigen veehouderij.</li>
+<li>4 (Plattelandswoning): Plattelandswoningen als bedoeld in de Wet plattelandswoningen zijn planologisch onderdeel van het bedrijfsterrein, maar mogen worden bewoond door personen die geen binding hebben met het bedrijf. De plattelandswoning krijgt geen bescherming tegen de veehouderij op het bedrijfsterrein, met uitzondering van fijnstof.</li>
+<li>5 (Overig): Overig pand die niet tot de andere categorien behoort</li>
+</ul></td></tr></table>
+</section>
+<section id="ReceptorGrondslagWegverkeer">
+<h2>ReceptorGrondslagWegverkeer</h2>
+<table>
+<tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
+<li>0 (NSL-toetspunt): NSL-toetspunt waarop getoetst wordt aan de normwaarden</li>
+<li>1 (Toepasbaarheidbeginsel): Het toepasbaarheidsbeginsel stelt dat niet getoetst hoeft te worden op plaatsen waar geen mensen mogen en kunnen komen, terreinen met &#233;&#233;n of meer inrichtingen  waar al regels gelden voor de gezondheid en veiligheid van werknemers en op de weginrichting zelf (rijbanen en middenberm).</li>
+<li>2 (Blootstellingcriterium): Het blootstellingscriterium stelt dat getoetst moet worden op punten waar een persoon kan worden blootgesteld gedurende een periode die in vergelijking met de middelingstijd van de betreffende luchtkwaliteitseis significant is.</li>
+<li>3 (Overig): Overige reden waarom dit geen toetspunt is. De reden kan onder 'opmerking' worden opgegeven.</li>
 </ul></td></tr></table>
 </section>
 <section id="Rekenmethode">
