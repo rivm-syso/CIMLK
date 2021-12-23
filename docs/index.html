@@ -1143,14 +1143,28 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Wegdeel.naam">
-<h3>naam</h3>
+<section id="Wegdeel.straatnaam">
+<h3>straatnaam</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een wegdeel te duiden.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De straatnaam zoals als aangeduid in het NWB of een eigen beschrijving wanneer de straat in het NWB niet bestaat.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (wegnummer == NULL) DAN (straatnaam != NULL)</td></tr>
+</table>
+</section>
+<section id="Wegdeel.wegnummer">
+<h3>wegnummer</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het wegnummer zoals aangeduid in het NWB.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (straatnaam == NULL) DAN (wegnummer != NULL)</td></tr>
 </table>
 </section>
 <section id="Wegdeel.rekenmethode">
@@ -1162,21 +1176,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Wegdeel.hoogte">
-<h3>hoogte</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De gemiddelde hoogte van het wegdeel t.o.v. omringend maaiveld</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit is specifiek voor SRM2.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
-<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.wegsoort">
@@ -1201,6 +1200,21 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Standaardwaarde</b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
+</table>
+</section>
+<section id="Wegdeel.hoogte">
+<h3>hoogte</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De gemiddelde hoogte van het wegdeel t.o.v. omringend maaiveld</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit is specifiek voor SRM2.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
+<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.opmerking">
@@ -1909,7 +1923,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>5</td>
 						<td>naam</td>
 						<td>
-							<a href="#Wegdeel.naam">Wegdeel.naam</a>
+							<a href="#Wegdeel.straatnaam">Wegdeel.straatnaam</a>
 						</td>
 					</tr>
 					<tr>
