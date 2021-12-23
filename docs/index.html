@@ -593,11 +593,11 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RavFactor.emissiefactor">
-<h3>emissiefactor</h3>
+<section id="RavFactor.emissiefactorPm10">
+<h3>emissiefactorPm10</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De op basis van de RAV factor code berekende emissie.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De op basis van de RAV factor code berekende emissie factor voor PM10.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>g/dier/jaar</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -643,11 +643,11 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RavMaatregel.reductiefactor">
-<h3>reductiefactor</h3>
+<section id="RavMaatregel.reductiefactorPm10">
+<h3>reductiefactorPm10</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De fractie waarmee de emissies behorende bij de RAV code worden verlaagd.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De fractie waarmee de PM10 emissies behorende bij de RAV code worden verlaagd.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit wijkt af van de rekenwijze zoals gehanteerd bij schalingsfactoren (onderdeel van maatregelfactor).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -889,6 +889,18 @@
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>180</td></tr>
 </table>
 </section>
+<section id="Stal.identificatiePandBAG">
+<h3>identificatiePandBAG</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
 <section id="Stal.tijdstipRegistratie">
 <h3>tijdstipRegistratie</h3>
 <table width=100%>
@@ -1106,7 +1118,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een deel van een weg.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Gemeentelijke en provinciale wegen hebben meestal een vijf-cijferige code en rijkswegen een zeven-cijferige code.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -1317,22 +1328,22 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Emissiespecificatie.eigenEmissiefactor">
-<h3>eigenEmissiefactor</h3>
+<section id="Emissiespecificatie.eigenEmissiefactorPm10">
+<h3>eigenEmissiefactorPm10</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde emissiefactor indien deze niet met de standaard RAV factoren kan worden bepaald.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor deze niet met de standaard RAV factoren kan worden bepaald.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>g/dier/jaar</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
-<section id="Emissiespecificatie.eigenReductiefactor">
-<h3>eigenReductiefactor</h3>
+<section id="Emissiespecificatie.eigenReductiefactorPm10">
+<h3>eigenReductiefactorPm10</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde reductiefactor indien deze niet met de standaard RAV maatregelen kan worden bepaald.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor deze niet met de standaard RAV maatregelen kan worden bepaald.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
@@ -1345,11 +1356,23 @@
 <h3>eigenFactorToelichting</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een beschrijving die aangeeft hoe de reductiefactor is bepaald.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een beschrijving die aangeeft hoe de emissiefactor en/of reductiefactor is bepaald wanneer wordt afgeweken van respectievelijk het standaard huisvestingssysteem of de standaard maatregel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (eigenEmissiefactor != NULL OF eigenReductiefactor != NULL) DAN (eigenFactorToeliching != NULL)</td></tr>
+</table>
+</section>
+<section id="Emissiespecificatie.opmerking">
+<h3>opmerking</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Opmerkingen die betrekking hebben op de ingevulde waarden.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section>
