@@ -293,7 +293,7 @@
 						<area href="#Receptor" coords="8,521,351,788" shape="rect"/>
 						<area href="#Correctieterm" coords="423,372,730,455" shape="rect"/>
 						<area href="#Correctie" coords="423,521,730,688" shape="rect"/>
-						<area href="#RekenresultaatWegverkeer" coords="8,841,270,1576" shape="rect"/>
+						<area href="#RekenresultaatWegverkeer" coords="8,841,270,1617" shape="rect"/>
 						<area href="#Maatregel" coords="423,841,730,1024" shape="rect"/>
 						<area href="#Maatregelfactor" coords="423,1080,730,1200" shape="rect"/>
 					</map>
@@ -308,7 +308,7 @@
 						<area href="#Stal" coords="8,227,266,437" shape="rect"/>
 						<area href="#Receptor" coords="380,227,725,488" shape="rect"/>
 						<area href="#Veehouderijbron" coords="8,556,266,750" shape="rect"/>
-						<area href="#RekenresultaatVeehouderij" coords="380,556,655,786" shape="rect"/>
+						<area href="#RekenresultaatVeehouderij" coords="380,556,655,820" shape="rect"/>
 						<area href="#Emissiespecificatie" coords="8,800,266,958" shape="rect"/>
 						<area href="#RavFactor" coords="8,1019,266,1140" shape="rect"/>
 						<area href="#RavMaatregel" coords="380,1019,638,1140" shape="rect"/>
@@ -815,6 +815,30 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor veehouderijen inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
 </table>
+<section id="RekenresultaatVeehouderij.rekentoolVersie">
+<h3>rekentoolVersie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De versie van de rekentool waarmee de berekening is uitgevoerd.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.rekenjaar">
+<h3>rekenjaar</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
 <section id="RekenresultaatVeehouderij.pm10Concentratie">
 <h3>pm10Concentratie</h3>
 <table width=100%>
@@ -948,6 +972,30 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor wegverkeer inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
 </table>
+<section id="RekenresultaatWegverkeer.rekentoolVersie">
+<h3>rekentoolVersie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De versie van de rekentool waarmee de berekening is uitgevoerd.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.rekenjaar">
+<h3>rekenjaar</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
 <section id="RekenresultaatWegverkeer.no2Concentratie">
 <h3>no2Concentratie</h3>
 <table width=100%>
