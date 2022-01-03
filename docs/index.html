@@ -286,15 +286,16 @@
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-wegverkeer">
-						<area href="#Wegdeel" coords="8,6,307,296" shape="rect"/>
-						<area href="#VerkeersgegevensWeg" coords="436,6,737,126" shape="rect"/>
-						<area href="#Overdrachtskenmerken" coords="9,372,305,471" shape="rect"/>
-						<area href="#Overdrachtsobject" coords="436,204,725,282" shape="rect"/>
-						<area href="#Receptor" coords="4,521,351,788" shape="rect"/>
-						<area href="#Correctieterm" coords="426,373,726,455" shape="rect"/>
-						<area href="#Correctie" coords="428,521,729,688" shape="rect"/>
-						<area href="#Maatregel" coords="8,821,311,989" shape="rect"/>
-						<area href="#Maatregelfactor" coords="436,823,728,938" shape="rect"/>
+						<area href="#Wegdeel" coords="8,6,307,323" shape="rect"/>
+						<area href="#VerkeersgegevensWeg" coords="423,6,730,126" shape="rect"/>
+						<area href="#Overdrachtskenmerken" coords="8,372,305,471" shape="rect"/>
+						<area href="#Overdrachtsobject" coords="423,204,730,282" shape="rect"/>
+						<area href="#Receptor" coords="8,521,351,788" shape="rect"/>
+						<area href="#Correctieterm" coords="423,372,730,455" shape="rect"/>
+						<area href="#Correctie" coords="423,521,730,688" shape="rect"/>
+						<area href="#RekenresultaatWegverkeer" coords="8,841,270,1576" shape="rect"/>
+						<area href="#Maatregel" coords="423,841,730,1024" shape="rect"/>
+						<area href="#Maatregelfactor" coords="423,1080,730,1200" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -304,12 +305,13 @@
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-veehouderij">
 						<area href="#Veehouderij" coords="187,7,442,143" shape="rect"/>
-						<area href="#Stal" coords="8,227,266,417" shape="rect"/>
-						<area href="#Receptor" coords="378,225,725,488" shape="rect"/>
-						<area href="#Veehouderijbron" coords="8,536,265,723" shape="rect"/>
-						<area href="#Emissiespecificatie" coords="378,536,635,668" shape="rect"/>
-						<area href="#RavFactor" coords="8,772,265,888" shape="rect"/>
-						<area href="#RavMaatregel" coords="380,774,638,889" shape="rect"/>
+						<area href="#Stal" coords="8,227,266,437" shape="rect"/>
+						<area href="#Receptor" coords="380,227,725,488" shape="rect"/>
+						<area href="#Veehouderijbron" coords="8,556,266,750" shape="rect"/>
+						<area href="#RekenresultaatVeehouderij" coords="380,556,655,786" shape="rect"/>
+						<area href="#Emissiespecificatie" coords="8,800,266,958" shape="rect"/>
+						<area href="#RavFactor" coords="8,1019,266,1140" shape="rect"/>
+						<area href="#RavMaatregel" coords="380,1019,638,1140" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -755,7 +757,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>Cijfers [0-9]</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -771,7 +772,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtskenmerken">Overdrachtskenmerken</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..*</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslagWegverkeer == NULL) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == "SRM1").</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslagWegverkeer == NULL) DAN (overdrachtskenmerken == NULL). ALS (overdrachtskenmerken != NULL) DAN (overdrachtskenmerken.wegdeel.rekenmethode == 'SRM1').</td></tr>
 </table>
 </section>
 <section id="Receptor.tijdstipRegistratie">
@@ -805,6 +806,587 @@
 <tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Veehouderij">Veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>0..1</td></tr>
+</table>
+</section>
+</section>
+<section id="RekenresultaatVeehouderij">
+<h2>RekenresultaatVeehouderij</h1>
+<table>
+<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor veehouderijen inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
+</table>
+<section id="RekenresultaatVeehouderij.pm10Concentratie">
+<h3>pm10Concentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale PM10 concentratie op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10BronbijdrageConcentratie">
+<h3>pm10BronbijdrageConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende bronbijdrage voor PM10 concentraties op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10AchtergrondConcentratie">
+<h3>pm10AchtergrondConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling).</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10GCNConcentratie">
+<h3>pm10GCNConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10DubtelcorrectieConcentratie">
+<h3>pm10DubtelcorrectieConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op de PM10 concentratie.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10Overschrijdingsdagen">
+<h3>pm10Overschrijdingsdagen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het berekende aantal overschrijdingsdagen op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>dag/jaar</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10BronbijdrageOverschrijdingsdagen">
+<h3>pm10BronbijdrageOverschrijdingsdagen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende bronbijdrage voor PM10 overschrijdingsdagen op de receptor.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10AchtergrondOverschrijdingsdagen">
+<h3>pm10AchtergrondOverschrijdingsdagen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 overschrijdingsdagen op basis van de achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10GCNOverschrijdingsdagen">
+<h3>pm10GCNOverschrijdingsdagen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het aantal overschrijdingsdagen op basis van de GCN.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.pm10DubtelcorrectieOverschrijdingsdagen">
+<h3>pm10DubtelcorrectieOverschrijdingsdagen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op het aantal PM10 overschrijdingsdagen.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section>
+<h3>receptor</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Type</b></td><td>Associatie</td></tr>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Relatiesoort</td></tr>
+<tr border="0"><td width=200px><b>Bron</b></td><td>RekenresultaatVeehouderij</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit bron</b></td><td>0..*</td></tr>
+<tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Receptor">Receptor</td></tr>
+<tr border="0"><td width=200px><b>Rol doel</b></td><td>receptor</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
+</table>
+</section>
+</section>
+<section id="RekenresultaatWegverkeer">
+<h2>RekenresultaatWegverkeer</h1>
+<table>
+<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor wegverkeer inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
+</table>
+<section id="RekenresultaatWegverkeer.no2Concentratie">
+<h3>no2Concentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale jaargemiddelde concentratie NO2 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2Overschrijdingsuren">
+<h3>no2Overschrijdingsuren</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het berekende aantal overschrijdingsuren NO2 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>uur/jaar</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.noxSRM1">
+<h3>noxSRM1</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor NOx op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.noxSRM2">
+<h3>noxSRM2</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor NOx op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2SRM1DirecteUitstoot">
+<h3>no2SRM1DirecteUitstoot</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 concentratie direct uitgestoten voor NO2 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2SRM2DirecteUitstoot">
+<h3>no2SRM2DirecteUitstoot</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 concentratie direct uitgestoten voor NO2 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2SRMConversiebijdrage">
+<h3>no2SRMConversiebijdrage</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende conversiebijdrage van NO2 uit NO en O3.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2AchtergrondConcentratie">
+<h3>no2AchtergrondConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>NO2 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2GCN">
+<h3>no2GCN</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie NO2.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2HWNdubtelcorrectie">
+<h3>no2HWNdubtelcorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Dubbeltellingscorrectie op NO2 voor de bijdrage van het hoofdwegennet.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2SchipholDelta">
+<h3>no2SchipholDelta</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het Schipholgebied.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.no2EigenCorrectie">
+<h3>no2EigenCorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor NO2 die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.o3GCN">
+<h3>o3GCN</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie O3.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.o3AchtergrondConcentratie">
+<h3>o3AchtergrondConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>O3 achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.o3SchipholDelta">
+<h3>o3SchipholDelta</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het Schipholgebied.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10Concentratie">
+<h3>pm10Concentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale PM10 concentratie op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10Overschrijdingsdagen">
+<h3>pm10Overschrijdingsdagen</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het berekende aantal overschrijdingsdagen op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>dag/jaar</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10SRM1">
+<h3>pm10SRM1</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor PM10 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10SRM2">
+<h3>pm10SRM2</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor PM10 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10AchtergrondConcentratie">
+<h3>pm10AchtergrondConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10GCN">
+<h3>pm10GCN</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10HWNdubtelcorrectie">
+<h3>pm10HWNdubtelcorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM10.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10IJmondDelta">
+<h3>pm10IJmondDelta</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het IJmondgebied.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm10EigenCorrectie">
+<h3>pm10EigenCorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM10 die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25Concentratie">
+<h3>pm25Concentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale jaargemiddelde concentratie PM2.5 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25SRM1">
+<h3>pm25SRM1</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor PM2.5 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25SRM2">
+<h3>pm25SRM2</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor PM2.5 op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25AchtergrondConcentratie">
+<h3>pm25AchtergrondConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM2.5 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25IJmondDelta">
+<h3>pm25IJmondDelta</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het IJmondgebied.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25GCN">
+<h3>pm25GCN</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM2.5.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25HWNdubtelcorrectie">
+<h3>pm25HWNdubtelcorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM2.5.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.pm25EigenCorrectie">
+<h3>pm25EigenCorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM2.5 die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecConcentratie">
+<h3>ecConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale jaargemiddelde concentratie EC op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecSRM1">
+<h3>ecSRM1</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor EC op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecSRM2">
+<h3>ecSRM2</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor EC op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecAchtergrondConcentratie">
+<h3>ecAchtergrondConcentratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>EC achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecGCN">
+<h3>ecGCN</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie EC.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecHWNdubtelcorrectie">
+<h3>ecHWNdubtelcorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op EC.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.ecEigenCorrectie">
+<h3>ecEigenCorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor EC die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section>
+<h3>receptor</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Type</b></td><td>Associatie</td></tr>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Relatiesoort</td></tr>
+<tr border="0"><td width=200px><b>Bron</b></td><td>RekenresultaatWegverkeer</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit bron</b></td><td>0..*</td></tr>
+<tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Receptor">Receptor</td></tr>
+<tr border="0"><td width=200px><b>Rol doel</b></td><td>receptor</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -894,7 +1476,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1159,7 +1740,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het wegnummer zoals aangeduid in het NWB.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1186,7 +1766,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (wegsoort IN ["b","c","d","e"]) ANDERS (wegsoort IN ["92","93","94"]).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (wegsoort IN ['b','c','d','e']) ANDERS (wegsoort IN ['92','93','94']).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.tunnelfactor">
@@ -1214,7 +1794,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>-30</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>30</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM2') DAN (hoogte != NULL) ANDERS (hoogte == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.opmerking">
@@ -1246,7 +1826,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectLinks == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (overdrachtsobjectLinks == NULL).</td></tr>
 </table>
 </section>
 <section id="Wegdeel.overdrachtsobjectRechts">
@@ -1258,7 +1838,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (overdrachtsobjectRechts == NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (overdrachtsobjectRechts == NULL)</td></tr>
 </table>
 </section>
 <section id="Wegdeel.tijdstipRegistratie">
@@ -1363,7 +1943,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (ravMaatregel == "Overig") DAN (eigenReductiefactor != NULL) ANDERS (eigenReductiefactor == NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (ravMaatregel == 'Overig') DAN (eigenReductiefactor != NULL) ANDERS (eigenReductiefactor == NULL)</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.eigenFactorToelichting">
@@ -1382,9 +1962,7 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Opmerkingen die betrekking hebben op de ingevulde waarden.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
@@ -1610,7 +2188,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM1") DAN (Voertuigclassificatie != "b").</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (Voertuigclassificatie != 'b').</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.maximumsnelheid">
@@ -1623,7 +2201,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>kilometer/uur</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == "SRM2") DAN (maximumsnelheid != NULL) ANDERS (maximumsnelheid == NULL).</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM2') DAN (maximumsnelheid != NULL) ANDERS (maximumsnelheid == NULL).</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.stagnatiefactor">
