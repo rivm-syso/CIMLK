@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">7 december 2021</h2>
+		<h2 id="subtitle">13 januari 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -173,7 +173,7 @@
 			</section>
 			<section>
 				<h3>NEN3610</h3>
-				<p>Er is voor gekozen om aan te sluiten bij de NEN3610 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Hierdoor hebben alle objecttypen een NEN3610ID om ze uniek te identificeren. Een dergelijk NEN3610ID is als volgt opgebouwd:
+				<p>Er is voor gekozen om aan te sluiten bij de NEN3610 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Hierdoor krijgen alle objecttypen een NEN3610ID om ze uniek te identificeren. Een NEN3610ID is als volgt opgebouwd:
 					<ul>
 						<li>namespace: unieke identificatie van het informatiemodel</li>
 						<li>lokaalID: een unieke identificatie van het object</li>
@@ -193,6 +193,8 @@
 				<li><b>S</b>: Stal</li>
 				<li><b>B</b>: Veehouderijbron</li>
 				</ul>
+				</p>
+				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
 				</p>
 			</section>
 			<section>
