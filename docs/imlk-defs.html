@@ -394,12 +394,12 @@
          </tr>
       </table>
    </section>
-   <section id="_A626_2941.eigenEmissiefactor">
-      <h3>eigenEmissiefactor</h3>
+   <section id="_A626_2941.eigenEmissiefactorPm10">
+      <h3>eigenEmissiefactorPm10</h3>
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">De zelf bepaalde emissiefactor indien deze niet met de standaard RAV factoren kan worden bepaald.</td>
+            <td border="0" valign="top">De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor deze niet met de standaard RAV factoren kan worden bepaald.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -423,12 +423,12 @@
          </tr>
       </table>
    </section>
-   <section id="_A626_2942.eigenReductiefactor">
-      <h3>eigenReductiefactor</h3>
+   <section id="_A626_2942.eigenReductiefactorPm10">
+      <h3>eigenReductiefactorPm10</h3>
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">De zelf bepaalde reductiefactor indien deze niet met de standaard RAV maatregelen kan worden bepaald.</td>
+            <td border="0" valign="top">De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor deze niet met de standaard RAV maatregelen kan worden bepaald.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -461,7 +461,32 @@
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">Een beschrijving die aangeeft hoe de reductiefactor is bepaald.</td>
+            <td border="0" valign="top">Een beschrijving die aangeeft hoe de emissiefactor en/of reductiefactor is bepaald wanneer wordt afgeweken van respectievelijk het standaard huisvestingssysteem of de standaard maatregel.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">0..1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">CharacterString</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A626_3056.opmerking">
+      <h3>opmerking</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Opmerkingen die betrekking hebben op de ingevulde waarden.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -1583,12 +1608,12 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          </tr>
       </table>
    </section>
-   <section id="_A627_2919.emissiefactor">
-      <h3>emissiefactor</h3>
+   <section id="_A627_2919.emissiefactorPm10">
+      <h3>emissiefactorPm10</h3>
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">De op basis van de RAV factor code berekende emissie.</td>
+            <td border="0" valign="top">De op basis van de RAV factor code berekende emissie factor voor PM10.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -1723,12 +1748,12 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          </tr>
       </table>
    </section>
-   <section id="_A628_2923.reductiefactor">
-      <h3>reductiefactor</h3>
+   <section id="_A628_2923.reductiefactorPm10">
+      <h3>reductiefactorPm10</h3>
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">De fractie waarmee de emissies behorende bij de RAV code worden verlaagd.</td>
+            <td border="0" valign="top">De fractie waarmee de PM10 emissies behorende bij de RAV code worden verlaagd.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -1921,12 +1946,12 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          </tr>
       </table>
    </section>
-   <section id="_A618_2889.grondslag">
-      <h3>grondslag</h3>
+   <section id="_A618_2889.grondslagWegverkeer">
+      <h3>grondslagWegverkeer</h3>
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie.</td>
+            <td border="0" valign="top">De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor wegverkeer.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -1938,58 +1963,94 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          </tr>
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
-            <td border="0" valign="top">1..2</td>
+            <td border="0" valign="top">0..1</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Type:</b></td>
-            <td border="0" valign="top">ReceptorGrondslag</td>
+            <td border="0" valign="top">ReceptorGrondslagWegverkeer</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Waarden:</b></td>
             <td border="0">
                <ul>
                   <li>0
-                     (Wegverkeer: NSL-toetspunt)
+                     (NSL-toetspunt)
                      
                      		 :
                      NSL-toetspunt waarop getoetst wordt aan de normwaarden</li>
                   <li>1
-                     (Wegverkeer: Toepasbaarheidbeginsel)
+                     (Toepasbaarheidbeginsel)
                      
                      		 :
                      Het toepasbaarheidsbeginsel stelt dat niet getoetst hoeft te worden op plaatsen waar geen mensen mogen en kunnen komen, terreinen met één of meer inrichtingen  waar al regels gelden voor de gezondheid en veiligheid van werknemers en op de weginrichting zelf (rijbanen en middenberm).</li>
                   <li>2
-                     (Wegverkeer: Blootstellingcriterium)
+                     (Blootstellingcriterium)
                      
                      		 :
                      Het blootstellingscriterium stelt dat getoetst moet worden op punten waar een persoon kan worden blootgesteld gedurende een periode die in vergelijking met de middelingstijd van de betreffende luchtkwaliteitseis significant is.</li>
                   <li>3
-                     (Wegverkeer: Overig)
+                     (Overig)
                      
                      		 :
                      Overige reden waarom dit geen toetspunt is. De reden kan onder 'opmerking' worden opgegeven.</li>
-                  <li>4
-                     (Veehouderij: Burgerwoning)
+               </ul>
+            </td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Waarde laat zien op welke grond dit punt is gekwalificeerd als rekenpunt in plaats van toetspunt.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A618_3044.grondslagVeehouderij">
+      <h3>grondslagVeehouderij</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor veehouderijen.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">0..1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">ReceptorGrondslagVeehouderij</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Waarden:</b></td>
+            <td border="0">
+               <ul>
+                  <li>1
+                     (Burgerwoning)
                      
                      		 :
                      Burgerwoning waarop getoetst moet worden</li>
-                  <li>5
-                     (Veehouderij: Eigen bedrijfswoning)
+                  <li>2
+                     (Eigen bedrijfswoning)
                      
                      		 :
                      Bedrijfswoning op terrein van de eigen veehouderij</li>
-                  <li>6
-                     (Veehouderij: Bedrijfswoning van naastgelegen inrichting)
+                  <li>3
+                     (Bedrijfswoning van naastgelegen inrichting)
                      
                      		 :
                      De bedrijfswoning van een (naastgelegen) veehouderij wordt wel beschermd tegen de belasting van fijnstof afkomstig van de veehouderijen in de omgeving maar niet beschermd tegen de belasting van fijnstof afkomstig van de eigen veehouderij.</li>
-                  <li>7
-                     (Veehouderij: Plattelandswoning)
+                  <li>4
+                     (Plattelandswoning)
                      
                      		 :
                      Plattelandswoningen als bedoeld in de Wet plattelandswoningen zijn planologisch onderdeel van het bedrijfsterrein, maar mogen worden bewoond door personen die geen binding hebben met het bedrijf. De plattelandswoning krijgt geen bescherming tegen de veehouderij op het bedrijfsterrein, met uitzondering van fijnstof.</li>
-                  <li>8
-                     (Veehouderij: Overig)
+                  <li>5
+                     (Overig)
                      
                      		 :
                      Overig pand die niet tot de andere categorien behoort</li>
@@ -2024,6 +2085,39 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Type:</b></td>
             <td border="0" valign="top">CharacterString</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A618_3054.identificatiePandBAG">
+      <h3>identificatiePandBAG</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">0..1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">CharacterString</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Lengte:</b></td>
+            <td border="0">16</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Patroon:</b></td>
+            <td border="0">Cijfers [0-9]</td>
          </tr>
       </table>
    </section>
@@ -2124,6 +2218,1609 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Type:</b></td>
             <td border="0" valign="top"><a href="#_C623">Veehouderij</a></td>
+         </tr>
+      </table>
+   </section>
+</section><section id="RekenresultaatVeehouderij">
+   <h2 id="_C678">RekenresultaatVeehouderij</h2>
+   <table class="feature">
+      <tr border="0">
+         <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+         <td>De berekende concentraties van een luchtkwaliteitsberekening voor veehouderijen inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td>
+      </tr>
+      <tr border="0">
+         <td border="0" valign="top" width="200px"><b>Stereotype:</b></td>
+         <td>Objecttype</td>
+      </tr>
+   </table>
+   <section id="_A678_3155.rekentoolVersie">
+      <h3>rekentoolVersie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De versie van de rekentool waarmee de berekening is uitgevoerd.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">CharacterString</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3156.rekenjaar">
+      <h3>rekenjaar</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Integer</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3127.pm10Concentratie">
+      <h3>pm10Concentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende totale PM10 concentratie op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3129.pm10BronbijdrageConcentratie">
+      <h3>pm10BronbijdrageConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende bronbijdrage voor PM10 concentraties op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3131.pm10AchtergrondConcentratie">
+      <h3>pm10AchtergrondConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3132.pm10GCNConcentratie">
+      <h3>pm10GCNConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De grootschalige achtergrondconcentratie PM10.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3130.pm10DubtelcorrectieConcentratie">
+      <h3>pm10DubtelcorrectieConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op de PM10 concentratie.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3128.pm10Overschrijdingsdagen">
+      <h3>pm10Overschrijdingsdagen</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het berekende aantal overschrijdingsdagen op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">dag/jaar</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3151.pm10BronbijdrageOverschrijdingsdagen">
+      <h3>pm10BronbijdrageOverschrijdingsdagen</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende bronbijdrage voor PM10 overschrijdingsdagen op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3152.pm10AchtergrondOverschrijdingsdagen">
+      <h3>pm10AchtergrondOverschrijdingsdagen</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">PM10 overschrijdingsdagen op basis van de achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3153.pm10GCNOverschrijdingsdagen">
+      <h3>pm10GCNOverschrijdingsdagen</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het aantal overschrijdingsdagen op basis van de GCN.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A678_3154.pm10DubtelcorrectieOverschrijdingsdagen">
+      <h3>pm10DubtelcorrectieOverschrijdingsdagen</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op het aantal PM10 overschrijdingsdagen.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section>
+      <h3>receptor</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Relatiesoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top"><a href="#_C618">Receptor</a></td>
+         </tr>
+      </table>
+   </section>
+</section><section id="RekenresultaatWegverkeer">
+   <h2 id="_C675">RekenresultaatWegverkeer</h2>
+   <table class="feature">
+      <tr border="0">
+         <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+         <td>De berekende concentraties van een luchtkwaliteitsberekening voor wegverkeer inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td>
+      </tr>
+      <tr border="0">
+         <td border="0" valign="top" width="200px"><b>Stereotype:</b></td>
+         <td>Objecttype</td>
+      </tr>
+   </table>
+   <section id="_A675_3157.rekentoolVersie">
+      <h3>rekentoolVersie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De versie van de rekentool waarmee de berekening is uitgevoerd.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">CharacterString</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3158.rekenjaar">
+      <h3>rekenjaar</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Integer</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Een inhoudelijke toelichting op de toepassing van het informatie-element.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3073.no2Concentratie">
+      <h3>no2Concentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende totale jaargemiddelde concentratie NO2 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3074.no2Overschrijdingsuren">
+      <h3>no2Overschrijdingsuren</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het berekende aantal overschrijdingsuren NO2 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">uur/jaar</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3075.noxSRM1">
+      <h3>noxSRM1</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM1 bijdrage voor NOx op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3076.noxSRM2">
+      <h3>noxSRM2</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM2 bijdrage voor NOx op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3077.no2SRM1DirecteUitstoot">
+      <h3>no2SRM1DirecteUitstoot</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM1 concentratie direct uitgestoten voor NO2 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3078.no2SRM2DirecteUitstoot">
+      <h3>no2SRM2DirecteUitstoot</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM2 concentratie direct uitgestoten voor NO2 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3079.no2SRMConversiebijdrage">
+      <h3>no2SRMConversiebijdrage</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende conversiebijdrage van NO2 uit NO en O3.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3080.no2AchtergrondConcentratie">
+      <h3>no2AchtergrondConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">NO2 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3081.no2GCN">
+      <h3>no2GCN</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De grootschalige achtergrondconcentratie NO2.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3082.no2HWNdubtelcorrectie">
+      <h3>no2HWNdubtelcorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Dubbeltellingscorrectie op NO2 voor de bijdrage van het hoofdwegennet.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3083.no2SchipholDelta">
+      <h3>no2SchipholDelta</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor het Schipholgebied.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3084.no2EigenCorrectie">
+      <h3>no2EigenCorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor NO2 die door de gebruiker is ingevoerd op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3085.o3GCN">
+      <h3>o3GCN</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De grootschalige achtergrondconcentratie O3.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3086.o3AchtergrondConcentratie">
+      <h3>o3AchtergrondConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">O3 achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3087.o3SchipholDelta">
+      <h3>o3SchipholDelta</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor het Schipholgebied.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3088.pm10Concentratie">
+      <h3>pm10Concentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende totale PM10 concentratie op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3089.pm10Overschrijdingsdagen">
+      <h3>pm10Overschrijdingsdagen</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het berekende aantal overschrijdingsdagen op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">dag/jaar</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3090.pm10SRM1">
+      <h3>pm10SRM1</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM1 bijdrage voor PM10 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3091.pm10SRM2">
+      <h3>pm10SRM2</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM2 bijdrage voor PM10 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3092.pm10AchtergrondConcentratie">
+      <h3>pm10AchtergrondConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3093.pm10GCN">
+      <h3>pm10GCN</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De grootschalige achtergrondconcentratie PM10.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3094.pm10HWNdubtelcorrectie">
+      <h3>pm10HWNdubtelcorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM10.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3095.pm10IJmondDelta">
+      <h3>pm10IJmondDelta</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor het IJmondgebied.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3096.pm10EigenCorrectie">
+      <h3>pm10EigenCorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor PM10 die door de gebruiker is ingevoerd op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3097.pm25Concentratie">
+      <h3>pm25Concentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende totale jaargemiddelde concentratie PM2.5 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3098.pm25SRM1">
+      <h3>pm25SRM1</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM1 bijdrage voor PM2.5 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3099.pm25SRM2">
+      <h3>pm25SRM2</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM2 bijdrage voor PM2.5 op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3100.pm25AchtergrondConcentratie">
+      <h3>pm25AchtergrondConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">PM2.5 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3101.pm25IJmondDelta">
+      <h3>pm25IJmondDelta</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor het IJmondgebied.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3102.pm25GCN">
+      <h3>pm25GCN</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De grootschalige achtergrondconcentratie PM2.5.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3103.pm25HWNdubtelcorrectie">
+      <h3>pm25HWNdubtelcorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM2.5.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3104.pm25EigenCorrectie">
+      <h3>pm25EigenCorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor PM2.5 die door de gebruiker is ingevoerd op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3105.ecConcentratie">
+      <h3>ecConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende totale jaargemiddelde concentratie EC op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3106.ecSRM1">
+      <h3>ecSRM1</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM1 bijdrage voor EC op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3107.ecSRM2">
+      <h3>ecSRM2</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De berekende SRM2 bijdrage voor EC op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3108.ecAchtergrondConcentratie">
+      <h3>ecAchtergrondConcentratie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">EC achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3109.ecGCN">
+      <h3>ecGCN</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De grootschalige achtergrondconcentratie EC.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3110.ecHWNdubtelcorrectie">
+      <h3>ecHWNdubtelcorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op EC.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A675_3111.ecEigenCorrectie">
+      <h3>ecEigenCorrectie</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Correctiewaarde voor EC die door de gebruiker is ingevoerd op de receptor.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Real</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">ug/m3</td>
+         </tr>
+      </table>
+   </section>
+   <section>
+      <h3>receptor</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Relatiesoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top"><a href="#_C618">Receptor</a></td>
          </tr>
       </table>
    </section>
@@ -2346,6 +4043,35 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Minimale waarde:</b></td>
             <td border="0">0</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A624_3055.identificatiePandBAG">
+      <h3>identificatiePandBAG</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">CharacterString</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Lengte:</b></td>
+            <td border="0">16</td>
          </tr>
       </table>
    </section>
@@ -3076,10 +4802,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
             <td border="0" width="200px" valign="top"><b>Type:</b></td>
             <td border="0" valign="top"><a href="#_C640">NEN3610ID</a></td>
          </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
-            <td border="0">Gemeentelijke en provinciale wegen hebben meestal een vijf-cijferige code en rijkswegen een zeven-cijferige code.</td>
-         </tr>
       </table>
    </section>
    <section id="_A612_2899.monitoringsjaar">
@@ -3132,12 +4854,12 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          </tr>
       </table>
    </section>
-   <section id="_A612_3034.naam">
-      <h3>naam</h3>
+   <section id="_A612_3034.straatnaam">
+      <h3>straatnaam</h3>
       <table class="att">
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">Een verzameling woorden die praktisch worden gebruikt om een wegdeel te duiden.</td>
+            <td border="0" valign="top">De straatnaam zoals als aangeduid in het NWB of een eigen beschrijving wanneer de straat in het NWB niet bestaat.</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px"><b>Stereotype:</b></td>
@@ -3149,7 +4871,32 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          </tr>
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
-            <td border="0" valign="top">1</td>
+            <td border="0" valign="top">0..1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">CharacterString</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A612_3057.wegnummer">
+      <h3>wegnummer</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">Het wegnummer zoals aangeduid in het NWB.</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">0..1</td>
          </tr>
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Type:</b></td>
@@ -3196,47 +4943,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
             <td border="0">Om een SRM1 berekening uit te kunnen voeren, is altijd een koppeling met een receptor vereist. De wettelijke onderlinge afstand tussen receptoren is gesteld op 100 meter. Voor wegdelen is geen minimale lengte vastgesteld en om deze reden zijn wegdelen met rekenmethode SRM1 waarbij een koppeling met een receptorontbreekt wel toegestaan.</td>
-         </tr>
-      </table>
-   </section>
-   <section id="_A612_2906.hoogte">
-      <h3>hoogte</h3>
-      <table class="att">
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
-            <td border="0" valign="top">De gemiddelde hoogte van het wegdeel t.o.v. omringend maaiveld</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px"><b>Stereotype:</b></td>
-            <td>Attribuutsoort</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
-            <td border="0">nee</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
-            <td border="0" valign="top">0..1</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Type:</b></td>
-            <td border="0" valign="top">Integer</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
-            <td border="0">meter</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Maximale waarde:</b></td>
-            <td border="0">30</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Minimale waarde:</b></td>
-            <td border="0">-30</td>
-         </tr>
-         <tr border="0">
-            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
-            <td border="0">Dit is specifiek voor SRM2.</td>
          </tr>
       </table>
    </section>
@@ -3341,6 +5047,47 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
          <tr border="0">
             <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
             <td border="0">Dit is een correctie voor opbouw van emissies in een tunnel.</td>
+         </tr>
+      </table>
+   </section>
+   <section id="_A612_2906.hoogte">
+      <h3>hoogte</h3>
+      <table class="att">
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Definitie:</b></td>
+            <td border="0" valign="top">De gemiddelde hoogte van het wegdeel t.o.v. omringend maaiveld</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Stereotype:</b></td>
+            <td>Attribuutsoort</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px"><b>Mogelijk geen waarde:</b></td>
+            <td border="0">nee</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Kardinaliteit:</b></td>
+            <td border="0" valign="top">0..1</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Type:</b></td>
+            <td border="0" valign="top">Integer</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Eenheid:</b></td>
+            <td border="0">meter</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Maximale waarde:</b></td>
+            <td border="0">30</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Minimale waarde:</b></td>
+            <td border="0">-30</td>
+         </tr>
+         <tr border="0">
+            <td border="0" width="200px" valign="top"><b>Toelichting:</b></td>
+            <td border="0">Dit is specifiek voor SRM2.</td>
          </tr>
       </table>
    </section>
