@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.join" id="C4cbe60cc-ac7e-4605-bd93-41b81ae29ea2" priority="normal">
+        <source name="types">
+            <class>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+            </class>
+        </source>
+        <source name="types">
+            <class>
+                <type name="codelijst_OIN_KvK_CBS_END_aggl"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </target>
+        <complexParameter name="join">
+            <jp:join-parameter xmlns:jp="http://www.esdi-humboldt.eu/hale/join">
+                <class>
+                    <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                </class>
+                <class>
+                    <type name="codelijst_OIN_KvK_CBS_END_aggl"/>
+                </class>
+                <jp:condition>
+                    <property>
+                        <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                        <child name="overheidid"/>
+                    </property>
+                    <property>
+                        <type name="codelijst_OIN_KvK_CBS_END_aggl"/>
+                        <child name="NSLCode"/>
+                    </property>
+                </jp:condition>
+            </jp:join-parameter>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C200d0224-e783-4326-ad7f-6be8cea5304a" priority="normal">
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="geomet_wkt"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="geometrie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+// access variable&#xD;
+def value = geomet_wkt&#xD;
+&#xD;
+return _.geom.with(geometry:value, crs: "EPSG:28992")
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C95d0bcb0-14b0-47ec-ab6c-d16570f66620" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="hoogte"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="hoogte" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C3e69d899-2040-48e4-be2d-7631afb2e4ba" priority="normal">
+        <source name="var">
+            <property>
+                <type name="codelijst_OIN_KvK_CBS_END_aggl"/>
+                <child name="KvKnummer"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="segment_id"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="codelijst_OIN_KvK_CBS_END_aggl"/>
+                <child name="NSLCode"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="W_{KvKnummer}_{segment_id}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C3e45f66e-46ac-43e0-9db3-3164ddce70f6" priority="normal">
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="namespace" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="{{project:namespace}}" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C74d6a3b0-4546-464a-a4df-6fc4441ab0cc" priority="normal">
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="monitoringsjaar" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="2021" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C60ab6e1c-39ba-47b6-b27d-7927a2f78028" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="opmerking"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="opmerking" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf609ab93-e26e-443f-8486-33d971a8a059" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="a_scherm_l"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="overdrachtsobjectLinks" ns="http://cimlk.nl/1.0"/>
+                <child name="Overdrachtsobject" ns="http://cimlk.nl/1.0"/>
+                <child name="afstand" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C18ce7ebd-e44c-403c-aeeb-64a2f0995846" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="s_hoogte_l"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="overdrachtsobjectLinks" ns="http://cimlk.nl/1.0"/>
+                <child name="Overdrachtsobject" ns="http://cimlk.nl/1.0"/>
+                <child name="hoogte" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2b99cc72-7ee6-413d-b4f8-8391773f756e" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="a_scherm_r"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="overdrachtsobjectRechts" ns="http://cimlk.nl/1.0"/>
+                <child name="Overdrachtsobject" ns="http://cimlk.nl/1.0"/>
+                <child name="afstand" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C01098508-0da8-420b-bd89-99b00cc280c7" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="s_hoogte_r"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="overdrachtsobjectRechts" ns="http://cimlk.nl/1.0"/>
+                <child name="Overdrachtsobject" ns="http://cimlk.nl/1.0"/>
+                <child name="hoogte" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cc6e8c1ed-a45f-44c7-907b-f9bb6dad8970" priority="normal">
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="wegtype"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="rekenmethode" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if ((wegtype == '92') || (wegtype == '93') || (wegtype == '94')) {&#xD;
+	return 'SRM2'&#xD;
+} &#xD;
+else {&#xD;
+	return 'SRM1'&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9c493866-6fef-4e8e-b238-e9ce2fad54be" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="straatnaam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="straatnaam" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C284201fb-8b10-47c6-b447-8392292e1b0d" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="gewijzigd"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C577ae3e0-d662-4d31-9aec-70ae2dfcdb3e" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="tun_factor"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="tunnelfactor" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ce1f9ab01-a9e6-449c-85b3-038d6b7275af" priority="normal">
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="int_lv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="maxsnelh_p"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="int_mv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="maxsnelh_v"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="maxs_p_dyn"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="stagf_lv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="int_zv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="int_bv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="int_lv_dyn"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="stagf_zv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="stagf_bv"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="stagf_mv"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="verkeergegevens" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+_target {&#xD;
+	VerkeersgegevensWeg {&#xD;
+		intensiteit int_bv&#xD;
+		stagnatiefactor stagf_bv&#xD;
+		voertuigclassificatie 'b'&#xD;
+	}&#xD;
+	VerkeersgegevensWeg {&#xD;
+		intensiteit int_lv&#xD;
+		maximumsnelheid maxsnelh_p&#xD;
+		stagnatiefactor stagf_lv&#xD;
+		voertuigclassificatie 'l'&#xD;
+	}&#xD;
+	VerkeersgegevensWeg {&#xD;
+		intensiteit int_mv&#xD;
+		stagnatiefactor stagf_mv&#xD;
+		voertuigclassificatie 'm'&#xD;
+	}&#xD;
+	VerkeersgegevensWeg {&#xD;
+		intensiteit int_zv&#xD;
+		stagnatiefactor stagf_zv&#xD;
+		voertuigclassificatie 'z'&#xD;
+	}&#xD;
+	if (maxs_p_dyn) {&#xD;
+		VerkeersgegevensWeg {&#xD;
+			intensiteit int_lv_dyn&#xD;
+			maximumsnelheid maxs_p_dyn&#xD;
+			voertuigclassificatie 'l'&#xD;
+		}&#xD;
+	}		&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbfa9635e-e286-4f4c-b503-bc7acabb8fb1" priority="normal">
+        <source>
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="nwb_weg_id"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="wegnummer" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ced0ea7ca-c7a4-48c0-8775-d6ad595e13db" priority="normal">
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="wegtype"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="segment_amersfoort_g307_mt2020_j2019_rpgw_s"/>
+                <child name="snelheid"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+                <child name="wegsoort" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if ((wegtype == '92') || (wegtype == '93') || (wegtype == '94')) {&#xD;
+	return wegtype&#xD;
+} &#xD;
+else {&#xD;
+	return snelheid&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+</alignment>
