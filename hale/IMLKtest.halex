@@ -4,7 +4,7 @@
     <author>Danny Greefhorst</author>
     <description>Test voor het maken van IMLK bestanden</description>
     <created>2021-12-06T12:46:28.259+01:00</created>
-    <modified>2022-01-18T15:04:50.188+01:00</modified>
+    <modified>2022-01-18T16:40:15.348+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -588,7 +588,7 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
+        <setting name="source">imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.schema">
@@ -889,7 +889,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.xls.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">00a5d994-f822-4ce4-b647-068d79766fc8</setting>
+        <setting name="resourceId">798267a0-3591-4adb-a705-73a4313e838b</setting>
         <setting name="sheetIndex">0</setting>
         <setting name="skip">true</setting>
         <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/20211117_OT_Codelijst_2022_OIN_Bronhouders_KvK_Type_CBScode_END_aggl_MG.xlsx</setting>
@@ -898,7 +898,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">ISO-8859-1</setting>
-        <setting name="resourceId">66a2c343-f6a9-404e-9eac-3eaa286a90c4</setting>
+        <setting name="resourceId">869521d5-a004-4c76-91b3-7ee2090ca0a5</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
         <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/segment_amersfoort_g307_mt2020_j2019_rpgw_s.csv</setting>
