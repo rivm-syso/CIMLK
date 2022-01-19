@@ -3,12 +3,12 @@
     <name>Veehouderij export</name>
     <author>dgree</author>
     <created>2022-01-19T08:02:55.462+01:00</created>
-    <modified>2022-01-19T13:43:18.787+01:00</modified>
+    <modified>2022-01-19T17:26:08.998+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Veehouderij%20export.halex</setting>
+        <setting name="target">file:/C:/Users/geijerm/Git/CIMLK/hale/Veehouderij%20export.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">ISO-8859-1</setting>
@@ -16,7 +16,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Float,java.lang.Float,java.lang.Float,java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.Float,java.lang.Float,java.lang.Float,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Float,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234.csv</setting>
+        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -384,7 +384,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
         <setting name="resourceId">aa11d5cc-8dfd-4ae6-9c52-12d5abb3aa3c</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
+        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
@@ -392,13 +392,20 @@
         <setting name="resourceId">b1e9651b-8dcd-4322-b5b0-3590c681b488</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234.csv</setting>
+        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
         <setting name="typename">veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234</setting>
     </resource>
+    <export-config name="JSON">
+        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.json.writer">
+            <setting name="charset">UTF-8</setting>
+            <setting name="meta.description"></setting>
+            <setting name="contentType">eu.esdihumboldt.hale.io.json</setting>
+        </configuration>
+    </export-config>
     <file name="alignment.xml" location="Veehouderij%20export.halex.alignment.xml"/>
     <file name="styles.sld" location="Veehouderij%20export.halex.styles.sld"/>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}CorrectieType/1">{http://cimlk.nl/1.0}geometrie</property>
