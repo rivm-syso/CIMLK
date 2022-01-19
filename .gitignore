@@ -1,1 +1,4 @@
 *.ldb
+*.log
+*.index
+*.data
