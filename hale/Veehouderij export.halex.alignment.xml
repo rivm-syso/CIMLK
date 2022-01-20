@@ -208,7 +208,7 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8d075d06-be2f-477e-b6ce-95439a7d896f" priority="normal">
+    <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="C8d075d06-be2f-477e-b6ce-95439a7d896f" priority="normal">
         <source>
             <property>
                 <type name="veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234"/>
@@ -221,8 +221,7 @@
                 <child name="datumVergunning" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <parameter value="d-M-yyyy" name="dateFormat"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cd656f0f4-4eac-4a4c-a346-1874a1ebbf57" priority="normal">
         <source name="var">
@@ -376,10 +375,8 @@ _target {&#xD;
 		eigenFactorToelichting eigenFactorToelichting&#xD;
 		eigenReductiefactorPm10 reductiefactorPM10&#xD;
 		opmerking opmerking&#xD;
-		if (ravFactor) {&#xD;
-			ravFactor {&#xD;
-				href '#'+ravFactor&#xD;
-			}&#xD;
+		ravFactor {&#xD;
+			href '#'+ravFactor&#xD;
 		}&#xD;
 		if (ravMaatregel) {&#xD;
 			ravMaatregel {&#xD;
@@ -412,7 +409,7 @@ _target {&#xD;
             </property>
         </target>
         <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">_.geom.with(geometry: "POINT(" + bronX + " " + bronY + ")", crs: "EPSG:28992")</core:text>
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return _.geom.with(geometry: "POINT("+bronX+" "+bronY+")", crs: "EPSG:28992")</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
