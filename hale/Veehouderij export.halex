@@ -3,36 +3,36 @@
     <name>Veehouderij export</name>
     <author>dgree</author>
     <created>2022-01-19T08:02:55.462+01:00</created>
-    <modified>2022-01-20T09:29:51.692+01:00</modified>
+    <modified>2022-01-20T14:52:43.184+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/geijerm/Git/CIMLK/hale/Veehouderij%20export.halex</setting>
+        <setting name="target">file:/Veehouderij%20export.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
-        <setting name="charset">ISO-8859-1</setting>
+        <setting name="charset">UTF-8</setting>
         <setting name="resourceId">22da5001-a28f-453d-8fe2-338e457ee29b</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Float,java.lang.Float,java.lang.Float,java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.Float,java.lang.Float,java.lang.Float,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Float,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234.csv</setting>
+        <setting name="source">file:/schemas/veehouderij_bronnen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234</setting>
+        <setting name="typename">veehouderij_bronnen</setting>
         <setting name="properties">veehouderijIdentificatie,naamOverheid,veehouderijAdres,veehouderijDatumVergunning,stalIdentificatie,stalLengte,stalBreedte,stalHoogte,stalOrientatie,stalIdentificatiePandBAG,stalX,stalY,bronIdentificatie,bronHoogte,bronDiameter,bronUittreesnelheid,bronX,bronY,ravFactor,owFactor,ravMaatregel,owMaatregel,aantalDieren,emissiefactorPM10,reductiefactorPM10,eigenFactorToelichting,opmerking,tijdstipRegistratie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
                     <hsd:entry index="0">
-                        <hsd:name>veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234</hsd:name>
+                        <hsd:name>veehouderij_bronnen</hsd:name>
                     </hsd:entry>
                 </hsd:type-index>
                 <hsd:mapping-relevant>0</hsd:mapping-relevant>
                 <hsd:types>
                     <hsd:type index="0">
-                        <hsd:name>veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234</hsd:name>
+                        <hsd:name>veehouderij_bronnen</hsd:name>
                         <hsd:constraint type="abstract" value="false"/>
                         <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
@@ -384,20 +384,20 @@
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
         <setting name="resourceId">aa11d5cc-8dfd-4ae6-9c52-12d5abb3aa3c</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/imlk.xsd</setting>
+        <setting name="source">file:/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">ISO-8859-1</setting>
+        <setting name="charset">UTF-8</setting>
         <setting name="resourceId">2a276f50-0cc4-441c-8b78-eac938f34718</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/actualiseren_bronnen_veehouderij.csv</setting>
+        <setting name="source">file:/input/actualiseren_bronnen_veehouderij.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">veehouderij_jurisdictienaam_p20003_mt2021_j2020_rpgw_s_11230604075774685234</setting>
+        <setting name="typename">veehouderij_bronnen</setting>
     </resource>
     <export-config name="GML">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">
@@ -405,18 +405,11 @@
             <setting name="meta.description">Export GML FeatureCollection</setting>
             <setting name="geometry.unifyWindingOrder">counterClockwise</setting>
             <setting name="gml.geometry.simplify">true</setting>
-            <setting name="crs"/>
-            <setting name="crs.epsg.prefix"/>
+            <setting name="crs"></setting>
+            <setting name="crs.epsg.prefix"></setting>
             <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
             <setting name="xml.notNil.omitNilReason">true</setting>
             <setting name="xml.pretty">true</setting>
-        </configuration>
-    </export-config>
-    <export-config name="JSON">
-        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.json.writer">
-            <setting name="charset">UTF-8</setting>
-            <setting name="meta.description"></setting>
-            <setting name="contentType">eu.esdihumboldt.hale.io.json</setting>
         </configuration>
     </export-config>
     <file name="alignment.xml" location="Veehouderij%20export.halex.alignment.xml"/>
