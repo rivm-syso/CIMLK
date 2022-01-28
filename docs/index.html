@@ -179,10 +179,10 @@
 						<li>lokaalID: een unieke identificatie van het object</li>
 						<li>versienummer: een identificatie van een specifieke versie van het object</li>
 					</ul>
-					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Het lokaalID zal bestaat uit een combinatie van het KvK-nummer van de bronhouder, een punt (".") en de identiticatie die de bronhouder er zelf aan heeft gegeven. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
+					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Er worden per objecttype standaard letters gehanteerd. Het NEN3610ID heeft dan de volgende structuur:<br>NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</p>
-				<p>De volgende standaard letters worden gehanteerd:
+				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen, monitoringsronden of zichtjaren dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype, de monitoringsronde en het monitoringsjaar. Het NEN3610ID heeft dan de volgende structuur:<br>NL.imlk.[Monitoringsronde]_[Monitoringsjaar]_[LettersObjecttype]_[KvK]_[identificatie]</p>
+				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
 				<ul>
 				<li><b>W</b>: Wegdeel</li>
 				<li><b>RW</b>: Receptor wegverkeer</li>
@@ -194,7 +194,7 @@
 				<li><b>B</b>: Veehouderijbron</li>
 				</ul>
 				</p>
-				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
+				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KVK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
 				</p>
 			</section>
 			<section>
@@ -288,17 +288,17 @@
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-wegverkeer">
-						<area href="#Wegdeel" coords="8,6,310,376" shape="rect"/>
+						<area href="#Wegdeel" coords="8,6,310,336" shape="rect"/>
 						<area href="#VerkeersgegevensWeg" coords="423,6,730,110" shape="rect"/>
-						<area href="#Overdrachtskenmerken" coords="8,435,310,540" shape="rect"/>
+						<area href="#Overdrachtskenmerken" coords="8,435,310,520" shape="rect"/>
 						<area href="#Overdrachtsobject" coords="423,200,730,315" shape="rect"/>
 						<area href="#ReceptorWegverkeer" coords="8,600,310,705" shape="rect"/>
-						<area href="#Receptor" coords="423,600,730,800" shape="rect"/>
-						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1680" shape="rect"/>
-						<area href="#Correctieterm" coords="423,900,730,1070" shape="rect"/>
-						<area href="#Correctie" coords="423,1130,730,1215" shape="rect"/>
-						<area href="#Maatregel" coords="423,1320,730,1500" shape="rect"/>
-						<area href="#Maatregelfactor" coords="423,1550,730,1680" shape="rect"/>
+						<area href="#Receptor" coords="423,600,730,760" shape="rect"/>
+						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1640" shape="rect"/>
+						<area href="#Correctie" coords="423,900,730,1030" shape="rect"/>						
+						<area href="#Correctieterm" coords="423,1100,730,1190" shape="rect"/>
+						<area href="#Maatregel" coords="423,1325,730,1460" shape="rect"/>
+						<area href="#Maatregelfactor" coords="423,1520,730,1640" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -307,15 +307,15 @@
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-veehouderij">
-						<area href="#Veehouderij" coords="187,7,442,143" shape="rect"/>
-						<area href="#Stal" coords="8,227,266,437" shape="rect"/>
-						<area href="#Veehouderijbron" coords="8,556,266,750" shape="rect"/>
-						<area href="#Emissiespecificatie" coords="8,800,266,958" shape="rect"/>
-						<area href="#Huisvestingssysteem" coords="8,1019,266,1140" shape="rect"/>
-						<area href="#Receptor" coords="380,227,650,422" shape="rect"/>
+						<area href="#Veehouderij" coords="187,7,442,123" shape="rect"/>
+						<area href="#Stal" coords="8,227,266,417" shape="rect"/>
+						<area href="#Veehouderijbron" coords="8,556,266,730" shape="rect"/>
+						<area href="#Emissiespecificatie" coords="8,800,266,938" shape="rect"/>
+						<area href="#Huisvestingssysteem" coords="8,1019,266,1120" shape="rect"/>
+						<area href="#Receptor" coords="380,227,650,380" shape="rect"/>
 						<area href="#ReceptorVeehouderij" coords="380,500,650,590" shape="rect"/>
 						<area href="#RekenresultaatVeehouderij" coords="380,660,650,925" shape="rect"/>
-						<area href="#AanvullendeTechniek" coords="380,1019,650,1140" shape="rect"/>
+						<area href="#AanvullendeTechniek" coords="380,1019,650,1120" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -337,23 +337,14 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Beschrijving van de aanvullende maatregelen die zijn genomen om de emissie te beperken.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De RAV maatregel geeft aan welke emissiereductie een maatregel tot gevolg heeft.</td></tr>
 </table>
-<section id="AanvullendeTechniek.code">
-<h3>code</h3>
+<section id="AanvullendeTechniek.identificatie">
+<h3>identificatie</h3>
 <table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een code die een de aanvullende techniek uniek identificeert zoals vastgesteld in de Regeling Ammoniak en Veehouderij.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#AanvullendeTechniekLijst">AanvullendeTechniekLijst</a></tr>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een aanvullende techniek. Deze bevat de code van de aanvullende techniek zoals vastgesteld in de Regeling Ammoniak en Veehouderij.
+</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="AanvullendeTechniek.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -398,26 +389,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Correctie.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Correctie.monitoringsjaar">
-<h3>monitoringsjaar</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Correctie.naam">
 <h3>naam</h3>
 <table width=100%>
@@ -433,7 +404,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Numerieke waardes voor de correcties voor specifieke stoffen. </td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Correctieterm">Correctieterm</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
@@ -481,24 +451,13 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Beschrijving van het soort stalsysteem dat wordt gebruikt om de dieren te houden zoals gedefinieerd in de Regeling Ammoniak en Veehouderij.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het gaat om pure emissies in combinatie met stalsystemen. De RAV factor wordt gebruikt om de emissie te bepalen. RAV factoren worden jaarlijks vastgesteld. </td></tr>
 </table>
-<section id="Huisvestingssysteem.code">
-<h3>code</h3>
+<section id="Huisvestingssysteem.identificatie">
+<h3>identificatie</h3>
 <table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De code die het huisvestingssysteem uniek identificeert zoals vastgesteld in de Regeling Ammoniak en Veehouderij.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>RAV factorcodes worden door de rijksoverheid gedefinieerd.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#HuisvestingssysteemLijst">HuisvestingssysteemLijst</a></tr>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een huisvestingssysteem deze bevat de code van het huisvestingssysteem zoals vastgesteld in de Regeling Ammoniak en Veehouderij.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Huisvestingssysteem.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -539,26 +498,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een maatregelgebied voor wegverkeer.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Maatregel.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Maatregel.monitoringsjaar">
-<h3>monitoringsjaar</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -681,26 +620,6 @@
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Receptor.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Receptor.monitoringsjaar">
-<h3>monitoringsjaar</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Receptor.naam">
 <h3>naam</h3>
 <table width=100%>
@@ -765,7 +684,7 @@
 <h3>toetspuntSoort</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of het een toetspunt betreft.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan voor welke stof/stoffen het punt een toetspunt is.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Deze informatie is alleen van belang voor het uitvoeren van de monitoring, niet voor het uitvoeren van een losse berekening.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#ToestpuntVeehouderij">ToestpuntVeehouderij</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -794,7 +713,7 @@
 <tr border="0"><td width=200px><b>Kardinaliteit bron</b></td><td>1..*</td></tr>
 <tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Veehouderij">Veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>veehouderij</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
 </table>
 </section>
 </section>
@@ -808,7 +727,7 @@
 <h3>toetspuntSoort</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of het een toetspunt betreft.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan voor welke stof/stoffen het punt een toetspunt is.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Deze informatie is alleen van belang voor het uitvoeren van de monitoring, niet voor het uitvoeren van een losse berekening.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>ToetspuntWegverkeer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -851,7 +770,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De versie van de rekentool waarmee de berekening is uitgevoerd.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -862,7 +780,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -939,7 +856,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende bronbijdrage voor PM10 overschrijdingsdagen op de receptor.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -950,7 +866,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 overschrijdingsdagen op basis van de achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling).</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -961,7 +876,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het aantal overschrijdingsdagen op basis van de GCN.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -972,7 +886,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op het aantal PM10 overschrijdingsdagen.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -1002,7 +915,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De versie van de rekentool waarmee de berekening is uitgevoerd.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -1013,7 +925,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -1129,33 +1040,11 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RekenresultaatWegverkeer.no2SchipholDelta">
-<h3>no2SchipholDelta</h3>
+<section id="RekenresultaatWegverkeer.no2GCNenEigenCorrectie">
+<h3>no2GCNenEigenCorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het Schipholgebied.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="RekenresultaatWegverkeer.no2EigenCorrectie">
-<h3>no2EigenCorrectie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor NO2 die door de gebruiker is ingevoerd op de receptor.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="RekenresultaatWegverkeer.o3GCN">
-<h3>o3GCN</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie O3.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor NO2 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1173,11 +1062,33 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RekenresultaatWegverkeer.o3SchipholDelta">
-<h3>o3SchipholDelta</h3>
+<section id="RekenresultaatWegverkeer.o3GCN">
+<h3>o3GCN</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het Schipholgebied.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie O3.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.o3HWNdubtelcorrectie">
+<h3>o3HWNdubtelcorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Dubbeltellingscorrectie op O3 voor de bijdrage van het hoofdwegennet.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatWegverkeer.o3GCNenEigenCorrectie">
+<h3>o3GCNenEigenCorrectie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor O3 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1261,22 +1172,11 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RekenresultaatWegverkeer.pm10IJmondDelta">
-<h3>pm10IJmondDelta</h3>
+<section id="RekenresultaatWegverkeer.pm10GCNenEigenCorrectie">
+<h3>pm10GCNenEigenCorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het IJmondgebied.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="RekenresultaatWegverkeer.pm10EigenCorrectie">
-<h3>pm10EigenCorrectie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM10 die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM10 die kan bestaan uit een correctie op de GCN (bijv. IJmond correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1327,17 +1227,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RekenresultaatWegverkeer.pm25IJmondDelta">
-<h3>pm25IJmondDelta</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor het IJmondgebied.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="RekenresultaatWegverkeer.pm25GCN">
 <h3>pm25GCN</h3>
 <table width=100%>
@@ -1360,11 +1249,11 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RekenresultaatWegverkeer.pm25EigenCorrectie">
-<h3>pm25EigenCorrectie</h3>
+<section id="RekenresultaatWegverkeer.pm25GCNenEigenCorrectie">
+<h3>pm25GCNenEigenCorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM2.5 die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM2.5 die kan bestaan uit een correctie op de GCN (waaronder Schiphol en IJmond correcties) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1437,11 +1326,11 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="RekenresultaatWegverkeer.ecEigenCorrectie">
-<h3>ecEigenCorrectie</h3>
+<section id="RekenresultaatWegverkeer.ecGCNenEigenCorrectie">
+<h3>ecGCNenEigenCorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor EC die door de gebruiker is ingevoerd op de receptor.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor EC die kan bestaan uit een correctie op de GCN en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
@@ -1474,16 +1363,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een stal van een veehouderij.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Stal.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1602,16 +1481,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Veehouderij.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Veehouderij.adres">
 <h3>adres</h3>
 <table width=100%>
@@ -1659,16 +1528,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een emissiebron van een veehouderij.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Veehouderijbron.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1773,26 +1632,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Wegdeel.monitoringsjaar">
-<h3>monitoringsjaar</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het jaar waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Wegdeel.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Wegdeel.straatnaam">
 <h3>straatnaam</h3>
 <table width=100%>
@@ -1894,7 +1733,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het soort talud dat het wegdeel aan beide kanten begrensd.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#TaludSoort">TaludSoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -1925,7 +1763,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Overdrachtsobject aan de linkerkant van een wegdeel gezien vanuit de rijrichting.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
@@ -1937,7 +1774,6 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Overdrachtsobject aan de rechterkant van een wegdeel gezien vanuit de rijrichting.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de gegevensgroep.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Overdrachtsobject">Overdrachtsobject</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
@@ -2003,18 +1839,7 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling kenmerken van een veehouderijbron die relevant is om de hoeveelheid emissie van die veehouderijbron te bepalen.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 </table>
-<section id="Emissiespecificatie.monitoringsronde">
-<h3>monitoringsronde</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Emissiespecificatie.aantalDieren">
 <h3>aantalDieren</h3>
 <table width=100%>
@@ -2029,25 +1854,25 @@
 <h3>eigenEmissiefactorPm10</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor deze niet met de standaard RAV factoren kan worden bepaald.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor er geen standaard emissiefactor beschikbaar is.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>g/dier/jaar</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (ravFactor == "Exp. Stal") DAN (eigenEmissiefactor != NULL) ANDERS (eigenEmissiefactor == NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (huisvestingssysteem == "Exp. stal") DAN (eigenEmissiefactor != NULL) ANDERS (eigenEmissiefactor == NULL)</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.eigenReductiefactorPm10">
 <h3>eigenReductiefactorPm10</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor deze niet met de standaard RAV maatregelen kan worden bepaald.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor er geen standaard reductiefactor beschikbaar is.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (ravMaatregel == 'Overig') DAN (eigenReductiefactor != NULL) ANDERS (eigenReductiefactor == NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (aanvullendeTechniek == 'Overig') DAN (eigenReductiefactor != NULL) ANDERS (eigenReductiefactor == NULL)</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.eigenFactorToelichting">
@@ -2219,17 +2044,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Overdrachtskenmerken.afstand">
-<h3>afstand</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De afstand tussen de receptor en het wegdeel die gebruik wordt in SRM1 berekening.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section>
 <h3>wegdeel</h3>
 <table width=100%>
@@ -2255,7 +2069,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Beschrijft het overdrachtsobject dat zich langs het wegdeel bevindt.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#OverdrachtsobjectSoort">OverdrachtsobjectSoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -2338,6 +2151,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>Bebouwingstype</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die verschillende vormen van bebouwing naast een weg beschrijft.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>1 (Brede streetcanyon): Aan beide zijden van de weg min of meer aaneengesloten bebouwing op een afstand van maximaal 60 meter van de wegas, waarbij de afstand tussen wegas en gevel kleiner is dan drie maal de hoogte van de bebouwing, maar groter is dan 1,5 x de hoogte van de bebouwing (brede streetcanyon).</li>
 <li>2 (Smalle streetcanyon): Aan beide zijden van de weg min of meer aaneengesloten bebouwing op een afstand van maximaal 60 meter van de weg, waarbij de afstand tussen wegas en gevel kleiner is dan 1,5 x de hoogte van de bebouwing.</li>
@@ -2349,6 +2163,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>Jurisdictietype</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst waarin onderscheid wordt gemaakt tussen de verschillende soorten jurisdicties.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>G (Gemeente)</li>
 <li>P (Provincie)</li>
@@ -2360,6 +2175,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>OverdrachtsobjectSoort</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die verschillende vormen van overdrachtsobjecten langs een weg beschrijft.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>s (Scherm): Een overdrachtsobject in de vorm van scherm.</li>
 <li>w (Wal): Een overdrachtsobject in de vorm van een wal.</li>
@@ -2369,6 +2185,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>ReceptorGrondslagVeehouderij</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met waarden die de grondslag beschrijven waarom een punt wel of geen toetspunt is voor veehouderijen.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>1 (Burgerwoning): Burgerwoning waarop getoetst moet worden</li>
 <li>2 (Eigen bedrijfswoning): Bedrijfswoning op terrein van de eigen veehouderij</li>
@@ -2381,6 +2198,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>ReceptorGrondslagWegverkeer</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met waarden die de grondslag beschrijven waarom een punt wel of geen toetspunt is voor wegverkeer.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>0 (NSL-toetspunt): NSL-toetspunt waarop getoetst wordt aan de normwaarden</li>
 <li>1 (Toepasbaarheidbeginsel): Het toepasbaarheidsbeginsel stelt dat niet getoetst hoeft te worden op plaatsen waar geen mensen mogen en kunnen komen, terreinen met &#233;&#233;n of meer inrichtingen  waar al regels gelden voor de gezondheid en veiligheid van werknemers en op de weginrichting zelf (rijbanen en middenberm).</li>
@@ -2392,6 +2210,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>Rekenmethode</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die de verschillende voorgeschreven rekenmethoden bevat voor wegverkeer bevat.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>SRM1 (): Standaard Reken Methode 1</li>
 <li>SRM2 (): Standaard Reken Methode 2</li>
@@ -2401,6 +2220,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>TaludSoort</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die de verschillende vormen van talud beschrijft langs een wegdeel.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>zvz (Zeer vlakke zijkanten): Talud met aan beide kanten zeer vlakke zijkanten (HOEK SPECIFICEREN).</li>
 <li>vz (Vlakke zijkanten): Talud met aan beide kanten vlakke zijkanten (HOEK SPECIFICEREN).</li>
@@ -2413,6 +2233,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>ToestpuntVeehouderij</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die beschrijft voor welke stof of stoffen de receptor een toetspunt is voor veehouderijen.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>Alle (Alle stoffen): Toetspunt voor alle stoffen waarvoor de berekening wordt uitgevoerd.</li>
 <li>Geen (Geen toetspunt): Voor geen van de stoffen waarvoor de berekening wordt uitgevoerd is het een toetspunt.</li>
@@ -2422,24 +2243,18 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>ToestpuntWegverkeer</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die beschrijft voor welke stof of stoffen de receptor een toetspunt is voor wegverkeer.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>Alle (Alle stoffen): Toetspunt voor alle stoffen waarvoor de berekening wordt uitgevoerd.</li>
 <li>PM10 (PM10): Toetspunt voor de stof PM10 maar niet voor de andere stoffen waarvoor de berekning wordt uitgevoerd.</li>
 <li>Geen (Geen toetspunt): Voor geen van de stoffen waarvoor de berekening wordt uitgevoerd is het een toetspunt.</li>
 </ul></td></tr></table>
 </section>
-<section id="VeehouderijStof">
-<h2>VeehouderijStof</h2>
-<table>
-<tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
-<tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
-<li>PM10 (PM10): Fijnstof <10 micrometer</li>
-</ul></td></tr></table>
-</section>
 <section id="Wegsoort">
 <h2>Wegsoort</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die onderscheid maakt in wegsoorten op basis waarvan de bijbehorende emissiefactor voor de weg kan worden bepaald.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>b (Buitenweg algemeen): Typisch buitenwegverkeer, een gemiddelde snelheid van ongeveer 60 km/h, gemiddeld ca. 0,2 stops per afgelegde km.</li>
 <li>c (Normaal stadsverkeer ): Typisch stadsverkeer met een redelijke mate van congestie, een gemiddelde snelheid tussen de 15 en 30 km/h, gemiddeld ca. 2 stops per afgelegde km.</li>
@@ -2454,6 +2269,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>WegverkeerBoomFactor</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>1,00 (Enkele bomen): Hier en daar bomen of in het geheel niet.</li>
 <li>1,25 (Meerdere bomen): Een of meer rijen bomen met een onderlinge afstand < 15 meter met openingen tussen de kronen.</li>
@@ -2464,6 +2280,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>WegverkeerStof</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met de stoffen waarop een correctie van toepassing kan zijn.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>EC (EC): Elementair koolstof</li>
 <li>NO2 (NO2): Stikstofdioxide</li>
@@ -2477,6 +2294,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>WegverkeerVoertuigtype</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met waarin onderscheid wordt gemaakt tussen verschillende voertuigtypen waarop een maatregel van toepassing kan zijn.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>b (Bus verkeer): Voor bussen op binnenstedelijke wegen heeft de Monitoringstool een aparte categorie. Dit komt doordat overheden via de aanbesteding invloed uit kunnen oefenen op de emissies per voertuig. Deze emissies zijn daardoor vaak anders dan die van 'middelzwaar verkeer'.</li>
 <li>l (Licht verkeer): Motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorieën 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</li>
@@ -2486,20 +2304,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 </ul></td></tr></table>
 </section>
 </section><section><h2>Referentielijsten</h2>
-<section id="AanvullendeTechniekLijst">
-<h2>AanvullendeTechniekLijst</h2>
-<table>
-<tr><td width=200px valign=top><b>Stereotype</b></td><td>Referentielijst</td></tr>
-<tr border="0"><td width=200px valign=top><b>Locatie</b></td><td>https://www.infomil.nl/onderwerpen/landbouw/emissiearme-stalsystemen/emissiefactoren-per/</td></tr>
-</ul></td></tr></table>
-</section>
-<section id="HuisvestingssysteemLijst">
-<h2>HuisvestingssysteemLijst</h2>
-<table>
-<tr><td width=200px valign=top><b>Stereotype</b></td><td>Referentielijst</td></tr>
-<tr border="0"><td width=200px valign=top><b>Locatie</b></td><td>https://www.infomil.nl/onderwerpen/landbouw/emissiearme-stalsystemen/emissiefactoren-per/</td></tr>
-</ul></td></tr></table>
-</section>
 </section><style>
 #bijlagen table  {
   counter-reset: rowNumber;
@@ -2520,7 +2324,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 	<h2>Bijlagen</h2>
 	<section>
 		<h3>Uitwisselbestanden</h3>
-		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven. Daarnaast wordt van elke kolom ook vermeld hoe deze zich verhoudt tot het informatiemodel. De aangeleverde CSV bestanden dienen altijd een puntkomma (;) als scheidingsteken te gebruiken.</p>
+		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven. Daarnaast wordt van elke kolom ook vermeld hoe deze zich verhoudt tot het informatiemodel. De aangeleverde CSV bestanden dienen altijd een puntkomma (;) als scheidingsteken te gebruiken en een punt (.) als decimaalteken. In de kolom tijdstipRegistratie wordt de tijd altijd in Nederlandse tijd weergegeven inclusief correctie voor zomer/wintertijd</p>
 		<section>
 			<h4>Wegverkeer</h4>
 			<section>
@@ -2572,11 +2376,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>
 							<a href="#Overdrachtskenmerken.bomenfactor">Overdrachtskenmerken.bomenfactor</a>
 						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>afstand</td>
-						<td><a href="#Overdrachtskenmerken.afstand">Overdrachtskenmerken.afstand</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -3079,18 +2878,8 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>no2SchipholDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.no2SchipholDelta">RekenresultaatWegverkeer.no2SchipholDelta</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>no2EigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.no2EigenCorrectie">RekenresultaatWegverkeer.no2EigenCorrectie</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>o3GCN</td>
-						<td><a href="#RekenresultaatWegverkeer.o3GCN">RekenresultaatWegverkeer.o3GCN</a></td>
+						<td>no2GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.no2GCNenEigenCorrectie">RekenresultaatWegverkeer.no2GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -3099,8 +2888,18 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>o3SchipholDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.o3SchipholDelta">RekenresultaatWegverkeer.o3SchipholDelta</a></td>
+						<td>o3GCN</td>
+						<td><a href="#RekenresultaatWegverkeer.o3GCN">RekenresultaatWegverkeer.o3GCN</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>o3HWNdubtelcorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.o3HWNdubtelcorrectie">RekenresultaatWegverkeer.o3HWNdubtelcorrectie</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>o3GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.o3GCNenEigenCorrectie">RekenresultaatWegverkeer.o3GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -3139,13 +2938,8 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>pm10IJmondDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.pm10IJmondDelta">RekenresultaatWegverkeer.pm10IJmondDelta</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>pm10EigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.pm10EigenCorrectie">RekenresultaatWegverkeer.pm10EigenCorrectie</a></td>
+						<td>pm10GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.pm10GCNenEigenCorrectie">RekenresultaatWegverkeer.pm10GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -3169,11 +2963,6 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>pm25IJmondDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.pm25IJmondDelta">RekenresultaatWegverkeer.pm25IJmondDelta</a></td>
-					</tr>
-					<tr>
-						<td></td>
 						<td>pm25GCN</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25GCN">RekenresultaatWegverkeer.pm25GCN</a></td>
 					</tr>
@@ -3184,8 +2973,8 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>pm25EigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.pm25EigenCorrectie">RekenresultaatWegverkeer.pm25EigenCorrectie</a></td>
+						<td>pm25GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.pm25GCNenEigenCorrectie">RekenresultaatWegverkeer.pm25GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -3219,8 +3008,8 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>ecEigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.ecEigenCorrectie">RekenresultaatWegverkeer.ecEigenCorrectie</a></td>
+						<td>ecGCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.ecGCNenEigenCorrectie">RekenresultaatWegverkeer.ecGCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
