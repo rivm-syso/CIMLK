@@ -179,10 +179,10 @@
 						<li>lokaalID: een unieke identificatie van het object</li>
 						<li>versienummer: een identificatie van een specifieke versie van het object</li>
 					</ul>
-					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Het lokaalID zal bestaat uit een combinatie van het KvK-nummer van de bronhouder, een punt (".") en de identiticatie die de bronhouder er zelf aan heeft gegeven. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
+					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype. Er worden per objecttype standaard letters gehanteerd. Het NEN3610ID heeft dan de volgende structuur:<br>NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</p>
-				<p>De volgende standaard letters worden gehanteerd:
+				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen, monitoringsronden of zichtjaren dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype, de monitoringsronde en het monitoringsjaar. Het NEN3610ID heeft dan de volgende structuur:<br>NL.imlk.[Monitoringsronde]_[Monitoringsjaar]_[LettersObjecttype]_[KvK]_[identificatie]</p>
+				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
 				<ul>
 				<li><b>W</b>: Wegdeel</li>
 				<li><b>RW</b>: Receptor wegverkeer</li>
@@ -194,7 +194,7 @@
 				<li><b>B</b>: Veehouderijbron</li>
 				</ul>
 				</p>
-				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
+				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KVK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
 				</p>
 			</section>
 			<section>
@@ -288,17 +288,17 @@
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-wegverkeer">
-						<area href="#Wegdeel" coords="8,6,310,376" shape="rect"/>
+						<area href="#Wegdeel" coords="8,6,310,336" shape="rect"/>
 						<area href="#VerkeersgegevensWeg" coords="423,6,730,110" shape="rect"/>
-						<area href="#Overdrachtskenmerken" coords="8,435,310,540" shape="rect"/>
+						<area href="#Overdrachtskenmerken" coords="8,435,310,520" shape="rect"/>
 						<area href="#Overdrachtsobject" coords="423,200,730,315" shape="rect"/>
 						<area href="#ReceptorWegverkeer" coords="8,600,310,705" shape="rect"/>
-						<area href="#Receptor" coords="423,600,730,800" shape="rect"/>
-						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1680" shape="rect"/>
-						<area href="#Correctieterm" coords="423,900,730,1070" shape="rect"/>
-						<area href="#Correctie" coords="423,1130,730,1215" shape="rect"/>
-						<area href="#Maatregel" coords="423,1320,730,1500" shape="rect"/>
-						<area href="#Maatregelfactor" coords="423,1550,730,1680" shape="rect"/>
+						<area href="#Receptor" coords="423,600,730,760" shape="rect"/>
+						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1640" shape="rect"/>
+						<area href="#Correctie" coords="423,900,730,1030" shape="rect"/>						
+						<area href="#Correctieterm" coords="423,1100,730,1190" shape="rect"/>
+						<area href="#Maatregel" coords="423,1325,730,1460" shape="rect"/>
+						<area href="#Maatregelfactor" coords="423,1520,730,1640" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -307,15 +307,15 @@
 					<br/>
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-veehouderij">
-						<area href="#Veehouderij" coords="187,7,442,143" shape="rect"/>
-						<area href="#Stal" coords="8,227,266,437" shape="rect"/>
-						<area href="#Veehouderijbron" coords="8,556,266,750" shape="rect"/>
-						<area href="#Emissiespecificatie" coords="8,800,266,958" shape="rect"/>
-						<area href="#Huisvestingssysteem" coords="8,1019,266,1140" shape="rect"/>
-						<area href="#Receptor" coords="380,227,650,422" shape="rect"/>
+						<area href="#Veehouderij" coords="187,7,442,123" shape="rect"/>
+						<area href="#Stal" coords="8,227,266,417" shape="rect"/>
+						<area href="#Veehouderijbron" coords="8,556,266,730" shape="rect"/>
+						<area href="#Emissiespecificatie" coords="8,800,266,938" shape="rect"/>
+						<area href="#Huisvestingssysteem" coords="8,1019,266,1120" shape="rect"/>
+						<area href="#Receptor" coords="380,227,650,380" shape="rect"/>
 						<area href="#ReceptorVeehouderij" coords="380,500,650,590" shape="rect"/>
 						<area href="#RekenresultaatVeehouderij" coords="380,660,650,925" shape="rect"/>
-						<area href="#AanvullendeTechniek" coords="380,1019,650,1140" shape="rect"/>
+						<area href="#AanvullendeTechniek" coords="380,1019,650,1120" shape="rect"/>
 					</map>
 				</section>
 				<section>

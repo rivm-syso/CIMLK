@@ -18,7 +18,7 @@
 	<h2>Bijlagen</h2>
 	<section>
 		<h3>Uitwisselbestanden</h3>
-		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven. Daarnaast wordt van elke kolom ook vermeld hoe deze zich verhoudt tot het informatiemodel. De aangeleverde CSV bestanden dienen altijd een puntkomma (;) als scheidingsteken te gebruiken.</p>
+		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven. Daarnaast wordt van elke kolom ook vermeld hoe deze zich verhoudt tot het informatiemodel. De aangeleverde CSV bestanden dienen altijd een puntkomma (;) als scheidingsteken te gebruiken en een punt (.) als decimaalteken. In de kolom tijdstipRegistratie wordt de tijd altijd in Nederlandse tijd weergegeven inclusief correctie voor zomer/wintertijd</p>
 		<section>
 			<h4>Wegverkeer</h4>
 			<section>
@@ -70,11 +70,6 @@
 						<td>
 							<a href="#Overdrachtskenmerken.bomenfactor">Overdrachtskenmerken.bomenfactor</a>
 						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>afstand</td>
-						<td><a href="#Overdrachtskenmerken.afstand">Overdrachtskenmerken.afstand</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -577,18 +572,8 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td>no2SchipholDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.no2SchipholDelta">RekenresultaatWegverkeer.no2SchipholDelta</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>no2EigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.no2EigenCorrectie">RekenresultaatWegverkeer.no2EigenCorrectie</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>o3GCN</td>
-						<td><a href="#RekenresultaatWegverkeer.o3GCN">RekenresultaatWegverkeer.o3GCN</a></td>
+						<td>no2GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.no2GCNenEigenCorrectie">RekenresultaatWegverkeer.no2GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -597,8 +582,18 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td>o3SchipholDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.o3SchipholDelta">RekenresultaatWegverkeer.o3SchipholDelta</a></td>
+						<td>o3GCN</td>
+						<td><a href="#RekenresultaatWegverkeer.o3GCN">RekenresultaatWegverkeer.o3GCN</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>o3HWNdubtelcorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.o3HWNdubtelcorrectie">RekenresultaatWegverkeer.o3HWNdubtelcorrectie</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>o3GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.o3GCNenEigenCorrectie">RekenresultaatWegverkeer.o3GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -637,13 +632,8 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td>pm10IJmondDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.pm10IJmondDelta">RekenresultaatWegverkeer.pm10IJmondDelta</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>pm10EigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.pm10EigenCorrectie">RekenresultaatWegverkeer.pm10EigenCorrectie</a></td>
+						<td>pm10GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.pm10GCNenEigenCorrectie">RekenresultaatWegverkeer.pm10GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -667,11 +657,6 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td>pm25IJmondDelta</td>
-						<td><a href="#RekenresultaatWegverkeer.pm25IJmondDelta">RekenresultaatWegverkeer.pm25IJmondDelta</a></td>
-					</tr>
-					<tr>
-						<td></td>
 						<td>pm25GCN</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25GCN">RekenresultaatWegverkeer.pm25GCN</a></td>
 					</tr>
@@ -682,8 +667,8 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td>pm25EigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.pm25EigenCorrectie">RekenresultaatWegverkeer.pm25EigenCorrectie</a></td>
+						<td>pm25GCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.pm25GCNenEigenCorrectie">RekenresultaatWegverkeer.pm25GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -717,8 +702,8 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td>ecEigenCorrectie</td>
-						<td><a href="#RekenresultaatWegverkeer.ecEigenCorrectie">RekenresultaatWegverkeer.ecEigenCorrectie</a></td>
+						<td>ecGCNenEigenCorrectie</td>
+						<td><a href="#RekenresultaatWegverkeer.ecGCNenEigenCorrectie">RekenresultaatWegverkeer.ecGCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
