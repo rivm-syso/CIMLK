@@ -181,7 +181,7 @@
 					</ul>
 					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen, monitoringsronden of zichtjaren dan leidt dat niet tot unieke ID's. Een manier om dat te doen is door in het lokaalID ook een identificatie toe te voegen van het objecttype, de monitoringsronde en het monitoringsjaar. Het NEN3610ID heeft dan de volgende structuur:<br>NL.imlk.[Monitoringsronde]_[Monitoringsjaar]_[LettersObjecttype]_[KvK]_[identificatie]</p>
+				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen, monitoringsronden of monitoringsjaren dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken worden de volgende velden daarom in het lokaalID opgenomen: identificatie van het objecttype, de monitoringsronde en het monitoringsjaar. Voor objecttypen die worden aangeleverd door bronhouders, geldt dat de ID's ook uniek moeten zijn over bronhouders heen. Naast de eerder genoemde velden wordt voor deze objectypten daarom ook het KvK nummer toegevoegd aan het NEN3610ID. Het NEN3610ID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgegeven bij objecttypen die door de bronhouder worden aangeleverd:<br><i>NL.imlk.[Monitoringsronde]_[Monitoringsjaar]_[LettersObjecttype]_[KvK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
 				<ul>
 				<li><b>W</b>: Wegdeel</li>
@@ -192,6 +192,8 @@
 				<li><b>V</b>: Veehouderij</li>
 				<li><b>S</b>: Stal</li>
 				<li><b>B</b>: Veehouderijbron</li>
+				<li><b>H</b>: Huisvestingssysteem</li>
+				<li><b>A</b>: AanvullendeTechniek</li>
 				</ul>
 				</p>
 				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KVK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
