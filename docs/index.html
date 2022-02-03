@@ -1738,6 +1738,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#TaludSoort">TaludSoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (hoogte != NULL) DAN (taludSoort != NULL) ANDERS (taludSoort == NULL)</td></tr>
 </table>
 </section>
 <section id="Wegdeel.opmerking">
@@ -2118,7 +2119,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (Voertuigclassificatie != 'b').</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (wegdeel.rekenmethode == 'SRM2') DAN (voertuigclassificatie != 'b'). ALS (voertuigclassificatie == 'ld') DAN (wegdeel.maximumsnelheidDynamisch != NULL AND intensiteit > 0)</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.stagnatiefactor">
