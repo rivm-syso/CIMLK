@@ -651,7 +651,6 @@
 <tr border="0"><td width=200px><b>Patroon</b></td><td>Cijfers [0-9]</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (Objecttype == ReceptorVeehouderij) DAN (identificatiePandBAG != NULL)</td></tr>
 </table>
 </section>
 <section id="Receptor.tijdstipRegistratie">
@@ -688,7 +687,7 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan voor welke stof/stoffen het punt een toetspunt is.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Deze informatie is alleen van belang voor het uitvoeren van de monitoring, niet voor het uitvoeren van een losse berekening.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>ToestpuntVeehouderij</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#ToetspuntVeehouderij">ToetspuntVeehouderij</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslag IN [1, 3]) DAN (toetspunt != 'Geen') ANDERS (toetspunt == 'Geen') </td></tr>
@@ -1430,7 +1429,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Stal.tijdstipRegistratie">
