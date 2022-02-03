@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeConfiguration xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1 https://shapechange.net/resources/schema/ShapeChangeConfiguration.xsd">
+	<input>
+		<parameter name="inputModelType" value="EA7"/>
+		<parameter name="inputFile" value="..\informatiemodel\cimlk.eapx"/>
+		<parameter name="appSchemaName" value="CIMLK"/>
+		<parameter name="publicOnly" value="true"/>
+		<parameter name="checkingConstraints" value="disabled"/>
+		<parameter name="sortedSchemaOutput" value="true"/>
+		<descriptorSources>
+			<DescriptorSource descriptor="description" source="tag" tag="description"/>		
+		</descriptorSources>
+		<xi:include href="https://shapechange.net/resources/config/StandardAliases.xml"/>
+	</input>
+	<log>
+		<parameter name="reportLevel" value="INFO"/>
+		<parameter name="logFile" value="cimlklog.xml"/>
+	</log>
+	<targets>
+		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" mode="enabled">
+			<targetParameter name="outputDirectory" value="results"/>
+			<targetParameter name="sortedOutput" value="true"/>
+			<targetParameter name="defaultEncodingRule" value="aaa-sk"/>
+			<rules>
+				<EncodingRule name="aaa-sk" extends="iso19136_2007">
+					<rule name="rule-xsd-prop-gmlArrayProperty"/>					
+					<rule name="rule-xsd-prop-gmlListProperty"/>
+					<rule name="rule-xsd-prop-xsdAsAttribute"/>
+					<rule name="rule-xsd-prop-nillable"/>
+					<rule name="rule-xsd-prop-qualified-associations"/>
+				</EncodingRule>
+			</rules>
+			<xi:include href="https://shapechange.net/resources/config/StandardRules.xml"/>
+			<xi:include href="https://shapechange.net/resources/config/StandardNamespaces.xml"/>
+			<xi:include href="https://shapechange.net/resources/config/StandardMapEntries.xml"/>
+		</TargetXmlSchema>
+	</targets>
+</ShapeChangeConfiguration>
