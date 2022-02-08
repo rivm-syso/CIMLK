@@ -1,0 +1,811 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "identificatie"
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22619",
+      "geometrie" : {"type":"Point","coordinates":[146952.3161,452419.2166]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22620",
+      "geometrie" : {"type":"Point","coordinates":[146972.4464,452402.1364]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22621",
+      "geometrie" : {"type":"Point","coordinates":[146838.1635,452498.5962]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22622",
+      "geometrie" : {"type":"Point","coordinates":[146816.7813,452472.9376]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22623",
+      "geometrie" : {"type":"Point","coordinates":[146892.084,452440.2798]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22624",
+      "geometrie" : {"type":"Point","coordinates":[146871.916,452419.7202]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22625",
+      "geometrie" : {"type":"Point","coordinates":[146684.564,452630.8092]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22626",
+      "geometrie" : {"type":"Point","coordinates":[146757.997,452567.568]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22628",
+      "geometrie" : {"type":"Point","coordinates":[146830.1026,452519.0969]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22629",
+      "geometrie" : {"type":"Point","coordinates":[146655.6573,452604.5645]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22630",
+      "geometrie" : {"type":"Point","coordinates":[146726.8177,452538.8177]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22631",
+      "geometrie" : {"type":"Point","coordinates":[146766.1948,452498.5685]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22632",
+      "geometrie" : {"type":"Point","coordinates":[146792.6535,452482.7846]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22633",
+      "geometrie" : {"type":"Point","coordinates":[146867.011,453339.2112]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22634",
+      "geometrie" : {"type":"Point","coordinates":[146846.989,453318.7888]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22635",
+      "geometrie" : {"type":"Point","coordinates":[146945.2492,453260.9722]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22636",
+      "geometrie" : {"type":"Point","coordinates":[146924.7508,453241.0278]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22637",
+      "geometrie" : {"type":"Point","coordinates":[147020.5603,453178.6421]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22638",
+      "geometrie" : {"type":"Point","coordinates":[146999.4397,453159.3579]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22639",
+      "geometrie" : {"type":"Point","coordinates":[146692.8738,453505.344]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22640",
+      "geometrie" : {"type":"Point","coordinates":[146673.1262,453484.656]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22641",
+      "geometrie" : {"type":"Point","coordinates":[146781.8766,453420.3413]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22642",
+      "geometrie" : {"type":"Point","coordinates":[146762.1234,453399.6587]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22872",
+      "geometrie" : {"type":"Point","coordinates":[147503.9508,451842.8067]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22873",
+      "geometrie" : {"type":"Point","coordinates":[147482.0492,451823.1933]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22874",
+      "geometrie" : {"type":"Point","coordinates":[147413.9974,451938.9974]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22875",
+      "geometrie" : {"type":"Point","coordinates":[147396.5248,451921.5248]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22876",
+      "geometrie" : {"type":"Point","coordinates":[147446.7806,451904.6396]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22877",
+      "geometrie" : {"type":"Point","coordinates":[147429.7226,451889.5716]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22878",
+      "geometrie" : {"type":"Point","coordinates":[147300.5136,452057.9774]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22879",
+      "geometrie" : {"type":"Point","coordinates":[147280.4824,452037.0625]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22880",
+      "geometrie" : {"type":"Point","coordinates":[147237.1742,452117.0221]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22881",
+      "geometrie" : {"type":"Point","coordinates":[147217.0632,452095.2351]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22882",
+      "geometrie" : {"type":"Point","coordinates":[147174.024,452176.1588]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22883",
+      "geometrie" : {"type":"Point","coordinates":[147153.976,452153.8412]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22884",
+      "geometrie" : {"type":"Point","coordinates":[147049.2894,452290.0516]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22885",
+      "geometrie" : {"type":"Point","coordinates":[147028.7106,452267.9484]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22886",
+      "geometrie" : {"type":"Point","coordinates":[147106.9816,452236.3304]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22887",
+      "geometrie" : {"type":"Point","coordinates":[147087.0184,452213.6696]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22888",
+      "geometrie" : {"type":"Point","coordinates":[147056.2519,452540.3563]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22889",
+      "geometrie" : {"type":"Point","coordinates":[147072.5694,452526.6348]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22890",
+      "geometrie" : {"type":"Point","coordinates":[147114.1481,452611.2311]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22891",
+      "geometrie" : {"type":"Point","coordinates":[147130.6592,452597.7432]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22892",
+      "geometrie" : {"type":"Point","coordinates":[147372.0388,451982.8071]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22893",
+      "geometrie" : {"type":"Point","coordinates":[147360.4932,451971.5575]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22894",
+      "geometrie" : {"type":"Point","coordinates":[147169.4688,452677.944]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22895",
+      "geometrie" : {"type":"Point","coordinates":[147185.6626,452664.763]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22896",
+      "geometrie" : {"type":"Point","coordinates":[147226.0546,452738.6073]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22897",
+      "geometrie" : {"type":"Point","coordinates":[147241.1364,452724.1673]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22898",
+      "geometrie" : {"type":"Point","coordinates":[147443.5557,452801.334]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22899",
+      "geometrie" : {"type":"Point","coordinates":[147436.4443,452774.666]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22900",
+      "geometrie" : {"type":"Point","coordinates":[147543.433,452780.787]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22901",
+      "geometrie" : {"type":"Point","coordinates":[147538.567,452753.213]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22902",
+      "geometrie" : {"type":"Point","coordinates":[147632.124,452760.647]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22903",
+      "geometrie" : {"type":"Point","coordinates":[147625.876,452733.353]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22904",
+      "geometrie" : {"type":"Point","coordinates":[147720.9918,452740.6766]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22905",
+      "geometrie" : {"type":"Point","coordinates":[147715.0082,452713.3234]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22906",
+      "geometrie" : {"type":"Point","coordinates":[147810.0257,452716.0668]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22907",
+      "geometrie" : {"type":"Point","coordinates":[147799.9743,452689.9332]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22908",
+      "geometrie" : {"type":"Point","coordinates":[147880.8206,452647.5015]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22909",
+      "geometrie" : {"type":"Point","coordinates":[147857.1794,452632.4985]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22910",
+      "geometrie" : {"type":"Point","coordinates":[147378.7828,452825.4353]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22911",
+      "geometrie" : {"type":"Point","coordinates":[147372.4185,452801.5693]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22912",
+      "geometrie" : {"type":"Point","coordinates":[147324.9852,452873.0219]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22914",
+      "geometrie" : {"type":"Point","coordinates":[147292.5936,452803.4064]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22915",
+      "geometrie" : {"type":"Point","coordinates":[147302.4295,452793.5705]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22916",
+      "geometrie" : {"type":"Point","coordinates":[147102.8926,453090.3326]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22917",
+      "geometrie" : {"type":"Point","coordinates":[147082.4528,453071.0498]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22918",
+      "geometrie" : {"type":"Point","coordinates":[147182.1945,453007.7697]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22919",
+      "geometrie" : {"type":"Point","coordinates":[147161.7044,452988.1334]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22920",
+      "geometrie" : {"type":"Point","coordinates":[147252.8764,452938.0911]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R22921",
+      "geometrie" : {"type":"Point","coordinates":[147233.0257,452917.8088]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23280",
+      "geometrie" : {"type":"Point","coordinates":[147627.2661,446819.2556]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23281",
+      "geometrie" : {"type":"Point","coordinates":[147616.7339,446782.7444]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23282",
+      "geometrie" : {"type":"Point","coordinates":[147731.2733,446789.2536]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23283",
+      "geometrie" : {"type":"Point","coordinates":[147720.7267,446752.7464]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23284",
+      "geometrie" : {"type":"Point","coordinates":[147835.575,446757.1651]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23285",
+      "geometrie" : {"type":"Point","coordinates":[147826.425,446724.8349]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23286",
+      "geometrie" : {"type":"Point","coordinates":[147946.4816,446727.476]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23287",
+      "geometrie" : {"type":"Point","coordinates":[147931.5184,446686.524]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23288",
+      "geometrie" : {"type":"Point","coordinates":[148053.5178,446679.6125]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23289",
+      "geometrie" : {"type":"Point","coordinates":[148034.4822,446640.3875]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23290",
+      "geometrie" : {"type":"Point","coordinates":[147843.2184,451491.4742]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23291",
+      "geometrie" : {"type":"Point","coordinates":[147857.2726,451509.9203]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23292",
+      "geometrie" : {"type":"Point","coordinates":[147900.8586,451457.3429]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23293",
+      "geometrie" : {"type":"Point","coordinates":[147914.9388,451481.7762]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23294",
+      "geometrie" : {"type":"Point","coordinates":[147564.4202,451771.7395]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23295",
+      "geometrie" : {"type":"Point","coordinates":[147543.5798,451754.2605]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23296",
+      "geometrie" : {"type":"Point","coordinates":[147628.8993,451701.3254]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23297",
+      "geometrie" : {"type":"Point","coordinates":[147609.1007,451682.6746]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23298",
+      "geometrie" : {"type":"Point","coordinates":[147697.11,451638.9173]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23299",
+      "geometrie" : {"type":"Point","coordinates":[147680.89,451617.0827]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23300",
+      "geometrie" : {"type":"Point","coordinates":[147794.0819,451554.726]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23301",
+      "geometrie" : {"type":"Point","coordinates":[147781.0426,451537.4682]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23302",
+      "geometrie" : {"type":"Point","coordinates":[147749.0049,451597.7879]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23303",
+      "geometrie" : {"type":"Point","coordinates":[147733.7169,451581.1706]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23304",
+      "geometrie" : {"type":"Point","coordinates":[147941.821,452557.2233]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23305",
+      "geometrie" : {"type":"Point","coordinates":[147918.179,452540.7767]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23306",
+      "geometrie" : {"type":"Point","coordinates":[148020.9434,452493.7295]}
+    }
+  }, {
+    "type" : "Feature",
+    "geometry" : null,
+    "properties" : {
+      "_type" : "receptoren",
+      "identificatie" : "R23307",
+      "geometrie" : {"type":"Point","coordinates":[148007.0566,452468.2705]}
+    }
+  } ]
+}

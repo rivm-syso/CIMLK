@@ -1,0 +1,6 @@
+veehouderijIdentificatie;naamOverheid;veehouderijAdres;veehouderijDatumVergunning;stalIdentificatie;stalLengte;stalBreedte;stalHoogte;stalOrientatie;stalIdentificatiePandBAG;stalX;stalY;bronIdentificatie;bronHoogte;bronDiameter;bronUittreesnelheid;bronX;bronY;ravFactor;owFactor;ravMaatregel;owMaatregel;aantalDieren;emissiefactorPM10;reductiefactorPM10;eigenFactorToelichting;opmerking;tijdstipRegistratie
+1;;Boerderij 10;19-1-2022;1;81.6;61.1;4.6;117;10;166000;459000;1;5;0.5;5;166010;459010;Exp.Stal;;Overig;;10000;40;0.65;Experimentele stal met een overige maatregel;Test 1;2022-01-13T03:17:09.452Z
+1;;Boerderij 10;19-1-2022;1;81.6;61.1;4.6;117;10;166000;459000;1;5;0.5;5;166010;459010;E2.11.2.2;;E7.6;;20000;9999;9999;;Test 2;2022-01-13T03:17:09.452Z
+1;;Boerderij 10;19-1-2022;1;81.6;61.1;4.6;117;10;166000;459000;2;6;0.6;6;166020;459020;A4.100;;;;100;;;;Test 3;2022-01-13T03:17:09.452Z
+1;;Boerderij 10;19-1-2022;2;48.6;17.65;4.8;130;20;166100;460000;3;7;0.7;7;166110;460010;A4.100;;;;200;;;;Test 4;2022-01-13T03:17:09.452Z
+1;;Boerderij 10;19-1-2022;2;48.6;17.85;4.8;130;20;166100;460000;4;8;0.8;8;166120;460020;A4.100;;;;300;;;;Test 5;2022-01-13T03:17:09.452Z
