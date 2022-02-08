@@ -1,33 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cimlk="http://cimlk.nl/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" elementFormDefault="qualified" targetNamespace="http://cimlk.nl/1.0" version="">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cimlk="http://cimlk.nl/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://cimlk.nl/1.0" version="">
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-  <import namespace="http://www.opengis.net/gmlsf/2.0" schemaLocation="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <annotation>
-    <appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
-      <gmlsf:ComplianceLevel>2</gmlsf:ComplianceLevel>
-    </appinfo>
-  </annotation>
-  <element name="FeatureCollectionIMLK" type="cimlk:FeatureCollectionIMLKType" substitutionGroup="gml:AbstractGML"/> 
-  <complexType name="FeatureCollectionIMLKType"> 
-    <complexContent> 
-	  <extension base="gml:AbstractFeatureType">
-	    <sequence minOccurs="1" maxOccurs="unbounded">
-		  <element name="featureMember"> 
-		    <complexType>
-			  <complexContent>
-			    <extension base="gml:AbstractFeatureMemberType"> 
-				  <sequence> 
-				    <element ref="gml:AbstractFeature"/>
-				  </sequence>
-				</extension>
-			  </complexContent>
-			 </complexType>
-		  </element> 
-		</sequence>
-	  </extension> 
-	</complexContent> 
-  </complexType>  
+  <element name="AanvullendeTechniek" substitutionGroup="gml:AbstractFeature" type="cimlk:AanvullendeTechniekType">
+    <annotation>
+      <documentation>Beschrijving van de aanvullende maatregelen die zijn genomen om de emissie te beperken.</documentation>
+    </annotation>
+  </element>
+  <complexType name="AanvullendeTechniekType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>De unieke identificatie van een aanvullende techniek. Deze bevat de code van de aanvullende techniek zoals vastgesteld in de Regeling Ammoniak en Veehouderij.</documentation>
+            </annotation>
+          </element>
+          <element name="omschrijving" type="string">
+            <annotation>
+              <documentation>Een beschrijving van de RAV maatregel.</documentation>
+            </annotation>
+          </element>
+          <element name="reductiefactorPm10" type="double">
+            <annotation>
+              <documentation>De fractie waarmee de PM10 emissies behorende bij de code voor de aanvullende techniek worden verlaagd.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AanvullendeTechniekPropertyType">
+    <sequence minOccurs="0">
+      <element ref="cimlk:AanvullendeTechniek"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
   <simpleType name="BebouwingstypeType">
+    <annotation>
+      <documentation>Een waardelijst die verschillende vormen van bebouwing naast een weg beschrijft.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="1">
         <annotation>
@@ -65,16 +77,6 @@
               <documentation>De unieke identificatie van een correctiegebied.</documentation>
             </annotation>
           </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsjaar" type="integer">
-            <annotation>
-              <documentation>Het jaar waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
           <element name="naam" type="string">
             <annotation>
               <documentation>Een verzameling woorden die praktisch worden gebruikt om een correctie te duiden.</documentation>
@@ -105,7 +107,7 @@
               <documentation>Geometrie die de ligging en vorm van het correctiegebied beschrijft.</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="receptor" type="cimlk:ReceptorPropertyType"/>
+          <element minOccurs="0" name="receptor" type="cimlk:ReceptorWegverkeerPropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -154,11 +156,6 @@
   </element>
   <complexType name="EmissiespecificatieType">
     <sequence>
-      <element name="monitoringsronde" type="integer">
-        <annotation>
-          <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-        </annotation>
-      </element>
       <element name="aantalDieren" type="integer">
         <annotation>
           <documentation>Aantal dieren dat met het geselecteerde staltype in de stal gehouden wordt.</documentation>
@@ -166,12 +163,12 @@
       </element>
       <element minOccurs="0" name="eigenEmissiefactorPm10" type="integer">
         <annotation>
-          <documentation>De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor deze niet met de standaard RAV factoren kan worden bepaald.</documentation>
+          <documentation>De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor er geen standaard emissiefactor beschikbaar is.</documentation>
         </annotation>
       </element>
       <element minOccurs="0" name="eigenReductiefactorPm10" type="double">
         <annotation>
-          <documentation>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor deze niet met de standaard RAV maatregelen kan worden bepaald.</documentation>
+          <documentation>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor er geen standaard reductiefactor beschikbaar is.</documentation>
         </annotation>
       </element>
       <element minOccurs="0" name="eigenFactorToelichting" type="string">
@@ -184,8 +181,8 @@
           <documentation>Opmerkingen die betrekking hebben op de ingevulde waarden.</documentation>
         </annotation>
       </element>
-      <element name="ravFactor" type="cimlk:RavFactorPropertyType"/>
-      <element minOccurs="0" name="ravMaatregel" type="cimlk:RavMaatregelPropertyType"/>
+      <element name="huisvestingssysteem" type="cimlk:HuisvestingssysteemPropertyType"/>
+      <element minOccurs="0" name="aanvullendeTechniek" type="cimlk:AanvullendeTechniekPropertyType"/>
     </sequence>
   </complexType>
   <complexType name="EmissiespecificatiePropertyType">
@@ -193,7 +190,45 @@
       <element ref="cimlk:Emissiespecificatie"/>
     </sequence>
   </complexType>
+  <element name="Huisvestingssysteem" substitutionGroup="gml:AbstractFeature" type="cimlk:HuisvestingssysteemType">
+    <annotation>
+      <documentation>Beschrijving van het soort stalsysteem dat wordt gebruikt om de dieren te houden zoals gedefinieerd in de Regeling Ammoniak en Veehouderij.</documentation>
+    </annotation>
+  </element>
+  <complexType name="HuisvestingssysteemType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>De unieke identificatie van een huisvestingssysteem deze bevat de code van het huisvestingssysteem zoals vastgesteld in de Regeling Ammoniak en Veehouderij.</documentation>
+            </annotation>
+          </element>
+          <element name="omschrijving" type="string">
+            <annotation>
+              <documentation>Een beschrijving van het staltype op basis van de RAV factor code.</documentation>
+            </annotation>
+          </element>
+          <element name="emissiefactorPm10" type="integer">
+            <annotation>
+              <documentation>De op basis van de RAV factor code berekende emissie factor voor PM10.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HuisvestingssysteemPropertyType">
+    <sequence minOccurs="0">
+      <element ref="cimlk:Huisvestingssysteem"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
   <simpleType name="JurisdictietypeType">
+    <annotation>
+      <documentation>Een waardelijst waarin onderscheid wordt gemaakt tussen de verschillende soorten jurisdicties.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="G"/>
       <enumeration value="P"/>
@@ -213,16 +248,6 @@
           <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
             <annotation>
               <documentation>De unieke identificatie van een maatregelgebied voor wegverkeer.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsjaar" type="integer">
-            <annotation>
-              <documentation>Het jaar waar de gegevens betrekking op hebben.</documentation>
             </annotation>
           </element>
           <element name="naam" type="string">
@@ -397,11 +422,6 @@
           <documentation>De mate waarin bomen aanwezig zijn rondom het wegdeel.</documentation>
         </annotation>
       </element>
-      <element name="afstand" type="double">
-        <annotation>
-          <documentation>De afstand tussen de receptor en het wegdeel die gebruik wordt in SRM1 berekening.</documentation>
-        </annotation>
-      </element>
       <element name="wegdeel" type="cimlk:WegdeelPropertyType"/>
     </sequence>
   </complexType>
@@ -417,9 +437,14 @@
   </element>
   <complexType name="OverdrachtsobjectType">
     <sequence>
-      <element name="afstand" type="double">
+      <element name="soort" type="cimlk:OverdrachtsobjectSoortType">
         <annotation>
-          <documentation>De afstand tussen de wegas van een wegdeel en het overdrachtsobject.</documentation>
+          <documentation>Beschrijft het overdrachtsobject dat zich langs het wegdeel bevindt.</documentation>
+        </annotation>
+      </element>
+      <element name="indicatieBinnen50m" type="boolean">
+        <annotation>
+          <documentation>Geeft aan of het overdrachtsobject zich binnen 50 meter van de wegas bevindt.</documentation>
         </annotation>
       </element>
       <element name="hoogte" type="double">
@@ -434,110 +459,29 @@
       <element ref="cimlk:Overdrachtsobject"/>
     </sequence>
   </complexType>
-  <element name="RavFactor" substitutionGroup="gml:AbstractFeature" type="cimlk:RavFactorType">
+  <simpleType name="OverdrachtsobjectSoortType">
     <annotation>
-      <documentation>Emissiefactor voor de feitelijke emissie van stoffen bij een veehouderij.</documentation>
+      <documentation>Een waardelijst die verschillende vormen van overdrachtsobjecten langs een weg beschrijft.</documentation>
     </annotation>
-  </element>
-  <complexType name="RavFactorType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="ravFactorCode" type="cimlk:RavFactorLijstPropertyType">
-            <annotation>
-              <documentation>Een code een RAV factor uniek identificeert.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Een code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
-          <element name="omschrijving" type="string">
-            <annotation>
-              <documentation>Een beschrijving van het staltype op basis van de RAV factor code.</documentation>
-            </annotation>
-          </element>
-          <element name="emissiefactorPm10" type="integer">
-            <annotation>
-              <documentation>De op basis van de RAV factor code berekende emissie factor voor PM10.</documentation>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="RavFactorPropertyType">
-    <sequence minOccurs="0">
-      <element ref="cimlk:RavFactor"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
-  <element name="RavFactorLijst" substitutionGroup="gml:AbstractObject" type="cimlk:RavFactorLijstType"/>
-  <complexType name="RavFactorLijstType">
-    <sequence/>
-  </complexType>
-  <complexType name="RavFactorLijstPropertyType">
-    <sequence>
-      <element ref="cimlk:RavFactorLijst"/>
-    </sequence>
-  </complexType>
-  <element name="RavMaatregel" substitutionGroup="gml:AbstractFeature" type="cimlk:RavMaatregelType">
-    <annotation>
-      <documentation>Een factor waarmee de emissies vanuit het dierenverblijf bij een veehouderij moeten worden geschaald.</documentation>
-    </annotation>
-  </element>
-  <complexType name="RavMaatregelType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="ravMaatregelCode" type="cimlk:RavMaatregelLijstPropertyType">
-            <annotation>
-              <documentation>Een code die een RAV maatregel uniek identificeert.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
-          <element name="omschrijving" type="string">
-            <annotation>
-              <documentation>Een beschrijving van de RAV maatregel.</documentation>
-            </annotation>
-          </element>
-          <element name="reductiefactorPm10" type="double">
-            <annotation>
-              <documentation>De fractie waarmee de PM10 emissies behorende bij de RAV code worden verlaagd.</documentation>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="RavMaatregelPropertyType">
-    <sequence minOccurs="0">
-      <element ref="cimlk:RavMaatregel"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
-  <element name="RavMaatregelLijst" substitutionGroup="gml:AbstractObject" type="cimlk:RavMaatregelLijstType"/>
-  <complexType name="RavMaatregelLijstType">
-    <sequence/>
-  </complexType>
-  <complexType name="RavMaatregelLijstPropertyType">
-    <sequence>
-      <element ref="cimlk:RavMaatregelLijst"/>
-    </sequence>
-  </complexType>
-  <element name="Receptor" substitutionGroup="gml:AbstractFeature" type="cimlk:ReceptorType">
+    <restriction base="string">
+      <enumeration value="s">
+        <annotation>
+          <documentation>Scherm: Een overdrachtsobject in de vorm van scherm.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="w">
+        <annotation>
+          <documentation>Wal: Een overdrachtsobject in de vorm van een wal.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <element abstract="true" name="Receptor" substitutionGroup="gml:AbstractFeature" type="cimlk:ReceptorType">
     <annotation>
       <documentation>Locatie waarop de concentratie wordt berekend als gevolg van emissies.</documentation>
     </annotation>
   </element>
-  <complexType name="ReceptorType">
+  <complexType abstract="true" name="ReceptorType">
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
@@ -546,34 +490,9 @@
               <documentation>De unieke identificatie van een receptor.</documentation>
             </annotation>
           </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsjaar" type="integer">
-            <annotation>
-              <documentation>Het jaar waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
           <element name="naam" type="string">
             <annotation>
               <documentation>Een verzameling woorden die praktisch worden gebruikt om een receptor te duiden.</documentation>
-            </annotation>
-          </element>
-          <element name="indicatieToetspunt" type="boolean">
-            <annotation>
-              <documentation>Geeft aan of het een toetspunt betreft.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="grondslagWegverkeer" type="cimlk:ReceptorGrondslagWegverkeerType">
-            <annotation>
-              <documentation>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor wegverkeer.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="grondslagVeehouderij" type="cimlk:ReceptorGrondslagVeehouderijType">
-            <annotation>
-              <documentation>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor veehouderijen.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="opmerking" type="string">
@@ -586,11 +505,6 @@
               <documentation>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="overdrachtskenmerken" type="cimlk:OverdrachtskenmerkenPropertyType">
-            <annotation>
-              <documentation>Verzamling kenmerken behorende bij de virtuele lijn tussen het wegdeel en de receptor zoals die voor een SRM1 berekening worden gedefinieerd.</documentation>
-            </annotation>
-          </element>
           <element minOccurs="0" name="tijdstipRegistratie" type="dateTime">
             <annotation>
               <documentation>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</documentation>
@@ -601,7 +515,6 @@
               <documentation>Geometrie die de ligging van de receptor beschrijft.</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="veehouderij" type="cimlk:VeehouderijPropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -614,6 +527,9 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <simpleType name="ReceptorGrondslagVeehouderijType">
+    <annotation>
+      <documentation>Een waardelijst met waarden die de grondslag beschrijven waarom een punt wel of geen toetspunt is voor veehouderijen.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="1">
         <annotation>
@@ -643,6 +559,9 @@
     </restriction>
   </simpleType>
   <simpleType name="ReceptorGrondslagWegverkeerType">
+    <annotation>
+      <documentation>Een waardelijst met waarden die de grondslag beschrijven waarom een punt wel of geen toetspunt is voor wegverkeer.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="0">
         <annotation>
@@ -666,7 +585,76 @@
       </enumeration>
     </restriction>
   </simpleType>
+  <element name="ReceptorVeehouderij" substitutionGroup="cimlk:Receptor" type="cimlk:ReceptorVeehouderijType">
+    <annotation>
+      <documentation>Kenmerken van een locatie waarop de concentratie als gevolg van de veehouderijbrage wordt berekend.</documentation>
+    </annotation>
+  </element>
+  <complexType name="ReceptorVeehouderijType">
+    <complexContent>
+      <extension base="cimlk:ReceptorType">
+        <sequence>
+          <element name="toetspuntSoort" type="cimlk:ToetspuntVeehouderijType">
+            <annotation>
+              <documentation>Geeft aan voor welke stof/stoffen het punt een toetspunt is.</documentation>
+            </annotation>
+          </element>
+          <element name="grondslag" type="cimlk:ReceptorGrondslagVeehouderijType">
+            <annotation>
+              <documentation>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor veehouderijen.</documentation>
+            </annotation>
+          </element>
+          <element name="veehouderij" type="cimlk:VeehouderijPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ReceptorVeehouderijPropertyType">
+    <sequence minOccurs="0">
+      <element ref="cimlk:ReceptorVeehouderij"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ReceptorWegverkeer" substitutionGroup="cimlk:Receptor" type="cimlk:ReceptorWegverkeerType">
+    <annotation>
+      <documentation>Kenmerken van een locatie waarop de concentratie als gevolg van de wegbijdrage wordt berekend.</documentation>
+    </annotation>
+  </element>
+  <complexType name="ReceptorWegverkeerType">
+    <complexContent>
+      <extension base="cimlk:ReceptorType">
+        <sequence>
+          <element name="toetspuntSoort" type="cimlk:ToetspuntWegverkeerType">
+            <annotation>
+              <documentation>Geeft aan voor welke stof/stoffen het punt een toetspunt is.</documentation>
+            </annotation>
+          </element>
+          <element name="grondslag" type="cimlk:ReceptorGrondslagWegverkeerType">
+            <annotation>
+              <documentation>De wettelijke basis voor het wel of niet moeten beoordelen van de luchtkwaliteit op de specifieke locatie voor wegverkeer.</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="overdrachtskenmerken" type="cimlk:OverdrachtskenmerkenPropertyType">
+            <annotation>
+              <documentation>Verzameling kenmerken behorende bij de virtuele lijn tussen het wegdeel en de receptor zoals die voor een SRM1 berekening worden gedefinieerd.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ReceptorWegverkeerPropertyType">
+    <sequence minOccurs="0">
+      <element ref="cimlk:ReceptorWegverkeer"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
   <simpleType name="RekenmethodeType">
+    <annotation>
+      <documentation>Een waardelijst die de verschillende voorgeschreven rekenmethoden bevat voor wegverkeer bevat.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="SRM1">
         <annotation>
@@ -749,7 +737,7 @@
               <documentation>Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op het aantal PM10 overschrijdingsdagen.</documentation>
             </annotation>
           </element>
-          <element name="receptor" type="cimlk:ReceptorPropertyType"/>
+          <element name="receptor" type="cimlk:ReceptorVeehouderijPropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -830,19 +818,9 @@
               <documentation>Dubbeltellingscorrectie op NO2 voor de bijdrage van het hoofdwegennet.</documentation>
             </annotation>
           </element>
-          <element name="no2SchipholDelta" type="double">
+          <element name="no2GCNenEigenCorrectie" type="double">
             <annotation>
-              <documentation>Correctiewaarde voor het Schipholgebied.</documentation>
-            </annotation>
-          </element>
-          <element name="no2EigenCorrectie" type="double">
-            <annotation>
-              <documentation>Correctiewaarde voor NO2 die door de gebruiker is ingevoerd op de receptor.</documentation>
-            </annotation>
-          </element>
-          <element name="o3GCN" type="double">
-            <annotation>
-              <documentation>De grootschalige achtergrondconcentratie O3.</documentation>
+              <documentation>Correctiewaarde voor NO2 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</documentation>
             </annotation>
           </element>
           <element name="o3AchtergrondConcentratie" type="double">
@@ -850,9 +828,19 @@
               <documentation>O3 achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="o3SchipholDelta" type="double">
+          <element name="o3GCN" type="double">
             <annotation>
-              <documentation>Correctiewaarde voor het Schipholgebied.</documentation>
+              <documentation>De grootschalige achtergrondconcentratie O3.</documentation>
+            </annotation>
+          </element>
+          <element name="o3HWNdubtelcorrectie" type="double">
+            <annotation>
+              <documentation>Dubbeltellingscorrectie op O3 voor de bijdrage van het hoofdwegennet.</documentation>
+            </annotation>
+          </element>
+          <element name="o3GCNenEigenCorrectie" type="double">
+            <annotation>
+              <documentation>Correctiewaarde voor O3 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</documentation>
             </annotation>
           </element>
           <element name="pm10Concentratie" type="double">
@@ -890,14 +878,9 @@
               <documentation>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM10.</documentation>
             </annotation>
           </element>
-          <element name="pm10IJmondDelta" type="double">
+          <element name="pm10GCNenEigenCorrectie" type="double">
             <annotation>
-              <documentation>Correctiewaarde voor het IJmondgebied.</documentation>
-            </annotation>
-          </element>
-          <element name="pm10EigenCorrectie" type="double">
-            <annotation>
-              <documentation>Correctiewaarde voor PM10 die door de gebruiker is ingevoerd op de receptor.</documentation>
+              <documentation>Correctiewaarde voor PM10 die kan bestaan uit een correctie op de GCN (bijv. IJmond correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</documentation>
             </annotation>
           </element>
           <element name="pm25Concentratie" type="double">
@@ -920,11 +903,6 @@
               <documentation>PM2.5 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="pm25IJmondDelta" type="double">
-            <annotation>
-              <documentation>Correctiewaarde voor het IJmondgebied.</documentation>
-            </annotation>
-          </element>
           <element name="pm25GCN" type="double">
             <annotation>
               <documentation>De grootschalige achtergrondconcentratie PM2.5.</documentation>
@@ -935,9 +913,9 @@
               <documentation>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM2.5.</documentation>
             </annotation>
           </element>
-          <element name="pm25EigenCorrectie" type="double">
+          <element name="pm25GCNenEigenCorrectie" type="double">
             <annotation>
-              <documentation>Correctiewaarde voor PM2.5 die door de gebruiker is ingevoerd op de receptor.</documentation>
+              <documentation>Correctiewaarde voor PM2.5 die kan bestaan uit een correctie op de GCN (waaronder Schiphol en IJmond correcties) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</documentation>
             </annotation>
           </element>
           <element name="ecConcentratie" type="double">
@@ -970,12 +948,12 @@
               <documentation>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op EC.</documentation>
             </annotation>
           </element>
-          <element name="ecEigenCorrectie" type="double">
+          <element name="ecGCNenEigenCorrectie" type="double">
             <annotation>
-              <documentation>Correctiewaarde voor EC die door de gebruiker is ingevoerd op de receptor.</documentation>
+              <documentation>Correctiewaarde voor EC die kan bestaan uit een correctie op de GCN en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</documentation>
             </annotation>
           </element>
-          <element name="receptor" type="cimlk:ReceptorPropertyType"/>
+          <element name="receptor" type="cimlk:ReceptorWegverkeerPropertyType"/>
         </sequence>
       </extension>
     </complexContent>
@@ -999,11 +977,6 @@
           <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
             <annotation>
               <documentation>De unieke identificatie van een stal van een veehouderij.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
             </annotation>
           </element>
           <element name="lengte" type="double">
@@ -1053,6 +1026,77 @@
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
+  <simpleType name="TaludSoortType">
+    <annotation>
+      <documentation>Een waardelijst die de verschillende vormen van talud beschrijft langs een wegdeel.</documentation>
+    </annotation>
+    <restriction base="string">
+      <enumeration value="zvz">
+        <annotation>
+          <documentation>Zeer vlakke zijkanten: Talud met aan beide kanten zeer vlakke zijkanten (HOEK SPECIFICEREN).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="vz">
+        <annotation>
+          <documentation>Vlakke zijkanten: Talud met aan beide kanten vlakke zijkanten (HOEK SPECIFICEREN).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="sz">
+        <annotation>
+          <documentation>Scherpe zijkanten: Talud met aan beide kanten scherpe zijkanten (HOEK SPECIFICEREN).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="v">
+        <annotation>
+          <documentation>Viaduct: Talud aan beide kanten begrensd door een viaduct.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="t">
+        <annotation>
+          <documentation>Tunnelbak: Talud aan beide kanten begrensd door een tunnelbak.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType name="ToetspuntVeehouderijType">
+    <annotation>
+      <documentation>Een waardelijst die beschrijft voor welke stof of stoffen de receptor een toetspunt is voor veehouderijen.</documentation>
+    </annotation>
+    <restriction base="string">
+      <enumeration value="Alle">
+        <annotation>
+          <documentation>Alle stoffen: Toetspunt voor alle stoffen waarvoor de berekening wordt uitgevoerd.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Geen">
+        <annotation>
+          <documentation>Geen toetspunt: Voor geen van de stoffen waarvoor de berekening wordt uitgevoerd is het een toetspunt.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <simpleType name="ToetspuntWegverkeerType">
+    <annotation>
+      <documentation>Een waardelijst die beschrijft voor welke stof of stoffen de receptor een toetspunt is voor wegverkeer.</documentation>
+    </annotation>
+    <restriction base="string">
+      <enumeration value="Alle">
+        <annotation>
+          <documentation>Alle stoffen: Toetspunt voor alle stoffen waarvoor de berekening wordt uitgevoerd.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="PM10">
+        <annotation>
+          <documentation>PM10: Toetspunt voor de stof PM10 maar niet voor de andere stoffen waarvoor de berekning wordt uitgevoerd.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="Geen">
+        <annotation>
+          <documentation>Geen toetspunt: Voor geen van de stoffen waarvoor de berekening wordt uitgevoerd is het een toetspunt.</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
   <element name="Veehouderij" substitutionGroup="gml:AbstractFeature" type="cimlk:VeehouderijType">
     <annotation>
       <documentation>Een bedrijf waar men vee houdt.</documentation>
@@ -1065,11 +1109,6 @@
           <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
             <annotation>
               <documentation>De unieke identificatie van een veehouderij.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
             </annotation>
           </element>
           <element name="adres" type="string">
@@ -1098,15 +1137,6 @@
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
-  <simpleType name="VeehouderijStofType">
-    <restriction base="string">
-      <enumeration value="PM10">
-        <annotation>
-          <documentation>PM10: Fijnstof &lt;10 micrometer</documentation>
-        </annotation>
-      </enumeration>
-    </restriction>
-  </simpleType>
   <element name="Veehouderijbron" substitutionGroup="gml:AbstractFeature" type="cimlk:VeehouderijbronType">
     <annotation>
       <documentation>Een plaats aan of nabij een stal waar de emissies vanuit die stal in de buitenlucht komen.</documentation>
@@ -1119,11 +1149,6 @@
           <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
             <annotation>
               <documentation>De unieke identificatie van een emissiebron van een veehouderij.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
             </annotation>
           </element>
           <element name="hoogte" type="double">
@@ -1180,11 +1205,6 @@
           <documentation>Eén van de vier typen voertuigen: licht, middelzwaar, zwaar of bus.</documentation>
         </annotation>
       </element>
-      <element name="maximumsnelheid" type="integer">
-        <annotation>
-          <documentation>Wettelijke maximumsnelheid op het wegdeel.</documentation>
-        </annotation>
-      </element>
       <element name="stagnatiefactor" type="double">
         <annotation>
           <documentation>Het aandeel van de opgegeven intensiteit dat stagnatie ondervindt.</documentation>
@@ -1216,16 +1236,6 @@
               <documentation>De unieke identificatie van een deel van een weg.</documentation>
             </annotation>
           </element>
-          <element name="monitoringsjaar" type="integer">
-            <annotation>
-              <documentation>Het jaar waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
-          <element name="monitoringsronde" type="integer">
-            <annotation>
-              <documentation>Code voor de monitoringsronde waar de gegevens betrekking op hebben.</documentation>
-            </annotation>
-          </element>
           <element minOccurs="0" name="straatnaam" type="string">
             <annotation>
               <documentation>De straatnaam zoals als aangeduid in het NWB of een eigen beschrijving wanneer de straat in het NWB niet bestaat.</documentation>
@@ -1246,6 +1256,16 @@
               <documentation>Het soort weg vanuit het perspectief van snelheid en doorstroming.</documentation>
             </annotation>
           </element>
+          <element name="maximumsnelheid" type="integer">
+            <annotation>
+              <documentation>Wettelijke maximumsnelheid op het wegdeel. Voor wegdelen met een dynamische maximumsnelheid wordt hier de laagste maximumsnelheid aangegeven.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="maximumsnelheidDynamisch" type="integer">
+            <annotation>
+              <documentation>Voor wegdelen waarop de maximumsnelheid dynamisch is, geeft dit de hoogste maximumsnelheid op het wegdeel aan.</documentation>
+            </annotation>
+          </element>
           <element name="tunnelfactor" type="double">
             <annotation>
               <documentation>De factor waarmee de emissies worden vermenigvuldigd om te corrigeren voor emissies uit een tunnelmond.</documentation>
@@ -1254,6 +1274,11 @@
           <element minOccurs="0" name="hoogte" type="integer">
             <annotation>
               <documentation>De gemiddelde hoogte van het wegdeel t.o.v. omringend maaiveld</documentation>
+            </annotation>
+          </element>
+          <element name="taludSoort" type="cimlk:TaludSoortType">
+            <annotation>
+              <documentation>Het soort talud dat het wegdeel aan beide kanten begrensd.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="opmerking" type="string"/>
@@ -1294,6 +1319,9 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <simpleType name="WegsoortType">
+    <annotation>
+      <documentation>Een waardelijst die onderscheid maakt in wegsoorten op basis waarvan de bijbehorende emissiefactor voor de weg kan worden bepaald.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="b">
         <annotation>
@@ -1333,6 +1361,9 @@
     </restriction>
   </simpleType>
   <simpleType name="WegverkeerBoomFactorType">
+    <annotation>
+      <documentation>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="1,00">
         <annotation>
@@ -1352,6 +1383,9 @@
     </restriction>
   </simpleType>
   <simpleType name="WegverkeerStofType">
+    <annotation>
+      <documentation>Een waardelijst met de stoffen waarop een correctie van toepassing kan zijn.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="EC">
         <annotation>
@@ -1386,6 +1420,9 @@
     </restriction>
   </simpleType>
   <simpleType name="WegverkeerVoertuigtypeType">
+    <annotation>
+      <documentation>Een waardelijst met waarin onderscheid wordt gemaakt tussen verschillende voertuigtypen waarop een maatregel van toepassing kan zijn.</documentation>
+    </annotation>
     <restriction base="string">
       <enumeration value="b">
         <annotation>
@@ -1405,6 +1442,11 @@
       <enumeration value="z">
         <annotation>
           <documentation>Zwaar verkeer: Gelede motorvoertuigen en motorvoertuigen met een dubbele achteras, met uitzondering van autobussen. Hieronder vallen vrachtwagens met 3 of meer assen, vrachtwagens met aanhanger en trekkers met oplegger.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="ld">
+        <annotation>
+          <documentation>Licht verkeer dynamisch: Een aparte categorie voor het lichtverkeer dat met de maximumsnelheidDynmaisch over het wegdeel rijdt. De voertuigcategorie is hetzelfde als voor licht verkeer: motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorieën 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</documentation>
         </annotation>
       </enumeration>
     </restriction>
