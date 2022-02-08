@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.merge" id="Cddc5e9fc-f895-4d8b-8d52-e16a95d31a56" priority="normal">
+        <source>
+            <class>
+                <type name="maatregelen_2020_pgd"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="auto_detect"/>
+        <parameter value="identificatie" name="property"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C983a0285-27ca-4ade-ae79-4a0cdb49eebf" priority="normal">
+        <source name="var">
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="geometrie"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="geometrie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def value = geometrie&#xD;
+&#xD;
+return _.geom.with(geometry:value, crs:"EPSG:28992")
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C9b03e5d8-d798-4d33-b96f-b4cf262c533e" priority="normal">
+        <source name="var">
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="{{project:namespace}}.M_{identificatie}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.string.regexanalysisfunction" id="Ce70035a4-bb42-409e-bdff-2fd26d9eec83" priority="normal">
+        <source>
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="M_{1}_{2}" name="outputFormat"/>
+        <parameter value="([0-9]*)_?([0-9]+)" name="regexPattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C48f2f7e4-1563-442e-b1cb-479f7a9e2d64" priority="normal">
+        <target>
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="namespace" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="{{project:namespace}}" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cfd54a27f-26a6-4c43-8c24-e56f64e5d2b0" priority="normal">
+        <source name="var">
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="voertuigtype"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="schalingsfactor"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="wegsoort"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="stof"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="maatregelen" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+_target {&#xD;
+	Maatregelfactor {&#xD;
+		schalingsfactor schalingsfactor&#xD;
+		stof stof&#xD;
+		voertuigtype voertuigtype&#xD;
+		wegsoort wegsoort&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="true" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C82420199-75ee-4bcd-83d3-8417e1d62317" priority="normal">
+        <source>
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="naam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="naam" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="C5eb8b6b1-d9fc-4bda-92ca-514922107e30" priority="normal">
+        <source>
+            <property>
+                <type name="maatregelen_2020_pgd"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="dd-MM-yyyy HH:mm" name="dateFormat"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cdb1d90d7-5365-4799-8f73-32736de2935a" priority="normal">
+        <source>
+            <class>
+                <type name="receptoren_2020_pdr"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C045fad96-3092-47ca-a439-74c45f3dbdb9" priority="normal">
+        <source name="var">
+            <property>
+                <type name="receptoren_2020_pdr"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="RW_{identificatie}" name="pattern"/>
+    </cell>
+</alignment>
