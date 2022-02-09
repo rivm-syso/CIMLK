@@ -3,7 +3,7 @@
     <name>Wegverkeer export</name>
     <author>dgree</author>
     <created>2022-02-08T12:46:37.415+01:00</created>
-    <modified>2022-02-08T17:12:38.190+01:00</modified>
+    <modified>2022-02-09T15:49:55.097+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -715,34 +715,80 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
-        <setting name="resourceId">45e81f61-bb43-4aab-8a0d-f3a3ac3b8f89</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
+        <setting name="source">imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">ISO-8859-2</setting>
-        <setting name="resourceId">0f6b57fe-5c5b-429e-8c95-30893c5fffcd</setting>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
+        <setting name="charset">ISO-8859-1</setting>
+        <setting name="resourceId">cef9171c-22bf-4d56-a6c9-0b0d12cead80</setting>
+        <setting name="types">java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/maatregelen_2020_pgd.csv</setting>
-        <setting name="decimal">.</setting>
+        <setting name="skip">True</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/metadata.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">maatregelen_2020_pgd</setting>
+        <setting name="typename">metadata</setting>
+        <setting name="properties">monitoringronde,monitoringjaar</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>metadata</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>metadata</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>monitoringronde</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>monitoringjaar</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">ISO-8859-2</setting>
-        <setting name="resourceId">d908b709-810f-4614-899e-1cdfc72d19bd</setting>
-        <setting name="quote">"</setting>
-        <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/receptoren_2020_pdr.csv</setting>
-        <setting name="decimal">.</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
-        <setting name="separator">;</setting>
-        <setting name="escape">\</setting>
-        <setting name="typename">receptoren_2020_pdr</setting>
-    </resource>
+    <export-config name="GML">
+        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">
+            <setting name="charset">UTF-8</setting>
+            <setting name="meta.description"></setting>
+            <setting name="geometry.unifyWindingOrder">counterClockwise</setting>
+            <setting name="gml.geometry.simplify">true</setting>
+            <setting name="crs"></setting>
+            <setting name="crs.epsg.prefix"></setting>
+            <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
+            <setting name="xml.notNil.omitNilReason">true</setting>
+            <setting name="xml.pretty">true</setting>
+        </configuration>
+    </export-config>
     <file name="alignment.xml" location="Wegverkeer%20export.halex.alignment.xml"/>
     <file name="styles.sld" location="Wegverkeer%20export.halex.styles.sld"/>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
@@ -802,8 +848,14 @@
     <property name="defaultGeometry:{http://cimlk.nl/1.0}WegdeelType/count">2</property>
     <complex-property name="variables">
         <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
+            <core:property name="monitoringronde">
+                <core:value value="2020"/>
+            </core:property>
             <core:property name="namespace">
                 <core:value value="NL.imlk"/>
+            </core:property>
+            <core:property name="monitoringjaar">
+                <core:value value="2019"/>
             </core:property>
         </core:properties>
     </complex-property>

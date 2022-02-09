@@ -1365,17 +1365,17 @@
       <documentation>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</documentation>
     </annotation>
     <restriction base="string">
-      <enumeration value="1,00">
+      <enumeration value="1">
         <annotation>
           <documentation>Enkele bomen: Hier en daar bomen of in het geheel niet.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="1,25">
+      <enumeration value="1.25">
         <annotation>
           <documentation>Meerdere bomen: Een of meer rijen bomen met een onderlinge afstand &lt; 15 meter met openingen tussen de kronen.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="1,50">
+      <enumeration value="1.50">
         <annotation>
           <documentation>Grote hoeveelheid bomen: De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</documentation>
         </annotation>
