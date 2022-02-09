@@ -999,7 +999,7 @@
               <documentation>De hoek in graden tussen de lange zijde van de stal en de x-as van het RD coördinatenstelsel (0 tot 180 graden).</documentation>
             </annotation>
           </element>
-          <element name="identificatiePandBAG" type="string">
+          <element minOccurs="0" name="identificatiePandBAG" type="string">
             <annotation>
               <documentation>Verwijzing naar de identificatie van het pand zoals opgenomen in de Basisregistratie Adressen en Gebouwen (BAG).</documentation>
             </annotation>
@@ -1200,12 +1200,12 @@
   </element>
   <complexType name="VerkeersgegevensWegType">
     <sequence>
-      <element name="voertuigclassificatie" type="cimlk:WegverkeerVoertuigtypeType">
+      <element name="voertuigtype" type="cimlk:WegverkeerVoertuigtypeType">
         <annotation>
-          <documentation>Eén van de vier typen voertuigen: licht, middelzwaar, zwaar of bus.</documentation>
+          <documentation>Eén van de typen voertuigen: licht verkeer, licht verkeer dynamisch, middelzwaar verkeer, zwaar verkeer of bus verkeer.</documentation>
         </annotation>
       </element>
-      <element name="stagnatiefactor" type="double">
+      <element minOccurs="0" name="stagnatiefactor" type="double">
         <annotation>
           <documentation>Het aandeel van de opgegeven intensiteit dat stagnatie ondervindt.</documentation>
         </annotation>
@@ -1365,17 +1365,17 @@
       <documentation>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</documentation>
     </annotation>
     <restriction base="string">
-      <enumeration value="1,00">
+      <enumeration value="1.00">
         <annotation>
           <documentation>Enkele bomen: Hier en daar bomen of in het geheel niet.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="1,25">
+      <enumeration value="1.25">
         <annotation>
           <documentation>Meerdere bomen: Een of meer rijen bomen met een onderlinge afstand &lt; 15 meter met openingen tussen de kronen.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="1,50">
+      <enumeration value="1.50">
         <annotation>
           <documentation>Grote hoeveelheid bomen: De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</documentation>
         </annotation>
@@ -1446,7 +1446,7 @@
       </enumeration>
       <enumeration value="ld">
         <annotation>
-          <documentation>Licht verkeer dynamisch: Een aparte categorie voor het lichtverkeer dat met de maximumsnelheidDynmaisch over het wegdeel rijdt. De voertuigcategorie is hetzelfde als voor licht verkeer: motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorieën 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</documentation>
+          <documentation>Licht verkeer dynamisch: Een aparte categorie voor het lichtverkeer dat met de maximumsnelheidDynamisch over het wegdeel rijdt. De voertuigcategorie is hetzelfde als voor licht verkeer: motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorieën 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</documentation>
         </annotation>
       </enumeration>
     </restriction>
