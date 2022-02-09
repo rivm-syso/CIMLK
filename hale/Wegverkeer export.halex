@@ -2,8 +2,8 @@
 <hale-project version="4.1.0.release">
     <name>Wegverkeer export</name>
     <author>dgree</author>
-    <created>2022-02-08T12:46:37.415+01:00</created>
-    <modified>2022-02-09T16:00:09.503+01:00</modified>
+    <created>2022-02-09T16:18:46.516+01:00</created>
+    <modified>2022-02-09T16:35:39.316+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -11,9 +11,9 @@
         <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Wegverkeer%20export.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
-        <setting name="charset">ISO-8859-2</setting>
-        <setting name="resourceId">7afb7233-a5d2-4783-bb2b-6d248b97e686</setting>
-        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">f0274abd-8f73-415b-a425-fef2cf1bb93b</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
         <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/maatregelen_2020_pgd.csv</setting>
@@ -21,7 +21,7 @@
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
         <setting name="typename">maatregelen_2020_pgd</setting>
-        <setting name="properties">identificatie,naam,stof,voertuigtype,wegsoort,schalingsfactor,tijdstipRegistratie,geometrie</setting>
+        <setting name="properties">identificatie,naamOverheid,naam,stof,voertuigtype,wegsoort,schalingsfactor,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
@@ -40,6 +40,18 @@
                         <hsd:declares>
                             <hsd:property>
 <hsd:name>identificatie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>naamOverheid</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -141,8 +153,8 @@
         </cache>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
-        <setting name="charset">ISO-8859-2</setting>
-        <setting name="resourceId">a4ec6229-b186-4660-a2df-409c1a9b79b8</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">bce10a84-de3a-4457-9322-ae7c49d49f76</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
@@ -319,8 +331,8 @@
         </cache>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
-        <setting name="charset">ISO-8859-1</setting>
-        <setting name="resourceId">964cf513-b844-433c-993d-c052e18781d0</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">229fdb13-5879-4a6f-a463-6cf80d483f73</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
@@ -715,66 +727,9 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
-        <setting name="source">imlk.xsd</setting>
+        <setting name="resourceId">8d94b0ef-bfc4-4000-a02c-bf403d8dea3d</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
-    </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
-        <setting name="charset">ISO-8859-1</setting>
-        <setting name="resourceId">cef9171c-22bf-4d56-a6c9-0b0d12cead80</setting>
-        <setting name="types">java.lang.String,java.lang.String</setting>
-        <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/metadata.csv</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
-        <setting name="separator">;</setting>
-        <setting name="escape">\</setting>
-        <setting name="typename">metadata</setting>
-        <setting name="properties">monitoringronde,monitoringjaar</setting>
-        <cache>
-            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
-                <hsd:type-index>
-                    <hsd:entry index="0">
-                        <hsd:name>metadata</hsd:name>
-                    </hsd:entry>
-                </hsd:type-index>
-                <hsd:mapping-relevant>0</hsd:mapping-relevant>
-                <hsd:types>
-                    <hsd:type index="0">
-                        <hsd:name>metadata</hsd:name>
-                        <hsd:constraint type="abstract" value="false"/>
-                        <hsd:constraint type="has-value" value="false"/>
-                        <hsd:constraint type="mappable" value="true"/>
-                        <hsd:constraint type="mapping-relevant" value="true"/>
-                        <hsd:declares>
-                            <hsd:property>
-<hsd:name>monitoringronde</hsd:name>
-<hsd:constraint type="cardinality" value="1..1"/>
-<hsd:constraint type="nillable" value="true"/>
-<hsd:propertyType>
-    <hsd:type>
-        <hsd:name>java.lang.String</hsd:name>
-        <hsd:constraint type="binding" value="java.lang.String"/>
-        <hsd:constraint type="has-value" value="true"/>
-    </hsd:type>
-</hsd:propertyType>
-                            </hsd:property>
-                            <hsd:property>
-<hsd:name>monitoringjaar</hsd:name>
-<hsd:constraint type="cardinality" value="1..1"/>
-<hsd:constraint type="nillable" value="true"/>
-<hsd:propertyType>
-    <hsd:type>
-        <hsd:name>java.lang.String</hsd:name>
-        <hsd:constraint type="binding" value="java.lang.String"/>
-        <hsd:constraint type="has-value" value="true"/>
-    </hsd:type>
-</hsd:propertyType>
-                            </hsd:property>
-                        </hsd:declares>
-                    </hsd:type>
-                </hsd:types>
-            </hsd:schema>
-        </cache>
     </resource>
     <export-config name="GML">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">
@@ -782,8 +737,8 @@
             <setting name="meta.description"></setting>
             <setting name="geometry.unifyWindingOrder">counterClockwise</setting>
             <setting name="gml.geometry.simplify">true</setting>
-            <setting name="crs"></setting>
-            <setting name="crs.epsg.prefix"></setting>
+            <setting name="crs"/>
+            <setting name="crs.epsg.prefix"/>
             <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
             <setting name="xml.notNil.omitNilReason">true</setting>
             <setting name="xml.pretty">true</setting>
@@ -849,13 +804,13 @@
     <complex-property name="variables">
         <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
             <core:property name="monitoringronde">
-                <core:value value="2020"/>
+                <core:value value=""/>
             </core:property>
             <core:property name="namespace">
                 <core:value value="NL.imlk"/>
             </core:property>
             <core:property name="monitoringjaar">
-                <core:value value="2019"/>
+                <core:value value=""/>
             </core:property>
         </core:properties>
     </complex-property>
