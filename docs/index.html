@@ -179,9 +179,9 @@
 						<li>lokaalID: een unieke identificatie van het object</li>
 						<li>versienummer: een identificatie van een specifieke versie van het object</li>
 					</ul>
-					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Er zal geen gebruik worden gemaakt van het versienummer.
+					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Het versienummer bevat de monitoringsronde en het monitoringsjaar zodat de objecten over de rondes en door de jaren heen een unieke aanduiding hebben.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen, monitoringsronden of monitoringsjaren dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken worden de volgende velden daarom in het lokaalID opgenomen: identificatie van het objecttype, de monitoringsronde en het monitoringsjaar. Voor objecttypen die worden aangeleverd door bronhouders, geldt dat de ID's ook uniek moeten zijn over bronhouders heen. Naast de eerder genoemde velden wordt voor deze objectypten daarom ook het KvK nummer toegevoegd aan het NEN3610ID. Het NEN3610ID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgegeven bij objecttypen die door de bronhouder worden aangeleverd:<br><i>NL.imlk.[Monitoringsronde]_[Monitoringsjaar]_[LettersObjecttype]_[KvK]_[identificatie]</i></p>
+				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het NEN3610ID. Het NEN3610ID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgegeven bij objecttypen die door de bronhouder worden aangeleverd:<br><i>NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
 				<ul>
 				<li><b>W</b>: Wegdeel</li>
@@ -2110,11 +2110,11 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van alle voor luchtkwaliteit relevante kenmerken van het verkeer dat over een wegdeel gaat.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het betreft karakteristieken zoals verkeersintensiteiten, stagnaties per voertuigtype en maximumsnelheid.</td></tr>
 </table>
-<section id="VerkeersgegevensWeg.voertuigclassificatie">
-<h3>voertuigclassificatie</h3>
+<section id="VerkeersgegevensWeg.voertuigtype">
+<h3>voertuigtype</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Eén van de vier typen voertuigen: licht, middelzwaar, zwaar of bus.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>E&#233;n van de typen voertuigen: licht verkeer, licht verkeer dynamisch, middelzwaar verkeer, zwaar verkeer of bus verkeer.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -2129,9 +2129,10 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Er komt gedurende een bepaalde, beperkte, periode van de dag stagnatie voor. Het betreft de etmaalgemiddelde fractie van de verkeersintensiteit van het voertuigtype dat stagneert. De stagnatiefactor geeft een verfijning van de gemiddelde snelheid.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (voertuigtype == 'ld') DAN (stagnatiefactor == NULL) ANDERS (stagnatiefactor != 0)</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.intensiteit">
@@ -2273,9 +2274,9 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
 <tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
-<li>1,00 (Enkele bomen): Hier en daar bomen of in het geheel niet.</li>
-<li>1,25 (Meerdere bomen): Een of meer rijen bomen met een onderlinge afstand < 15 meter met openingen tussen de kronen.</li>
-<li>1,50 (Grote hoeveelheid bomen): De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</li>
+<li>1.00 (Enkele bomen): Hier en daar bomen of in het geheel niet.</li>
+<li>1.25 (Meerdere bomen): Een of meer rijen bomen met een onderlinge afstand < 15 meter met openingen tussen de kronen.</li>
+<li>1.50 (Grote hoeveelheid bomen): De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</li>
 </ul></td></tr></table>
 </section>
 <section id="WegverkeerStof">
@@ -2302,7 +2303,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <li>l (Licht verkeer): Motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorieën 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</li>
 <li>m (Middelzwaar verkeer): Gelede en ongelede autobussen, en andere motorvoertuigen die ongeleed zijn en voorzien van 1 achteras met 4 banden. Hieronder vallen alle autobussen en vrachtwagens met 2 assen en 4 achterwielen. Voor binnenstedelijke wegen geldt dat er een aparte categorie is voor busverkeer.</li>
 <li>z (Zwaar verkeer): Gelede motorvoertuigen en motorvoertuigen met een dubbele achteras, met uitzondering van autobussen. Hieronder vallen vrachtwagens met 3 of meer assen, vrachtwagens met aanhanger en trekkers met oplegger.</li>
-<li>ld (Licht verkeer dynamisch): Een aparte categorie voor het lichtverkeer dat met de maximumsnelheidDynmaisch over het wegdeel rijdt. De voertuigcategorie is hetzelfde als voor licht verkeer: motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorie&#235;n 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</li>
+<li>ld (Licht verkeer dynamisch): Een aparte categorie voor het lichtverkeer dat met de maximumsnelheidDynamisch over het wegdeel rijdt. De voertuigcategorie is hetzelfde als voor licht verkeer: motorvoertuigen op 3 of meer wielen, met uitzondering van de voertuigen uit de categorie&#235;n 'middelzware' en 'zware' voertuigen. Hieronder vallen alle personenauto's, de meeste bestelauto's en vrachtwagens met 4 wielen.</li>
 </ul></td></tr></table>
 </section>
 </section><section><h2>Referentielijsten</h2>
