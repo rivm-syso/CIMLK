@@ -3,7 +3,7 @@
     <cell relation="eu.esdihumboldt.hale.align.merge" id="Cddc5e9fc-f895-4d8b-8d52-e16a95d31a56" priority="normal">
         <source>
             <class>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
             </class>
         </source>
         <target>
@@ -17,7 +17,7 @@
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C983a0285-27ca-4ade-ae79-4a0cdb49eebf" priority="normal">
         <source name="var">
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="geometrie"/>
             </property>
         </source>
@@ -39,7 +39,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C9b03e5d8-d798-4d33-b96f-b4cf262c533e" priority="normal">
         <source name="var">
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -54,7 +54,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C0eb0e97c-334a-4836-985d-2860663f48cf" priority="normal">
         <source name="var">
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -102,7 +102,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C5b26e54e-d427-4f29-aa76-9a2ede50dc0c" priority="normal">
         <source>
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="schalingsfactor"/>
             </property>
         </source>
@@ -120,7 +120,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C3dbdc9de-1f48-451d-a8b0-39b3cff5ee1f" priority="normal">
         <source>
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="stof"/>
             </property>
         </source>
@@ -138,7 +138,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C95b070d3-c159-465b-a700-314319633698" priority="normal">
         <source>
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="voertuigtype"/>
             </property>
         </source>
@@ -156,7 +156,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C510f2bef-b34c-4aa5-be8c-ce017a230d51" priority="normal">
         <source>
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="wegsoort"/>
             </property>
         </source>
@@ -174,7 +174,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C82420199-75ee-4bcd-83d3-8417e1d62317" priority="normal">
         <source>
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="naam"/>
             </property>
         </source>
@@ -190,7 +190,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="C5eb8b6b1-d9fc-4bda-92ca-514922107e30" priority="normal">
         <source>
             <property>
-                <type name="maatregelen_2020_pgd"/>
+                <type name="Maatregelen"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
@@ -205,7 +205,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.merge" id="Cdb1d90d7-5365-4799-8f73-32736de2935a" priority="normal">
         <source>
             <class>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
             </class>
         </source>
         <target>
@@ -219,7 +219,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C7fce3272-ba13-4947-81cc-99bc5f9a808e" priority="normal">
         <source name="var">
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="geometrie"/>
             </property>
         </source>
@@ -241,7 +241,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbbdb8e21-2757-4f67-a363-1ae3ad238a00" priority="normal">
         <source>
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="grondslag"/>
             </property>
         </source>
@@ -257,7 +257,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C5dc9e0c6-3804-40ec-a93c-fcc376a5f902" priority="normal">
         <source name="var">
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -272,7 +272,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C045fad96-3092-47ca-a439-74c45f3dbdb9" priority="normal">
         <source name="var">
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -320,7 +320,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C6f3e4466-e820-40d0-ae8c-d87005c8128c" priority="normal">
         <source>
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="identificatiePandBAG"/>
             </property>
         </source>
@@ -336,7 +336,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C5bbad20a-4aa7-462a-a229-f9a1e8608e7e" priority="normal">
         <source>
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="naam"/>
             </property>
         </source>
@@ -352,7 +352,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce8c934f6-a4f2-4715-9a68-8b2611ac12fa" priority="normal">
         <source>
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="opmerking"/>
             </property>
         </source>
@@ -368,19 +368,19 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C3153d0ed-6c7a-479e-923f-98eba168a93d" priority="normal">
         <source name="var">
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="wegdeel"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="bebouwingstype"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="bomenfactor"/>
             </property>
         </source>
@@ -398,7 +398,7 @@ if (wegdeel) {&#xD;
 			bomenfactor bomenfactor&#xD;
 			bebouwingstype bebouwingstype&#xD;
 			wegdeel {&#xD;
-				href "#"+_project.vars.namespace+"."+wegdeel&#xD;
+				href "#"+_project.vars.namespace+".W_"+wegdeel&#xD;
 			}&#xD;
 		}&#xD;
 	}&#xD;
@@ -411,7 +411,7 @@ if (wegdeel) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="C77b28e6c-788d-45fb-9dff-7411e061dba2" priority="normal">
         <source>
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
@@ -426,7 +426,7 @@ if (wegdeel) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C762b5e8c-ef71-45a6-9c11-607258a17094" priority="normal">
         <source>
             <property>
-                <type name="receptoren_2020_pdr"/>
+                <type name="Receptoren"/>
                 <child name="toetspuntSoort"/>
             </property>
         </source>
@@ -442,7 +442,7 @@ if (wegdeel) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.retype" id="C37314610-2665-4e13-9e4a-55dc445c716b" priority="normal">
         <source>
             <class>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
             </class>
         </source>
         <target>
@@ -456,7 +456,7 @@ if (wegdeel) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C32590b6b-9613-4bc6-afe5-324b7f0242ec" priority="normal">
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="geometrie"/>
             </property>
         </source>
@@ -478,7 +478,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C09083289-4867-479b-bc47-1a6b16d36bed" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="hoogte"/>
             </property>
         </source>
@@ -494,7 +494,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cba4c591b-e085-4358-a633-339ade963a55" priority="normal">
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -509,7 +509,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Ca63cd08b-a2b1-4c8b-af54-e56b74060a79" priority="normal">
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -526,7 +526,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
     <cell relation="eu.esdihumboldt.hale.align.assign.bound" id="C6d072240-233c-4706-af16-e777d3446cf4" priority="normal">
         <source name="anchor">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="identificatie"/>
             </property>
         </source>
@@ -563,7 +563,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C4a0ca482-b589-43f9-8f42-b7abf76ffa33" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="maximumsnelheid"/>
             </property>
         </source>
@@ -579,7 +579,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C8f737607-9be6-4d2c-a49a-4df3cdcef6b7" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="maximumsnelheidDynamisch"/>
             </property>
         </source>
@@ -595,7 +595,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc286998b-dc77-4c7b-b0fb-79081ccaa7da" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="opmerking"/>
             </property>
         </source>
@@ -611,19 +611,19 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ccb06aed5-6004-44b6-9bb6-f9333e34f285" priority="normal">
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="overdrachtLinksBinnen50m"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="overdrachtLinksSoort"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="overdrachtLinksHoogte"/>
             </property>
         </source>
@@ -651,19 +651,19 @@ if (overdrachtLinksSoort) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C6e237589-c2d7-4c12-9eba-e2968ccc4de2" priority="normal">
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="overdrachtRechtsHoogte"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="overdrachtRechtsBinnen50m"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="overdrachtRechtsSoort"/>
             </property>
         </source>
@@ -691,7 +691,7 @@ if (overdrachtRechtsSoort) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C0ac5d07b-f995-443b-b288-c9dd831c1d59" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="rekenmethode"/>
             </property>
         </source>
@@ -707,7 +707,7 @@ if (overdrachtRechtsSoort) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C79a6be95-f07f-4717-92c4-163b5b76806d" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="straatnaam"/>
             </property>
         </source>
@@ -723,7 +723,7 @@ if (overdrachtRechtsSoort) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccc8245a2-610f-49f6-b5c8-50ac1a031fdc" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="taludSoort"/>
             </property>
         </source>
@@ -739,7 +739,7 @@ if (overdrachtRechtsSoort) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="Cb51c55a5-6177-4c9c-b188-0d91200f83ba" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
@@ -754,7 +754,7 @@ if (overdrachtRechtsSoort) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc3ebef9e-0227-470f-b041-6f49ed2192f2" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="tunnelfactor"/>
             </property>
         </source>
@@ -770,55 +770,55 @@ if (overdrachtRechtsSoort) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C5b0c818c-f0e2-4f46-9c72-e6fe4718d245" priority="normal">
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="intensiteitMiddelzwaarVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="intensiteitZwaarVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="stagnatiefactorZwaarVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="stagnatiefactorMiddelzwaarVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="intensiteitBusVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="intensiteitLichtVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="stagnatiefactorBusVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="stagnatiefactorLichtVerkeer"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="intensiteitLichtVerkeerDynamisch"/>
             </property>
         </source>
@@ -867,7 +867,7 @@ _target {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C7fb74cff-c141-4cd5-95b4-382a2cadeb7d" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="wegnummer"/>
             </property>
         </source>
@@ -883,7 +883,7 @@ _target {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C248beb2c-0d4f-447b-942a-c6a72f67ce7b" priority="normal">
         <source>
             <property>
-                <type name="wegdelen_2020_pdr"/>
+                <type name="Wegdelen"/>
                 <child name="wegsoort"/>
             </property>
         </source>
