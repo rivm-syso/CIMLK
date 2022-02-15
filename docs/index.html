@@ -619,7 +619,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
 </table>
 </section>
 <section id="Receptor.naam">
@@ -733,7 +732,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#ToetspuntWegverkeer">ToetspuntWegverkeer</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslag == 0) DAN (toetspunt != 'Geen') ANDERS (toetspunt != 'Geen') </td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (grondslag == 0) DAN (toetspunt != 'Geen') ANDERS (toetspunt == 'Geen') </td></tr>
 </table>
 </section>
 <section id="ReceptorWegverkeer.grondslag">
@@ -948,7 +947,7 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het berekende aantal overschrijdingsuren NO2 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Eenheid</b></td><td>uur/jaar</td></tr>
+<tr border="0"><td width=200px><b>Eenheid</b></td><td>ug/m3</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1687,6 +1686,8 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>kilometer/uur</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
+<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>130</td></tr>
 </table>
 </section>
 <section id="Wegdeel.maximumsnelheidDynamisch">
@@ -1699,6 +1700,8 @@
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>kilometer/uur</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
+<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>130</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (maximumsnelheidDynamisch == NULL)</td></tr>
 </table>
 </section>
@@ -1736,8 +1739,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het soort talud dat het wegdeel aan beide kanten begrensd.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#TaludSoort">TaludSoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (hoogte != NULL) DAN (taludSoort != NULL) ANDERS (taludSoort == NULL)</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM2' & hoogte != 0) DAN (taludSoort != NULL) ANDERS (taludSoort == NULL)</td></tr>
 </table>
 </section>
 <section id="Wegdeel.opmerking">
@@ -1750,8 +1753,8 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
-<section id="Wegdeel.verkeergegevens">
-<h3>verkeergegevens</h3>
+<section id="Wegdeel.verkeersgegevens">
+<h3>verkeersgegevens</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van alle voor luchtkwaliteit relevante kenmerken van het verkeer dat over een wegdeel gaat.</td></tr>
@@ -2041,7 +2044,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De mate waarin bomen aanwezig zijn rondom het wegdeel.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit kan wijzigen over de lengte van het wegdeel daarom wordt dit overdrachtskenmerk aan de receptor gekoppeld.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerBoomFactor">WegverkeerBoomFactor</a></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerBomenfactor">WegverkeerBomenfactor</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -2076,17 +2079,16 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
-<section id="Overdrachtsobject.indicatieBinnen50m">
-<h3>indicatieBinnen50m</h3>
+<section id="Overdrachtsobject.afstand">
+<h3>afstand</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft aan of het overdrachtsobject zich binnen 50 meter van de wegas bevindt.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>Boolean</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft de afstand aan tussen het overdrachtsobject en de wegas.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
-<tr border="0"><td width=200px><b>Maximale waarde</b></td><td>50</td></tr>
 </table>
 </section>
 <section id="Overdrachtsobject.hoogte">
@@ -2132,7 +2134,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 <tr border="0"><td width=200px><b>Maximale waarde</b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (voertuigtype == 'ld') DAN (stagnatiefactor == NULL) ANDERS (stagnatiefactor != 0)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (voertuigtype == 'ld') DAN (stagnatiefactor == NULL) ANDERS (stagnatiefactor != NULL)</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.intensiteit">
@@ -2213,7 +2215,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <h2>Rekenmethode</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
-<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die de verschillende voorgeschreven rekenmethoden bevat voor wegverkeer bevat.</td></tr>
+<tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst die de verschillende voorgeschreven rekenmethoden voor wegverkeer bevat.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
 <li>SRM1 (): Standaard Reken Methode 1</li>
 <li>SRM2 (): Standaard Reken Methode 2</li>
@@ -2268,15 +2270,15 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <li>94 (Snelweg met strikte handhaving):  (snel)weg van het hoofdwegennet met een breed profiel en toepassing van strikte handhaving op de snelheid.</li>
 </ul></td></tr></table>
 </section>
-<section id="WegverkeerBoomFactor">
-<h2>WegverkeerBoomFactor</h2>
+<section id="WegverkeerBomenfactor">
+<h2>WegverkeerBomenfactor</h2>
 <table>
 <tr><td width=200px valign=top><b>Stereotype</b></td><td>Enumeratie</td></tr>
 <tr><td width=200px valign=top><b>Definitie</b></td><td>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</td></tr>
 <tr><td width=200px valign=top><b>Mogelijke waarden</b></td><td><ul>
-<li>1.00 (Enkele bomen): Hier en daar bomen of in het geheel niet.</li>
+<li>1 (Enkele bomen): Hier en daar bomen of in het geheel niet.</li>
 <li>1.25 (Meerdere bomen): Een of meer rijen bomen met een onderlinge afstand < 15 meter met openingen tussen de kronen.</li>
-<li>1.50 (Grote hoeveelheid bomen): De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</li>
+<li>1.5 (Grote hoeveelheid bomen): De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</li>
 </ul></td></tr></table>
 </section>
 <section id="WegverkeerStof">
@@ -2327,7 +2329,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 	<h2>Bijlagen</h2>
 	<section>
 		<h3>Uitwisselbestanden</h3>
-		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven. Daarnaast wordt van elke kolom ook vermeld hoe deze zich verhoudt tot het informatiemodel. De aangeleverde CSV bestanden dienen altijd een puntkomma (;) als scheidingsteken te gebruiken en een punt (.) als decimaalteken. In de kolom tijdstipRegistratie wordt de tijd altijd in Nederlandse tijd weergegeven inclusief correctie voor zomer/wintertijd</p>
+		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven. Daarnaast wordt van elke kolom ook vermeld hoe deze zich verhoudt tot het informatiemodel. De aangeleverde CSV bestanden dienen altijd een puntkomma (;) als scheidingsteken te gebruiken en een punt (.) als decimaalteken. In de kolom tijdstipRegistratie wordt de tijd altijd in Nederlandse tijd weergegeven inclusief correctie voor zomer/wintertijd.</p>
 		<section>
 			<h4>Wegverkeer</h4>
 			<section>
@@ -2507,9 +2509,9 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>overdrachtLinksBinnen50m</td>
+						<td>overdrachtLinksAfstand</td>
 						<td>
-							Instantie van <a href="#Wegdeel.overdrachtsobjectLinks">Wegdeel.overdrachtsobjectLinks</a> met attribuut <a href="#Overdrachtsobject.indicatieBinnen50m">Overdrachtsobject.indicatieBinnen50m</a>
+							Instantie van <a href="#Wegdeel.overdrachtsobjectLinks">Wegdeel.overdrachtsobjectLinks</a> met attribuut <a href="#Overdrachtsobject.afstand">Overdrachtsobject.afstand</a>
 						</td>
 					</tr>
 					<tr>
@@ -2528,9 +2530,9 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					</tr>
 					<tr>
 						<td></td>
-						<td>overdrachtRechtsBinnen50m</td>
+						<td>overdrachtRechtsAfstand</td>
 						<td>
-							Instantie van <a href="#Wegdeel.overdrachtsobjectRechts">Wegdeel.overdrachtsobjectRechts</a> met attribuut <a href="#Overdrachtsobject.indicatieBinnen50m">Overdrachtsobject.indicatieBinnen50m</a>
+							Instantie van <a href="#Wegdeel.overdrachtsobjectRechts">Wegdeel.overdrachtsobjectRechts</a> met attribuut <a href="#Overdrachtsobject.afstand">Overdrachtsobject.afstand</a>
 						</td>
 					</tr>
 					<tr>
