@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">13 januari 2022</h2>
+		<h2 id="subtitle">15 februari 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -87,7 +87,7 @@
 			</section>
 			<section>
 				<h3>Conventies</h3>
-				<p>Deze paragraaf beschrijft een aantal conventies zoals deze worden gehanteerd in het informatiemodel, zoals de gebruikt modelleertechnieken en wijze van beschrijving. Het informatiemodel is beschreven en gevisualiseerd in de Unified Modeling Language (UML). Verder wordt aangesloten bij het Metamodel voor Informatiemodellering 1.1. Dat betekent dat de terminologie en metadata-eigenschappen uit die standaard zijn overgenomen. Er is wel gekozen voor het beperken van de eigenschappen, om de leesbaarheid te maximaliseren.</p>
+				<p>Deze paragraaf beschrijft een aantal conventies zoals deze worden gehanteerd in het informatiemodel, zoals de gebruikte modelleertechnieken en wijze van beschrijving. Het informatiemodel is beschreven en gevisualiseerd in de <a href="https://www.omg.org/spec/UML/" target="_blank">Unified Modeling Language (UML)</a>. Verder wordt aangesloten bij het <a href="https://docs.geostandaarden.nl/mim/mim/" target="_blank">Metamodel voor Informatiemodellering 1.1</a>. Dat betekent dat de terminologie en metadata-eigenschappen uit die standaard zijn overgenomen. Er is wel gekozen voor het beperken van de eigenschappen, om de leesbaarheid te maximaliseren.</p>
 				<p>Het logisch model beschrijft op het hoogste niveau de objecttypen, gegevensgroeptypen en referentielijsten. Attributen worden getoond bij de objecttypen en gegevensgroeptypen waarbij ze gebruikt worden. Enumeraties worden getoond bij het attribuut waarbij ze worden gebruikt.</p>
 				<p>Voor alle elementen zijn er bepaalde metadata-eigenschappen, gebaseerd op het Metamodel voor Informatiemodellering. Elementen zijn zoveel mogelijk voorzien van een definitie die een duiding geeft van de betekenis en waar relevant ook van een verdere toelichting. Attributen zijn het meest uitgebreid beschreven en hebben aanvullend de volgende metadata-eigenschappen:
 					<ul>
@@ -117,11 +117,11 @@
 						</li>
 						<li>
 							<b>Minimale waarde:</b>
-							de minimale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
+							de minimale waarde die een getal kan aannemen. Dit is alleen relevant voor attributen van het type Integer of Real.
 						</li>
 						<li>
 							<b>Maximale waarde:</b>
-							de maximale waarde die een getal kan aannamen. Dit is alleen relevant voor attributen van het type Integer of Real.
+							de maximale waarde die een getal kan aannemen. Dit is alleen relevant voor attributen van het type Integer of Real.
 						</li>
 						<li>
 							<b>Constraints:</b>
@@ -173,13 +173,13 @@
 			</section>
 			<section>
 				<h3>NEN3610</h3>
-				<p>Er is voor gekozen om aan te sluiten bij de NEN3610 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Hierdoor krijgen alle objecttypen een NEN3610ID om ze uniek te identificeren. Een NEN3610ID is als volgt opgebouwd:
+				<p>Er is voor gekozen om aan te sluiten bij de <a href="https://www.geonovum.nl/geo-standaarden/nen-3610-basismodel-voor-informatiemodellen" target="_blank">NEN3610 standaard voor informatiemodellering</a>. Deze is specifiek gericht op geografische informatie. Hierdoor krijgen alle objecttypen een NEN3610ID om ze uniek te identificeren. Een NEN3610ID is als volgt opgebouwd:
 					<ul>
 						<li>namespace: unieke identificatie van het informatiemodel</li>
 						<li>lokaalID: een unieke identificatie van het object</li>
-						<li>versienummer: een identificatie van een specifieke versie van het object</li>
+						<li>versie: een identificatie van een specifieke versie van het object</li>
 					</ul>
-					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Het versienummer bevat de monitoringsronde en het monitoringsjaar zodat de objecten over de rondes en door de jaren heen een unieke aanduiding hebben.
+					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. De versie bevat de monitoringsronde en het monitoringsjaar zodat de objecten over de rondes en door de jaren heen een unieke aanduiding hebben.
 				</p>
 				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het NEN3610ID. Het NEN3610ID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgegeven bij objecttypen die door de bronhouder worden aangeleverd:<br><i>NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
@@ -196,7 +196,7 @@
 				<li><b>A</b>: AanvullendeTechniek</li>
 				</ul>
 				</p>
-				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KVK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
+				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KvK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
 				</p>
 			</section>
 			<section>
@@ -206,8 +206,8 @@
 			<section>
 				<h3>Uitwisselbestanden</h3>
 				<p>Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden en in de toekomst ook via API's. Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. Denk bijvoorbeeld aan het niet volledig uitschrijven van de NEN3610ID's; deze worden door het CIMLK zelf verrijkt bij het ontvangen van de gegevens.</p>
-				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel. Ook de NEN3610ID's zullen in dit formaat volledig moeten worden opgenomen. De GML-id's zullen overeenkomen met het NEN3610ID, waarbij de namespace en de lokaalID van elkaar gescheiden zijn door een punt (".").</p>
-				<p>De beschrijving van het formaat van de uitwisselbestanden is strikt genomen geen onderdeel van het informatiemodel zelf. De informatie is echter wel beschikbaar en zal in de toekomst ook beschikbaar worden gesteld.</p>
+				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel. Ook de NEN3610ID's zullen in dit formaat volledig moeten worden opgenomen. De GML-id's zullen overeenkomen met het NEN3610ID, waarbij de namespace en het lokaalID van elkaar gescheiden zijn door een punt (".").</p>
+				<p>De beschrijving van het formaat van de uitwisselbestanden is strikt genomen geen onderdeel van het informatiemodel zelf. De informatie is echter wel beschikbaar wordt in de bijlage beschikbaar gesteld.</p>
 			</section>
 		</section>
 		<section>
@@ -238,6 +238,8 @@
 					<h4>Emissieobject</h4>
 					<p>Onderdeel van een luchtkwaliteitbron die stoffen emitteert.</p>
 					<p>Allerlei objecten stoten luchtverontreinigende stoffen uit. Voorbeelden hiervan zijn het verkeer op een weg of dieren in een stal van een veehouderij.</p>
+				</section>
+				<section>
 					<h4>Receptor</h4>
 					<p>De locatie waar de luchtkwaliteit bepaald wordt.</p>
 					<p>Dit hangt af van het project en wordt daarom per project opgenomen in een luchtkwaliteitberekening. Er wordt onderscheid gemaakt tussen toetspunten en rekenpunten. Op receptoren die aangeduid zijn als toetspunten, wordt onderzocht of de berekende concentraties voldoen aan de grenswaarden. Op receptoren die aangeduid zijn als rekenpunten, vindt geen toetsing van de rekenresultaten aan de grenswaarden plaats.</p>
@@ -284,11 +286,10 @@
 			<p>Het logisch model is de uitwerking van een conceptueel model in een ontwerp. Dit ontwerp is nog vrij van de te gebruiken technologie, maar bevat al wel keuzes over hoe gegevens gestructureerd worden. Het werkt de begrippen uit tot objecttypen met attributen (ook wel: attribuutsoorten). Een objecttype is een logische clustering van gegevens. Attributen zijn een representatie van de eigenschappen van concepten op gegevensniveau. Merk op dat het conceptueel model een andere focus heeft dan het logisch model, waardoor niet elk begrip in het conceptueel model ook tot een objecttype in het logisch model leidt.</p>
 			<section>
 				<h3>Diagrammen</h3>
+				<p>Klik op een diagram om naar een specifiek objecttype toe te springen.</p>
 				<section>
 					<h4>Wegverkeer</h4>
 					<img src="diagram-wegverkeer.png" usemap="#image-map-wegverkeer"/>
-					<br/>
-					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map-wegverkeer">
 						<area href="#Wegdeel" coords="8,6,310,336" shape="rect"/>
 						<area href="#VerkeersgegevensWeg" coords="423,6,730,110" shape="rect"/>
