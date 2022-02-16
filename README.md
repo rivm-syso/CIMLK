@@ -13,13 +13,22 @@ Nadat wijzigingen in het informatiemodel zijn doorgevoerd dienen een aantal stap
 Wanneer al deze stappen zijn uitgevoerd kunnen op Github worden gezet.
 De wijzigingen worden vervolgens automatisch gepubliceerd wanneer deze op `main` branch worden doorgevoerd.
 
+De volgende stappen dienen hiervoor te worden gevolgd:
+- Genereren Respec document
+- Updaten afbeeldingen met diagrammen
+- Genereren CSV's met informatie over objecttypen en attributen
+- Genereren nieuw XSD schema
+- Updaten van transformaties en validaties in HALE
+
+Bovenstaande stappen worden hieronder verder toegelicht.
+
 ### Wijzigingen Sparx Enterprise Architect
 Het Sparx Enterprise Architect bestand wordt als basis gebruikt voor het informatiemodel.
 
 Op basis van het informatiemodel wordt automatisch een Respec document gegenereerd.
 Dit document wordt op Github automatisch gepubliceerd als webpagina zodat gebruikers het kunnen raadplegen.
 Het document kan met behulp van een vanuit Sparx Enterprise Architect gegnereerd worden: Scripting -> CIMLK -> Export to Respec.
-Dit script voert de volgende stappen uit:
+Dit script voert de volgende stappen uit en voegt informatie uit verschillende bestanden samen:
 - Opstellen Respec document inclusief inleidende teksten op basis van `informatiemodel/respec-basis.html`
 - Toevoegen van informatie over de objectyupen en attributen vanuit Sparx Enterprise Architect
 - Toevoegen van bijlagen over de uitwisselbestanden op basis van `informatiemodel/bijlagen.html`
