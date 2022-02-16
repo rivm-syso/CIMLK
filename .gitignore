@@ -2,5 +2,6 @@
 *.log
 *.index
 *.data
-cimlklog.html
-cimlklog.xml
+shapechange/cimlklog.html
+shapechange/cimlklog.xml
+shapechange/shapechange_java.txt
