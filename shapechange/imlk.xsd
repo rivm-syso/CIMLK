@@ -417,7 +417,7 @@
           <documentation>De mate van bebouwing op de virtuele lijn tussen wegdeel en receptor voor een SRM1 berekening.</documentation>
         </annotation>
       </element>
-      <element name="bomenfactor" type="cimlk:WegverkeerBoomFactorType">
+      <element name="bomenfactor" type="cimlk:WegverkeerBomenfactorType">
         <annotation>
           <documentation>De mate waarin bomen aanwezig zijn rondom het wegdeel.</documentation>
         </annotation>
@@ -442,9 +442,9 @@
           <documentation>Beschrijft het overdrachtsobject dat zich langs het wegdeel bevindt.</documentation>
         </annotation>
       </element>
-      <element name="indicatieBinnen50m" type="boolean">
+      <element name="afstand" type="integer">
         <annotation>
-          <documentation>Geeft aan of het overdrachtsobject zich binnen 50 meter van de wegas bevindt.</documentation>
+          <documentation>Geeft de afstand aan tussen het overdrachtsobject en de wegas.</documentation>
         </annotation>
       </element>
       <element name="hoogte" type="double">
@@ -653,17 +653,17 @@
   </complexType>
   <simpleType name="RekenmethodeType">
     <annotation>
-      <documentation>Een waardelijst die de verschillende voorgeschreven rekenmethoden bevat voor wegverkeer bevat.</documentation>
+      <documentation>Een waardelijst die de verschillende voorgeschreven rekenmethoden voor wegverkeer bevat.</documentation>
     </annotation>
     <restriction base="string">
       <enumeration value="SRM1">
         <annotation>
-          <documentation>Standaard Reken Methode 1</documentation>
+          <documentation>Standaard Reken Methode 1: Rekenmethode voor wegen binnen de bebouwde kom.</documentation>
         </annotation>
       </enumeration>
       <enumeration value="SRM2">
         <annotation>
-          <documentation>Standaard Reken Methode 2</documentation>
+          <documentation>Standaard Reken Methode 2: Rekenmethode voor (snel)wegen.</documentation>
         </annotation>
       </enumeration>
     </restriction>
@@ -1276,13 +1276,13 @@
               <documentation>De gemiddelde hoogte van het wegdeel t.o.v. omringend maaiveld</documentation>
             </annotation>
           </element>
-          <element name="taludSoort" type="cimlk:TaludSoortType">
+          <element minOccurs="0" name="taludSoort" type="cimlk:TaludSoortType">
             <annotation>
               <documentation>Het soort talud dat het wegdeel aan beide kanten begrensd.</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="opmerking" type="string"/>
-          <element maxOccurs="unbounded" name="verkeergegevens" type="cimlk:VerkeersgegevensWegPropertyType">
+          <element maxOccurs="unbounded" name="verkeersgegevens" type="cimlk:VerkeersgegevensWegPropertyType">
             <annotation>
               <documentation>Specificatie van alle voor luchtkwaliteit relevante kenmerken van het verkeer dat over een wegdeel gaat.</documentation>
             </annotation>
@@ -1360,12 +1360,12 @@
       </enumeration>
     </restriction>
   </simpleType>
-  <simpleType name="WegverkeerBoomFactorType">
+  <simpleType name="WegverkeerBomenfactorType">
     <annotation>
       <documentation>Een waardelijst met waarden die mate van bomen langs een weg aangeven.</documentation>
     </annotation>
     <restriction base="string">
-      <enumeration value="1.00">
+      <enumeration value="1">
         <annotation>
           <documentation>Enkele bomen: Hier en daar bomen of in het geheel niet.</documentation>
         </annotation>
@@ -1375,7 +1375,7 @@
           <documentation>Meerdere bomen: Een of meer rijen bomen met een onderlinge afstand &lt; 15 meter met openingen tussen de kronen.</documentation>
         </annotation>
       </enumeration>
-      <enumeration value="1.50">
+      <enumeration value="1.5">
         <annotation>
           <documentation>Grote hoeveelheid bomen: De kronen raken elkaar en overspannen minstens een derde gedeelte van de straatbreedte.</documentation>
         </annotation>
