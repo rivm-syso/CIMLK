@@ -3,7 +3,7 @@
     <name>Wegverkeer export</name>
     <author>dgree</author>
     <created>2022-02-09T16:18:46.516+01:00</created>
-    <modified>2022-02-09T16:35:39.316+01:00</modified>
+    <modified>2022-02-16T16:35:15.769+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -737,8 +737,8 @@
             <setting name="meta.description"></setting>
             <setting name="geometry.unifyWindingOrder">counterClockwise</setting>
             <setting name="gml.geometry.simplify">true</setting>
-            <setting name="crs"/>
-            <setting name="crs.epsg.prefix"/>
+            <setting name="crs"></setting>
+            <setting name="crs.epsg.prefix"></setting>
             <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
             <setting name="xml.notNil.omitNilReason">true</setting>
             <setting name="xml.pretty">true</setting>
