@@ -317,21 +317,26 @@ if (_project.vars.monitoringjaar) {&#xD;
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6f3e4466-e820-40d0-ae8c-d87005c8128c" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C6f3e4466-e820-40d0-ae8c-d87005c8128c" priority="normal">
+        <source name="var">
             <property>
                 <type name="Receptoren"/>
                 <child name="identificatiePandBAG"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
                 <child name="identificatiePandBAG" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (identificatiePandBAG)&#xD;
+	return identificatiePandBAG
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C5bbad20a-4aa7-462a-a229-f9a1e8608e7e" priority="normal">
         <source>
@@ -349,21 +354,26 @@ if (_project.vars.monitoringjaar) {&#xD;
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce8c934f6-a4f2-4715-9a68-8b2611ac12fa" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ce8c934f6-a4f2-4715-9a68-8b2611ac12fa" priority="normal">
+        <source name="var">
             <property>
                 <type name="Receptoren"/>
                 <child name="opmerking"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
                 <child name="opmerking" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (opmerking)&#xD;
+	return opmerking
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C3153d0ed-6c7a-479e-923f-98eba168a93d" priority="normal">
         <source name="var">
@@ -475,21 +485,26 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C09083289-4867-479b-bc47-1a6b16d36bed" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C09083289-4867-479b-bc47-1a6b16d36bed" priority="normal">
+        <source name="var">
             <property>
                 <type name="Wegdelen"/>
                 <child name="hoogte"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
                 <child name="hoogte" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (hoogte)&#xD;
+	return hoogte
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cba4c591b-e085-4358-a633-339ade963a55" priority="normal">
         <source name="var">
@@ -576,37 +591,47 @@ if (_project.vars.monitoringjaar) {&#xD;
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8f737607-9be6-4d2c-a49a-4df3cdcef6b7" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C8f737607-9be6-4d2c-a49a-4df3cdcef6b7" priority="normal">
+        <source name="var">
             <property>
                 <type name="Wegdelen"/>
                 <child name="maximumsnelheidDynamisch"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
                 <child name="maximumsnelheidDynamisch" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (maximumsnelheidDynamisch)&#xD;
+	return maximumsnelheidDynamisch
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc286998b-dc77-4c7b-b0fb-79081ccaa7da" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cc286998b-dc77-4c7b-b0fb-79081ccaa7da" priority="normal">
+        <source name="var">
             <property>
                 <type name="Wegdelen"/>
                 <child name="opmerking"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
                 <child name="opmerking" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (opmerking)&#xD;
+	return opmerking
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ccb06aed5-6004-44b6-9bb6-f9333e34f285" priority="normal">
         <source name="var">
@@ -704,21 +729,26 @@ if (overdrachtRechtsSoort) {&#xD;
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C79a6be95-f07f-4717-92c4-163b5b76806d" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C79a6be95-f07f-4717-92c4-163b5b76806d" priority="normal">
+        <source name="var">
             <property>
                 <type name="Wegdelen"/>
                 <child name="straatnaam"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
                 <child name="straatnaam" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (straatnaam)&#xD;
+	return straatnaam
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccc8245a2-610f-49f6-b5c8-50ac1a031fdc" priority="normal">
         <source>
@@ -836,49 +866,60 @@ _target {&#xD;
 		stagnatiefactor stagnatiefactorBusVerkeer&#xD;
 		voertuigtype 'b'&#xD;
 	}&#xD;
+}&#xD;
+_target {&#xD;
 	VerkeersgegevensWeg {&#xD;
 		intensiteit intensiteitLichtVerkeer&#xD;
 		stagnatiefactor stagnatiefactorLichtVerkeer&#xD;
 		voertuigtype 'l'&#xD;
 	}&#xD;
-	if (intensiteitLichtVerkeerDynamisch) {&#xD;
+}&#xD;
+if (intensiteitLichtVerkeerDynamisch) {&#xD;
+	_target {&#xD;
 		VerkeersgegevensWeg {&#xD;
 			intensiteit intensiteitLichtVerkeerDynamisch&#xD;
 			voertuigtype 'ld'&#xD;
 		}&#xD;
 	}&#xD;
+}&#xD;
+_target {&#xD;
 	VerkeersgegevensWeg {&#xD;
 		intensiteit intensiteitMiddelzwaarVerkeer&#xD;
 		stagnatiefactor stagnatiefactorMiddelzwaarVerkeer&#xD;
 		voertuigtype 'm'&#xD;
 	}&#xD;
+}&#xD;
+_target {&#xD;
 	VerkeersgegevensWeg {&#xD;
 		intensiteit intensiteitZwaarVerkeer&#xD;
 		stagnatiefactor stagnatiefactorZwaarVerkeer&#xD;
 		voertuigtype 'z'&#xD;
 	}&#xD;
-}&#xD;
-	&#xD;
-		
+}
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7fb74cff-c141-4cd5-95b4-382a2cadeb7d" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C7fb74cff-c141-4cd5-95b4-382a2cadeb7d" priority="normal">
+        <source name="var">
             <property>
                 <type name="Wegdelen"/>
                 <child name="wegnummer"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
                 <child name="wegnummer" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (wegnummer)&#xD;
+	return wegnummer
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C248beb2c-0d4f-447b-942a-c6a72f67ce7b" priority="normal">
         <source>
