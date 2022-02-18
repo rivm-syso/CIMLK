@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">15 februari 2022</h2>
+		<h2 id="subtitle">18 februari 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -179,7 +179,7 @@
 						<li>lokaalID: een unieke identificatie van het object</li>
 						<li>versie: een identificatie van een specifieke versie van het object</li>
 					</ul>
-					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. De versie bevat de monitoringsronde en het monitoringsjaar zodat de objecten over de rondes en door de jaren heen een unieke aanduiding hebben.
+					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. De versie wordt gebruikt voor objecttypen die gelinkt zijn aan een monitoringsronde en een monitoringsjaar zodat de objecten over de rondes en door de jaren heen een unieke aanduiding hebben.
 				</p>
 				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het NEN3610ID. Het NEN3610ID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgegeven bij objecttypen die door de bronhouder worden aangeleverd:<br><i>NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
@@ -297,11 +297,11 @@
 						<area href="#Overdrachtsobject" coords="423,200,730,315" shape="rect"/>
 						<area href="#ReceptorWegverkeer" coords="8,600,310,705" shape="rect"/>
 						<area href="#Receptor" coords="423,600,730,760" shape="rect"/>
-						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1640" shape="rect"/>
+						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1660" shape="rect"/>
 						<area href="#Correctie" coords="423,900,730,1030" shape="rect"/>						
 						<area href="#Correctieterm" coords="423,1100,730,1190" shape="rect"/>
-						<area href="#Maatregel" coords="423,1325,730,1460" shape="rect"/>
-						<area href="#Maatregelfactor" coords="423,1520,730,1640" shape="rect"/>
+						<area href="#Maatregel" coords="423,1345,730,1480" shape="rect"/>
+						<area href="#Maatregelfactor" coords="423,1540,730,1660" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -317,7 +317,7 @@
 						<area href="#Huisvestingssysteem" coords="8,1019,266,1120" shape="rect"/>
 						<area href="#Receptor" coords="380,227,650,380" shape="rect"/>
 						<area href="#ReceptorVeehouderij" coords="380,500,650,590" shape="rect"/>
-						<area href="#RekenresultaatVeehouderij" coords="380,660,650,925" shape="rect"/>
+						<area href="#RekenresultaatVeehouderij" coords="380,660,650,945" shape="rect"/>
 						<area href="#AanvullendeTechniek" coords="380,1019,650,1120" shape="rect"/>
 					</map>
 				</section>
@@ -768,6 +768,18 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor veehouderijen inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
 </table>
+<section id="RekenresultaatVeehouderij.identificatie">
+<h3>identificatie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een rekenresultaat.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
 <section id="RekenresultaatVeehouderij.rekentoolVersie">
 <h3>rekentoolVersie</h3>
 <table width=100%>
@@ -913,6 +925,18 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor wegverkeer inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
 </table>
+<section id="RekenresultaatWegverkeer.identificatie">
+<h3>identificatie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een rekenresultaat.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
 <section id="RekenresultaatWegverkeer.rekentoolVersie">
 <h3>rekentoolVersie</h3>
 <table width=100%>
