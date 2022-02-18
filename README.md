@@ -14,6 +14,7 @@ Wanneer al deze stappen zijn uitgevoerd kunnen op Github worden gezet.
 De wijzigingen worden vervolgens automatisch gepubliceerd wanneer deze op `main` branch worden doorgevoerd.
 
 De volgende stappen dienen hiervoor te worden gevolgd:
+- Wijzigen datum in `informatiemodel/respec-basis.html`
 - Genereren Respec document
 - Updaten afbeeldingen met diagrammen
 - Genereren CSV's met informatie over objecttypen en attributen
