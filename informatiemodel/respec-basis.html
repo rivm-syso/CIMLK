@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">23 februari 2022</h2>
+		<h2 id="subtitle">9 maart 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -185,7 +185,7 @@
 				<p>De namespace voor dit informatiemodel zal altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd.</p>
 				
 				<h4>LokaalID</h4>
-				<p>Het lokaalID in NEN3610ID is de unieke identificatie van één object en kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het lokaalID. Het lokaalID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgenomen bij objecttypen die door de bronhouder worden aangeleverd:<br><i>[LettersObjecttype]_[KvK]_[identificatie]</i></p>
+				<p>Het lokaalID in NEN3610ID is de unieke identificatie van één object en kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het lokaalID. Het lokaalID heeft dan de volgende structuur:<br><i>[LettersObjecttype]_[KvK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
 					<ul>
 					<li><b>W</b>: Wegdeel</li>
