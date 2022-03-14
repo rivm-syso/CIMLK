@@ -3,7 +3,7 @@
     <name>Wegverkeer import</name>
     <author>dgree</author>
     <created>2022-03-14T08:35:04.128+01:00</created>
-    <modified>2022-03-14T11:07:29.876+01:00</modified>
+    <modified>2022-03-14T11:35:00.370+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -746,6 +746,42 @@
         <setting name="strict">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
     </resource>
+    <export-config name="CSVmaatregel">
+        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.csv.writer.instance">
+            <setting name="charset">UTF-8</setting>
+            <setting name="meta.description"></setting>
+            <setting name="quote">"</setting>
+            <setting name="selectedExportType">test_maatregel</setting>
+            <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
+            <setting name="separator">;</setting>
+            <setting name="escape">\</setting>
+            <setting name="solveNestedProperties">true</setting>
+        </configuration>
+    </export-config>
+    <export-config name="CSVreceptor">
+        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.csv.writer.instance">
+            <setting name="charset">UTF-8</setting>
+            <setting name="meta.description"></setting>
+            <setting name="quote">"</setting>
+            <setting name="selectedExportType">test_receptor</setting>
+            <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
+            <setting name="separator">;</setting>
+            <setting name="escape">\</setting>
+            <setting name="solveNestedProperties">true</setting>
+        </configuration>
+    </export-config>
+    <export-config name="CSVwegdeel">
+        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.csv.writer.instance">
+            <setting name="charset">UTF-8</setting>
+            <setting name="meta.description"></setting>
+            <setting name="quote">"</setting>
+            <setting name="selectedExportType">test_wegdeel</setting>
+            <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
+            <setting name="separator">;</setting>
+            <setting name="escape">\</setting>
+            <setting name="solveNestedProperties">true</setting>
+        </configuration>
+    </export-config>
     <file name="alignment.xml" location="Wegverkeer%20import.halex.alignment.xml"/>
     <file name="styles.sld" location="Wegverkeer%20import.halex.styles.sld"/>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
