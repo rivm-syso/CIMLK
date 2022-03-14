@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cecd2e2b4-6337-47f9-8bad-211b871b4765" priority="normal">
+        <source>
+            <class>
+                <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="test_maatregel"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geo = _.geom.find(_source.p.geometrie.first()).geometry&#xD;
+String wkt = geo.toText()&#xD;
+&#xD;
+_source.p.maatregelen.each { maatregel -&gt;&#xD;
+	_target {&#xD;
+		naam(_source.p.naam.value())&#xD;
+		geometrie(wkt)&#xD;
+		tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
+		identificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(2))&#xD;
+		stof(maatregel.p.Maatregelfactor.stof.value())&#xD;
+		schalingsfactor(maatregel.p.Maatregelfactor.schalingsfactor.value())&#xD;
+		voertuigtype(maatregel.p.Maatregelfactor.voertuigtype.value())&#xD;
+		wegsoort(maatregel.p.Maatregelfactor.wegsoort.value())&#xD;
+	}&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C37b53093-3ef8-4cfd-81fe-b6c08de5a53c" priority="normal">
+        <source>
+            <class>
+                <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="test_receptor"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geo = _.geom.find(_source.p.geometrie.first()).geometry&#xD;
+String wkt = geo.toText()&#xD;
+&#xD;
+if (_source.p.overdrachtskenmerken.values().size() !=0) {&#xD;
+	_source.p.overdrachtskenmerken.each { overdrachtskenmerk -&gt;&#xD;
+		_target {&#xD;
+			naam(_source.p.naam.value())&#xD;
+			identificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(3))&#xD;
+			identificatiePandBAG(_source.p.identificatiePandBAG.value())&#xD;
+			tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
+			toetspuntSoort(_source.p.toetspuntSoort.value())&#xD;
+			grondslag(_source.p.grondslag.value())&#xD;
+			opmerking(_source.p.opmerking.value())&#xD;
+			geometrie(wkt)&#xD;
+			bebouwingstype(overdrachtskenmerk.p.Overdrachtskenmerken.bebouwingstype.value())		&#xD;
+			bomenfactor(overdrachtskenmerk.p.Overdrachtskenmerken.bomenfactor.value())&#xD;
+			String tmpstring = overdrachtskenmerk.p.Overdrachtskenmerken.wegdeel.href.value()&#xD;
+			tmpstring = tmpstring.substring(11)&#xD;
+			wegdeel(tmpstring)&#xD;
+		}&#xD;
+	}&#xD;
+	} else {&#xD;
+		_target {&#xD;
+			naam(_source.p.naam.value())&#xD;
+			identificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(3))&#xD;
+			identificatiePandBAG(_source.p.identificatiePandBAG.value())&#xD;
+			tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
+			toetspuntSoort(_source.p.toetspuntSoort.value())&#xD;
+			grondslag(_source.p.grondslag.value())&#xD;
+			opmerking(_source.p.opmerking.value())&#xD;
+			geometrie(wkt)&#xD;
+		}&#xD;
+	}
+</core:text>
+        </complexParameter>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cd021bf4d-be74-44e6-b88c-861d2cdce1ba" priority="normal">
+        <source>
+            <class>
+                <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="test_wegdeel"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geo = _.geom.find(_source.p.geometrie.first()).geometry&#xD;
+String wkt = geo.toText()&#xD;
+&#xD;
+_target {&#xD;
+	geometrie(wkt)&#xD;
+	hoogte(_source.p.hoogte.value())&#xD;
+	identificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(2))&#xD;
+	maximumsnelheid(_source.p.maximumsnelheid.value())&#xD;
+	maximumsnelheidDynamisch(_source.p.maximumsnelheidDynamisch.value())&#xD;
+	opmerking(_source.p.opmerking.value())&#xD;
+	if (_source.p.overdrachtsobjectLinks.values().size() &gt; 0) {&#xD;
+		_log.info('Links: ' + _source.p.overdrachtsobjectLinks.Overdrachtsobject.soort.value())&#xD;
+		overdrachtLinksHoogte(_source.p.overdrachtsobjectLinks.Overdrachtsobject.hoogte.value())&#xD;
+		overdrachtLinksBinnen50m(_source.p.overdrachtsobjectLinks.Overdrachtsobject.indicatieBinnen50m.value())&#xD;
+		overdrachtLinksSoort(_source.p.overdrachtsobjectLinks.Overdrachtsobject.soort.value())&#xD;
+	}&#xD;
+	if (_source.p.overdrachtsobjectRechts.values().size() &gt; 0) {&#xD;
+		_log.info('Rechts: ')&#xD;
+		overdrachtRechtsHoogte(_source.p.overdrachtsobjectRechts.Overdrachtsobject.hoogte.value())&#xD;
+		overdrachtRechtsBinnen50m(_source.p.overdrachtsobjectRechts.Overdrachtsobject.indicatieBinnen50m.value())&#xD;
+		overdrachtRechtsSoort(_source.p.overdrachtsobjectRechts.Overdrachtsobject.soort.value())&#xD;
+	}&#xD;
+	rekenmethode(_source.p.rekenmethode.value())&#xD;
+	straatnaam(_source.p.straatnaam.value())&#xD;
+	taludSoort(_source.p.taludSoort.value())&#xD;
+	tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
+	tunnelfactor(_source.p.tunnelfactor.value())&#xD;
+	_source.p.verkeergegevens.each { vg -&gt;&#xD;
+		vg.p.VerkeersgegevensWeg.each { record -&gt;&#xD;
+			if (record.p.voertuigtype.value() == 'l') {&#xD;
+				intensiteitLichtVerkeer(record.p.intensiteit.value())&#xD;
+				stagnatiefactorLichtVerkeer(record.p.stagnatiefactor.value())&#xD;
+			} else if (record.p.voertuigtype.value() == 'm') {&#xD;
+				intensiteitMiddelzwaarVerkeer(record.p.intensiteit.value())&#xD;
+				stagnatiefactorMiddelzwaarVerkeer(record.p.stagnatiefactor.value())&#xD;
+			} else if (record.p.voertuigtype.value() == 'z') {&#xD;
+				intensiteitZwaarVerkeer(record.p.intensiteit.value())&#xD;
+				stagnatiefactorZwaarVerkeer(record.p.stagnatiefactor.value())&#xD;
+			} else if (record.p.voertuigtype.value() == 'b') {&#xD;
+				intensiteitBusVerkeer(record.p.intensiteit.value())&#xD;
+				stagnatiefactorBusVerkeer(record.p.stagnatiefactor.value())&#xD;
+			} else if (record.p.voertuigtype.value() == 'ld') {&#xD;
+				intensiteitLichtVerkeerDynamisch(record.p.intensiteit.value())&#xD;
+			}&#xD;
+		}&#xD;
+	}&#xD;
+	wegnummer(_source.p.wegnummer.value())&#xD;
+	wegsoort(_source.p.wegsoort.value())&#xD;
+}
+</core:text>
+        </complexParameter>
+    </cell>
+</alignment>
