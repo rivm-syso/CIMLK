@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">15 februari 2022</h2>
+		<h2 id="subtitle">9 maart 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -179,24 +179,35 @@
 						<li>lokaalID: een unieke identificatie van het object</li>
 						<li>versie: een identificatie van een specifieke versie van het object</li>
 					</ul>
-					Voor dit informatiemodel zal de namespace altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd. Een lokaalID kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. De versie bevat de monitoringsronde en het monitoringsjaar zodat de objecten over de rondes en door de jaren heen een unieke aanduiding hebben.
 				</p>
-				<p>Merk op dat een NEN3610ID één object uniek identificeert. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het NEN3610ID. Het NEN3610ID heeft dan de volgende structuur, waarbij de KvK alleen wordt opgegeven bij objecttypen die door de bronhouder worden aangeleverd:<br><i>NL.imlk.[LettersObjecttype]_[KvK]_[identificatie]</i></p>
+				
+				<h4>Namespace</h4>
+				<p>De namespace voor dit informatiemodel zal altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd.</p>
+				
+				<h4>LokaalID</h4>
+				<p>Het lokaalID in NEN3610ID is de unieke identificatie van één object en kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het lokaalID. Het lokaalID heeft dan de volgende structuur:<br><i>[LettersObjecttype]_[KvK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
-				<ul>
-				<li><b>W</b>: Wegdeel</li>
-				<li><b>RW</b>: Receptor wegverkeer</li>
-				<li><b>RV</b>: Receptor veehouderij</li>
-				<li><b>C</b>: Correctie</li>
-				<li><b>M</b>: Maatregel</li>
-				<li><b>V</b>: Veehouderij</li>
-				<li><b>S</b>: Stal</li>
-				<li><b>B</b>: Veehouderijbron</li>
-				<li><b>H</b>: Huisvestingssysteem</li>
-				<li><b>A</b>: AanvullendeTechniek</li>
-				</ul>
+					<ul>
+					<li><b>W</b>: Wegdeel</li>
+					<li><b>RW</b>: ReceptorWegverkeer</li>
+					<li><b>RV</b>: ReceptorVeehouderij</li>
+					<li><b>BW</b>: RekenresultaatWegverkeer</li>
+					<li><b>BV</b>: RekenresultaatVeehouderij</li>
+					<li><b>C</b>: Correctie</li>
+					<li><b>M</b>: Maatregel</li>
+					<li><b>V</b>: Veehouderij</li>
+					<li><b>S</b>: Stal</li>
+					<li><b>B</b>: Veehouderijbron</li>
+					<li><b>H</b>: Huisvestingssysteem</li>
+					<li><b>A</b>: AanvullendeTechniek</li>
+					</ul>
 				</p>
-				<p>Er is voor gekozen om het NEN3610ID niet te hanteren in de CSV en Shape uitwisselbestanden. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KvK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. Het NEN3610ID zal in de toekomst vooral worden gebruikt in de GML uitwisselbestanden.
+				
+				<h4>Versie</h4>
+				<p>Alle data in het informatiemodel is gelinkt aan een specifieke monitoringsronde en een specifiek monitoringsjaar. De versie uit NEN3610 wordt gebruikt om ervoor te zorgen dat de objecten over de monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. De versie heeft de volgende opbouw: <i>[monitoringsronde]_[monitoringsjaar]</i></p>
+				
+				<h4>Uitwisselformaten</h4>
+				<p>Het NEN3610ID zal worden gebruikt in de GML uitwisselbestanden. Echter, voor de CSV en Shape uitwisselbestanden is ervoor gekozen om het NEN3610ID niet te hanteren. In deze bestanden is alleen een verkorte identificatie opgenomen met alleen het KvK nummer en de eigen opgegeven identificatie, zonder namespace en zonder aanduiding van het objecttype. Dit maakt de handmatige invoer van gegevens eenvoudiger. 
 				</p>
 			</section>
 			<section>
@@ -297,11 +308,11 @@
 						<area href="#Overdrachtsobject" coords="423,200,730,315" shape="rect"/>
 						<area href="#ReceptorWegverkeer" coords="8,600,310,705" shape="rect"/>
 						<area href="#Receptor" coords="423,600,730,760" shape="rect"/>
-						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1640" shape="rect"/>
+						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1660" shape="rect"/>
 						<area href="#Correctie" coords="423,900,730,1030" shape="rect"/>						
 						<area href="#Correctieterm" coords="423,1100,730,1190" shape="rect"/>
-						<area href="#Maatregel" coords="423,1325,730,1460" shape="rect"/>
-						<area href="#Maatregelfactor" coords="423,1520,730,1640" shape="rect"/>
+						<area href="#Maatregel" coords="423,1345,730,1480" shape="rect"/>
+						<area href="#Maatregelfactor" coords="423,1540,730,1660" shape="rect"/>
 					</map>
 				</section>
 				<section>
@@ -317,7 +328,7 @@
 						<area href="#Huisvestingssysteem" coords="8,1019,266,1120" shape="rect"/>
 						<area href="#Receptor" coords="380,227,650,380" shape="rect"/>
 						<area href="#ReceptorVeehouderij" coords="380,500,650,590" shape="rect"/>
-						<area href="#RekenresultaatVeehouderij" coords="380,660,650,925" shape="rect"/>
+						<area href="#RekenresultaatVeehouderij" coords="380,660,650,945" shape="rect"/>
 						<area href="#AanvullendeTechniek" coords="380,1019,650,1120" shape="rect"/>
 					</map>
 				</section>
