@@ -8,7 +8,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Veehouderij%20export.halex</setting>
+        <setting name="target">file:/Veehouderij%20export.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
@@ -16,7 +16,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/veehouderij_bronnen.csv</setting>
+        <setting name="source">file:/input/veehouderij_bronnen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -384,7 +384,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
         <setting name="resourceId">81dc6d22-7daa-4d26-a5ae-5f642e27246a</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
+        <setting name="source">file:/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
@@ -392,7 +392,7 @@
         <setting name="resourceId">53f90e70-7e44-48bc-9817-2e381ee53145</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/actualiseren_bronnen_veehouderij.csv</setting>
+        <setting name="source">file:/input/actualiseren_bronnen_veehouderij.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
