@@ -113,26 +113,6 @@
         </target>
         <parameter value="{{project:namespace}}" name="value"/>
     </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C1dcc799b-cffa-487c-ba03-23c7f9bc299a" priority="normal">
-        <target name="result">
-            <property>
-                <type name="StalType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="versie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-if (_project.vars.monitoringjaar) {&#xD;
-	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
-} else {&#xD;
-	return ""&#xD;
-}
-</core:text>
-        </complexParameter>
-        <parameter value="false" name="variablesAsInstances"/>
-    </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C64f7d2f7-c03b-4a7e-b666-30da1e83a38a" priority="normal">
         <source>
             <property>
@@ -300,26 +280,6 @@ if (_project.vars.monitoringjaar) {&#xD;
             </property>
         </target>
         <parameter value="{{project:namespace}}" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C489f3ead-37d3-41b3-84d3-1c0f2f19fa21" priority="normal">
-        <target name="result">
-            <property>
-                <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="versie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-if (_project.vars.monitoringjaar) {&#xD;
-	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
-} else {&#xD;
-	return ""&#xD;
-}
-</core:text>
-        </complexParameter>
-        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce464fd0f-4605-4354-9840-623b0d937536" priority="normal">
         <source>
@@ -505,21 +465,6 @@ _target {&#xD;
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C23787bcf-5a75-4e16-b415-48fc1e371f5f" priority="normal">
-        <source name="var">
-            <property>
-                <type name="veehouderij_bronnen"/>
-                <child name="bronIdentificatie"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
-                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
-            </property>
-        </target>
-        <parameter value="{{project:namespace}}.B_{bronIdentificatie}" name="pattern"/>
-    </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C3beb94f8-f954-46b7-9b08-366b487a1892" priority="normal">
         <source name="var">
             <property>
@@ -547,26 +492,6 @@ _target {&#xD;
             </property>
         </target>
         <parameter value="{{project:namespace}}" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cd0a04676-2e2e-43a1-870a-3014ddabe581" priority="normal">
-        <target name="result">
-            <property>
-                <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="versie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-if (_project.vars.monitoringjaar) {&#xD;
-	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
-} else {&#xD;
-	return ""&#xD;
-}
-</core:text>
-        </complexParameter>
-        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C483a5be4-cf6b-48ee-a46a-771bb1d56e86" priority="normal">
         <source name="var">
