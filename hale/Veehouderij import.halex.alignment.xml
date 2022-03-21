@@ -99,7 +99,11 @@ _source.p.emissiespecificaties.each { maatregel -&gt;&#xD;
 		veehouderijIdentificatie(c.veehouderijId[stalid].value())&#xD;
 		String veehouderijidentificatie = c.veehouderijIdentificatie[stalid].value()&#xD;
 		veehouderijAdres(c.veehouderijAdres[veehouderijidentificatie].value())&#xD;
-		veehouderijDatumVergunning(c.veehouderijDatumVergunning[veehouderijidentificatie].value())&#xD;
+		String datumvergunning = c.veehouderijDatumVergunning[veehouderijidentificatie].value()&#xD;
+		if (datumvergunning) {&#xD;
+			String datumvergunningNL = datumvergunning.substring(8,10)+'-'+datumvergunning.substring(5,7)+'-'+datumvergunning.substring(0,4)&#xD;
+			veehouderijDatumVergunning(datumvergunningNL)&#xD;
+		}&#xD;
 	}&#xD;
 }
 </core:text>
