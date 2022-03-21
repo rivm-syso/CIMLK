@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <hale-project version="4.1.0.release">
-    <name>Veehouderij export</name>
+    <name>Veehouderij test</name>
     <author>dgree</author>
-    <created>2022-03-21T08:51:27.075+01:00</created>
-    <modified>2022-03-21T14:59:08.839+01:00</modified>
+    <created>2022-03-16T08:20:06.075+01:00</created>
+    <modified>2022-03-16T08:26:42.878+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Veehouderij%20export.halex</setting>
+        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Veehouderij%20test.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">ae9ae227-fe23-43c6-9c2b-6e706bf020c3</setting>
+        <setting name="resourceId">9a5fc1f1-2263-4135-a0cf-42fefae094f0</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
@@ -383,37 +383,12 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
-        <setting name="resourceId">81dc6d22-7daa-4d26-a5ae-5f642e27246a</setting>
+        <setting name="resourceId">f5551a79-b8a6-43d3-8c63-7ea7614f0252</setting>
         <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">53f90e70-7e44-48bc-9817-2e381ee53145</setting>
-        <setting name="quote">"</setting>
-        <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/actualiseren_bronnen_veehouderij.csv</setting>
-        <setting name="decimal">.</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
-        <setting name="separator">;</setting>
-        <setting name="escape">\</setting>
-        <setting name="typename">veehouderij_bronnen</setting>
-    </resource>
-    <export-config name="GML">
-        <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">
-            <setting name="charset">UTF-8</setting>
-            <setting name="meta.description"></setting>
-            <setting name="geometry.unifyWindingOrder">counterClockwise</setting>
-            <setting name="gml.geometry.simplify">true</setting>
-            <setting name="crs"/>
-            <setting name="crs.epsg.prefix"/>
-            <setting name="contentType">eu.esdihumboldt.hale.io.gml</setting>
-            <setting name="xml.notNil.omitNilReason">true</setting>
-            <setting name="xml.pretty">true</setting>
-        </configuration>
-    </export-config>
-    <file name="alignment.xml" location="Veehouderij%20export.halex.alignment.xml"/>
-    <file name="styles.sld" location="Veehouderij%20export.halex.styles.sld"/>
+    <file name="alignment.xml" location="Veehouderij%20test.halex.alignment.xml"/>
+    <file name="styles.sld" location="Veehouderij%20test.halex.styles.sld"/>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/count">2</property>
@@ -469,17 +444,4 @@
     <property name="defaultGeometry:{http://cimlk.nl/1.0}WegdeelType/1">{http://cimlk.nl/1.0}geometrie</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}WegdeelType/2">{http://www.opengis.net/gml/3.2/AbstractCurve}choice</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}WegdeelType/count">2</property>
-    <complex-property name="variables">
-        <core:properties xmlns:core="http://www.esdi-humboldt.eu/hale/core">
-            <core:property name="monitoringronde">
-                <core:value value=""/>
-            </core:property>
-            <core:property name="namespace">
-                <core:value value="nl.imlk"/>
-            </core:property>
-            <core:property name="monitoringjaar">
-                <core:value value=""/>
-            </core:property>
-        </core:properties>
-    </complex-property>
 </hale-project>
