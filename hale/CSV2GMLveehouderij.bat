@@ -1,0 +1,2 @@
+"C:\Program Files\wetransform\HALE\jre\bin\java" -Dhale.project.monitoringronde="2022" -Dhale.project.monitoringjaar="2021" -jar "C:\Program Files\wetransform\HALE\plugins\org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar" -application hale.transform -project "Veehouderij CSV2GML.halex" -source input\veehouderij_bronnen.csv -Stypename veehouderij_bronnen -Scharset UTF-8 -Sseparator ";" -Sskip true -target output\veehouderij_groot.gml -preset GML -Scrs.epsg.prefix urn:ogc:def:crs:EPSG:: -reportsOut output\exportveehouderij.log -trustGroovy 
+

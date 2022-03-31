@@ -1,5 +1,0 @@
-"C:\Program Files\wetransform\HALE\jre\bin\java" -jar "C:\Program Files\wetransform\HALE\plugins\org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar" -application hale.transform -project "Wegverkeer import.halex" -source output\wegverkeer.gml -target output\maatregel.csv -preset CSVmaatregel -reportsOut output\importwegverkeer_maatregel.log -trustGroovy 
-"C:\Program Files\wetransform\HALE\jre\bin\java" -jar "C:\Program Files\wetransform\HALE\plugins\org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar" -application hale.transform -project "Wegverkeer import.halex" -source output\wegverkeer.gml -target output\receptor.csv -preset CSVreceptor -reportsOut output\importwegverkeer_receptor.log -trustGroovy 
-"C:\Program Files\wetransform\HALE\jre\bin\java" -jar "C:\Program Files\wetransform\HALE\plugins\org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar" -application hale.transform -project "Wegverkeer import.halex" -source output\wegverkeer.gml -target output\wegdeel.csv -preset CSVwegdeel -reportsOut output\importwegverkeer_wegdeel.log -trustGroovy 
-
-

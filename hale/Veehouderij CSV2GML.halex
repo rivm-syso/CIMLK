@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<hale-project version="4.1.0.release">
-    <name>Wegverkeer export</name>
+<hale-project version="4.2.0.SNAPSHOT">
+    <name>Wegverkeer CSV2GML</name>
     <author>dgree</author>
     <created>2022-02-09T16:18:46.516+01:00</created>
-    <modified>2022-02-16T16:35:15.769+01:00</modified>
+    <modified>2022-03-31T12:20:31.465+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/geijerm/Git/CIMLK/hale/Wegverkeer%20export.halex</setting>
+        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Veehouderij%20CSV2GML.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
@@ -16,7 +16,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/test_maatregel.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_maatregel.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -158,7 +158,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/test_receptor.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_receptor.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -336,7 +336,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/test_wegdeel.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_wegdeel.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -728,7 +728,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
         <setting name="resourceId">8d94b0ef-bfc4-4000-a02c-bf403d8dea3d</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/imlk.xsd</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
@@ -736,7 +736,7 @@
         <setting name="resourceId">2d3dbf7e-26af-488a-8721-d943a84ed7d1</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/test_wegdeel.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_wegdeel.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
@@ -748,7 +748,7 @@
         <setting name="resourceId">bdf3e935-98bb-4414-a45a-af71283142ed</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/test_receptor.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_receptor.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
@@ -760,7 +760,7 @@
         <setting name="resourceId">98bcaacb-62a9-4e47-9088-ebcd232c8871</setting>
         <setting name="quote">"</setting>
         <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/geijerm/Git/CIMLK/hale/input/test_maatregel.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_maatregel.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
@@ -780,8 +780,8 @@
             <setting name="xml.pretty">true</setting>
         </configuration>
     </export-config>
-    <file name="alignment.xml" location="Wegverkeer%20export.halex.alignment.xml"/>
-    <file name="styles.sld" location="Wegverkeer%20export.halex.styles.sld"/>
+    <file name="alignment.xml" location="Veehouderij%20CSV2GML.halex.alignment.xml"/>
+    <file name="styles.sld" location="Veehouderij%20CSV2GML.halex.styles.sld"/>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}AanvullendeTechniekType/count">2</property>
