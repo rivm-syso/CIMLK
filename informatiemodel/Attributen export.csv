@@ -66,7 +66,6 @@ GUID;Objecttype;Naam;Definitie;Toelichting;Type;Eenheid;Formeel patroon;Patroon;
 {11EA576B-6A8F-4f9c-B3CD-B0592E7892C9};RekenresultaatWegverkeer;rekentoolVersie;De versie van de rekentool waarmee de berekening is uitgevoerd.;;CharacterString;;;;false;;1;1;;;;;;;;;;;
 {921542D3-1FE1-4980-8ED8-73C57A34DA3D};RekenresultaatWegverkeer;rekenjaar;Het jaartal waarvoor de berekening is uitgevoerd en waarop de resultaten betrekking hebben.;;Integer;;;;false;;1;1;;;;;;;;;;;
 {3359D367-38F7-4208-B3E4-BA063AB12369};RekenresultaatWegverkeer;no2Concentratie;De berekende totale jaargemiddelde concentratie NO2 op de receptor.;;Real;ug/m3;;;false;;1;1;;;;;;;;;;rekenresultaat;conc_no2
-{5633729A-50B2-4f20-B2D6-39054A791D6F};RekenresultaatWegverkeer;no2Overschrijdingsuren;Het berekende aantal overschrijdingsuren NO2 op de receptor.;;Real;ug/m3;;;false;;1;1;;;;;;;;;;;
 {250A685D-B985-4ae0-949E-05C95BD1A9C5};RekenresultaatWegverkeer;noxSRM1;De berekende SRM1 bijdrage voor NOx op de receptor.;;Real;ug/m3;;;false;;1;1;;;;;;;;;;rekenresultaat;srm1_nox
 {BA15DC2E-04BB-4fe3-B987-D2E9820B33B9};RekenresultaatWegverkeer;noxSRM2;De berekende SRM2 bijdrage voor NOx op de receptor.;;Real;ug/m3;;;false;;1;1;;;;;;;;;;rekenresultaat;srm2_nox
 {7526A8D9-D10C-445a-8EF2-16516E4820F3};RekenresultaatWegverkeer;no2SRM1DirecteUitstoot;De berekende SRM1 concentratie direct uitgestoten voor NO2 op de receptor.;;Real;ug/m3;;;false;;1;1;;;;;;;;;;rekenresultaat;srm1_no2du
