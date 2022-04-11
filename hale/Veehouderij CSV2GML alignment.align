@@ -3,7 +3,7 @@
     <cell relation="eu.esdihumboldt.hale.align.merge" id="C7ec00c83-f54c-4b30-b7a9-aed0a9e3fda6" priority="normal">
         <source>
             <class>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
             </class>
         </source>
         <target>
@@ -17,7 +17,7 @@
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C44bad55b-3562-44c0-bba5-00d38b2c3569" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalBreedte"/>
             </property>
         </source>
@@ -33,13 +33,13 @@
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cea89266b-76f2-42e6-b328-a7da29e828e4" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalY"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalX"/>
             </property>
         </source>
@@ -53,18 +53,11 @@
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">_.geom.with(geometry: "POINT(" + stalX + " " + stalY + ")", crs: "EPSG:28992")</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
-        <annotation type="message">
-            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
-                <core:content>
-                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
-                </core:content>
-            </core:message>
-        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C5817ba14-db84-4a9b-9c93-fa8d3bbbd113" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalHoogte"/>
             </property>
         </source>
@@ -80,7 +73,7 @@
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cb5f1f9db-fa42-4e25-8809-163a8a7000d3" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalIdentificatie"/>
             </property>
         </source>
@@ -95,7 +88,7 @@
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C625653a4-8284-486f-bcd2-1d7cecd468af" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalIdentificatie"/>
             </property>
         </source>
@@ -143,7 +136,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C64f7d2f7-c03b-4a7e-b666-30da1e83a38a" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalIdentificatiePandBAG"/>
             </property>
         </source>
@@ -159,7 +152,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C87920d5a-0eed-4eef-9217-a064af2927de" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalLengte"/>
             </property>
         </source>
@@ -175,7 +168,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C18f898f4-8370-4633-83d6-09aa4d9c3a5f" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalOrientatie"/>
             </property>
         </source>
@@ -191,7 +184,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc7e25176-12ff-4152-aba3-e462567e8374" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
@@ -207,7 +200,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cbea58f3f-874b-43b4-a298-21714808a46c" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="veehouderijIdentificatie"/>
             </property>
         </source>
@@ -223,7 +216,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.merge" id="C1920c9a8-64cf-4e5a-be11-43f03d6ab852" priority="normal">
         <source>
             <class>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
             </class>
         </source>
         <target>
@@ -237,7 +230,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C2e760b9a-37cd-48ea-baa4-b507f4f66c01" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="veehouderijAdres"/>
             </property>
         </source>
@@ -253,7 +246,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="C8d075d06-be2f-477e-b6ce-95439a7d896f" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="veehouderijDatumVergunning"/>
             </property>
         </source>
@@ -268,7 +261,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C0e512609-231b-4393-9f36-ece398424856" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="veehouderijIdentificatie"/>
             </property>
         </source>
@@ -283,7 +276,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cd656f0f4-4eac-4a4c-a346-1874a1ebbf57" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="veehouderijIdentificatie"/>
             </property>
         </source>
@@ -331,7 +324,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce464fd0f-4605-4354-9840-623b0d937536" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
@@ -347,7 +340,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.merge" id="Cab072e59-6f55-4e8d-b205-f2a6ea6d90c8" priority="normal">
         <source>
             <class>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
             </class>
         </source>
         <target>
@@ -356,11 +349,11 @@ if (_project.vars.monitoringjaar) {&#xD;
             </class>
         </target>
         <parameter value="owMaatregel" name="additional_property"/>
-        <parameter value="aanvullendeTechniek" name="additional_property"/>
+        <parameter value="ravMaatregel" name="additional_property"/>
         <parameter value="emissiefactorPM10" name="additional_property"/>
         <parameter value="eigenFactorToelichting" name="additional_property"/>
         <parameter value="reductiefactorPM10" name="additional_property"/>
-        <parameter value="huisvestingssysteem" name="additional_property"/>
+        <parameter value="ravFactor" name="additional_property"/>
         <parameter value="aantalDieren" name="additional_property"/>
         <parameter value="owFactor" name="additional_property"/>
         <parameter value="false" name="auto_detect"/>
@@ -369,7 +362,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf494ca71-34fc-42d5-92ff-24e231cfad36" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronDiameter"/>
             </property>
         </source>
@@ -385,44 +378,56 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C0eb9e5a0-1314-4072-a42f-4cdc2d8af817" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
-                <child name="aanvullendeTechniek"/>
+                <type name="veehouderij_bronnen"/>
+                <child name="owMaatregel"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
+                <child name="ravMaatregel"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="veehouderij_bronnen"/>
                 <child name="emissiefactorPM10"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="eigenFactorToelichting"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="reductiefactorPM10"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="opmerking"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
-                <child name="huisvestingssysteem"/>
+                <type name="veehouderij_bronnen"/>
+                <child name="ravFactor"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="aantalDieren"/>
+            </property>
+        </source>
+        <source name="var">
+            <property>
+                <type name="veehouderij_bronnen"/>
+                <child name="owFactor"/>
             </property>
         </source>
         <target name="result">
@@ -436,22 +441,22 @@ if (_project.vars.monitoringjaar) {&#xD;
 _target {&#xD;
 	Emissiespecificatie {&#xD;
 		aantalDieren aantalDieren&#xD;
-		if(huisvestingssysteem == "Exp.Stal") {&#xD;
+		if(ravFactor == "Exp.Stal") {&#xD;
 			eigenEmissiefactorPm10 emissiefactorPM10&#xD;
 		}&#xD;
-		if(aanvullendeTechniek == "Overig") {&#xD;
+		if(ravMaatregel == "Overig") {&#xD;
 			eigenReductiefactorPm10 reductiefactorPM10&#xD;
 		}&#xD;
-		if(huisvestingssysteem == "Exp.Stal" || aanvullendeTechniek == "Overig") {&#xD;
+		if(ravFactor == "Exp.Stal" || ravMaatregel == "Overig") {&#xD;
 			eigenFactorToelichting eigenFactorToelichting&#xD;
 		}&#xD;
 		opmerking opmerking&#xD;
 		huisvestingssysteem {&#xD;
-			href '#'+huisvestingssysteem&#xD;
+			href '#'+ravFactor&#xD;
 		}&#xD;
-		if (aanvullendeTechniek) {&#xD;
+		if (ravMaatregel) {&#xD;
 			aanvullendeTechniek {&#xD;
-				href '#'+aanvullendeTechniek&#xD;
+				href '#'+ravMaatregel&#xD;
 			}&#xD;
 		}&#xD;
 	}&#xD;
@@ -459,24 +464,17 @@ _target {&#xD;
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
-        <annotation type="message">
-            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
-                <core:content>
-                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
-                </core:content>
-            </core:message>
-        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C10e4fb1e-dbe6-4229-8176-993e3b7bb58e" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronY"/>
             </property>
         </source>
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronX"/>
             </property>
         </source>
@@ -490,18 +488,11 @@ _target {&#xD;
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return _.geom.with(geometry: "POINT("+bronX+" "+bronY+")", crs: "EPSG:28992")</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
-        <annotation type="message">
-            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
-                <core:content>
-                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
-                </core:content>
-            </core:message>
-        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C8f8eed86-f935-4478-a28f-27eb9f3b2387" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronHoogte"/>
             </property>
         </source>
@@ -517,7 +508,7 @@ _target {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C23787bcf-5a75-4e16-b415-48fc1e371f5f" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronIdentificatie"/>
             </property>
         </source>
@@ -532,7 +523,7 @@ _target {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C3beb94f8-f954-46b7-9b08-366b487a1892" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronIdentificatie"/>
             </property>
         </source>
@@ -580,7 +571,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C483a5be4-cf6b-48ee-a46a-771bb1d56e86" priority="normal">
         <source name="var">
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="stalIdentificatie"/>
             </property>
         </source>
@@ -596,7 +587,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C65ffbdb5-2ae3-4428-9a2f-26c63b4f6c86" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
@@ -612,7 +603,7 @@ if (_project.vars.monitoringjaar) {&#xD;
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C832e8727-9080-429b-b88c-cde0e46a2f59" priority="normal">
         <source>
             <property>
-                <type name="test_veehouderij"/>
+                <type name="veehouderij_bronnen"/>
                 <child name="bronUittreesnelheid"/>
             </property>
         </source>
