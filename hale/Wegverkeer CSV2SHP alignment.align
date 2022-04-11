@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C08903a2a-625d-4cf6-85f0-a5de35960269" priority="normal">
+        <source>
+            <class>
+                <type name="maatregel"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="maatregel"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C59b0e838-63bb-4133-bb55-9faa7536a194" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="geometrie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="geometrie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc5ab3a0f-3ddd-44f4-bbb8-5bf4b8b47c18" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="identificatie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd041cb5b-c54a-41b6-862b-152109442627" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="naam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="naam"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C48059ad2-cc47-4cb1-88a2-446dd381eeab" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="naamOverheid"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="naamOverheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce5baa59a-e131-4450-b18c-dfd2bf5a5c3f" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="schalingsfactor"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="schalingsfactor"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4ba6a975-4850-4cfb-8c66-dd5ae30b26a4" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="stof"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="stof"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ced4e9963-8ee3-4eeb-a0b2-924352458e73" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cff458443-ff0f-4bc1-ad39-e05643b92779" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="voertuigtype"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="voertuigtype"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7b38e24b-8d67-4bc7-8503-043c547b8516" priority="normal">
+        <source>
+            <property>
+                <type name="maatregel"/>
+                <child name="wegsoort"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="maatregel"/>
+                <child name="wegsoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C8511a439-26c6-49a0-a69a-9ba62d4afa25" priority="normal">
+        <source>
+            <class>
+                <type name="receptor"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="receptor"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2c339362-efd1-4053-80b2-fa3c61d4eb03" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="bebouwingstype"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="bebouwingstype"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C71ec3b69-f1c2-45b5-b674-a2b8b42c6daf" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="bomenfactor"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="bomenfactor"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C65f7120c-a63e-4298-bcc5-017dc7ae09c3" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="geometrie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="geometrie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd5451737-9765-4d33-b980-f9c79e171a4d" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="grondslag"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="grondslag"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb3812bf8-9487-4b21-b73f-cce117fd024f" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="identificatie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C90973a62-b72b-41c6-931c-36ed7f461fff" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="identificatiePandBAG"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="identificatiePandBAG"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8fda3f4e-355a-4ef5-9e6f-9343dc3c9e53" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="naam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="naam"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C594d7c26-4b22-4e0b-896e-c9a75d5ec05a" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="naamOverheid"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="naamOverheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C36da165c-b5da-4a6a-9712-98406ee39406" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="opmerking"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="opmerking"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cbb680260-618e-4519-a72d-07a3bc66263e" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C07a7cc46-d99c-4f54-8c65-77bd4efd6a34" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="toetspuntSoort"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="toetspuntSoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C34f0a110-f961-48d1-9a6f-0983b9cc87cd" priority="normal">
+        <source>
+            <property>
+                <type name="receptor"/>
+                <child name="wegdeel"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="receptor"/>
+                <child name="wegdeel"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+</alignment>
