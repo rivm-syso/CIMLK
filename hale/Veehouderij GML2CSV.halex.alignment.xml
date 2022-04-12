@@ -133,4 +133,198 @@ _source.p.emissiespecificaties.each { maatregel -&gt;&#xD;
         </target>
         <parameter value="{lokaalID}" name="pattern"/>
     </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cb4ae94c1-cae8-4938-a6b8-21eb8f9f3aa0" priority="normal">
+        <source>
+            <class>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="test_veehouderij_receptor"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C19e9d63f-e315-435c-bb0e-43fdf1c46d43" priority="normal">
+        <source>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="grondslag" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="grondslag"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ca2403a5b-9a95-4073-96d4-18d10623bc67" priority="normal">
+        <source name="var">
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="identificatie"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return identificatie_NEN3610ID_lokaalID.substring(3)</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cfb03642f-d9c3-40ba-b74d-70b3abbb90d9" priority="normal">
+        <source>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatiePandBAG" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="identificatiePandBAG"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C135bf9b8-a89f-46a2-99cc-d80a69108e62" priority="normal">
+        <source>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="naam" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="naam"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cdd9b1325-1fc8-4dca-bbe8-655a50858b3d" priority="normal">
+        <source>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="opmerking" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="opmerking"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5cb7c66f-a7c2-49d3-bdb0-c825ff5de22a" priority="normal">
+        <source>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1eb6e672-34bd-4f34-a16b-e12d2e8e7109" priority="normal">
+        <source>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="toetspuntSoort" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="toetspuntSoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C0e913749-89ef-4a83-86c6-39e896a13a56" priority="normal">
+        <source name="var">
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="veehouderij" ns="http://cimlk.nl/1.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="veehouderijIdentificatie"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+String href = veehouderij_href&#xD;
+return href.substring(11)
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C6ab2cd9a-f96c-4ced-8557-f2d6680e5519" priority="normal">
+        <source name="var">
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="geometrie" ns="http://cimlk.nl/1.0"/>
+                <child name="Point" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="choice_1" ns="http://www.opengis.net/gml/3.2/PointType"/>
+                <child name="pos" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="x"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return geometrie_Point_choice_1_pos[0]</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C5dae8c4f-3e1b-4f32-9147-0daedd6a95fd" priority="normal">
+        <source name="var">
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="geometrie" ns="http://cimlk.nl/1.0"/>
+                <child name="Point" ns="http://www.opengis.net/gml/3.2"/>
+                <child name="choice_1" ns="http://www.opengis.net/gml/3.2/PointType"/>
+                <child name="pos" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="test_veehouderij_receptor"/>
+                <child name="y"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return geometrie_Point_choice_1_pos[1]</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
 </alignment>
