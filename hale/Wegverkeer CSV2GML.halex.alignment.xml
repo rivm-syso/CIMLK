@@ -109,7 +109,7 @@ if (_project.vars.monitoringjaar) {&#xD;
         <target>
             <property>
                 <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
-                <child name="maatregelen" ns="http://cimlk.nl/1.0"/>
+                <child name="maatregelfactoren" ns="http://cimlk.nl/1.0"/>
                 <child name="Maatregelfactor" ns="http://cimlk.nl/1.0"/>
                 <child name="schalingsfactor" ns="http://cimlk.nl/1.0"/>
             </property>
@@ -127,7 +127,7 @@ if (_project.vars.monitoringjaar) {&#xD;
         <target>
             <property>
                 <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
-                <child name="maatregelen" ns="http://cimlk.nl/1.0"/>
+                <child name="maatregelfactoren" ns="http://cimlk.nl/1.0"/>
                 <child name="Maatregelfactor" ns="http://cimlk.nl/1.0"/>
                 <child name="stof" ns="http://cimlk.nl/1.0"/>
             </property>
@@ -145,7 +145,7 @@ if (_project.vars.monitoringjaar) {&#xD;
         <target>
             <property>
                 <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
-                <child name="maatregelen" ns="http://cimlk.nl/1.0"/>
+                <child name="maatregelfactoren" ns="http://cimlk.nl/1.0"/>
                 <child name="Maatregelfactor" ns="http://cimlk.nl/1.0"/>
                 <child name="voertuigtype" ns="http://cimlk.nl/1.0"/>
             </property>
@@ -163,7 +163,7 @@ if (_project.vars.monitoringjaar) {&#xD;
         <target>
             <property>
                 <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
-                <child name="maatregelen" ns="http://cimlk.nl/1.0"/>
+                <child name="maatregelfactoren" ns="http://cimlk.nl/1.0"/>
                 <child name="Maatregelfactor" ns="http://cimlk.nl/1.0"/>
                 <child name="wegsoort" ns="http://cimlk.nl/1.0"/>
             </property>
@@ -637,7 +637,7 @@ if (opmerking)&#xD;
         <source name="var">
             <property>
                 <type name="Wegdelen"/>
-                <child name="overdrachtLinksBinnen50m"/>
+                <child name="overdrachtLinksAfstand"/>
             </property>
         </source>
         <source name="var">
@@ -664,7 +664,7 @@ if (overdrachtLinksSoort) {&#xD;
 	_target {&#xD;
 		Overdrachtsobject {&#xD;
 			hoogte overdrachtLinksHoogte&#xD;
-			indicatieBinnen50m overdrachtLinksBinnen50m&#xD;
+			afstand overdrachtLinksAfstand&#xD;
 			soort overdrachtLinksSoort&#xD;
 		}&#xD;
 	}&#xD;
@@ -672,6 +672,13 @@ if (overdrachtLinksSoort) {&#xD;
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C6e237589-c2d7-4c12-9eba-e2968ccc4de2" priority="normal">
         <source name="var">
@@ -683,7 +690,7 @@ if (overdrachtLinksSoort) {&#xD;
         <source name="var">
             <property>
                 <type name="Wegdelen"/>
-                <child name="overdrachtRechtsBinnen50m"/>
+                <child name="overdrachtRechtsAfstand"/>
             </property>
         </source>
         <source name="var">
@@ -704,7 +711,7 @@ if (overdrachtRechtsSoort) {&#xD;
 	_target {&#xD;
 		Overdrachtsobject {&#xD;
 			hoogte overdrachtRechtsHoogte&#xD;
-			indicatieBinnen50m overdrachtRechtsBinnen50m&#xD;
+			afstand overdrachtRechtsAfstand&#xD;
 			soort overdrachtRechtsSoort&#xD;
 		}&#xD;
 	}&#xD;
@@ -712,6 +719,13 @@ if (overdrachtRechtsSoort) {&#xD;
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C0ac5d07b-f995-443b-b288-c9dd831c1d59" priority="normal">
         <source>
@@ -855,18 +869,21 @@ if (straatnaam)&#xD;
         <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
-                <child name="verkeergegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="verkeersgegevens" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-_target {&#xD;
-	VerkeersgegevensWeg {&#xD;
-		intensiteit intensiteitBusVerkeer&#xD;
-		stagnatiefactor stagnatiefactorBusVerkeer&#xD;
-		voertuigtype 'b'&#xD;
+if (intensiteitBusVerkeer) {&#xD;
+	_target {&#xD;
+		VerkeersgegevensWeg {&#xD;
+			intensiteit intensiteitBusVerkeer&#xD;
+			stagnatiefactor stagnatiefactorBusVerkeer&#xD;
+			voertuigtype 'b'&#xD;
+		}&#xD;
 	}&#xD;
 }&#xD;
+&#xD;
 _target {&#xD;
 	VerkeersgegevensWeg {&#xD;
 		intensiteit intensiteitLichtVerkeer&#xD;
@@ -899,6 +916,13 @@ _target {&#xD;
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C7fb74cff-c141-4cd5-95b4-382a2cadeb7d" priority="normal">
         <source name="var">
