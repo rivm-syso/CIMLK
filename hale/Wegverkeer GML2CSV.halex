@@ -3,7 +3,7 @@
     <name>Wegverkeer GML2CSV</name>
     <author>dgree</author>
     <created>2022-03-14T08:35:04.128+01:00</created>
-    <modified>2022-03-31T12:19:02.329+02:00</modified>
+    <modified>2022-04-21T09:44:47.111+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -13,33 +13,33 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
-        <setting name="resourceId">a76099c9-e65a-486f-80f2-2f044c63a448</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
+        <setting name="resourceId">855e76ed-e8a4-4370-9ce1-cb284741fbb4</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/docs/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">a52e984d-f8b5-4445-a5f9-70625aebd30f</setting>
+        <setting name="resourceId">3c60f622-e327-4570-b1e9-95c264ced933</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_maatregel.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">test_maatregel</setting>
+        <setting name="typename">Maatregelen</setting>
         <setting name="properties">identificatie,naamOverheid,naam,stof,voertuigtype,wegsoort,schalingsfactor,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
                     <hsd:entry index="0">
-                        <hsd:name>test_maatregel</hsd:name>
+                        <hsd:name>Maatregelen</hsd:name>
                     </hsd:entry>
                 </hsd:type-index>
                 <hsd:mapping-relevant>0</hsd:mapping-relevant>
                 <hsd:types>
                     <hsd:type index="0">
-                        <hsd:name>test_maatregel</hsd:name>
+                        <hsd:name>Maatregelen</hsd:name>
                         <hsd:constraint type="abstract" value="false"/>
                         <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
@@ -161,27 +161,27 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">43fc57d0-2b8b-45e1-86b9-4e31ccaf5e16</setting>
+        <setting name="resourceId">e3257423-fb45-43e9-860d-2acdb29b2fb8</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_receptor.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Receptoren.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">test_receptor</setting>
+        <setting name="typename">Receptoren</setting>
         <setting name="properties">identificatie,wegdeel,naamOverheid,naam,bebouwingstype,bomenfactor,toetspuntSoort,grondslag,opmerking,identificatiePandBAG,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
                     <hsd:entry index="0">
-                        <hsd:name>test_receptor</hsd:name>
+                        <hsd:name>Receptoren</hsd:name>
                     </hsd:entry>
                 </hsd:type-index>
                 <hsd:mapping-relevant>0</hsd:mapping-relevant>
                 <hsd:types>
                     <hsd:type index="0">
-                        <hsd:name>test_receptor</hsd:name>
+                        <hsd:name>Receptoren</hsd:name>
                         <hsd:constraint type="abstract" value="false"/>
                         <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
@@ -339,27 +339,27 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">b1c97342-7719-4d4f-ac1f-43de027cd595</setting>
+        <setting name="resourceId">dde87145-6ae7-4943-8727-aec8e14bf3d8</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_wegdeel.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Wegdelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">test_wegdeel</setting>
-        <setting name="properties">identificatie,naamOverheid,typeOverheid,straatnaam,wegnummer,rekenmethode,wegsoort,tunnelfactor,hoogte,taludSoort,overdrachtLinksSoort,overdrachtLinksBinnen50m,overdrachtLinksHoogte,overdrachtRechtsSoort,overdrachtRechtsBinnen50m,overdrachtRechtsHoogte,maximumsnelheid,maximumsnelheidDynamisch,intensiteitLichtVerkeer,intensiteitLichtVerkeerDynamisch,intensiteitMiddelzwaarVerkeer,intensiteitZwaarVerkeer,intensiteitBusVerkeer,stagnatiefactorLichtVerkeer,stagnatiefactorMiddelzwaarVerkeer,stagnatiefactorZwaarVerkeer,stagnatiefactorBusVerkeer,opmerking,tijdstipRegistratie,geometrie</setting>
+        <setting name="typename">Wegdelen</setting>
+        <setting name="properties">identificatie,naamOverheid,typeOverheid,straatnaam,wegnummer,rekenmethode,wegsoort,tunnelfactor,hoogte,taludSoort,overdrachtLinksSoort,overdrachtLinksAfstand,overdrachtLinksHoogte,overdrachtRechtsSoort,overdrachtRechtsAfstand,overdrachtRechtsHoogte,maximumsnelheid,maximumsnelheidDynamisch,intensiteitLichtVerkeer,intensiteitLichtVerkeerDynamisch,intensiteitMiddelzwaarVerkeer,intensiteitZwaarVerkeer,intensiteitBusVerkeer,stagnatiefactorLichtVerkeer,stagnatiefactorMiddelzwaarVerkeer,stagnatiefactorZwaarVerkeer,stagnatiefactorBusVerkeer,opmerking,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
                     <hsd:entry index="0">
-                        <hsd:name>test_wegdeel</hsd:name>
+                        <hsd:name>Wegdelen</hsd:name>
                     </hsd:entry>
                 </hsd:type-index>
                 <hsd:mapping-relevant>0</hsd:mapping-relevant>
                 <hsd:types>
                     <hsd:type index="0">
-                        <hsd:name>test_wegdeel</hsd:name>
+                        <hsd:name>Wegdelen</hsd:name>
                         <hsd:constraint type="abstract" value="false"/>
                         <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
@@ -498,7 +498,7 @@
 </hsd:propertyType>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>overdrachtLinksBinnen50m</hsd:name>
+<hsd:name>overdrachtLinksAfstand</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -534,7 +534,7 @@
 </hsd:propertyType>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>overdrachtRechtsBinnen50m</hsd:name>
+<hsd:name>overdrachtRechtsAfstand</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -733,7 +733,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.gml.reader">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">6d9a9c30-726f-4e3e-bb08-b6cff114aaae</setting>
+        <setting name="resourceId">3e019863-28c6-43b1-b5b5-f8ffe13d1ffb</setting>
         <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/output/wegverkeer.gml</setting>
         <setting name="interpolation.maxError">0.1</setting>
         <setting name="interpolation.algorithm">segment</setting>
@@ -751,7 +751,7 @@
             <setting name="charset">UTF-8</setting>
             <setting name="meta.description"></setting>
             <setting name="quote">"</setting>
-            <setting name="selectedExportType">test_maatregel</setting>
+            <setting name="selectedExportType">Maatregelen</setting>
             <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
             <setting name="separator">;</setting>
             <setting name="escape">\</setting>
@@ -763,7 +763,7 @@
             <setting name="charset">UTF-8</setting>
             <setting name="meta.description"></setting>
             <setting name="quote">"</setting>
-            <setting name="selectedExportType">test_receptor</setting>
+            <setting name="selectedExportType">Receptoren</setting>
             <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
             <setting name="separator">;</setting>
             <setting name="escape">\</setting>
@@ -775,7 +775,7 @@
             <setting name="charset">UTF-8</setting>
             <setting name="meta.description"></setting>
             <setting name="quote">"</setting>
-            <setting name="selectedExportType">test_wegdeel</setting>
+            <setting name="selectedExportType">Wegdelen</setting>
             <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
             <setting name="separator">;</setting>
             <setting name="escape">\</setting>

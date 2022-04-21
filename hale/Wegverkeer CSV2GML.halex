@@ -3,20 +3,27 @@
     <name>Wegverkeer CSV2GML</name>
     <author>dgree</author>
     <created>2022-02-09T16:18:46.516+01:00</created>
-    <modified>2022-03-31T12:18:17.878+02:00</modified>
+    <modified>2022-04-21T08:58:05.326+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
         <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Wegverkeer%20CSV2GML.halex</setting>
     </save-config>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="onlyElementsMappable">true</setting>
+        <setting name="resourceId">01e7512d-9e21-4282-a731-00fbb0ab1524</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/docs/imlk.xsd</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
+    </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">f0274abd-8f73-415b-a425-fef2cf1bb93b</setting>
+        <setting name="resourceId">29e86be5-8eeb-442f-bb8c-5d27238a029e</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_maatregel.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -154,11 +161,11 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">bce10a84-de3a-4457-9322-ae7c49d49f76</setting>
+        <setting name="resourceId">051e1ab0-891c-48fa-87bd-8345a751c1ba</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_receptor.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Receptoren.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -332,16 +339,16 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">229fdb13-5879-4a6f-a463-6cf80d483f73</setting>
+        <setting name="resourceId">19549790-787b-4681-9625-03deb982cd34</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">True</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_wegdeel.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Wegdelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
         <setting name="typename">Wegdelen</setting>
-        <setting name="properties">identificatie,naamOverheid,typeOverheid,straatnaam,wegnummer,rekenmethode,wegsoort,tunnelfactor,hoogte,taludSoort,overdrachtLinksSoort,overdrachtLinksBinnen50m,overdrachtLinksHoogte,overdrachtRechtsSoort,overdrachtRechtsBinnen50m,overdrachtRechtsHoogte,maximumsnelheid,maximumsnelheidDynamisch,intensiteitLichtVerkeer,intensiteitLichtVerkeerDynamisch,intensiteitMiddelzwaarVerkeer,intensiteitZwaarVerkeer,intensiteitBusVerkeer,stagnatiefactorLichtVerkeer,stagnatiefactorMiddelzwaarVerkeer,stagnatiefactorZwaarVerkeer,stagnatiefactorBusVerkeer,opmerking,tijdstipRegistratie,geometrie</setting>
+        <setting name="properties">identificatie,naamOverheid,typeOverheid,straatnaam,wegnummer,rekenmethode,wegsoort,tunnelfactor,hoogte,taludSoort,overdrachtLinksSoort,overdrachtLinksAfstand,overdrachtLinksHoogte,overdrachtRechtsSoort,overdrachtRechtsAfstand,overdrachtRechtsHoogte,maximumsnelheid,maximumsnelheidDynamisch,intensiteitLichtVerkeer,intensiteitLichtVerkeerDynamisch,intensiteitMiddelzwaarVerkeer,intensiteitZwaarVerkeer,intensiteitBusVerkeer,stagnatiefactorLichtVerkeer,stagnatiefactorMiddelzwaarVerkeer,stagnatiefactorZwaarVerkeer,stagnatiefactorBusVerkeer,opmerking,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
@@ -491,7 +498,7 @@
 </hsd:propertyType>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>overdrachtLinksBinnen50m</hsd:name>
+<hsd:name>overdrachtLinksAfstand</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -527,7 +534,7 @@
 </hsd:propertyType>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>overdrachtRechtsBinnen50m</hsd:name>
+<hsd:name>overdrachtRechtsAfstand</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -724,31 +731,24 @@
             </hsd:schema>
         </cache>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
-        <setting name="charset">UTF-8</setting>
-        <setting name="onlyElementsMappable">true</setting>
-        <setting name="resourceId">8d94b0ef-bfc4-4000-a02c-bf403d8dea3d</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
-    </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">2d3dbf7e-26af-488a-8721-d943a84ed7d1</setting>
+        <setting name="resourceId">bc6a9ca2-8b55-496b-9103-ad367f15630b</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_wegdeel.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">Wegdelen</setting>
+        <setting name="typename">Maatregelen</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">bdf3e935-98bb-4414-a45a-af71283142ed</setting>
+        <setting name="resourceId">d8fd5c6d-76b5-4021-9d0e-e62531dfc4eb</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_receptor.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Receptoren.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
@@ -756,16 +756,16 @@
         <setting name="typename">Receptoren</setting>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">ISO-8859-2</setting>
-        <setting name="resourceId">98bcaacb-62a9-4e47-9088-ebcd232c8871</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">25e76f7b-7e3c-40b1-9866-606cb284bd7c</setting>
         <setting name="quote">"</setting>
-        <setting name="skip">true</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_maatregel.csv</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Wegdelen.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">Maatregelen</setting>
+        <setting name="typename">Wegdelen</setting>
     </resource>
     <export-config name="GML">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">

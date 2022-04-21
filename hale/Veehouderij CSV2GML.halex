@@ -3,43 +3,36 @@
     <name>Veehouderij CSV2GML</name>
     <author>dgree</author>
     <created>2022-03-21T08:51:27.075+01:00</created>
-    <modified>2022-04-12T07:50:10.409+02:00</modified>
+    <modified>2022-04-21T15:40:19.651+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
         <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Veehouderij%20CSV2GML.halex</setting>
     </save-config>
-    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
-        <setting name="charset">UTF-8</setting>
-        <setting name="onlyElementsMappable">true</setting>
-        <setting name="resourceId">81dc6d22-7daa-4d26-a5ae-5f642e27246a</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/imlk.xsd</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
-    </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">d65e0f78-8e1b-4160-a4cc-97fc2f736b0e</setting>
+        <setting name="resourceId">6c1e92ae-4d54-416c-92ab-454329a25810</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_veehouderij.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Veehouderijen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">test_veehouderij</setting>
+        <setting name="typename">Veehouderijen</setting>
         <setting name="properties">veehouderijIdentificatie,naamOverheid,veehouderijAdres,veehouderijDatumVergunning,stalIdentificatie,stalLengte,stalBreedte,stalHoogte,stalOrientatie,stalIdentificatiePandBAG,stalX,stalY,bronIdentificatie,bronHoogte,bronDiameter,bronUittreesnelheid,bronX,bronY,huisvestingssysteem,aanvullendeTechniek,aantalDieren,emissiefactorPM10,reductiefactorPM10,eigenFactorToelichting,opmerking,tijdstipRegistratie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
                     <hsd:entry index="0">
-                        <hsd:name>test_veehouderij</hsd:name>
+                        <hsd:name>Veehouderijen</hsd:name>
                     </hsd:entry>
                 </hsd:type-index>
                 <hsd:mapping-relevant>0</hsd:mapping-relevant>
                 <hsd:types>
                     <hsd:type index="0">
-                        <hsd:name>test_veehouderij</hsd:name>
+                        <hsd:name>Veehouderijen</hsd:name>
                         <hsd:constraint type="abstract" value="false"/>
                         <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
@@ -363,41 +356,29 @@
             </hsd:schema>
         </cache>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">13967e03-2d5d-4966-a194-9be47e865d89</setting>
-        <setting name="quote">"</setting>
-        <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_veehouderij.csv</setting>
-        <setting name="decimal">.</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
-        <setting name="separator">;</setting>
-        <setting name="escape">\</setting>
-        <setting name="typename">test_veehouderij</setting>
-    </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">3abb7094-9e5c-4e05-a26c-d9e2700594c5</setting>
+        <setting name="resourceId">aee14c0a-b7c4-4dd6-a672-6897f87f7bd2</setting>
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_veehouderij_receptor.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Veehouderij_receptoren.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">test_veehouderij_receptor</setting>
+        <setting name="typename">Veehouderij_receptoren</setting>
         <setting name="properties">veehouderijIdentificatie,identificatie,naamOverheid,naam,toetspuntSoort,grondslag,identificatiePandBAG,opmerking,tijdstipRegistratie,x,y</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
                     <hsd:entry index="0">
-                        <hsd:name>test_veehouderij_receptor</hsd:name>
+                        <hsd:name>Veehouderij_receptoren</hsd:name>
                     </hsd:entry>
                 </hsd:type-index>
                 <hsd:mapping-relevant>0</hsd:mapping-relevant>
                 <hsd:types>
                     <hsd:type index="0">
-                        <hsd:name>test_veehouderij_receptor</hsd:name>
+                        <hsd:name>Veehouderij_receptoren</hsd:name>
                         <hsd:constraint type="abstract" value="false"/>
                         <hsd:constraint type="has-value" value="false"/>
                         <hsd:constraint type="mappable" value="true"/>
@@ -541,17 +522,36 @@
             </hsd:schema>
         </cache>
     </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
+        <setting name="charset">UTF-8</setting>
+        <setting name="onlyElementsMappable">true</setting>
+        <setting name="resourceId">cf87b128-90e5-46af-bde4-32591cebcc24</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/docs/imlk.xsd</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
+    </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">f8e11dda-2456-47de-b9c7-d3c6f6188307</setting>
+        <setting name="resourceId">1a568f5b-5002-4a46-9c94-a29998afa8c6</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/test_veehouderij_receptor.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Veehouderijen.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">test_veehouderij_receptor</setting>
+        <setting name="typename">Veehouderijen</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">a528bad0-b1aa-43d7-be96-a329ccfe350c</setting>
+        <setting name="quote">"</setting>
+        <setting name="skip">1</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Veehouderij_receptoren.csv</setting>
+        <setting name="decimal">.</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
+        <setting name="separator">;</setting>
+        <setting name="escape">\</setting>
+        <setting name="typename">Veehouderij_receptoren</setting>
     </resource>
     <export-config name="GML">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">
