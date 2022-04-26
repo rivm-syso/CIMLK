@@ -1,0 +1,155 @@
+{
+	"schemas": [
+		{
+			"namespace": "http://www.esdi-humboldt.eu/hale/csv",
+			"typeIndex": [
+				{
+					"ref": 0,
+					"name": "Maatregelen"
+				}
+			],
+			"mappingRelevant": [0],
+			"types": [
+				{
+					"id": 0,
+					"location": "file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv",
+					"name": "Maatregelen",
+					"constraints": {
+						"abstract": false,
+						"has-value": false,
+						"mappable": true,
+						"mapping-relevant": true
+					},
+					"declares": [
+						{
+							"name": "identificatie",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "naamOverheid",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "naam",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "stof",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "voertuigtype",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "wegsoort",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "schalingsfactor",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "tijdstipRegistratie",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						},
+						{
+							"name": "geometrie",
+							"constraints": {
+								"cardinality": "1..1",
+								"nillable": true
+							},
+							"propertyType": {
+								"name": "java.lang.String",
+								"constraints": {
+									"binding": "java.lang.String",
+									"has-value": true
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
