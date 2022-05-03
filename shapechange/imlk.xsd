@@ -20,7 +20,7 @@
               <documentation>Een beschrijving van de RAV maatregel.</documentation>
             </annotation>
           </element>
-          <element name="reductiefactorPm10" type="double">
+          <element name="reductiefactorPM10" type="double">
             <annotation>
               <documentation>De fractie waarmee de PM10 emissies behorende bij de code voor de aanvullende techniek worden verlaagd.</documentation>
             </annotation>
@@ -161,12 +161,12 @@
           <documentation>Aantal dieren dat met het geselecteerde staltype in de stal gehouden wordt.</documentation>
         </annotation>
       </element>
-      <element minOccurs="0" name="eigenEmissiefactorPm10" type="integer">
+      <element minOccurs="0" name="eigenEmissiefactorPM10" type="integer">
         <annotation>
           <documentation>De zelf bepaalde emissiefactor indien wordt afgeweken van het standaard huisvestingssysteem waardoor er geen standaard emissiefactor beschikbaar is.</documentation>
         </annotation>
       </element>
-      <element minOccurs="0" name="eigenReductiefactorPm10" type="double">
+      <element minOccurs="0" name="eigenReductiefactorPM10" type="double">
         <annotation>
           <documentation>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor er geen standaard reductiefactor beschikbaar is.</documentation>
         </annotation>
@@ -174,6 +174,11 @@
       <element minOccurs="0" name="eigenFactorToelichting" type="string">
         <annotation>
           <documentation>Een beschrijving die aangeeft hoe de emissiefactor en/of reductiefactor is bepaald wanneer wordt afgeweken van respectievelijk het standaard huisvestingssysteem of de standaard maatregel.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="emissiePM10" type="double">
+        <annotation>
+          <documentation>De door het systeem berekende PM10 emissie op basis het aantal dieren, de emissiefactor en de reductiefactor.</documentation>
         </annotation>
       </element>
       <element minOccurs="0" name="opmerking" type="string">
@@ -209,7 +214,7 @@
               <documentation>Een beschrijving van het staltype op basis van de RAV factor code.</documentation>
             </annotation>
           </element>
-          <element name="emissiefactorPm10" type="integer">
+          <element name="emissiefactorPM10" type="integer">
             <annotation>
               <documentation>De op basis van de RAV factor code berekende emissie factor voor PM10.</documentation>
             </annotation>
@@ -255,7 +260,7 @@
               <documentation>Een verzameling woorden die praktisch worden gebruikt om een maatregel te duiden.</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="maatregelen">
+          <element maxOccurs="unbounded" name="maatregelfactoren">
             <annotation>
               <documentation>Specificatie van de combinaties van voertuigtype en snelheidstype waarvoor een maatregel geldt.</documentation>
             </annotation>
@@ -348,7 +353,7 @@
           <documentation>Unieke identificatiecode binnen een registratie.</documentation>
         </annotation>
       </element>
-      <element minOccurs="0" name="versie" type="string">
+      <element name="versie" type="string">
         <annotation>
           <documentation>Versie-aanduiding van een object.</documentation>
         </annotation>
@@ -372,11 +377,6 @@
           <element name="kvkNummer" type="integer">
             <annotation>
               <documentation>Het KvK-nummer van de overheidsorganisatie die bronhouder is van de gegevens.</documentation>
-            </annotation>
-          </element>
-          <element name="identificatieOverheid" type="string">
-            <annotation>
-              <documentation>Een alternatieve identificatie van de overheidsorganisatie.</documentation>
             </annotation>
           </element>
           <element name="naam" type="string">
@@ -490,7 +490,7 @@
               <documentation>De unieke identificatie van een receptor.</documentation>
             </annotation>
           </element>
-          <element name="naam" type="string">
+          <element minOccurs="0" name="naam" type="string">
             <annotation>
               <documentation>Een verzameling woorden die praktisch worden gebruikt om een receptor te duiden.</documentation>
             </annotation>
@@ -677,6 +677,11 @@
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>De unieke identificatie van een rekenresultaat.</documentation>
+            </annotation>
+          </element>
           <element name="rekentoolVersie" type="string">
             <annotation>
               <documentation>De versie van de rekentool waarmee de berekening is uitgevoerd.</documentation>
@@ -758,6 +763,11 @@
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="cimlk:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>De unieke identificatie van een rekenresultaat.</documentation>
+            </annotation>
+          </element>
           <element name="rekentoolVersie" type="string">
             <annotation>
               <documentation>De versie van de rekentool waarmee de berekening is uitgevoerd.</documentation>
@@ -771,11 +781,6 @@
           <element name="no2Concentratie" type="double">
             <annotation>
               <documentation>De berekende totale jaargemiddelde concentratie NO2 op de receptor.</documentation>
-            </annotation>
-          </element>
-          <element name="no2Overschrijdingsuren" type="double">
-            <annotation>
-              <documentation>Het berekende aantal overschrijdingsuren NO2 op de receptor.</documentation>
             </annotation>
           </element>
           <element name="noxSRM1" type="double">
@@ -808,7 +813,7 @@
               <documentation>NO2 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="no2GCN" type="double">
+          <element minOccurs="0" name="no2GCN" type="double">
             <annotation>
               <documentation>De grootschalige achtergrondconcentratie NO2.</documentation>
             </annotation>
@@ -828,17 +833,17 @@
               <documentation>O3 achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="o3GCN" type="double">
+          <element minOccurs="0" name="o3GCN" type="double">
             <annotation>
               <documentation>De grootschalige achtergrondconcentratie O3.</documentation>
             </annotation>
           </element>
-          <element name="o3HWNdubtelcorrectie" type="double">
+          <element minOccurs="0" name="o3HWNdubtelcorrectie" type="double">
             <annotation>
               <documentation>Dubbeltellingscorrectie op O3 voor de bijdrage van het hoofdwegennet.</documentation>
             </annotation>
           </element>
-          <element name="o3GCNenEigenCorrectie" type="double">
+          <element minOccurs="0" name="o3GCNenEigenCorrectie" type="double">
             <annotation>
               <documentation>Correctiewaarde voor O3 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</documentation>
             </annotation>
@@ -868,7 +873,7 @@
               <documentation>PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="pm10GCN" type="double">
+          <element minOccurs="0" name="pm10GCN" type="double">
             <annotation>
               <documentation>De grootschalige achtergrondconcentratie PM10.</documentation>
             </annotation>
@@ -903,7 +908,7 @@
               <documentation>PM2.5 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="pm25GCN" type="double">
+          <element minOccurs="0" name="pm25GCN" type="double">
             <annotation>
               <documentation>De grootschalige achtergrondconcentratie PM2.5.</documentation>
             </annotation>
@@ -938,7 +943,7 @@
               <documentation>EC achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</documentation>
             </annotation>
           </element>
-          <element name="ecGCN" type="double">
+          <element minOccurs="0" name="ecGCN" type="double">
             <annotation>
               <documentation>De grootschalige achtergrondconcentratie EC.</documentation>
             </annotation>
@@ -1121,6 +1126,11 @@
               <documentation>De datum waarop de verstrekte milieuvergunning is afgegeven.</documentation>
             </annotation>
           </element>
+          <element minOccurs="0" name="emissiePM10" type="double">
+            <annotation>
+              <documentation>De berekende totale PM10 emissie van alle bronnen die bij de veehouderij horen.</documentation>
+            </annotation>
+          </element>
           <element minOccurs="0" name="tijdstipRegistratie" type="dateTime">
             <annotation>
               <documentation>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</documentation>
@@ -1202,7 +1212,7 @@
     <sequence>
       <element name="voertuigtype" type="cimlk:WegverkeerVoertuigtypeType">
         <annotation>
-          <documentation>Eén van de typen voertuigen: licht verkeer, licht verkeer dynamisch, middelzwaar verkeer, zwaar verkeer of bus verkeer.</documentation>
+          <documentation>E&amp;#233n van de typen voertuigen: licht verkeer, licht verkeer dynamisch, middelzwaar verkeer, zwaar verkeer of bus verkeer.</documentation>
         </annotation>
       </element>
       <element minOccurs="0" name="stagnatiefactor" type="double">
