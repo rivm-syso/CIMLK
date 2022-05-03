@@ -88,7 +88,7 @@
 				<h3>Gebruik van het informatiemodel</h3>
 				<p>Het informatiemodel geeft vooral inzicht in de betekenis van de gegevens in CIMLK. Je kunt erin opzoeken wat een gegeven precies betekent en welke regels het aan moet voldoen. Denk bijvoorbeeld aan het datatype van het gegeven, de mogelijke waarden die het aan kan nemen of meer specifieke regels die eraan gesteld worden. Je kunt ook zien hoe het gegeven zich verhoudt tot andere gegevens. Het geeft inzicht in de structuur van de gegevens; hoe ze zijn gegroepeerd en hoe ze aan elkaar zijn gerelateerd.</p>
 				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de CSV bestanden</a> die moeten worden uitgewisseld. Deze CSV bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
-				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Onder het kopje <a href="#Bebouwingstype">enumeraties</a> zijn waardelijsten beschreven, waaruit een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
+				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Daarvoor zijn met name de <a href="#Bebouwingstype">enumeraties</a> bedoeld. Dit zijn waardelijsten waarbij een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
 			</section>
 			<section>
 				<h3>Conventies</h3>
@@ -1630,6 +1630,20 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
+<section id="Veehouderij.emissiePM10">
+<h3>emissiePM10</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale PM10 emissie van alle bronnen die bij de veehouderij horen.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
+</table>
+</section>
 <section id="Veehouderij.tijdstipRegistratie">
 <h3>tijdstipRegistratie</h3>
 <table width=100%>
@@ -2027,6 +2041,20 @@
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (eigenEmissiefactorPM10 != NULL OF eigenReductiefactorPM10 != NULL) DAN (eigenFactorToeliching != NULL)</td></tr>
+</table>
+</section>
+<section id="Emissiespecificatie.emissiePM10">
+<h3>emissiePM10</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De door het systeem berekende PM10 emissie op basis het aantal dieren, de emissiefactor en de reductiefactor.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
 <section id="Emissiespecificatie.opmerking">
