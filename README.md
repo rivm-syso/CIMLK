@@ -59,6 +59,12 @@ Zet in het bestand het pad naar de locatie van het ShapeChange jar bestand (bijv
 
 Het XSD schema kan vervolgens met behulp van de volgende stappen 
 Start de command line en navigeer naar de `shapechange` map van dit project.
+
+Op de Campus omgeving moet je zorgen dat de juiste java versie wordt gebruikt:
+```cmd
+cmd.exe /appvve:8b3b135f-5502-49b9-8c32-b75904c64222_242a68da-ee02-4478-a72d-1fe21f33dd76
+```
+
 Start het script met het volgende commando:
 ```cmd
 cimlk.bat
