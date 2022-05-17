@@ -3,7 +3,7 @@
     <name>Wegverkeer CSV2GML</name>
     <author>dgree</author>
     <created>2022-02-09T16:18:46.516+01:00</created>
-    <modified>2022-04-21T08:58:05.326+02:00</modified>
+    <modified>2022-05-16T11:29:25.717+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -733,10 +733,10 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">bc6a9ca2-8b55-496b-9103-ad367f15630b</setting>
+        <setting name="resourceId">e0ef3a41-f455-4f83-aba7-85259bbf60b3</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/MR2021/maatregelen_mr2021_2020x.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
@@ -745,10 +745,10 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">d8fd5c6d-76b5-4021-9d0e-e62531dfc4eb</setting>
+        <setting name="resourceId">c8bbf6bd-2350-4e53-8b1d-e67df5a924bc</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Receptoren.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/MR2021/receptoren_mr2021_2020x.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
@@ -757,10 +757,10 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">25e76f7b-7e3c-40b1-9866-606cb284bd7c</setting>
+        <setting name="resourceId">ae8e5cb9-fae5-4701-8b53-822d4136a753</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Wegdelen.csv</setting>
+        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/MR2021/wegdelen_mr2021_2020x.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
