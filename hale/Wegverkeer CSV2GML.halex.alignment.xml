@@ -338,21 +338,26 @@ if (identificatiePandBAG)&#xD;
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C5bbad20a-4aa7-462a-a229-f9a1e8608e7e" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C5bbad20a-4aa7-462a-a229-f9a1e8608e7e" priority="normal">
+        <source name="var">
             <property>
                 <type name="Receptoren"/>
                 <child name="naam"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
                 <child name="naam" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (naam)&#xD;
+	return naam
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ce8c934f6-a4f2-4715-9a68-8b2611ac12fa" priority="normal">
         <source name="var">
@@ -764,21 +769,26 @@ if (straatnaam)&#xD;
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ccc8245a2-610f-49f6-b5c8-50ac1a031fdc" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ccc8245a2-610f-49f6-b5c8-50ac1a031fdc" priority="normal">
+        <source name="var">
             <property>
                 <type name="Wegdelen"/>
                 <child name="taludSoort"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="WegdeelType" ns="http://cimlk.nl/1.0"/>
                 <child name="taludSoort" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (taludSoort) &#xD;
+	return taludSoort
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="Cb51c55a5-6177-4c9c-b188-0d91200f83ba" priority="normal">
         <source>

@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C3374f847-11b1-4432-8be4-f9291d0174c7" priority="normal">
+        <source name="var">
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="Maatregelen"/>
+                <child name="geometrie"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geom = the_geom&#xD;
+if (geom)&#xD;
+	return geom.toText()
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3ad7a6c6-4a55-40d5-8f6b-a18383664da7" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="identificatie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C808590e7-83ce-4081-9c9b-1f3f87ed3eaf" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="naam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="naam"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C14bd5e07-f053-4cff-911b-3bb539fad58a" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="naamOverhd"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="naamOverheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C6ba53358-e65f-4e22-94cd-fff1f5633987" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="schaalfact"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="schalingsfactor"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4e2da0db-8f39-4212-8842-4296ca239f1c" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="stof"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="stof"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb4201d68-6cf6-460c-aa2e-c0f7733eb81c" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="tijdReg"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf2918955-dbf9-4a87-adf4-9bcc7871c3c2" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="voertuig"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="voertuigtype"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca955826d-69b8-46a6-97d9-deaa94240c11" priority="normal">
+        <source>
+            <property>
+                <type name="test_maatregel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="wegsoort"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Maatregelen"/>
+                <child name="wegsoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="C6c5a5090-c459-47b0-820b-5422dca453a4" priority="normal">
+        <source>
+            <class>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="Receptoren"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C91117338-0542-475e-bfde-f80d8567e4f3" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="bebouwing"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="bebouwingstype"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce21b4889-7bde-4c6c-8d39-f69bd2731d95" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="bomenfact"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="bomenfactor"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cbe20003a-f7ff-45e7-8760-523d31363e73" priority="normal">
+        <source name="var">
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="Receptoren"/>
+                <child name="geometrie"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geom = the_geom&#xD;
+if (geom)&#xD;
+	return geom.toText()
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C83d86b9a-e36a-452c-9834-16fc5324acc4" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="grondslag"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="grondslag"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3df6aa73-75d3-4841-ac2a-39d211676ee5" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="identificatie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7d945ba4-2354-457c-8303-014b766653eb" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="IDPandBAG"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="identificatiePandBAG"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4c784d9a-8453-4e19-b5ed-6b80f51889be" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="naam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="naam"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4de11d87-efec-4d64-bb13-c522d97118a8" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="naamOverhd"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="naamOverheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C656704a0-f8b3-4d40-8019-2c4a769272dd" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="opmerking"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="opmerking"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C2c446f83-0ec7-4f6d-8c61-c7fdc3351825" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="tijdReg"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb17c0fd4-5c16-4cd6-a2ac-45de152f88c1" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="toetsSoort"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="toetspuntSoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C51622bc4-26af-4fff-98cc-08aed97da871" priority="normal">
+        <source>
+            <property>
+                <type name="test_receptor" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="wegdeelID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Receptoren"/>
+                <child name="wegdeel"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.retype" id="Cb957cbb4-f4d6-40ca-aa5f-6448c1ce62ae" priority="normal">
+        <source>
+            <class>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="Wegdelen"/>
+            </class>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cc85867f0-c6a7-497f-8fa0-5400978658fa" priority="normal">
+        <source name="var">
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="the_geom"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="Wegdelen"/>
+                <child name="geometrie"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geom = the_geom&#xD;
+if (geom)&#xD;
+	return geom.toText()
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C327a1b69-c6f0-4efa-bb14-fdb29c8744c6" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="hoogte"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="hoogte"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C03affe66-3f0a-47a5-a36a-6ef465937346" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="ID"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="identificatie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C974b0e37-3919-4786-ad09-b4e38523e470" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="intBV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="intensiteitBusVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0f957e7a-ddc2-4792-ba14-2ff3eb5199b8" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="intLV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="intensiteitLichtVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3b9fa41e-8a11-4f4c-819f-43664e5f0b06" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="intLVDyn"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="intensiteitLichtVerkeerDynamisch"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca8e905cd-4692-43c9-bca8-683efccc2dc1" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="intMV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="intensiteitMiddelzwaarVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C9159a3d0-8234-4193-9937-60e13cff6e57" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="intZV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="intensiteitZwaarVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C0e4fe59e-1cbd-4d5d-8b7e-d453f42ecb48" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="maxsnlhd"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="maximumsnelheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ca81e9945-c07d-410a-b15f-42d6b84878a5" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="maxDyn"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="maximumsnelheidDynamisch"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C10d2614c-b48c-421b-a610-2db154c684d4" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="naamOverhd"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="naamOverheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C55f6fe4e-6bbd-4656-9bcb-7a7f47b3e204" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="opmerking"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="opmerking"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C7b6e30a2-c8ac-4eed-9368-0aa791d37333" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="overdrLAfs"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="overdrachtLinksAfstand"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3818512a-ded5-4a6d-93f8-5d294af9f864" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="overdrLHgt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="overdrachtLinksHoogte"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cf86f9668-4fe2-4f8a-8705-f37e77978e51" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="overdrLSrt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="overdrachtLinksSoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4a69dc67-00d9-4383-8ab7-c99c78588f32" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="overdrRAfs"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="overdrachtRechtsAfstand"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cdff01376-b3f1-4f1b-8bcf-49cf3b565815" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="overdrRHgt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="overdrachtRechtsHoogte"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ced32e04d-ebc1-4640-bb50-9fa4e4023e16" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="overdrRSrt"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="overdrachtRechtsSoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C36dfc119-03fd-41f6-939d-f2d6c480d428" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="rekenmeth"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="rekenmethode"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc2f74be4-32ae-4afa-9ef2-2f401f31ca8d" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="stagBV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="stagnatiefactorBusVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C160c9a21-5cc1-4ce5-96b5-157d16af5a2e" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="stagLV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="stagnatiefactorLichtVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C4148b836-3298-4a49-ad05-1fe4a628b9e7" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="stagMV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="stagnatiefactorMiddelzwaarVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C8253a3f5-a8d0-4ede-9657-279679dae2d2" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="stagZV"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="stagnatiefactorZwaarVerkeer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd12cc606-8b1c-4b09-8256-499968c8b646" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="straatnaam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="straatnaam"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1a0ce6ab-4a87-488a-9289-5cead47ba79f" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="taludSoort"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="taludSoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cecbb5d47-be5f-4743-a0e8-267f700b635b" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="tijdReg"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C965bcda9-1ebf-47b3-94d7-5c2d83ce7b6f" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="tunnelfact"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="tunnelfactor"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C55d97703-6d65-4c79-af7b-d4e8fce29fd0" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="typeOverhd"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="typeOverheid"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cb2b5a0af-2470-46fc-992c-871259b7d4cd" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="wegnummer"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="wegnummer"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cec99b17c-08b0-44ce-863b-574e6bbf82d6" priority="normal">
+        <source>
+            <property>
+                <type name="test_wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
+                <child name="wegsoort"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="Wegdelen"/>
+                <child name="wegsoort"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+</alignment>
