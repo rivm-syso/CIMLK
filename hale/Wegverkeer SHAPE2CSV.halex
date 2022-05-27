@@ -8,7 +8,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Wegverkeer%20SHAPE2CSV.halex</setting>
+        <setting name="target">file:/Wegverkeer%20SHAPE2CSV.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
@@ -16,7 +16,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv</setting>
+        <setting name="source">file:/input/Maatregelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -158,7 +158,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Receptoren.csv</setting>
+        <setting name="source">file:/input/Receptoren.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -336,7 +336,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Wegdelen.csv</setting>
+        <setting name="source">file:/input/Wegdelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -727,7 +727,7 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
         <setting name="resourceId">f521672c-c12d-4655-9312-46a3b21fbc05</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/maatregel.shp</setting>
+        <setting name="source">file:/input/maatregel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
@@ -913,7 +913,7 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">ISO-8859-1</setting>
         <setting name="resourceId">cc29c5ce-cec4-48bf-9d7b-21e5edcef441</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/wegdeel.shp</setting>
+        <setting name="source">file:/input/wegdeel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
@@ -1427,7 +1427,7 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">ISO-8859-1</setting>
         <setting name="resourceId">ec633d11-11ec-4d8f-9221-22a5a56b40cd</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/receptor.shp</setting>
+        <setting name="source">file:/input/receptor.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
@@ -1651,7 +1651,7 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
         <setting name="resourceId">59b0b257-0175-4e76-b2b3-dd8a0b8986a0</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/rekenresultaat.shp</setting>
+        <setting name="source">file:/input/rekenresultaat.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
@@ -2404,7 +2404,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Rekenresultaten.csv</setting>
+        <setting name="source">file:/input/Rekenresultaten.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -2975,7 +2975,7 @@
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
         <setting name="resourceId">a395d816-e0cf-4826-bde7-46ebe25c5197</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/correctie.shp</setting>
+        <setting name="source">file:/input/correctie.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/shp">
@@ -3124,7 +3124,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Correcties.csv</setting>
+        <setting name="source">file:/input/Correcties.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -3252,7 +3252,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="matchShortPropertyNames">false</setting>
         <setting name="resourceId">317041a2-5a2a-4e1e-bccb-89c04d78a1b1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/correctie.shp</setting>
+        <setting name="source">file:/input/correctie.shp</setting>
         <setting name="autoDetectSchemaTypes">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}correctie</setting>
@@ -3261,7 +3261,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="matchShortPropertyNames">false</setting>
         <setting name="resourceId">3535662d-bd98-463e-b409-2319cdaf54d6</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/maatregel.shp</setting>
+        <setting name="source">file:/input/maatregel.shp</setting>
         <setting name="autoDetectSchemaTypes">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}maatregel</setting>
@@ -3270,7 +3270,7 @@
         <setting name="charset">ISO-8859-1</setting>
         <setting name="matchShortPropertyNames">false</setting>
         <setting name="resourceId">b1de68d7-a1a6-4f2a-a52d-85c5fe54c5b5</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/receptor.shp</setting>
+        <setting name="source">file:/input/receptor.shp</setting>
         <setting name="autoDetectSchemaTypes">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}receptor</setting>
@@ -3279,7 +3279,7 @@
         <setting name="charset">ISO-8859-1</setting>
         <setting name="matchShortPropertyNames">false</setting>
         <setting name="resourceId">eca671eb-6c2b-400e-a1e4-35658ca97ba0</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/rekenresultaat.shp</setting>
+        <setting name="source">file:/input/rekenresultaat.shp</setting>
         <setting name="autoDetectSchemaTypes">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}rekenresultaat</setting>
@@ -3288,7 +3288,7 @@
         <setting name="charset">UTF-8</setting>
         <setting name="matchShortPropertyNames">false</setting>
         <setting name="resourceId">4f6d7f2a-c2de-4ff1-a4c8-a5ab85a5e65b</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/wegdeel.shp</setting>
+        <setting name="source">file:/input/wegdeel.shp</setting>
         <setting name="autoDetectSchemaTypes">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}wegdeel</setting>
