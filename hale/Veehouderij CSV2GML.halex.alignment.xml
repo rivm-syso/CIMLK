@@ -272,6 +272,50 @@ if (tijdstipRegistratie)&#xD;
         </target>
         <parameter value="#{{project:namespace}}.V_{veehouderijIdentificatie}" name="pattern"/>
     </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C9380fdca-da18-4507-a637-9e9f234c512c" priority="normal">
+        <source>
+            <class>
+                <type name="Veehouderij_rekenresultaten"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="RekenresultaatVeehouderijType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+_target {&#xD;
+	def uuid = UUID.randomUUID().toString()&#xD;
+	id(_project.vars.namespace+".BV_"+uuid)&#xD;
+	identificatie {&#xD;
+		NEN3610ID {&#xD;
+			lokaalID("BV_"+uuid)&#xD;
+			namespace(_project.vars.namespace)&#xD;
+		}&#xD;
+	}&#xD;
+	pm10AchtergrondConcentratie(_source.p.pm10AchtergrondConcentratie.value())&#xD;
+	pm10AchtergrondOverschrijdingsdagen(_source.p.pm10AchtergrondOverschrijdingsdagen.value())&#xD;
+	pm10BronbijdrageConcentratie(_source.p.pm10BronbijdrageConcentratie.value())&#xD;
+	pm10BronbijdrageOverschrijdingsdagen(_source.p.pm10BronbijdrageOverschrijdingsdagen.value())&#xD;
+	pm10Concentratie(_source.p.pm10Concentratie.value())&#xD;
+	pm10DubtelcorrectieConcentratie(_source.p.pm10DubtelcorrectieConcentratie.value())&#xD;
+	pm10DubtelcorrectieOverschrijdingsdagen(_source.p.pm10DubtelcorrectieOverschrijdingsdagen.value())&#xD;
+	pm10GCNConcentratie(_source.p.pm10GCNConcentratie.value())&#xD;
+	pm10GCNOverschrijdingsdagen(_source.p.pm10GCNOverschrijdingsdagen.value())&#xD;
+	pm10Overschrijdingsdagen(_source.p.pm10Overschrijdingsdagen.value())&#xD;
+	rekenjaar(_source.p.rekenjaar.value())&#xD;
+	if (_source.p.identificatie.value()) {&#xD;
+		receptor {&#xD;
+			href("#"+_project.vars.namespace+".RV_"+_source.p.identificatie.value())&#xD;
+		}&#xD;
+	}&#xD;
+	rekentoolVersie(_source.p.rekentoolVersie.value())&#xD;
+}&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
     <cell relation="eu.esdihumboldt.hale.align.merge" id="C7ec00c83-f54c-4b30-b7a9-aed0a9e3fda6" priority="normal">
         <source>
             <class>

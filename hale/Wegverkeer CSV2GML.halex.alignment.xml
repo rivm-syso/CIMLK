@@ -636,10 +636,10 @@ if (wegdeel) {&#xD;
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 _target {&#xD;
 	def uuid = UUID.randomUUID().toString()&#xD;
-	id(_project.vars.namespace+".BB_"+uuid)&#xD;
+	id(_project.vars.namespace+".BW_"+uuid)&#xD;
 	identificatie {&#xD;
 		NEN3610ID {&#xD;
-			lokaalID("BB_"+uuid)&#xD;
+			lokaalID("BW_"+uuid)&#xD;
 			namespace(_project.vars.namespace)&#xD;
 		}&#xD;
 	}&#xD;
