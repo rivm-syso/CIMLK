@@ -1,5 +1,172 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.hale.align.merge" id="Cbd1fc4d7-f67d-40d1-8b19-7d78ec3b62ab" priority="normal">
+        <source>
+            <class>
+                <type name="Correcties"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </target>
+        <parameter value="false" name="auto_detect"/>
+        <parameter value="identificatie" name="property"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C1563c6fa-1c19-4997-90e3-fd2778e661d5" priority="normal">
+        <source>
+            <property>
+                <type name="Correcties"/>
+                <child name="correctie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="correctietermen" ns="http://cimlk.nl/1.0"/>
+                <child name="Correctieterm" ns="http://cimlk.nl/1.0"/>
+                <child name="correctie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C50a6f04c-7b8f-4c41-9ea8-8955b4b2ffcd" priority="normal">
+        <source>
+            <property>
+                <type name="Correcties"/>
+                <child name="stof"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="correctietermen" ns="http://cimlk.nl/1.0"/>
+                <child name="Correctieterm" ns="http://cimlk.nl/1.0"/>
+                <child name="stof" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ce2a2cfcb-08a6-4427-82f1-b8726d47c8ef" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Correcties"/>
+                <child name="geometrie"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="geometrie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def value = geometrie&#xD;
+return _.geom.with(geometry:value, crs:"EPSG:28992")
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C5a1a04ce-7450-4a4a-bee1-1d5b05ad99af" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Correcties"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="id" ns="http://www.opengis.net/gml/3.2"/>
+            </property>
+        </target>
+        <parameter value="{{project:namespace}}.M_{identificatie}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C485adb09-0130-4c43-bc2a-6424ebb439bd" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Correcties"/>
+                <child name="identificatie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="W_{identificatie}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="C1280906a-74b7-436f-b7fd-247dbd40d53a" priority="normal">
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
+                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="namespace" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="{{project:namespace}}" name="value"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cdc13d6fc-e38d-4285-b57d-f364cb64c7e9" priority="normal">
+        <source>
+            <property>
+                <type name="Correcties"/>
+                <child name="naam"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="naam" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cafec961e-6f69-462b-90d9-6f8fd6b6a6ca" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Correcties"/>
+                <child name="receptorIdentificatie"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="receptor" ns="http://cimlk.nl/1.0"/>
+                <child name="href" ns="http://www.w3.org/1999/xlink"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (receptorIdentificatie) &#xD;
+	return "#"+_project.vars.namespace+".RW_"+receptorIdentificatie
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.string.dateextraction" id="Cad935444-28ee-4b01-ae87-bb71a15ee9ed" priority="normal">
+        <source>
+            <property>
+                <type name="Correcties"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </source>
+        <target>
+            <property>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="dd-MM-yyyy HH:mm" name="dateFormat"/>
+    </cell>
     <cell relation="eu.esdihumboldt.hale.align.merge" id="Cddc5e9fc-f895-4d8b-8d52-e16a95d31a56" priority="normal">
         <source>
             <class>
@@ -453,6 +620,82 @@ if (wegdeel) {&#xD;
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C3b2a9d3f-09e6-4fca-addc-8b1434bbc8f7" priority="normal">
+        <source>
+            <class>
+                <type name="Rekenresultaten"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="RekenresultaatWegverkeerType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+_target {&#xD;
+	def uuid = UUID.randomUUID().toString()&#xD;
+	id(_project.vars.namespace+".BB_"+uuid)&#xD;
+	identificatie {&#xD;
+		NEN3610ID {&#xD;
+			lokaalID("BB_"+uuid)&#xD;
+			namespace(_project.vars.namespace)&#xD;
+		}&#xD;
+	}&#xD;
+	ecAchtergrondConcentratie(_source.p.ecAchtergrondConcentratie.value())&#xD;
+	ecConcentratie(_source.p.ecConcentratie.value())&#xD;
+	if (_source.p.ecGCN.value())&#xD;
+		ecGCN(_source.p.ecGCN.value())&#xD;
+	ecGCNenEigenCorrectie(_source.p.ecGCNenEigenCorrectie.value())&#xD;
+	ecHWNdubtelcorrectie(_source.p.ecHWNdubtelcorrectie.value())&#xD;
+	ecSRM1(_source.p.ecSRM1.value())&#xD;
+	ecSRM2(_source.p.ecSRM2.value())&#xD;
+	no2AchtergrondConcentratie(_source.p.no2AchtergrondConcentratie.value())&#xD;
+	no2Concentratie(_source.p.no2Concentratie.value())&#xD;
+	if (_source.p.no2GCN.value())&#xD;
+		no2GCN(_source.p.no2GCN.value())&#xD;
+	no2GCNenEigenCorrectie(_source.p.no2GCNenEigenCorrectie.value())&#xD;
+	no2HWNdubtelcorrectie(_source.p.no2HWNdubtelcorrectie.value())&#xD;
+	no2SRM1DirecteUitstoot(_source.p.no2SRM1DirecteUitstoot.value())&#xD;
+	no2SRM2DirecteUitstoot(_source.p.no2SRM2DirecteUitstoot.value())&#xD;
+	no2SRMConversiebijdrage(_source.p.no2SRMConversiebijdrage.value())&#xD;
+	noxSRM1(_source.p.noxSRM1.value())&#xD;
+	noxSRM2(_source.p.noxSRM2.value())&#xD;
+	o3AchtergrondConcentratie(_source.p.o3AchtergrondConcentratie.value())&#xD;
+	if (_source.p.o3GCN.value())&#xD;
+		o3GCN(_source.p.o3GCN.value())&#xD;
+	if (_source.p.o3GCNenEigenCorrectie.value()) &#xD;
+		o3GCNenEigenCorrectie(_source.p.o3GCNenEigenCorrectie.value())&#xD;
+	if (_source.p.o3HWNdubtelcorrectie.value())&#xD;
+		o3HWNdubtelcorrectie(_source.p.o3HWNdubtelcorrectie.value())&#xD;
+	pm10AchtergrondConcentratie(_source.p.pm10AchtergrondConcentratie.value())&#xD;
+	pm10Concentratie(_source.p.pm10Concentratie.value())&#xD;
+	if (_source.p.pm10GCN.value())&#xD;
+		pm10GCN(_source.p.pm10GCN.value())&#xD;
+	pm10GCNenEigenCorrectie(_source.p.pm10GCNenEigenCorrectie.value())&#xD;
+	pm10HWNdubtelcorrectie(_source.p.pm10HWNdubtelcorrectie.value())&#xD;
+	pm10Overschrijdingsdagen(_source.p.pm10Overschrijdingsdagen.value())&#xD;
+	pm10SRM1(_source.p.pm10SRM1.value())&#xD;
+	pm10SRM2(_source.p.pm10SRM2.value())&#xD;
+	pm25AchtergrondConcentratie(_source.p.pm25AchtergrondConcentratie.value())&#xD;
+	pm25Concentratie(_source.p.pm25Concentratie.value())&#xD;
+	if (_source.p.pm25GCN.value())&#xD;
+		pm25GCN(_source.p.pm25GCN.value())&#xD;
+	pm25GCNenEigenCorrectie(_source.p.pm25GCNenEigenCorrectie.value())&#xD;
+	pm25HWNdubtelcorrectie(_source.p.pm25HWNdubtelcorrectie.value())&#xD;
+	pm25SRM1(_source.p.pm25SRM1.value())&#xD;
+	pm25SRM2(_source.p.pm25SRM2.value())&#xD;
+	if (_source.p.receptorIdentificatie.value()) {&#xD;
+		receptor {&#xD;
+			href("#"+_project.vars.namespace+".RW_"+_source.p.receptorIdentificatie.value())&#xD;
+		}&#xD;
+	}&#xD;
+	rekenjaar(_source.p.rekenjaar.value())&#xD;
+	rekentoolVersie(_source.p.rekentoolVersie.value())&#xD;
+}
+</core:text>
+        </complexParameter>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.retype" id="C37314610-2665-4e13-9e4a-55dc445c716b" priority="normal">
         <source>

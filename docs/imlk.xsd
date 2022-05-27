@@ -348,7 +348,7 @@
           <documentation>Unieke identificatiecode binnen een registratie.</documentation>
         </annotation>
       </element>
-      <element name="versie" type="string">
+      <element minOccurs="0" name="versie" type="string">
         <annotation>
           <documentation>Versie-aanduiding van een object.</documentation>
         </annotation>

@@ -88,7 +88,7 @@
 				<h3>Gebruik van het informatiemodel</h3>
 				<p>Het informatiemodel geeft vooral inzicht in de betekenis van de gegevens in CIMLK. Je kunt erin opzoeken wat een gegeven precies betekent en welke regels het aan moet voldoen. Denk bijvoorbeeld aan het datatype van het gegeven, de mogelijke waarden die het aan kan nemen of meer specifieke regels die eraan gesteld worden. Je kunt ook zien hoe het gegeven zich verhoudt tot andere gegevens. Het geeft inzicht in de structuur van de gegevens; hoe ze zijn gegroepeerd en hoe ze aan elkaar zijn gerelateerd.</p>
 				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de CSV bestanden</a> die moeten worden uitgewisseld. Deze CSV bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
-				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Daarvoor zijn met name de <a href="#Bebouwingstype">enumeraties</a> bedoeld. Dit zijn waardelijsten waarbij een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
+				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Onder het kopje <a href="#Bebouwingstype">enumeraties</a> zijn waardelijsten beschreven, waaruit een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
 			</section>
 			<section>
 				<h3>Conventies</h3>
@@ -383,8 +383,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De fractie waarmee de PM10 emissies behorende bij de code voor de aanvullende techniek worden verlaagd.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit wijkt af van de rekenwijze zoals gehanteerd bij schalingsfactoren (onderdeel van maatregelfactor).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -445,6 +445,7 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geometrie die de ligging en vorm van het correctiegebied beschrijft.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Als de correctie is gerelateerd aan een receptor dan is de geometrie van de correctie een polygoon die is afgeleid van de locatie van de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>GM_Surface</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
@@ -812,8 +813,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale PM10 concentratie op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -825,8 +826,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende bronbijdrage voor PM10 concentraties op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -838,8 +839,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -851,8 +852,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -864,8 +865,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op de PM10 concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -877,8 +878,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het berekende aantal overschrijdingsdagen op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -890,8 +891,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende bronbijdrage voor PM10 overschrijdingsdagen op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -903,8 +904,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 overschrijdingsdagen op basis van de achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -916,8 +917,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het aantal overschrijdingsdagen op basis van de GCN.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -929,8 +930,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van veehouderijen op het aantal PM10 overschrijdingsdagen.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -991,8 +992,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale jaargemiddelde concentratie NO2 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1004,8 +1005,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor NOx op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1017,8 +1018,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor NOx op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1030,8 +1031,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 concentratie direct uitgestoten voor NO2 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1043,8 +1044,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 concentratie direct uitgestoten voor NO2 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1056,8 +1057,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende conversiebijdrage van NO2 uit NO en O3.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1069,8 +1070,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>NO2 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1082,8 +1083,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie NO2.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN (no2GCN == NULL) ANDERS (no2GCN != NULL)</td></tr>
@@ -1096,8 +1097,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Dubbeltellingscorrectie op NO2 voor de bijdrage van het hoofdwegennet.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1109,8 +1110,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor NO2 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1122,8 +1123,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>O3 achtergrond waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1135,8 +1136,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie O3.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN o3GCN == NULL) ANDERS (o3GCN != NULL)</td></tr>
@@ -1149,8 +1150,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Dubbeltellingscorrectie op O3 voor de bijdrage van het hoofdwegennet.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN (o3HWNdubtelcorrectie == NULL) ANDERS (o3HWNdubtelcorrectie != NULL)</td></tr>
@@ -1163,8 +1164,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor O3 die kan bestaan uit een correctie op de GCN (bijv. Schiphol correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN (o3GCNenEigenCorrectie == NULL) ANDERS (o3GCNenEigenCorrectie != NULL)</td></tr>
@@ -1177,8 +1178,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale PM10 concentratie op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1190,8 +1191,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het berekende aantal overschrijdingsdagen op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1203,8 +1204,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor PM10 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1216,8 +1217,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor PM10 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1229,8 +1230,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM10 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1242,8 +1243,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN (pm10GCN == NULL) ANDERS (pm10GCN != NULL)</td></tr>
@@ -1256,8 +1257,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM10.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1269,8 +1270,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM10 die kan bestaan uit een correctie op de GCN (bijv. IJmond correctie) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1282,8 +1283,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale jaargemiddelde concentratie PM2.5 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1295,8 +1296,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor PM2.5 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1308,8 +1309,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor PM2.5 op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1321,8 +1322,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>PM2.5 achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1334,8 +1335,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM2.5.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN (pm25GCN == NULL) ANDERS (pm25GCN != NULL)</td></tr>
@@ -1348,8 +1349,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM2.5.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1361,8 +1362,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor PM2.5 die kan bestaan uit een correctie op de GCN (waaronder Schiphol en IJmond correcties) en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1374,8 +1375,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale jaargemiddelde concentratie EC op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1387,8 +1388,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM1 bijdrage voor EC op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1400,8 +1401,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende SRM2 bijdrage voor EC op de receptor.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1413,8 +1414,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>EC achtergrondconcentratie waarmee gerekend is (inclusief correctie voor dubbeltelling, verfijningsvelden en puntcorrecties).</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1426,8 +1427,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie EC.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde IN [2021, 2022]) DAN (ecGCN == NULL) ANDERS (ecGCN != NULL)</td></tr>
@@ -1440,8 +1441,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op EC.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1453,8 +1454,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Correctiewaarde voor EC die kan bestaan uit een correctie op de GCN en/of een eigen correctie op de wegbijdrage als gevolg van een windtunnelonderzoek.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1495,8 +1496,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootste afmeting van een als rechthoek gedefinieerde stal.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1510,8 +1511,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De kleinste afmeting van een als rechthoek gedefinieerde stal.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1525,8 +1526,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De hoogte van de stal boven maaiveld.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1635,10 +1636,9 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende totale PM10 emissie van alle bronnen die bij de veehouderij horen.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1680,8 +1680,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De hoogte van de veehouderijbron boven maaiveld.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1696,8 +1696,8 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>In de berekening wordt uitgegaan van een cirkelvormige bron met bijbehorende diameter.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1711,8 +1711,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De snelheid waarmee de emissie vrij komt in de verticale richting.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter / seconde</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1857,8 +1857,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De factor waarmee de emissies worden vermenigvuldigd om te corrigeren voor emissies uit een tunnelmond.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit is een correctie voor opbouw van emissies in een tunnel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -1982,8 +1982,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Absolute correctie van de berekende concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -2023,8 +2023,8 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De zelf bepaalde reductiefactor indien wordt afgeweken van de standaard maatregelen waardoor er geen standaard reductiefactor beschikbaar is.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -2048,10 +2048,9 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De door het systeem berekende PM10 emissie op basis het aantal dieren, de emissiefactor en de reductiefactor.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een inhoudelijke toelichting op de toepassing van het informatie-element.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -2139,8 +2138,8 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De factor waarmee de emissies worden vermenigvuldigd binnen het maatregelgebied.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Deze factor wordt gebruikt voor emissies van de genoemde stof, voertuigen en snelheid.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -2188,7 +2187,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘versie’ maakt geen deel uit van de identificatie van het object maar kan worden gebruikt om verschillende versies van hetzelfde object te identificeren.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 </section>
@@ -2269,8 +2268,8 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De hoogte van het overdrachtsobject langs een wegdeel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
@@ -2303,8 +2302,8 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het aandeel van de opgegeven intensiteit dat stagnatie ondervindt.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Er komt gedurende een bepaalde, beperkte, periode van de dag stagnatie voor. Het betreft de etmaalgemiddelde fractie van de verkeersintensiteit van het voertuigtype dat stagneert. De stagnatiefactor geeft een verfijning van de gemiddelde snelheid.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{4}$</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met 4 cijfers achter de komma</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]*\.[0-9]{1,4}$</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td>Decimaal getal met maximaal 4 cijfers achter de komma</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
