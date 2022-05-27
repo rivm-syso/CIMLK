@@ -1,1 +1,0 @@
-SET PATH=C:\Program Files\wetransform\HALE\jre\bin;%PATH%
