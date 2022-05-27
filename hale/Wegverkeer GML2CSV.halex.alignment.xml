@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <alignment xmlns="http://www.esdi-humboldt.eu/hale/alignment">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C99966de2-d14b-4062-82ab-eea9015e25cf" priority="normal">
+        <source>
+            <class>
+                <type name="CorrectieType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="Correcties"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def geo = _.geom.find(_source.p.geometrie.first()).geometry&#xD;
+String wkt = geo.toText()&#xD;
+&#xD;
+_source.p.correctietermen.each { correctieterm -&gt;&#xD;
+	_target {&#xD;
+		geometrie(wkt)&#xD;
+		tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
+		identificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(2))&#xD;
+		naam(_source.p.naam.value())&#xD;
+		String receptorID = _source.p.receptor.href.value()&#xD;
+		if (receptorID)	receptorIdentificatie(receptorID.substring(3))&#xD;
+		correctie(correctieterm.p.Correctieterm.correctie.value())&#xD;
+		stof(correctieterm.p.Correctieterm.stof.value())&#xD;
+	}&#xD;
+}		&#xD;
+
+</core:text>
+        </complexParameter>
+    </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cecd2e2b4-6337-47f9-8bad-211b871b4765" priority="normal">
         <source>
             <class>
@@ -38,7 +70,7 @@ _source.p.maatregelfactoren.each { maatregelfactor -&gt;&#xD;
             </core:message>
         </annotation>
     </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C37b53093-3ef8-4cfd-81fe-b6c08de5a53c" priority="normal">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C37b53093-3ef8-4cfd-81fe-b6c08de5a53c" priority="highest">
         <source>
             <class>
                 <type name="ReceptorWegverkeerType" ns="http://cimlk.nl/1.0"/>
@@ -53,6 +85,15 @@ _source.p.maatregelfactoren.each { maatregelfactor -&gt;&#xD;
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 def geo = _.geom.find(_source.p.geometrie.first()).geometry&#xD;
 String wkt = geo.toText()&#xD;
+&#xD;
+withTransformationContext{&#xD;
+	def c = _.context.collector(it)&#xD;
+	c.geometrie[_source.p.id.value()] = wkt&#xD;
+	c.naam[_source.p.id.value()] = _source.p.naam.value()&#xD;
+	c.opmerking[_source.p.id.value()] = _source.p.opmerking.value()&#xD;
+	c.grondslag[_source.p.id.value()] = _source.p.grondslag.value()&#xD;
+	c.toetspuntSoort[_source.p.id.value()] = _source.p.toetspuntSoort.value()&#xD;
+}&#xD;
 &#xD;
 if (_source.p.overdrachtskenmerken.values().size() !=0) {&#xD;
 	_source.p.overdrachtskenmerken.each { overdrachtskenmerk -&gt;&#xD;
@@ -93,6 +134,83 @@ if (_source.p.overdrachtskenmerken.values().size() !=0) {&#xD;
                 </core:content>
             </core:message>
         </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C734e887d-1e63-4b01-8aa9-7356955d95a7" priority="lowest">
+        <source>
+            <class>
+                <type name="RekenresultaatWegverkeerType" ns="http://cimlk.nl/1.0"/>
+            </class>
+        </source>
+        <target>
+            <class>
+                <type name="Rekenresultaten"/>
+            </class>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+def c = _.context.collector()&#xD;
+&#xD;
+_target {&#xD;
+	String receptorhref = _source.p.receptor.href.value()&#xD;
+	if (receptorhref) {&#xD;
+		String receptorID = receptorhref.substring(1)&#xD;
+		receptorIdentificatie(receptorID)&#xD;
+		naam(c.naam[receptorID].value())&#xD;
+		opmerking(c.opmerking[receptorID].value())&#xD;
+		grondslag(c.grondslag[receptorID].value())&#xD;
+		geometrie(c.geometrie[receptorID].value())	&#xD;
+		toetspuntSoort(c.toetspuntSoort[receptorID].value())	&#xD;
+	}&#xD;
+	ecAchtergrondConcentratie(_source.p.ecAchtergrondConcentratie.value())&#xD;
+	ecConcentratie(_source.p.ecConcentratie.value())&#xD;
+	if (_source.p.ecGCN.value())&#xD;
+		ecGCN(_source.p.ecGCN.value())&#xD;
+	ecGCNenEigenCorrectie(_source.p.ecGCNenEigenCorrectie.value())&#xD;
+	ecHWNdubtelcorrectie(_source.p.ecHWNdubtelcorrectie.value())&#xD;
+	ecSRM1(_source.p.ecSRM1.value())&#xD;
+	ecSRM2(_source.p.ecSRM2.value())&#xD;
+	no2AchtergrondConcentratie(_source.p.no2AchtergrondConcentratie.value())&#xD;
+	no2Concentratie(_source.p.no2Concentratie.value())&#xD;
+	if (_source.p.no2GCN.value())&#xD;
+		no2GCN(_source.p.no2GCN.value())&#xD;
+	no2GCNenEigenCorrectie(_source.p.no2GCNenEigenCorrectie.value())&#xD;
+	no2HWNdubtelcorrectie(_source.p.no2HWNdubtelcorrectie.value())&#xD;
+	no2SRM1DirecteUitstoot(_source.p.no2SRM1DirecteUitstoot.value())&#xD;
+	no2SRM2DirecteUitstoot(_source.p.no2SRM2DirecteUitstoot.value())&#xD;
+	no2SRMConversiebijdrage(_source.p.no2SRMConversiebijdrage.value())&#xD;
+	noxSRM1(_source.p.noxSRM1.value())&#xD;
+	noxSRM2(_source.p.noxSRM2.value())&#xD;
+	o3AchtergrondConcentratie(_source.p.o3AchtergrondConcentratie.value())&#xD;
+	if (_source.p.o3GCN.value())&#xD;
+		o3GCN(_source.p.o3GCN.value())&#xD;
+	if (_source.p.o3GCNenEigenCorrectie.value())&#xD;
+		o3GCNenEigenCorrectie(_source.p.o3GCNenEigenCorrectie.value())&#xD;
+	if (_source.p.o3HWNdubtelcorrectie.value())&#xD;
+		o3HWNdubtelcorrectie(_source.p.o3HWNdubtelcorrectie.value())&#xD;
+	pm10AchtergrondConcentratie(_source.p.pm10AchtergrondConcentratie.value())&#xD;
+	pm10Concentratie(_source.p.pm10Concentratie.value())&#xD;
+	if (_source.p.pm10GCN.value())&#xD;
+		pm10GCN(_source.p.pm10GCN.value())&#xD;
+	pm10GCNenEigenCorrectie(_source.p.pm10GCNenEigenCorrectie.value())&#xD;
+	pm10HWNdubtelcorrectie(_source.p.pm10HWNdubtelcorrectie.value())&#xD;
+	pm10Overschrijdingsdagen(_source.p.pm10Overschrijdingsdagen.value())&#xD;
+	pm10SRM1(_source.p.pm10SRM1.value())&#xD;
+	pm10SRM2(_source.p.pm10SRM2.value())&#xD;
+	pm25AchtergrondConcentratie(_source.p.pm25AchtergrondConcentratie.value())&#xD;
+	pm25Concentratie(_source.p.pm25Concentratie.value())&#xD;
+		pm25GCN(_source.p.pm25GCN.value())&#xD;
+	pm25GCNenEigenCorrectie(_source.p.pm25GCNenEigenCorrectie.value())&#xD;
+	pm25HWNdubtelcorrectie(_source.p.pm25HWNdubtelcorrectie.value())&#xD;
+	pm25SRM1(_source.p.pm25SRM1.value())&#xD;
+	pm25SRM2(_source.p.pm25SRM2.value())&#xD;
+	rekenjaar(_source.p.rekenjaar.value())&#xD;
+	rekentoolVersie(_source.p.rekentoolVersie.value())&#xD;
+}&#xD;
+		&#xD;
+&#xD;
+
+</core:text>
+        </complexParameter>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="Cd021bf4d-be74-44e6-b88c-861d2cdce1ba" priority="normal">
         <source>

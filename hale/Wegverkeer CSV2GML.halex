@@ -3,17 +3,16 @@
     <name>Wegverkeer CSV2GML</name>
     <author>dgree</author>
     <created>2022-02-09T16:18:46.516+01:00</created>
-    <modified>2022-05-16T11:29:25.717+02:00</modified>
+    <modified>2022-05-27T11:26:43.655+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.project.hale25.xml</setting>
-        <setting name="target">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/Wegverkeer%20CSV2GML.halex</setting>
+        <setting name="target">file:/Wegverkeer%20CSV2GML.halex</setting>
     </save-config>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.xsd.reader">
         <setting name="charset">UTF-8</setting>
         <setting name="onlyElementsMappable">true</setting>
-        <setting name="resourceId">01e7512d-9e21-4282-a731-00fbb0ab1524</setting>
         <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/docs/imlk.xsd</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.xsd</setting>
     </resource>
@@ -23,7 +22,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Maatregelen.csv</setting>
+        <setting name="source">file:/input/Maatregelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -165,7 +164,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Receptoren.csv</setting>
+        <setting name="source">file:/input/Receptoren.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -343,7 +342,7 @@
         <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/Wegdelen.csv</setting>
+        <setting name="source">file:/input/Wegdelen.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
@@ -731,41 +730,709 @@
             </hsd:schema>
         </cache>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">e0ef3a41-f455-4f83-aba7-85259bbf60b3</setting>
+        <setting name="resourceId">3fb1091c-34ea-451b-988f-e16396a369ab</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/MR2021/maatregelen_mr2021_2020x.csv</setting>
-        <setting name="decimal">.</setting>
+        <setting name="source">file:/input/Correcties.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">Maatregelen</setting>
+        <setting name="typename">Correcties</setting>
+        <setting name="properties">identificatie,receptorIdentificatie,naamOverheid,naam,stof,correctie,tijdstipRegistratie,geometrie</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>Correcties</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>Correcties</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>identificatie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>receptorIdentificatie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>naamOverheid</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>naam</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>stof</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>correctie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>tijdstipRegistratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>geometrie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
     </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
+    <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">c8bbf6bd-2350-4e53-8b1d-e67df5a924bc</setting>
+        <setting name="resourceId">c37583a1-9281-4028-8edc-b2f3505a439e</setting>
+        <setting name="types">java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/MR2021/receptoren_mr2021_2020x.csv</setting>
-        <setting name="decimal">.</setting>
+        <setting name="source">file:/input/Rekenresultaten.csv</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">Receptoren</setting>
-    </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">ae8e5cb9-fae5-4701-8b53-822d4136a753</setting>
-        <setting name="quote">"</setting>
-        <setting name="skip">1</setting>
-        <setting name="source">file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/hale/input/MR2021/wegdelen_mr2021_2020x.csv</setting>
-        <setting name="decimal">.</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
-        <setting name="separator">;</setting>
-        <setting name="escape">\</setting>
-        <setting name="typename">Wegdelen</setting>
+        <setting name="typename">Rekenresultaten</setting>
+        <setting name="properties">receptorIdentificatie,rekentoolVersie,rekenjaar,naamOverheid,naam,toetspuntSoort,grondslag,opmerking,no2Concentratie,noxSRM1,noxSRM2,no2SRM1DirecteUitstoot,no2SRM2DirecteUitstoot,no2SRMConversiebijdrage,no2AchtergrondConcentratie,no2GCN,no2HWNdubtelcorrectie,no2GCNenEigenCorrectie,o3AchtergrondConcentratie,o3GCN,o3HWNdubtelcorrectie,o3GCNenEigenCorrectie,pm10Concentratie,pm10Overschrijdingsdagen,pm10SRM1,pm10SRM2,pm10AchtergrondConcentratie,pm10GCN,pm10HWNdubtelcorrectie,pm10GCNenEigenCorrectie,pm25Concentratie,pm25SRM1,pm25SRM2,pm25AchtergrondConcentratie,pm25GCN,pm25HWNdubtelcorrectie,pm25GCNenEigenCorrectie,ecConcentratie,ecSRM1,ecSRM2,ecAchtergrondConcentratie,ecGCN,ecHWNdubtelcorrectie,ecGCNenEigenCorrectie,geometrie</setting>
+        <cache>
+            <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
+                <hsd:type-index>
+                    <hsd:entry index="0">
+                        <hsd:name>Rekenresultaten</hsd:name>
+                    </hsd:entry>
+                </hsd:type-index>
+                <hsd:mapping-relevant>0</hsd:mapping-relevant>
+                <hsd:types>
+                    <hsd:type index="0">
+                        <hsd:name>Rekenresultaten</hsd:name>
+                        <hsd:constraint type="abstract" value="false"/>
+                        <hsd:constraint type="has-value" value="false"/>
+                        <hsd:constraint type="mappable" value="true"/>
+                        <hsd:constraint type="mapping-relevant" value="true"/>
+                        <hsd:declares>
+                            <hsd:property>
+<hsd:name>receptorIdentificatie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>rekentoolVersie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>rekenjaar</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>naamOverheid</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>naam</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>toetspuntSoort</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>grondslag</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>opmerking</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2Concentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noxSRM1</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>noxSRM2</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2SRM1DirecteUitstoot</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2SRM2DirecteUitstoot</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2SRMConversiebijdrage</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2AchtergrondConcentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2GCN</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2HWNdubtelcorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>no2GCNenEigenCorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>o3AchtergrondConcentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>o3GCN</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>o3HWNdubtelcorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>o3GCNenEigenCorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10Concentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10Overschrijdingsdagen</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10SRM1</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10SRM2</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10AchtergrondConcentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10GCN</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10HWNdubtelcorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm10GCNenEigenCorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25Concentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25SRM1</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25SRM2</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25AchtergrondConcentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25GCN</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25HWNdubtelcorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>pm25GCNenEigenCorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecConcentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecSRM1</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecSRM2</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecAchtergrondConcentratie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecGCN</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecHWNdubtelcorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>ecGCNenEigenCorrectie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                            <hsd:property>
+<hsd:name>geometrie</hsd:name>
+<hsd:constraint type="cardinality" value="1..1"/>
+<hsd:constraint type="nillable" value="true"/>
+<hsd:propertyType>
+    <hsd:type>
+        <hsd:name>java.lang.String</hsd:name>
+        <hsd:constraint type="binding" value="java.lang.String"/>
+        <hsd:constraint type="has-value" value="true"/>
+    </hsd:type>
+</hsd:propertyType>
+                            </hsd:property>
+                        </hsd:declares>
+                    </hsd:type>
+                </hsd:types>
+            </hsd:schema>
+        </cache>
     </resource>
     <export-config name="GML">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.gml.writer">
