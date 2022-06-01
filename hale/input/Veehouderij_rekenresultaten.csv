@@ -1,4 +1,4 @@
-identificatie;veehouderijIdentificatie;rekentoolVersie;rekenjaar;naamOverheid;naam;toetspuntSoort;grondslag;pm10Concentratie;pm10BronbijdrageConcentratie;pm10AchtergrondConcentratie;pm10GCNConcentratie;pm10DubtelcorrectieConcentratie;pm10Overschrijdingsdagen;pm10BronbijdrageOverschrijdingsdagen;pm10AchtergrondOverschrijdingsdagen;pm10GCNOverschrijdingsdagen;pm10DubtelcorrectieOverschrijdingsdagen;x;y
+receptorIdentificatie;veehouderijIdentificatie;rekentoolVersie;rekenjaar;naamOverheid;naam;toetspuntSoort;grondslag;pm10Concentratie;pm10BronbijdrageConcentratie;pm10AchtergrondConcentratie;pm10GCNConcentratie;pm10DubtelcorrectieConcentratie;pm10Overschrijdingsdagen;pm10BronbijdrageOverschrijdingsdagen;pm10AchtergrondOverschrijdingsdagen;pm10GCNOverschrijdingsdagen;pm10DubtelcorrectieOverschrijdingsdagen;x;y
 98765432_21822;37;ISL3a-V2021.1;2020;NAAM OVERHEID;;Alle;1;16.53;0.97;15.56;15.96;-0.4;6;0;6;6;0;1.0;2.0
 98765432_21822;37;ISL3a-V2021.1;2020;NAAM OVERHEID;;Alle;1;16.74;1.18;15.56;15.96;-0.4;6;0;6;6;0;1.0;2.0
 98765432_21822;37;ISL3a-V2021.1;2020;NAAM OVERHEID;;Alle;1;16.05;0.49;15.56;15.96;-0.4;6;0;6;6;0;1.0;2.0
