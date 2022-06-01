@@ -562,7 +562,7 @@
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
         <setting name="typename">Veehouderij_rekenresultaten</setting>
-        <setting name="properties">identificatie,veehouderijIdentificatie,rekentoolVersie,rekenjaar,naamOverheid,naam,toetspuntSoort,grondslag,pm10Concentratie,pm10BronbijdrageConcentratie,pm10AchtergrondConcentratie,pm10GCNConcentratie,pm10DubtelcorrectieConcentratie,pm10Overschrijdingsdagen,pm10BronbijdrageOverschrijdingsdagen,pm10AchtergrondOverschrijdingsdagen,pm10GCNOverschrijdingsdagen,pm10DubtelcorrectieOverschrijdingsdagen,x,y</setting>
+        <setting name="properties">receptorIdentificatie,veehouderijIdentificatie,rekentoolVersie,rekenjaar,naamOverheid,naam,toetspuntSoort,grondslag,pm10Concentratie,pm10BronbijdrageConcentratie,pm10AchtergrondConcentratie,pm10GCNConcentratie,pm10DubtelcorrectieConcentratie,pm10Overschrijdingsdagen,pm10BronbijdrageOverschrijdingsdagen,pm10AchtergrondOverschrijdingsdagen,pm10GCNOverschrijdingsdagen,pm10DubtelcorrectieOverschrijdingsdagen,x,y</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
@@ -580,7 +580,7 @@
                         <hsd:constraint type="mapping-relevant" value="true"/>
                         <hsd:declares>
                             <hsd:property>
-<hsd:name>identificatie</hsd:name>
+<hsd:name>receptorIdentificatie</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>

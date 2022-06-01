@@ -119,7 +119,7 @@ _target {&#xD;
 	String receptorhref = _source.p.receptor.href.value()&#xD;
 	if (receptorhref) {&#xD;
 		String receptorID = receptorhref.substring(1)&#xD;
-		identificatie(receptorID.substring(11))&#xD;
+		receptorIdentificatie(receptorID.substring(11))&#xD;
 		naam(c.naam[receptorID].value())&#xD;
 		grondslag(c.grondslag[receptorID].value())&#xD;
 		x(c.x[receptorID].value())	&#xD;
