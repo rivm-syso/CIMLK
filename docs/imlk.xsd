@@ -1,6 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cimlk="http://cimlk.nl/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="http://cimlk.nl/1.0" version="">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cimlk="http://cimlk.nl/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" elementFormDefault="qualified" targetNamespace="http://cimlk.nl/1.0" version="">
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="http://www.opengis.net/gmlsf/2.0" schemaLocation="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <annotation>
+    <appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+      <gmlsf:ComplianceLevel>2</gmlsf:ComplianceLevel>
+    </appinfo>
+  </annotation>
+  <element name="FeatureCollectionIMLK" type="cimlk:FeatureCollectionIMLKType" substitutionGroup="gml:AbstractGML"/> 
+  <complexType name="FeatureCollectionIMLKType"> 
+    <complexContent> 
+	  <extension base="gml:AbstractFeatureType">
+	    <sequence minOccurs="1" maxOccurs="unbounded">
+		  <element name="featureMember"> 
+		    <complexType>
+			  <complexContent>
+			    <extension base="gml:AbstractFeatureMemberType"> 
+				  <sequence> 
+				    <element ref="gml:AbstractFeature"/>
+				  </sequence>
+				</extension>
+			  </complexContent>
+			 </complexType>
+		  </element> 
+		</sequence>
+	  </extension> 
+	</complexContent> 
+  </complexType>  
   <element name="AanvullendeTechniek" substitutionGroup="gml:AbstractFeature" type="cimlk:AanvullendeTechniekType">
     <annotation>
       <documentation>Beschrijving van de aanvullende maatregelen die zijn genomen om de emissie te beperken.</documentation>
