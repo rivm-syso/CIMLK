@@ -190,7 +190,7 @@
 				<p>De namespace voor dit informatiemodel zal altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd.</p>
 				
 				<h4>LokaalID</h4>
-				<p>Het lokaalID in NEN3610ID is de unieke identificatie van één object en kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KvK nummer toegevoegd aan het lokaalID. Het lokaalID heeft dan de volgende structuur:<br><i>[LettersObjecttype]_[KvK]_[identificatie]</i></p>
+				<p>Het lokaalID in NEN3610ID is de unieke identificatie van één object en kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KVK nummer toegevoegd aan het lokaalID. Het lokaalID heeft dan de volgende structuur:<br><i>[LettersObjecttype]_[KVK]_[identificatie]</i></p>
 				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
 					<ul>
 					<li><b>W</b>: Wegdeel</li>
@@ -214,11 +214,11 @@
 				<h4>Uitwisselformaten</h4>
 				<p>Op dit moment worden alleen CSV en Shape als uitwisselformaten ondersteund (voor veehouderijen alleen CSV). Het is de intentie in de toekomst meerdere formaten te ondersteunen, te beginnen met GML. De belangrijkste eigenschappen per formaat staan in de volgende paragrafen uitgeschreven.</p>
 				<h5>CSV</h5>
-				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. Het gebruikt niet het volledige formaat van de NEN3610ID's. In plaats daarvan bestaat een identificatie alleen uit een KvK nummer, gevolgd door een underscore ("_") en de unieke identificatie van het object. De versie-informatie (monitoringronde en monitoringjaar) maakt onderdeel uit van de bestandsnaam.<p>
-				<p>CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: dd-mm-jjjj hh:mm. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). Geometrieën hanteren het WKT formaat.</p>
+				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. Het gebruikt niet het volledige formaat van de NEN3610ID's. In plaats daarvan bestaat een identificatie alleen uit een KVK nummer, gevolgd door een underscore ("_") en de unieke identificatie van het object. De versie-informatie (monitoringronde en monitoringjaar) maakt onderdeel uit van de bestandsnaam.<p>
+				<p>CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj hh:mm (geen voorloopnullen in datum). Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). Geometrieën hanteren het WKT formaat.</p>
 				<h5>Shape</h5>
-				<p>Het Shape formaat geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat geldt grotendeels hetzelfde als voor het CSV formaat. Het gebruikt ook de verkorte identificaties voor objecten. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Voor waarden die afwezig zijn wordt het getal -999 ingevuld.<p>
-				<h5>Geographty Markup Language (GML)</h5>
+				<p>Het Shape formaat geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat geldt grotendeels hetzelfde als voor het CSV formaat. Het gebruikt ook de verkorte identificaties voor objecten. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (",").<p>
+				<h5>Geography Markup Language (GML)</h5>
 				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. 
 				</p>
 			</section>
@@ -581,7 +581,7 @@
 <h3>kvkNummer</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het KvK-nummer van de overheidsorganisatie die bronhouder is van de gegevens.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het KVK-nummer van de overheidsorganisatie die bronhouder is van de gegevens.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{8}$</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>8 Cijfers</td></tr>
