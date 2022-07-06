@@ -3,7 +3,7 @@
     <name>Wegverkeer CSV2SHAPE</name>
     <author>dgree</author>
     <created>2022-05-25T12:41:05.532+02:00</created>
-    <modified>2022-05-25T12:47:52.813+02:00</modified>
+    <modified>2022-07-06T14:49:58.758+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -1627,7 +1627,6 @@
     <hsd:type>
         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
-        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Geometry"/>
         <hsd:constraint type="has-value" value="true"/>
         <hsd:constraint type="mappable" value="false"/>
         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2392,7 +2391,6 @@
     <hsd:type>
         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Point</hsd:name>
         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
-        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Geometry"/>
         <hsd:constraint type="has-value" value="true"/>
         <hsd:constraint type="mappable" value="false"/>
         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2795,16 +2793,16 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">rekenmeth</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="16">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagBV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactBV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="17">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagLV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactLV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="18">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagMV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactMV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="19">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagZV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactZV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="20">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">straatnaam</hsd:name>
@@ -2940,28 +2938,28 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="16">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagBV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactBV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="17">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagLV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactLV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="18">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagMV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactMV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="19">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagZV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactZV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
@@ -3172,25 +3170,25 @@
 <hsd:propertyType index="1"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagLV</hsd:name>
+<hsd:name>stagfactLV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="17"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagMV</hsd:name>
+<hsd:name>stagfactMV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="18"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagZV</hsd:name>
+<hsd:name>stagfactZV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="19"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagBV</hsd:name>
+<hsd:name>stagfactBV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="16"/>
@@ -3252,21 +3250,21 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">6e403b40-13b4-4c6b-81e5-e1e658fd43c8</setting>
+        <setting name="resourceId">b6d09947-b993-4864-bc91-22af9bd8f5f2</setting>
         <setting name="quote">"</setting>
         <setting name="skip">1</setting>
-        <setting name="source">file:/input/Correcties.csv</setting>
+        <setting name="source">file:/input/Wegdelen.csv</setting>
         <setting name="decimal">.</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
-        <setting name="typename">Correcties</setting>
+        <setting name="typename">Wegdelen</setting>
     </resource>
     <export-config name="SHP">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.shp.instance.writer">
             <setting name="charset">UTF-8</setting>
             <setting name="meta.description"></setting>
-            <setting name="crs"/>
+            <setting name="crs"></setting>
             <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         </configuration>
     </export-config>

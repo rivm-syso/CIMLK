@@ -970,16 +970,16 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">rekenmeth</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="17">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagBV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactBV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="18">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagLV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactLV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="19">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagMV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactMV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="20">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagZV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactZV</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="21">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">straatnaam</hsd:name>
@@ -1122,28 +1122,28 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="17">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagBV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactBV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="18">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagLV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactLV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="19">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagMV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactMV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="20">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagZV</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactZV</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
@@ -1354,25 +1354,25 @@
 <hsd:propertyType index="1"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagLV</hsd:name>
+<hsd:name>stagfactLV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="18"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagMV</hsd:name>
+<hsd:name>stagfactMV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="19"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagZV</hsd:name>
+<hsd:name>stagfactZV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="20"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>stagBV</hsd:name>
+<hsd:name>stagfactBV</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="17"/>

@@ -1572,7 +1572,7 @@
         <source>
             <property>
                 <type name="wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
-                <child name="stagBV"/>
+                <child name="stagfactBV"/>
             </property>
         </source>
         <target>
@@ -1588,7 +1588,7 @@
         <source>
             <property>
                 <type name="wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
-                <child name="stagLV"/>
+                <child name="stagfactLV"/>
             </property>
         </source>
         <target>
@@ -1604,7 +1604,7 @@
         <source>
             <property>
                 <type name="wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
-                <child name="stagMV"/>
+                <child name="stagfactMV"/>
             </property>
         </source>
         <target>
@@ -1620,7 +1620,7 @@
         <source>
             <property>
                 <type name="wegdeel" ns="http://www.esdi-humboldt.eu/hale/shp"/>
-                <child name="stagZV"/>
+                <child name="stagfactZV"/>
             </property>
         </source>
         <target>
