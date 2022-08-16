@@ -3,7 +3,7 @@
     <name>Wegverkeer CSV2SHAPE</name>
     <author>dgree</author>
     <created>2022-05-25T12:41:05.532+02:00</created>
-    <modified>2022-07-06T14:49:58.758+02:00</modified>
+    <modified>2022-08-16T15:06:32.840+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -1430,7 +1430,6 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">5c2d9031-34ff-437f-b9ed-554c18ebfc87</setting>
         <setting name="source">file:/input/correctie.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1990,7 +1989,6 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">bf73e37e-1a11-4b8b-afcf-211de4cd9682</setting>
         <setting name="source">file:/input/rekenresultaat.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -2132,14 +2130,14 @@
                     </hsd:type>
                     <hsd:type index="2">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtrCor</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="3">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecGCN</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2153,7 +2151,7 @@
                     </hsd:type>
                     <hsd:type index="5">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecSRM1</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2181,14 +2179,14 @@
                     </hsd:type>
                     <hsd:type index="9">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">no2ExtrCor</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="10">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">no2GCN</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2202,7 +2200,7 @@
                     </hsd:type>
                     <hsd:type index="12">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">no2SRM1DU</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2223,7 +2221,7 @@
                     </hsd:type>
                     <hsd:type index="15">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">noxSRM1</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2244,21 +2242,21 @@
                     </hsd:type>
                     <hsd:type index="18">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">o3ExtrCor</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="19">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">o3GCN</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="20">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">o3HWNcor</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2279,14 +2277,14 @@
                     </hsd:type>
                     <hsd:type index="23">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm10ExtCor</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="24">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm10GCN</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2300,14 +2298,14 @@
                     </hsd:type>
                     <hsd:type index="26">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm10Ovd</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="27">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm10SRM1</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2335,14 +2333,14 @@
                     </hsd:type>
                     <hsd:type index="31">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm25ExtCor</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="32">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm25GCN</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2356,7 +2354,7 @@
                     </hsd:type>
                     <hsd:type index="34">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">pm25SRM1</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Long"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2738,7 +2736,6 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">12fbd3c9-3c3b-4fdc-8d6f-c2b8d6f3714c</setting>
         <setting name="source">file:/input/wegdeel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -2827,56 +2824,56 @@
                 <hsd:types>
                     <hsd:type index="0">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">hoogte</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="1">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">intBV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="2">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">intLV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="3">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">intLVDyn</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="4">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">intMV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="5">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">intZV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="6">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">maxDyn</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="7">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">maxsnlhd</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2890,14 +2887,14 @@
                     </hsd:type>
                     <hsd:type index="9">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">overdrLAfs</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="10">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">overdrLHgt</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2911,14 +2908,14 @@
                     </hsd:type>
                     <hsd:type index="12">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">overdrRAfs</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Long"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="13">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">overdrRHgt</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2939,28 +2936,28 @@
                     </hsd:type>
                     <hsd:type index="16">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactBV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="17">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactLV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="18">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactMV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="19">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">stagfactZV</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -2981,7 +2978,7 @@
                     </hsd:type>
                     <hsd:type index="22">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">tunnelfact</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.String"/>
+                        <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -3247,18 +3244,6 @@
                 </hsd:types>
             </hsd:schema>
         </cache>
-    </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.csv.reader.instance">
-        <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">b6d09947-b993-4864-bc91-22af9bd8f5f2</setting>
-        <setting name="quote">"</setting>
-        <setting name="skip">1</setting>
-        <setting name="source">file:/input/Wegdelen.csv</setting>
-        <setting name="decimal">.</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.csv</setting>
-        <setting name="separator">;</setting>
-        <setting name="escape">\</setting>
-        <setting name="typename">Wegdelen</setting>
     </resource>
     <export-config name="SHP">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.shp.instance.writer">
