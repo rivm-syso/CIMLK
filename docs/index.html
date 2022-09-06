@@ -87,7 +87,7 @@
 			<section>
 				<h3>Gebruik van het informatiemodel</h3>
 				<p>Het informatiemodel geeft vooral inzicht in de betekenis van de gegevens in CIMLK. Je kunt erin opzoeken wat een gegeven precies betekent en welke regels het aan moet voldoen. Denk bijvoorbeeld aan het datatype van het gegeven, de mogelijke waarden die het aan kan nemen of meer specifieke regels die eraan gesteld worden. Je kunt ook zien hoe het gegeven zich verhoudt tot andere gegevens. Het geeft inzicht in de structuur van de gegevens; hoe ze zijn gegroepeerd en hoe ze aan elkaar zijn gerelateerd.</p>
-				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de CSV bestanden</a> die moeten worden uitgewisseld. Deze CSV bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
+				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de uitwisselbestanden</a> die moeten worden uitgewisseld. Deze CSV bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
 				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Onder het kopje <a href="#Bebouwingstype">enumeraties</a> zijn waardelijsten beschreven, waaruit een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
 			</section>
 			<section>
@@ -150,10 +150,6 @@
 							een tekst
 						</li>
 						<li>
-							<b>Boolean:</b>
-							waar (true) of onwaar (false)
-						</li>
-						<li>
 							<b>Date:</b>
 							een bepaalde dag van de kalender
 						</li>
@@ -210,17 +206,6 @@
 				
 				<h4>Versie</h4>
 				<p>Alle data in het informatiemodel is gelinkt aan een specifieke monitoringsronde en een specifiek monitoringsjaar. De versie uit NEN3610 wordt gebruikt om ervoor te zorgen dat de objecten over de monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. De versie heeft de volgende opbouw: <i>[monitoringsronde]_[monitoringsjaar]</i></p>
-				
-				<h4>Uitwisselformaten</h4>
-				<p>Op dit moment worden alleen CSV en Shape als uitwisselformaten ondersteund (voor veehouderijen alleen CSV). Het is de intentie in de toekomst meerdere formaten te ondersteunen, te beginnen met GML. De belangrijkste eigenschappen per formaat staan in de volgende paragrafen uitgeschreven.</p>
-				<h5>CSV</h5>
-				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. Het gebruikt niet het volledige formaat van de NEN3610ID's. In plaats daarvan bestaat een identificatie alleen uit een KVK nummer, gevolgd door een underscore ("_") en de unieke identificatie van het object. De versie-informatie (monitoringronde en monitoringjaar) maakt onderdeel uit van de bestandsnaam.<p>
-				<p>CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum).  Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 ingevuld.</p>
-				<h5>Shape</h5>
-				<p>Het Shape formaat is geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat geldt grotendeels hetzelfde als voor het CSV formaat. Het gebruikt ook de verkorte identificaties voor objecten. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (","). Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 ingevuld.<p>
-				<h5>Geography Markup Language (GML)</h5>
-				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. 
-				</p>
 			</section>
 			<section>
 				<h3>Coördinaatreferentiesyteem</h3>
@@ -228,9 +213,31 @@
 			</section>
 			<section>
 				<h3>Uitwisselbestanden</h3>
-				<p>Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden en in de toekomst ook via API's. Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. Denk bijvoorbeeld aan het niet volledig uitschrijven van de NEN3610ID's; deze worden door het CIMLK zelf verrijkt bij het ontvangen van de gegevens.</p>
+				<p>Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden. Op dit moment worden alleen CSV en Shape als uitwisselformaten ondersteund (voor veehouderijen alleen CSV). Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. Denk bijvoorbeeld aan het niet volledig uitschrijven van de NEN3610ID's; deze worden door het CIMLK zelf verrijkt bij het ontvangen van de gegevens.</p>
 				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel. Ook de NEN3610ID's zullen in dit formaat volledig moeten worden opgenomen. De GML-id's zullen overeenkomen met het NEN3610ID, waarbij de namespace en het lokaalID van elkaar gescheiden zijn door een punt (".").</p>
-				<p>De beschrijving van het formaat van de uitwisselbestanden is strikt genomen geen onderdeel van het informatiemodel zelf. De informatie is echter wel beschikbaar en wordt in de bijlage beschikbaar gesteld.</p>
+				<p>De beschrijving van het formaat van de uitwisselbestanden is opgenomen in een bijlage. De belangrijkste eigenschappen per formaat staan in de volgende paragrafen uitgeschreven.</p>
+				<h5>CSV</h5>
+				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. Het gebruikt niet het volledige formaat van de NEN3610ID's. In plaats daarvan bestaat een identificatie alleen uit een KVK nummer, gevolgd door een underscore ("_") en de unieke identificatie van het object.<p>
+				<p>CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum).  Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 ingevuld.</p>
+				<h5>Shape</h5>
+				<p>Het Shape formaat is geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat geldt grotendeels hetzelfde als voor het CSV formaat. Het gebruikt ook de verkorte identificaties voor objecten. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (","). Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 ingevuld. Er is een standaard mapping van datatypes in het Informatiemodel:</p>
+				<p>
+				<table>
+				<tr><th>Datatype Informatiemodel</th><th>Datatype Shape</th></tr>
+				<tr><td>Integer</td><td>int</td></tr>
+				<tr><td>Real</td><td>double</td></tr>
+				<tr><td>CharacterString</td><td>QString</td></tr>
+				<tr><td>DateTime</td><td>QString</td></tr>
+				</table>
+				</p>
+				<p>
+				Voor waarden in enumeraties wordt het meest passende datatype gebruikt. Als de waarden gehele getallen zijn dan is het Shape datatype int, als het reële getallen zijn dan is het Shape datatype double, als het alfanumerieke waarden zijn dan is het Shape datatype QString.
+				</p>
+				<p>Er wordt geadviseerd om niet zelf een Shape bestand te maken met de juiste eigenschappen, omdat dit foutgevoelig is en er een reële kans is dat de bestanden niet exact voldoet aan de specificaties (zoals datatypes en aantal decimalen). Het advies is om een in plaats daarvan een download te doen van de gegevens van vorig jaar en deze als basis te gebruiken. Als het de eerste aanlevering is dan is het advies om een download van een ander bevoegd gezag als basis te nemen, de aanwezige gegevens te verwijderen en de juiste gegevens toe te voegen.
+				</p>
+				<h5>Geography Markup Language (GML)</h5>
+				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. 
+				</p>
 			</section>
 		</section>
 		<section>
@@ -2512,7 +2519,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 	<h2>Bijlagen</h2>
 	<section>
 		<h3>Uitwisselbestanden</h3>
-		<p>De opbouw van de CSV uitwisselbestanden wordt in deze bijlage weergegeven.</p>
+		<p>De opbouw van de CSV en Shape uitwisselbestanden wordt in deze bijlage weergegeven. Het Shape formaat wordt alleen gebruikt voor uitwisselbestanden over wegverkeer.</p>
 		<section>
 			<h4>Wegverkeer</h4>
 			<section>
@@ -2520,12 +2527,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 				<table>
 					<tr>
 						<th>Volgorde</th>
-						<th>Kolomnaam</th>
+						<th>Kolomnaam CSV</th>
+						<th>Kolomnaam Shape</th>
 						<th>Link met informatiemodel</th>
 					</tr>
 					<tr>
 						<td></td>
 						<td>identificatie</td>
+						<td>ID</td>
 						<td>
 							<a href="#Receptor.identificatie">Receptor.identificatie</a>
 						</td>
@@ -2533,6 +2542,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>wegdeelIdentificatie</td>
+						<td>wegdeelID</td>
 						<td>
 							<a href="#Wegdeel.identificatie">Wegdeel.identificatie</a>
 						</td>
@@ -2540,12 +2550,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naamOverheid</td>
+						<td>naamOverhd</td>
 						<td>
 							<a href="#Organisatie.naam">Organisatie.naam</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>naam</td>
 						<td>naam</td>
 						<td>
 							<a href="#Receptor.naam">Receptor.naam</a>
@@ -2554,6 +2566,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>bebouwingstype</td>
+						<td>bebouwing</td>
 						<td>
 							<a href="#Overdrachtskenmerken.bebouwingstype">Overdrachtskenmerken.bebouwingstype</a>
 						</td>
@@ -2561,6 +2574,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>bomenfactor</td>
+						<td>bomenfact</td>
 						<td>
 							<a href="#Overdrachtskenmerken.bomenfactor">Overdrachtskenmerken.bomenfactor</a>
 						</td>
@@ -2568,12 +2582,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>toetspuntSoort</td>
+						<td>toetsSoort</td>
 						<td>
 							<a href="#ReceptorWegverkeer.toetspuntSoort">ReceptorWegverkeer.toetspuntSoort</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>grondslag</td>
 						<td>grondslag</td>
 						<td>
 							<a href="#ReceptorWegverkeer.grondslag">ReceptorWegverkeer.grondslag</a>
@@ -2582,6 +2598,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>opmerking</td>
+						<td>opmerking</td>
 						<td>
 							<a href="#Receptor.opmerking">Receptor.opmerking</a>
 						</td>
@@ -2589,6 +2606,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>identificatiePandBAG</td>
+						<td>IDPandBAG</td>
 						<td>
 							<a href="#Receptor.identificatiePandBAG">Receptor.identificatiePandBAG</a>
 						</td>
@@ -2596,11 +2614,13 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>tijdstipRegistratie</td>
+						<td>tijdReg</td>
 						<td><a href="#Receptor.tijdstipRegistratie">Receptor.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>geometrie</td>
+						<td>the_geom</td>
 						<td>
 							<a href="#Receptor.geometrie">Receptor.geometrie</a>
 						</td>
@@ -2612,12 +2632,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 				<table>
 					<tr>
 						<th>Volgorde</th>
-						<th>Kolomnaam</th>
+						<th>Kolomnaam CSV</th>
+						<th>Kolomnaam Shape</th>
 						<th>Link met informatiemodel</th>
 					</tr>
 					<tr>
 						<td></td>
 						<td>identificatie</td>
+						<td>ID</td>
 						<td>
 							<a href="#Wegdeel.identificatie">Wegdeel.identificatie</a>
 						</td>
@@ -2625,6 +2647,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naamOverheid</td>
+						<td>naamOverhd</td>
 						<td>
 							<a href="#Organisatie.naam">Organisatie.naam</a>
 						</td>
@@ -2632,12 +2655,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>typeOverheid</td>
+						<td>typeOverhd</td>
 						<td>
 							<a href="#Organisatie.typeOverheid">Organisatie.typeOverheid</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>straatnaam</td>
 						<td>straatnaam</td>
 						<td>
 							<a href="#Wegdeel.straatnaam">Wegdeel.straatnaam</a>
@@ -2646,6 +2671,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>wegnummer</td>
+						<td>wegnummer</td>
 						<td>
 							<a href="#Wegdeel.wegnummer">Wegdeel.wegnummer</a>
 						</td>
@@ -2653,12 +2679,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>rekenmethode</td>
+						<td>rekenmeth</td>
 						<td>
 							<a href="#Wegdeel.rekenmethode">Wegdeel.rekenmethode</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>wegsoort</td>
 						<td>wegsoort</td>
 						<td>
 							<a href="#Wegdeel.wegsoort">Wegdeel.wegsoort</a>
@@ -2667,12 +2695,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>tunnelfactor</td>
+						<td>tunnelfact</td>
 						<td>
 							<a href="#Wegdeel.tunnelfactor">Wegdeel.tunnelfactor</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>hoogte</td>
 						<td>hoogte</td>
 						<td>
 							<a href="#Wegdeel.hoogte">Wegdeel.hoogte</a>
@@ -2681,11 +2711,13 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>taludSoort</td>
+						<td>taludSoort</td>
 						<td><a href="#Wegdeel.taludSoort">Wegdeel.taludSoort</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>overdrachtLinksSoort</td>
+						<td>overdrLSrt</td>
 						<td>
 							Instantie van <a href="#Wegdeel.overdrachtsobjectLinks">Wegdeel.overdrachtsobjectLinks</a> met attribuut <a href="#Overdrachtsobject.soort">Overdrachtsobject.soort</a>
 						</td>
@@ -2693,6 +2725,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>overdrachtLinksAfstand</td>
+						<td>overdrLAfs</td>
 						<td>
 							Instantie van <a href="#Wegdeel.overdrachtsobjectLinks">Wegdeel.overdrachtsobjectLinks</a> met attribuut <a href="#Overdrachtsobject.afstand">Overdrachtsobject.afstand</a>
 						</td>
@@ -2700,6 +2733,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>overdrachtLinksHoogte</td>
+						<td>overdrLHgt</td>
 						<td>
 							Instantie van <a href="#Wegdeel.overdrachtsobjectLinks">Wegdeel.overdrachtsobjectLinks</a> met attribuut <a href="#Overdrachtsobject.hoogte">Overdrachtsobject.hoogte</a>
 						</td>
@@ -2707,6 +2741,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>overdrachtRechtsSoort</td>
+						<td>overdrRSrt</td>
 						<td>
 							Instantie van <a href="#Wegdeel.overdrachtsobjectRechts">Wegdeel.overdrachtsobjectLinks</a> met attribuut <a href="#Overdrachtsobject.soort">Overdrachtsobject.soort</a>
 						</td>
@@ -2714,6 +2749,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>overdrachtRechtsAfstand</td>
+						<td>overdrRAfs</td>
 						<td>
 							Instantie van <a href="#Wegdeel.overdrachtsobjectRechts">Wegdeel.overdrachtsobjectRechts</a> met attribuut <a href="#Overdrachtsobject.afstand">Overdrachtsobject.afstand</a>
 						</td>
@@ -2721,6 +2757,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>overdrachtRechtsHoogte</td>
+						<td>overdrRHgt</td>
 						<td>
 							Instantie van <a href="#Wegdeel.overdrachtsobjectRechts">Wegdeel.overdrachtsobjectRechts</a> met attribuut <a href="#Overdrachtsobject.hoogte">Overdrachtsobject.hoogte</a>
 						</td>
@@ -2728,6 +2765,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>maximumsnelheid</td>
+						<td>maximumsnlhd</td>
 						<td>
 							<a href="#Wegdeel.maximumsnelheid">Wegdeel.maximumsnelheid</a>
 						</td>
@@ -2735,6 +2773,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>maximumsnelheidDynamisch</td>
+						<td>maxDyn</td>
 						<td>
 							<a href="#Wegdeel.maximumsnelheidDynamisch">Wegdeel.maximumsnelheidDynamisch</a>
 						</td>
@@ -2742,6 +2781,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>intensiteitLichtVerkeer</td>
+						<td>intLV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.intensiteit">VerkeersgegevensWeg.intensiteit</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> licht verkeer
 						</td>
@@ -2749,6 +2789,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>intensiteitLichtVerkeerDynamisch</td>
+						<td>intLVDyn</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.intensiteit">VerkeersgegevensWeg.intensiteit</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> licht verkeer dynamisch
 						</td>
@@ -2756,6 +2797,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>intensiteitMiddelzwaarVerkeer</td>
+						<td>intMV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.intensiteit">VerkeersgegevensWeg.intensiteit</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> middelzwaar verkeer
 						</td>
@@ -2763,6 +2805,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>intensiteitZwaarVerkeer</td>
+						<td>intZV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.intensiteit">VerkeersgegevensWeg.intensiteit</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> zwaar verkeer
 						</td>
@@ -2770,6 +2813,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>intensiteitBusVerkeer</td>
+						<td>intBV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.intensiteit">VerkeersgegevensWeg.intensiteit</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> bus verkeer
 						</td>
@@ -2777,6 +2821,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>stagnatiefactorLichtVerkeer</td>
+						<td>stagfactLV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.stagnatiefactor">VerkeersgegevensWeg.stagnatiefactor</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> licht verkeer
 						</td>
@@ -2784,6 +2829,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>stagnatiefactorMiddelzwaarVerkeer</td>
+						<td>stagfactMV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.stagnatiefactor">VerkeersgegevensWeg.stagnatiefactor</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> middelzwaar verkeer
 						</td>
@@ -2791,6 +2837,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>stagnatiefactorZwaarVerkeer</td>
+						<td>stagfactZV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.stagnatiefactor">VerkeersgegevensWeg.stagnatiefactor</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> zwaar verkeer
 						</td>
@@ -2798,12 +2845,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>stagnatiefactorBusVerkeer</td>
+						<td>stagfactBV</td>
 						<td>
 							<a href="#VerkeersgegevensWeg.stagnatiefactor">VerkeersgegevensWeg.stagnatiefactor</a> met <a href="#VerkeersgegevensWeg.voertuigtype">VerkeersgegevensWeg.voertuigtype</a> bus verkeer
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>opmerking</td>
 						<td>opmerking</td>
 						<td>
 							<a href="#Wegdeel.opmerking">Wegdeel.opmerking</a>
@@ -2812,11 +2861,13 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>tijdstipRegistratie</td>
+						<td>tijdReg</td>
 						<td><a href="#Wegdeel.tijdstipRegistratie">Wegdeel.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>geometrie</td>
+						<td>the_geom</td>
 						<td>
 							<a href="#Wegdeel.geometrie">Wegdeel.geometrie</a>
 						</td>
@@ -2828,12 +2879,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 				<table>
 					<tr>
 						<th>Volgorde</th>
-						<th>Kolomnaam</th>
+						<th>Kolomnaam CSV</th>
+						<th>Kolomnaam Shape</th>
 						<th>Link met informatiemodel</th>
 					</tr>
 					<tr>
 						<td></td>
 						<td>identificatie</td>
+						<td>ID</td>
 						<td>
 							<a href="#Maatregel.identificatie">Maatregel.identificatie</a>
 						</td>
@@ -2841,6 +2894,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naamOverheid</td>
+						<td>naamOverhd</td>
 						<td>
 							<a href="#Organisatie.naam">Organisatie.naam</a>
 						</td>
@@ -2848,10 +2902,12 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naam</td>
+						<td>naam</td>
 						<td><a href="#Maatregel.naam">Maatregel.naam</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>stof</td>
 						<td>stof</td>
 						<td>
 							<a href="#Maatregelfactor.stof">Maatregelfactor.stof</a>
@@ -2860,12 +2916,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>voertuigtype</td>
+						<td>voertuig</td>
 						<td>
 							<a href="#Maatregelfactor.voertuigtype">Maatregelfactor.voertuigtype</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>wegsoort</td>
 						<td>wegsoort</td>
 						<td>
 							<a href="#Maatregelfactor.wegsoort">Maatregelfactor.wegsoort</a>
@@ -2874,6 +2932,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>schalingsfactor</td>
+						<td>schaalfact</td>
 						<td>
 							<a href="#Maatregelfactor.schalingsfactor">Maatregelfactor.schalingsfactor</a>
 						</td>
@@ -2881,11 +2940,13 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>tijdstipRegistratie</td>
+						<td>tijdReg</td>
 						<td><a href="#Maatregel.tijdstipRegistratie">Maatregel.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>geometrie</td>
+						<td>the_geom</td>
 						<td>
 							<a href="#Maatregel.geometrie">Maatregel.geometrie</a>
 						</td>
@@ -2897,12 +2958,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 				<table>
 					<tr>
 						<th>Volgorde</th>
-						<th>Kolomnaam</th>
+						<th>Kolomnaam CSV</th>
+						<th>Kolomnaam Shape</th>
 						<th>Link met informatiemodel</th>
 					</tr>
 					<tr>
 						<td>1</td>
 						<td>identificatie</td>
+						<td>ID</td>
 						<td>
 							<a href="#Correctie.identificatie">Correctie.identificatie</a>
 						</td>
@@ -2910,6 +2973,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>receptorIdentificatie</td>
+						<td>receptorID</td>
 						<td>
 							<a href="#Receptor.identificatie">Receptor.identificatie</a>
 						</td>
@@ -2917,6 +2981,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naamOverheid</td>
+						<td>naamOverhd</td>
 						<td>
 							<a href="#Organisatie.naam">Organisatie.naam</a>
 						</td>
@@ -2924,10 +2989,12 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naam</td>
+						<td>naam</td>
 						<td><a href="#Correctie.naam">Correctie.naam</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>stof</td>
 						<td>stof</td>
 						<td>
 							<a href="#Correctieterm.stof">Correctieterm.stof</a>
@@ -2936,6 +3003,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>correctie</td>
+						<td>correctie</td>
 						<td>
 							<a href="#Correctieterm.correctie">Correctieterm.correctie</a>
 						</td>
@@ -2943,11 +3011,13 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>tijdstipRegistratie</td>
+						<td>tijdReg</td>
 						<td><a href="#Correctie.tijdstipRegistratie">Correctie.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>geometrie</td>
+						<td>the_geom</td>
 						<td>
 							<a href="#Correctie.geometrie">Correctie.geometrie</a>
 						</td>
@@ -2959,12 +3029,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 				<table>
 					<tr>
 						<th>Volgorde</th>
-						<th>Kolomnaam</th>
+						<th>Kolomnaam CSV</th>
+						<th>Kolomnaam Shape</th>
 						<th>Link met informatiemodel</th>
 					</tr>
 					<tr>
 						<td></td>
 						<td>receptorIdentificatie</td>
+						<td>receptorID</td>
 						<td>
 							<a href="#Receptor.identificatie">Receptor.identificatie</a>
 						</td>
@@ -2972,12 +3044,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>rekentoolVersie</td>
+						<td>rtVersie</td>
 						<td>
 							<a href="#RekenresultaatWegverkeer.rekentoolVersie">RekenresultaatWegverkeer.rekentoolVersie</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>rekenjaar</td>
 						<td>rekenjaar</td>
 						<td>
 							<a href="#RekenresultaatWegverkeer.rekenjaar">RekenresultaatWegverkeer.rekenjaar</a>
@@ -2986,6 +3060,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naamOverheid</td>
+						<td>naamOverhd</td>
 						<td>
 							<a href="#Organisatie.naam">Organisatie.naam</a>
 						</td>
@@ -2993,17 +3068,20 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>naam</td>
+						<td>naam</td>
 						<td><a href="#Receptor.naam">Receptor.naam</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>toetspuntSoort</td>
+						<td>toetsSoort</td>
 						<td>
 							<a href="#ReceptorWegverkeer.toetspuntSoort">ReceptorWegverkeer.toetspuntSoort</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>grondslag</td>
 						<td>grondslag</td>
 						<td>
 							<a href="#ReceptorWegverkeer.grondslag">ReceptorWegverkeer.grondslag</a>
@@ -3012,191 +3090,229 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>opmerking</td>
+						<td>opmerking</td>
 						<td><a href="#Receptor.opmerking">Receptor.opmerking</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2Concentratie</td>
+						<td>no2Conc</td>
 						<td><a href="#RekenresultaatWegverkeer.no2Concentratie">RekenresultaatWegverkeer.no2Concentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>noxSRM1</td>
 						<td>noxSRM1</td>
 						<td><a href="#RekenresultaatWegverkeer.noxSRM1">RekenresultaatWegverkeer.noxSRM1</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>noxSRM2</td>
+						<td>noxSRM2</td>
 						<td><a href="#RekenresultaatWegverkeer.noxSRM2">RekenresultaatWegverkeer.noxSRM2</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2SRM1DirecteUitstoot</td>
+						<td>no2SRM1DU</td>
 						<td><a href="#RekenresultaatWegverkeer.no2SRM1DirecteUitstoot">RekenresultaatWegverkeer.no2SRM1DirecteUitstoot</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2SRM2DirecteUitstoot</td>
+						<td>no2SRM2DU</td>
 						<td><a href="#RekenresultaatWegverkeer.no2SRM2DirecteUitstoot">RekenresultaatWegverkeer.no2SRM2DirecteUitstoot</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2SRMConversiebijdrage</td>
-						<td><a href="#RekenresultaatWegverkeer.no2SRMConversiebijdrage">RekenresultaatWegverkeer.no2SRMConversiebijdrage</a></td>
+						<td>no2SRMConv</td>
+					<td><a href="#RekenresultaatWegverkeer.no2SRMConversiebijdrage">RekenresultaatWegverkeer.no2SRMConversiebijdrage</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2AchtergrondConcentratie</td>
+						<td>no2AchtgC</td>
 						<td><a href="#RekenresultaatWegverkeer.no2AchtergrondConcentratie">RekenresultaatWegverkeer.no2AchtergrondConcentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>no2GCN</td>
 						<td>no2GCN</td>
 						<td><a href="#RekenresultaatWegverkeer.no2GCN">RekenresultaatWegverkeer.no2GCN</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2HWNdubtelcorrectie</td>
+						<td>no2HWNcor</td>
 						<td><a href="#RekenresultaatWegverkeer.no2HWNdubtelcorrectie">RekenresultaatWegverkeer.no2HWNdubtelcorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>no2GCNenEigenCorrectie</td>
+						<td>no2ExtrCor</td>
 						<td><a href="#RekenresultaatWegverkeer.no2GCNenEigenCorrectie">RekenresultaatWegverkeer.no2GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>o3AchtergrondConcentratie</td>
+						<td>o3AchtgC</td>
 						<td><a href="#RekenresultaatWegverkeer.o3AchtergrondConcentratie">RekenresultaatWegverkeer.o3AchtergrondConcentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>o3GCN</td>
 						<td>o3GCN</td>
 						<td><a href="#RekenresultaatWegverkeer.o3GCN">RekenresultaatWegverkeer.o3GCN</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>o3HWNdubtelcorrectie</td>
+						<td>o3HWNcor</td>
 						<td><a href="#RekenresultaatWegverkeer.o3HWNdubtelcorrectie">RekenresultaatWegverkeer.o3HWNdubtelcorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>o3GCNenEigenCorrectie</td>
+						<td>o3ExtrCor</td>
 						<td><a href="#RekenresultaatWegverkeer.o3GCNenEigenCorrectie">RekenresultaatWegverkeer.o3GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm10Concentratie</td>
+						<td>pm10Conc</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10Concentratie">RekenresultaatWegverkeer.pm10Concentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm10Overschrijdingsdagen</td>
+						<td>pm10Ovd</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10Overschrijdingsdagen">RekenresultaatWegverkeer.pm10Overschrijdingsdagen</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>pm10SRM1</td>
 						<td>pm10SRM1</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10SRM1">RekenresultaatWegverkeer.pm10SRM1</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm10SRM2</td>
+						<td>pm10SRM2</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10SRM2">RekenresultaatWegverkeer.pm10SRM2</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm10AchtergrondConcentratie</td>
+						<td>pm10AchtgC</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10AchtergrondConcentratie">RekenresultaatWegverkeer.pm10AchtergrondConcentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>pm10GCN</td>
 						<td>pm10GCN</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10GCN">RekenresultaatWegverkeer.pm10GCN</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm10HWNdubtelcorrectie</td>
+						<td>pm10HNWcor</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10HWNdubtelcorrectie">RekenresultaatWegverkeer.pm10HWNdubtelcorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm10GCNenEigenCorrectie</td>
+						<td>pm10ExtCor</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10GCNenEigenCorrectie">RekenresultaatWegverkeer.pm10GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm25Concentratie</td>
+						<td>pm25Conc</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25Concentratie">RekenresultaatWegverkeer.pm25Concentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>pm25SRM1</td>
 						<td>pm25SRM1</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25SRM1">RekenresultaatWegverkeer.pm25SRM1</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm25SRM2</td>
+						<td>pm25SRM2</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25SRM2">RekenresultaatWegverkeer.pm25SRM2</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm25AchtergrondConcentratie</td>
+						<td>pm25AchtgC</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25AchtergrondConcentratie">RekenresultaatWegverkeer.pm25AchtergrondConcentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>pm25GCN</td>
 						<td>pm25GCN</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25GCN">RekenresultaatWegverkeer.pm25GCN</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm25HWNdubtelcorrectie</td>
+						<td>pm25HWNcor</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25HWNdubtelcorrectie">RekenresultaatWegverkeer.pm25HWNdubtelcorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>pm25GCNenEigenCorrectie</td>
+						<td>pm25ExtCor</td>
 						<td><a href="#RekenresultaatWegverkeer.pm25GCNenEigenCorrectie">RekenresultaatWegverkeer.pm25GCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>ecConcentratie</td>
+						<td>ecConc</td>
 						<td><a href="#RekenresultaatWegverkeer.ecConcentratie">RekenresultaatWegverkeer.ecConcentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>ecSRM1</td>
 						<td>ecSRM1</td>
 						<td><a href="#RekenresultaatWegverkeer.ecSRM1">RekenresultaatWegverkeer.ecSRM1</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>ecSRM2</td>
+						<td>ecSRM2</td>
 						<td><a href="#RekenresultaatWegverkeer.ecSRM2">RekenresultaatWegverkeer.ecSRM2</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>ecAchtergrondConcentratie</td>
+						<td>ecAchtgC</td>
 						<td><a href="#RekenresultaatWegverkeer.ecAchtergrondConcentratie">RekenresultaatWegverkeer.ecAchtergrondConcentratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
+						<td>ecGCN</td>
 						<td>ecGCN</td>
 						<td><a href="#RekenresultaatWegverkeer.ecGCN">RekenresultaatWegverkeer.ecGCN</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>ecHWNdubtelcorrectie</td>
+						<td>ecHWNcor</td>
 						<td><a href="#RekenresultaatWegverkeer.ecHWNdubtelcorrectie">RekenresultaatWegverkeer.ecHWNdubtelcorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>ecGCNenEigenCorrectie</td>
+						<td>ecExtCor</td>
 						<td><a href="#RekenresultaatWegverkeer.ecGCNenEigenCorrectie">RekenresultaatWegverkeer.ecGCNenEigenCorrectie</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>geometrie</td>
+						<td>the_geom</td>
 						<td>
 							<a href="#Receptor.geometrie">Receptor.geometrie</a>
 						</td>
