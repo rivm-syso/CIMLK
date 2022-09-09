@@ -31,10 +31,10 @@ Dit document wordt op Github automatisch gepubliceerd als webpagina zodat gebrui
 Het document kan met behulp van een vanuit Sparx Enterprise Architect gegnereerd worden: Scripting -> CIMLK -> Export to Respec.
 Dit script voert de volgende stappen uit en voegt informatie uit verschillende bestanden samen:
 - Opstellen Respec document inclusief inleidende teksten op basis van `informatiemodel/respec-basis.html`
-- Toevoegen van informatie over de objectyupen en attributen vanuit Sparx Enterprise Architect
+- Toevoegen van informatie over de objectypen en attributen vanuit Sparx Enterprise Architect
 - Toevoegen van bijlagen over de uitwisselbestanden op basis van `informatiemodel/bijlagen.html`
 
-Het resultaat van het script wordt opgeslagen onder `docs/index.html`.
+Het resultaat van het script wordt opgeslagen onder `docs/index.html`. Merk op dat dit alleen succesvol werkt als Sparx Enterprise Architect is geopend door het modelbestand aan te klikken en niet door het te openen vanuit Sparx Enterprise Architect. In het laatste geval staat de huidige directory niet goed ingesteld en dan kunnen de scripts de relevante bestanden niet lokaliseren.
 
 Eventuele wijzigingen van de diagrammen kunnen worden opgeslagen door de diagrammen te kopieren.
 Sla vervolgens de diagrammen op als afbeelding in de map `docs`.
