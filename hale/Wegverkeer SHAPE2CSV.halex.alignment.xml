@@ -44,7 +44,7 @@
             </property>
         </target>
         <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.toText()</core:text>
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.getGeometryN(0).toText()</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
@@ -172,7 +172,7 @@
             </property>
         </target>
         <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.toText()</core:text>
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.getGeometryN(0).toText()</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
@@ -364,7 +364,7 @@
             </property>
         </target>
         <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.toText()</core:text>
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.getGeometryN(0).toText()</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
@@ -506,7 +506,7 @@
         <target>
             <property>
                 <type name="Receptoren"/>
-                <child name="wegdeel"/>
+                <child name="wegdeelIdentificatie"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
@@ -652,7 +652,7 @@
             </property>
         </target>
         <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.toText()</core:text>
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.getGeometryN(0).toText()</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
@@ -1276,7 +1276,7 @@
             </property>
         </target>
         <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.toText()</core:text>
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">return the_geom.geometry.getGeometryN(0).toText()</core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
     </cell>
