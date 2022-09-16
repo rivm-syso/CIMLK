@@ -293,7 +293,7 @@
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
         <setting name="typename">Receptoren</setting>
-        <setting name="properties">identificatie,wegdeel,naamOverheid,naam,bebouwingstype,bomenfactor,toetspuntSoort,grondslag,opmerking,identificatiePandBAG,tijdstipRegistratie,geometrie</setting>
+        <setting name="properties">identificatie,wegdeelIdentificatie,naamOverheid,naam,bebouwingstype,bomenfactor,toetspuntSoort,grondslag,opmerking,identificatiePandBAG,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
@@ -323,7 +323,7 @@
 </hsd:propertyType>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>wegdeel</hsd:name>
+<hsd:name>wegdeelIdentificatie</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -1442,7 +1442,7 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ID</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Polygon</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="3">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">naam</hsd:name>
@@ -1542,7 +1542,7 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Polygon</hsd:name>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
@@ -1624,7 +1624,7 @@
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
     <hsd:type>
-        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Polygon</hsd:name>
         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
         <hsd:constraint type="has-value" value="true"/>
         <hsd:constraint type="mappable" value="false"/>
@@ -2766,7 +2766,7 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">maxsnlhd</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="8">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">LineString</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="9">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">overdrLAfs</hsd:name>
@@ -2879,7 +2879,7 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="8">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">LineString</hsd:name>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>

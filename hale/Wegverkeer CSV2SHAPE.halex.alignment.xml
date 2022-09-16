@@ -512,7 +512,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
         <source>
             <property>
                 <type name="Receptoren"/>
-                <child name="wegdeel"/>
+                <child name="wegdeelIdentificatie"/>
             </property>
         </source>
         <target>

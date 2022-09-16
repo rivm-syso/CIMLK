@@ -3,7 +3,7 @@
     <name>Wegverkeer SHAPE2CSV</name>
     <author>dgree</author>
     <created>2022-05-13T09:42:01.192+02:00</created>
-    <modified>2022-08-16T15:37:19.975+02:00</modified>
+    <modified>2022-09-16T15:23:25.124+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -163,7 +163,7 @@
         <setting name="separator">;</setting>
         <setting name="escape">\</setting>
         <setting name="typename">Receptoren</setting>
-        <setting name="properties">identificatie,wegdeel,naamOverheid,naam,bebouwingstype,bomenfactor,toetspuntSoort,grondslag,opmerking,identificatiePandBAG,tijdstipRegistratie,geometrie</setting>
+        <setting name="properties">identificatie,wegdeelIdentificatie,naamOverheid,naam,bebouwingstype,bomenfactor,toetspuntSoort,grondslag,opmerking,identificatiePandBAG,tijdstipRegistratie,geometrie</setting>
         <cache>
             <hsd:schema xmlns:hsd="http://www.esdi-humboldt.eu/hale/schema" namespace="http://www.esdi-humboldt.eu/hale/csv">
                 <hsd:type-index>
@@ -193,7 +193,7 @@
 </hsd:propertyType>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>wegdeel</hsd:name>
+<hsd:name>wegdeelIdentificatie</hsd:name>
 <hsd:constraint type="cardinality" value="1..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
@@ -1627,6 +1627,7 @@
     <hsd:type>
         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
+        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Geometry"/>
         <hsd:constraint type="has-value" value="true"/>
         <hsd:constraint type="mappable" value="false"/>
         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -3248,6 +3249,24 @@
             </hsd:schema>
         </cache>
     </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
+        <setting name="charset">ISO-8859-1</setting>
+        <setting name="matchShortPropertyNames">false</setting>
+        <setting name="resourceId">61f4d4c8-1f2b-4817-8661-3b49ed0daa07</setting>
+        <setting name="source">file:/input/correctie.shp</setting>
+        <setting name="autoDetectSchemaTypes">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}correctie</setting>
+    </resource>
+    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
+        <setting name="charset">ISO-8859-1</setting>
+        <setting name="matchShortPropertyNames">false</setting>
+        <setting name="resourceId">db3bc0cd-809e-4cee-89ed-e2850182a632</setting>
+        <setting name="source">file:/input/wegdeel.shp</setting>
+        <setting name="autoDetectSchemaTypes">false</setting>
+        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
+        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}wegdeel</setting>
+    </resource>
     <export-config name="CSV">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.csv.writer.instance">
             <setting name="charset">UTF-8</setting>
@@ -3285,5 +3304,6 @@
     <property name="defaultGeometry:{http://www.esdi-humboldt.eu/hale/shp}wegdeel/count">1</property>
     <property name="resource-317041a2-5a2a-4e1e-bccb-89c04d78a1b1:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}correctie/the_geom">code:EPSG:28992</property>
     <property name="resource-5fe956eb-0ed9-4061-82c8-592eb5a69f24:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}rekenresultaat/the_geom">code:EPSG:28992</property>
+    <property name="resource-61f4d4c8-1f2b-4817-8661-3b49ed0daa07:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}correctie/the_geom">code:EPSG:28992</property>
     <property name="resource-eca671eb-6c2b-400e-a1e4-35658ca97ba0:defaultCRS:{http://www.esdi-humboldt.eu/hale/shp}rekenresultaat/the_geom">code:EPSG:28992</property>
 </hale-project>
