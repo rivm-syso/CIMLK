@@ -3,7 +3,7 @@
     <name>Wegverkeer SHAPE2CSV</name>
     <author>dgree</author>
     <created>2022-05-13T09:42:01.192+02:00</created>
-    <modified>2022-09-16T15:23:25.124+02:00</modified>
+    <modified>2022-09-21T10:52:45.847+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -1430,7 +1430,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">29758ae0-17e1-453e-a73b-15549cf927ea</setting>
+        <setting name="resourceId">90ce7296-73c6-4c7c-835b-db76ce389ee1</setting>
         <setting name="source">file:/input/correctie.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1590,7 +1590,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">cc657b9d-f24c-4c1d-a0eb-a1ce8289086c</setting>
+        <setting name="resourceId">0ba25eb7-76ed-4246-827f-7677e17134fb</setting>
         <setting name="source">file:/input/maatregel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1627,7 +1627,6 @@
     <hsd:type>
         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
-        <hsd:constraint type="geometry-type" value="org.locationtech.jts.geom.Geometry"/>
         <hsd:constraint type="has-value" value="true"/>
         <hsd:constraint type="mappable" value="false"/>
         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -1765,7 +1764,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">d71a9fe3-13e2-45f6-8593-f61eaa819659</setting>
+        <setting name="resourceId">035ce889-f810-4dca-8ad9-787f1d6482b6</setting>
         <setting name="source">file:/input/receptor.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1810,7 +1809,7 @@
                     </hsd:type>
                     <hsd:type index="1">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">bomenfact</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Double"/>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -1991,7 +1990,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">9126b120-b865-4b5c-a4c4-2ce80e604e41</setting>
+        <setting name="resourceId">0d9ba171-dc9f-48f0-a06c-09107fdec37b</setting>
         <setting name="source">file:/input/rekenresultaat.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -2004,7 +2003,7 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecConc</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtrCor</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtCor</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="3">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecGCN</hsd:name>
@@ -2132,7 +2131,7 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtrCor</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtCor</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
@@ -2705,7 +2704,7 @@
 <hsd:propertyType index="4"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>ecExtrCor</hsd:name>
+<hsd:name>ecExtCor</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="2"/>
@@ -2739,7 +2738,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">413754a4-c8cc-4951-83f2-e9f0f42f78e4</setting>
+        <setting name="resourceId">495439f5-d00b-4b1f-8279-3d5f786dfb40</setting>
         <setting name="source">file:/input/wegdeel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -3248,24 +3247,6 @@
                 </hsd:types>
             </hsd:schema>
         </cache>
-    </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
-        <setting name="charset">ISO-8859-1</setting>
-        <setting name="matchShortPropertyNames">false</setting>
-        <setting name="resourceId">61f4d4c8-1f2b-4817-8661-3b49ed0daa07</setting>
-        <setting name="source">file:/input/correctie.shp</setting>
-        <setting name="autoDetectSchemaTypes">false</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
-        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}correctie</setting>
-    </resource>
-    <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.shape.reader.instance">
-        <setting name="charset">ISO-8859-1</setting>
-        <setting name="matchShortPropertyNames">false</setting>
-        <setting name="resourceId">db3bc0cd-809e-4cee-89ed-e2850182a632</setting>
-        <setting name="source">file:/input/wegdeel.shp</setting>
-        <setting name="autoDetectSchemaTypes">false</setting>
-        <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
-        <setting name="typename">{http://www.esdi-humboldt.eu/hale/shp}wegdeel</setting>
     </resource>
     <export-config name="CSV">
         <configuration action-id="eu.esdihumboldt.hale.io.instance.write.transformed" provider-id="eu.esdihumboldt.hale.io.csv.writer.instance">

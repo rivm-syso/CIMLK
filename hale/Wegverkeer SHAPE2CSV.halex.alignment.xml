@@ -578,7 +578,7 @@
         <source>
             <property>
                 <type name="rekenresultaat" ns="http://www.esdi-humboldt.eu/hale/shp"/>
-                <child name="ecExtrCor"/>
+                <child name="ecExtCor"/>
             </property>
         </source>
         <target>
