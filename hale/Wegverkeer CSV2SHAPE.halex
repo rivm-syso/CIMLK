@@ -3,7 +3,7 @@
     <name>Wegverkeer CSV2SHAPE</name>
     <author>dgree</author>
     <created>2022-05-25T12:41:05.532+02:00</created>
-    <modified>2022-08-16T15:06:32.840+02:00</modified>
+    <modified>2022-09-21T10:49:55.665+02:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -1430,6 +1430,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">1973dd39-d801-42c1-ba03-fa4d406b1ca7</setting>
         <setting name="source">file:/input/correctie.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1442,7 +1443,7 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ID</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Polygon</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="3">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">naam</hsd:name>
@@ -1542,7 +1543,7 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Polygon</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
@@ -1588,8 +1589,8 @@
         </cache>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
-        <setting name="charset">ISO-8859-1</setting>
-        <setting name="resourceId">f84ab311-641f-4d17-a418-4dabe7583404</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">7d345659-8d37-43b9-ba2c-50587a03501a</setting>
         <setting name="source">file:/input/maatregel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1624,7 +1625,7 @@
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType>
     <hsd:type>
-        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">Polygon</hsd:name>
+        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiPolygon</hsd:name>
         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
         <hsd:constraint type="has-value" value="true"/>
         <hsd:constraint type="mappable" value="false"/>
@@ -1762,8 +1763,8 @@
         </cache>
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
-        <setting name="charset">ISO-8859-1</setting>
-        <setting name="resourceId">7be1d87c-279a-4758-9c42-1edac5bf2e23</setting>
+        <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">84ec3907-eed8-4d3f-86cc-dd386ae712b3</setting>
         <setting name="source">file:/input/receptor.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -1808,7 +1809,7 @@
                     </hsd:type>
                     <hsd:type index="1">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">bomenfact</hsd:name>
-                        <hsd:constraint type="binding" value="java.lang.Double"/>
+                        <hsd:constraint type="binding" value="java.lang.String"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
                         <hsd:constraint type="mapping-relevant" value="false"/>
@@ -1989,6 +1990,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">5fb1c75d-ec0d-432f-b9c2-04186c5f40e4</setting>
         <setting name="source">file:/input/rekenresultaat.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -2001,7 +2003,7 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecConc</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtrCor</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtCor</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="3">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecGCN</hsd:name>
@@ -2129,7 +2131,7 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="2">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtrCor</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">ecExtCor</hsd:name>
                         <hsd:constraint type="binding" value="java.lang.Double"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>
@@ -2702,7 +2704,7 @@
 <hsd:propertyType index="4"/>
                             </hsd:property>
                             <hsd:property>
-<hsd:name>ecExtrCor</hsd:name>
+<hsd:name>ecExtCor</hsd:name>
 <hsd:constraint type="cardinality" value="0..1"/>
 <hsd:constraint type="nillable" value="true"/>
 <hsd:propertyType index="2"/>
@@ -2736,6 +2738,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.schema.read.target" provider-id="eu.esdihumboldt.hale.io.shape.reader.schema">
         <setting name="charset">UTF-8</setting>
+        <setting name="resourceId">552ac8e8-5f98-42b3-8da5-aeb8ee9285dc</setting>
         <setting name="source">file:/input/wegdeel.shp</setting>
         <setting name="contentType">eu.esdihumboldt.hale.io.shp</setting>
         <cache>
@@ -2766,7 +2769,7 @@
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">maxsnlhd</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="8">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">LineString</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
                     </hsd:entry>
                     <hsd:entry index="9">
                         <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">overdrLAfs</hsd:name>
@@ -2879,7 +2882,7 @@
                         <hsd:constraint type="mapping-relevant" value="false"/>
                     </hsd:type>
                     <hsd:type index="8">
-                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">LineString</hsd:name>
+                        <hsd:name namespace="http://www.esdi-humboldt.eu/hale/shp">MultiLineString</hsd:name>
                         <hsd:constraint type="binding" value="eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty"/>
                         <hsd:constraint type="has-value" value="true"/>
                         <hsd:constraint type="mappable" value="false"/>

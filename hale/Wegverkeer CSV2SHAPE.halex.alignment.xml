@@ -580,7 +580,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
         <target>
             <property>
                 <type name="rekenresultaat" ns="http://www.esdi-humboldt.eu/hale/shp"/>
-                <child name="ecExtrCor"/>
+                <child name="ecExtCor"/>
             </property>
         </target>
         <parameter value="false" name="ignoreNamespaces"/>

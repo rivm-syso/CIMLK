@@ -60,8 +60,8 @@
 		<script src='rivm-respec-w3c-v26.13.4.js' class='remove'></script>
 	</head>
 	<body>
-		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">6 september 2022</h2>
+		<h1 id="title">Infmatiemodel Monitoring Luchtkwaliteit</h1>
+		<h2 id="subtitle">21 september 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -87,7 +87,7 @@
 			<section>
 				<h3>Gebruik van het informatiemodel</h3>
 				<p>Het informatiemodel geeft vooral inzicht in de betekenis van de gegevens in CIMLK. Je kunt erin opzoeken wat een gegeven precies betekent en welke regels het aan moet voldoen. Denk bijvoorbeeld aan het datatype van het gegeven, de mogelijke waarden die het aan kan nemen of meer specifieke regels die eraan gesteld worden. Je kunt ook zien hoe het gegeven zich verhoudt tot andere gegevens. Het geeft inzicht in de structuur van de gegevens; hoe ze zijn gegroepeerd en hoe ze aan elkaar zijn gerelateerd.</p>
-				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de uitwisselbestanden</a> die moeten worden uitgewisseld. Deze CSV bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
+				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de uitwisselbestanden</a> die moeten worden uitgewisseld. De CSV en Shape bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
 				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Onder het kopje <a href="#Bebouwingstype">enumeraties</a> zijn waardelijsten beschreven, waaruit een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
 			</section>
 			<section>
@@ -174,38 +174,19 @@
 			</section>
 			<section>
 				<h3>NEN3610</h3>
-				<p>Er is voor gekozen om het informatiemodel aan te laten sluiten bij de <a href="https://www.geonovum.nl/geo-standaarden/nen-3610-basismodel-voor-informatiemodellen" target="_blank">NEN3610 standaard voor informatiemodellering</a>. Deze is specifiek gericht op geografische informatie. Hierdoor krijgen alle objecttypen een NEN3610ID om ze uniek te identificeren. Een NEN3610ID is als volgt opgebouwd:
+				<p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen om ze uniek te identificeren: 
 					<ul>
-						<li>namespace: unieke identificatie van het informatiemodel</li>
-						<li>lokaalID: een unieke identificatie van het object</li>
-						<li>versie: een identificatie van een specifieke versie van het object</li>
+						<li><b>identificatie:</b> Unieke identificatiecode van een informatieobject binnen de context van een registratie.</li>
+						<li><b>domein:</b> Aanduiding van het domein waarbinnen de identificatie uniek is.</li>
 					</ul>
-				</p>
-				
-				<h4>Namespace</h4>
-				<p>De namespace voor dit informatiemodel zal altijd de waarde “NL.imlk” bevatten. Aangezien dit een constante waarde is hoeft deze niet in systemen te worden opgeslagen, maar kan deze worden gegenereerd.</p>
-				
-				<h4>LokaalID</h4>
-				<p>Het lokaalID in NEN3610ID is de unieke identificatie van één object en kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Als dezelfde lokaalID's dus worden hergebruikt voor verschillende objecttypen dan leidt dat niet tot unieke ID's. Om hier onderscheid in te maken wordt een identificatie van het objecttype in het lokaalID opgenomen. Daarnaast kunnen objecttypen worden aangeleverd door verschillende bronhouders en moeten de ID's uniek zijn over bronhouders heen. Daarom wordt naast een identificatie van het objecttype ook het KVK nummer toegevoegd aan het lokaalID. Het lokaalID heeft dan de volgende structuur:<br><i>[LettersObjecttype]_[KVK]_[identificatie]</i></p>
-				<p>Voor de objecttypen worden de volgende standaard letters gehanteerd:
+					<p>De identificatie is een samenstelling het KVK nummer van de bronhouder, een underscore ("_") en een lokaal unieke identifcatie bij de bronhouder. De identificatie heeft daarmee de volgende structuur:<br><i>&lt;KVK&gt;_&lt;lokale identificatie&gt;</i>. De identificatie kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Het domein zal altijd de waarde “imlk” bevatten. 
+					</p>
+					<p>Naast de attributen voor het identificeren zijn er ook een aantal attributen die specifiek zijn gericht op het beschrijven van een versie van een object en die in NEN3610:2022 onderdeel zijn van het objecttype Registratie:
 					<ul>
-					<li><b>W</b>: Wegdeel</li>
-					<li><b>RW</b>: ReceptorWegverkeer</li>
-					<li><b>RV</b>: ReceptorVeehouderij</li>
-					<li><b>BW</b>: RekenresultaatWegverkeer</li>
-					<li><b>BV</b>: RekenresultaatVeehouderij</li>
-					<li><b>C</b>: Correctie</li>
-					<li><b>M</b>: Maatregel</li>
-					<li><b>V</b>: Veehouderij</li>
-					<li><b>S</b>: Stal</li>
-					<li><b>B</b>: Veehouderijbron</li>
-					<li><b>H</b>: Huisvestingssysteem</li>
-					<li><b>A</b>: AanvullendeTechniek</li>
+						<li><b>versie:</b> Versieaanduiding van een informatieobject.</li>
+						<li><b>tijdstipRegistratie:</b> Tijdsaanduiding van het moment waarop deze versie van het informatieobject is opgenomen in de registratie.</li>
 					</ul>
-				</p>
-				
-				<h4>Versie</h4>
-				<p>Alle data in het informatiemodel is gelinkt aan een specifieke monitoringsronde en een specifiek monitoringsjaar. De versie uit NEN3610 wordt gebruikt om ervoor te zorgen dat de objecten over de monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. De versie heeft de volgende opbouw: <i>[monitoringsronde]_[monitoringsjaar]</i></p>
+					Alle gegevens in het informatiemodel zijn gelinkt aan een specifieke monitoringsronde en een specifiek monitoringsjaar. Het versienummer wordt gebruikt om ervoor te zorgen dat de objecten over de monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. Het versienummer heeft de volgende opbouw: <i>&lt;monitoringsronde&gt;_&lt;monitoringsjaar&gt;</i>. Het attribuut tijdstipRegistratie wordt geautomatiseerd gevuld in CIMLK.</p>
 			</section>
 			<section>
 				<h3>Coördinaatreferentiesyteem</h3>
@@ -217,26 +198,13 @@
 				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel. Ook de NEN3610ID's zullen in dit formaat volledig moeten worden opgenomen. De GML-id's zullen overeenkomen met het NEN3610ID, waarbij de namespace en het lokaalID van elkaar gescheiden zijn door een punt (".").</p>
 				<p>De beschrijving van het formaat van de uitwisselbestanden is opgenomen in een bijlage. De belangrijkste eigenschappen per formaat staan in de volgende paragrafen uitgeschreven.</p>
 				<h5>CSV</h5>
-				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. Het gebruikt niet het volledige formaat van de NEN3610ID's. In plaats daarvan bestaat een identificatie alleen uit een KVK nummer, gevolgd door een underscore ("_") en de unieke identificatie van het object.<p>
-				<p>CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum).  Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 ingevuld.</p>
+				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum).  Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999.0) ingevuld.</p>
 				<h5>Shape</h5>
-				<p>Het Shape formaat is geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat geldt grotendeels hetzelfde als voor het CSV formaat. Het gebruikt ook de verkorte identificaties voor objecten. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (","). Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 ingevuld. Er is een standaard mapping van datatypes in het Informatiemodel:</p>
-				<p>
-				<table>
-				<tr><th>Datatype Informatiemodel</th><th>Datatype Shape</th></tr>
-				<tr><td>Integer</td><td>int</td></tr>
-				<tr><td>Real</td><td>double</td></tr>
-				<tr><td>CharacterString</td><td>QString</td></tr>
-				<tr><td>DateTime</td><td>QString</td></tr>
-				</table>
-				</p>
-				<p>
-				Voor waarden in enumeraties wordt het meest passende datatype gebruikt. Als de waarden gehele getallen zijn dan is het Shape datatype int, als het reële getallen zijn dan is het Shape datatype double, als het alfanumerieke waarden zijn dan is het Shape datatype QString.
-				</p>
+				<p>Het Shape formaat is geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat deels hetzelfde als voor het CSV formaat. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (","). Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999,0) ingevuld. </p>
 				<p>Er wordt geadviseerd om niet zelf een Shape bestand te maken met de juiste eigenschappen, omdat dit foutgevoelig is en er een reële kans is dat de bestanden niet exact voldoet aan de specificaties (zoals datatypes en aantal decimalen). Het advies is om een in plaats daarvan een download te doen van de gegevens van vorig jaar en deze als basis te gebruiken. Als het de eerste aanlevering is dan is het advies om een download van een ander bevoegd gezag als basis te nemen, de aanwezige gegevens te verwijderen en de juiste gegevens toe te voegen.
 				</p>
 				<h5>Geography Markup Language (GML)</h5>
-				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. 
+				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. In GML worden feature members uniek geïdentificeerd op basis van het GML-id. Het GML-id is gebaseerd op de identificatie, maar is vormgegeven als een URL. Het formaat van de URL is http://cimlk.nl/id/&lt;objecttype&gt;/&lt;identificatie&gt;.
 				</p>
 			</section>
 		</section>
@@ -370,16 +338,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Beschrijving van de aanvullende maatregelen die zijn genomen om de emissie te beperken.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De RAV maatregel geeft aan welke emissiereductie een maatregel tot gevolg heeft.</td></tr>
 </table>
-<section id="AanvullendeTechniek.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een aanvullende techniek. Deze bevat de code van de aanvullende techniek zoals vastgesteld in de Regeling Ammoniak en Veehouderij. </td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="AanvullendeTechniek.omschrijving">
 <h3>omschrijving</h3>
 <table width=100%>
@@ -413,16 +371,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een bestuurlijke beslissing waarin een correctie op concentraties is gedefinieerd.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De berekende concentraties op een locatie kunnen worden gecorrigeerd door middel van een absolute correctieterm. De term kan toegekend worden aan een specifieke locatie of aan een gebied.</td></tr>
 </table>
-<section id="Correctie.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een correctiegebied.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Correctie.naam">
 <h3>naam</h3>
 <table width=100%>
@@ -441,17 +389,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Correctieterm">Correctieterm</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
-</table>
-</section>
-<section id="Correctie.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Correctie.geometrie">
@@ -479,6 +416,46 @@
 </table>
 </section>
 </section>
+<section id="GeoObject">
+<h2>GeoObject</h1>
+<table>
+<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Abstractie van een fenomeen in de werkelijkheid, dat direct of indirect is geassocieerd met een locatie relatief ten opzichte van de aarde. </td></tr>
+</table>
+<section id="GeoObject.identificatie">
+<h3>identificatie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatiecode van een informatieobject binnen de context van een registratie.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="GeoObject.domein">
+<h3>domein</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Aanduiding van het domein waarbinnen de identificatie uniek is.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section>
+<h3>registratiegegevens</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Naam</b></td><td>geregistreerd met</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>Associatie</td></tr>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Relatiesoort</td></tr>
+<tr border="0"><td width=200px><b>Bron</b></td><td>GeoObject</td></tr>
+<tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Registratie">Registratie</td></tr>
+<tr border="0"><td width=200px><b>Rol doel</b></td><td>registratiegegevens</td></tr>
+</table>
+</section>
+</section>
 <section id="Huisvestingssysteem">
 <h2>Huisvestingssysteem</h1>
 <table>
@@ -486,16 +463,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Beschrijving van het soort stalsysteem dat wordt gebruikt om de dieren te houden zoals gedefinieerd in de Regeling Ammoniak en Veehouderij.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het gaat om pure emissies in combinatie met stalsystemen. De RAV factor wordt gebruikt om de emissie te bepalen. RAV factoren worden jaarlijks vastgesteld. </td></tr>
 </table>
-<section id="Huisvestingssysteem.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een huisvestingssysteem deze bevat de code van het huisvestingssysteem zoals vastgesteld in de Regeling Ammoniak en Veehouderij.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Huisvestingssysteem.omschrijving">
 <h3>omschrijving</h3>
 <table width=100%>
@@ -526,16 +493,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een bestuurlijke beslissing waarin een emissiemaatregel is gedefinieerd. </td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een maatregel reduceert emissies en heeft effect op één of meer voertuigtypen en snelheidstypen.</td></tr>
 </table>
-<section id="Maatregel.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een maatregelgebied voor wegverkeer.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Maatregel.naam">
 <h3>naam</h3>
 <table width=100%>
@@ -554,17 +511,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Maatregelfactor">Maatregelfactor</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
-</table>
-</section>
-<section id="Maatregel.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 <section id="Maatregel.geometrie">
@@ -634,16 +580,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Locatie waarop de concentratie wordt berekend als gevolg van emissies.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De emissie van een bron verspreidt zich over de omgeving en genereert daar een concentratiebijdrage. Op de receptor wordt de totale concentratie berekend als gevolg van de grootschalige concentratie en de concentratiebijdrage.</td></tr>
 </table>
-<section id="Receptor.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een receptor.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Receptor.naam">
 <h3>naam</h3>
 <table width=100%>
@@ -673,17 +609,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{16}$</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>16 Cijfers waarbij voorloop nullen zijn toegestaan</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-</table>
-</section>
-<section id="Receptor.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
@@ -784,22 +709,41 @@
 </table>
 </section>
 </section>
+<section id="Registratie">
+<h2>Registratie</h1>
+<table>
+<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Vastlegging van een versie van een set gegevens.</td></tr>
+</table>
+<section id="Registratie.tijdstipRegistratie">
+<h3>tijdstipRegistratie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdsaanduiding van het moment waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+</table>
+</section>
+<section id="Registratie.versie">
+<h3>versie</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Versieaanduiding van een informatieobject.</td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
+</table>
+</section>
+</section>
 <section id="RekenresultaatVeehouderij">
 <h2>RekenresultaatVeehouderij</h1>
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor veehouderijen inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
 </table>
-<section id="RekenresultaatVeehouderij.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een rekenresultaat.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="RekenresultaatVeehouderij.rekentoolVersie">
 <h3>rekentoolVersie</h3>
 <table width=100%>
@@ -863,7 +807,7 @@
 <h3>pm10GCNConcentratie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10 in de GCN kaart.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -974,7 +918,7 @@
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een rekenresultaat.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>NEN3610ID</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -1094,7 +1038,7 @@
 <h3>no2GCN</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie NO2.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie NO2 in de GCN kaart.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -1108,7 +1052,7 @@
 <h3>no2HWNdubtelcorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Dubbeltellingscorrectie op NO2 voor de bijdrage van het hoofdwegennet.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op NO2 concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -1147,7 +1091,7 @@
 <h3>o3GCN</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie O3.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie O3 in de GCN kaart.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -1161,7 +1105,7 @@
 <h3>o3HWNdubtelcorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Dubbeltellingscorrectie op O3 voor de bijdrage van het hoofdwegennet.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op O3 concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
@@ -1254,7 +1198,7 @@
 <h3>pm10GCN</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM10 in de GCN kaart.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -1268,7 +1212,7 @@
 <h3>pm10HWNdubtelcorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM10.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM10 concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
@@ -1346,7 +1290,7 @@
 <h3>pm25GCN</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM2.5.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie PM2.5 in de GCN kaart.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -1360,7 +1304,7 @@
 <h3>pm25HWNdubtelcorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM2.5.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op PM2.5 concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
@@ -1438,7 +1382,7 @@
 <h3>ecGCN</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie EC.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De grootschalige achtergrondconcentratie EC in de GCN kaart.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^[0-9]+\.?[0-9]{0,4}$</td></tr>
@@ -1452,7 +1396,7 @@
 <h3>ecHWNdubtelcorrectie</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op EC.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Toegepaste dubbeltellingscorrectie voor de bijdrage van hoofdwegennet op EC concentratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>microgram / kubieke meter</td></tr>
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^-?[0-9]*\.[0-9]{1,4}$</td></tr>
@@ -1493,16 +1437,6 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een inrichting waarbinnen zich vee bevindt.</td></tr>
 </table>
-<section id="Stal.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een stal van een veehouderij.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Stal.lengte">
 <h3>lengte</h3>
 <table width=100%>
@@ -1574,17 +1508,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
-<section id="Stal.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-</table>
-</section>
 <section id="Stal.geometrie">
 <h3>geometrie</h3>
 <table width=100%>
@@ -1614,16 +1537,6 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een bedrijf waar men vee houdt.</td></tr>
 </table>
-<section id="Veehouderij.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een veehouderij.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Veehouderij.adres">
 <h3>adres</h3>
 <table width=100%>
@@ -1659,17 +1572,6 @@
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
-<section id="Veehouderij.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-</table>
-</section>
 </section>
 <section id="Veehouderijbron">
 <h2>Veehouderijbron</h1>
@@ -1678,16 +1580,6 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een plaats aan of nabij een stal waar de emissies vanuit die stal in de buitenlucht komen.</td></tr>
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>De emissiebron heeft specifieke kenmerken (bijv. hoogte) die de mate van verspreiding van de emissie bepalen.</td></tr>
 </table>
-<section id="Veehouderijbron.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een emissiebron van een veehouderij.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Veehouderijbron.hoogte">
 <h3>hoogte</h3>
 <table width=100%>
@@ -1742,17 +1634,6 @@
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1..*</td></tr>
 </table>
 </section>
-<section id="Veehouderijbron.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-</table>
-</section>
 <section id="Veehouderijbron.geometrie">
 <h3>geometrie</h3>
 <table width=100%>
@@ -1782,16 +1663,6 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een deel van een weg waarvan de eigenschappen, die van invloed zijn op de concentraties luchtverontreinigende stoffen, gelijk blijven.</td></tr>
 </table>
-<section id="Wegdeel.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Gegevensgroep</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een deel van een weg.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td><a href="#NEN3610ID">NEN3610ID</a></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Wegdeel.straatnaam">
 <h3>straatnaam</h3>
 <table width=100%>
@@ -1947,17 +1818,6 @@
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (overdrachtsobjectRechts == NULL)</td></tr>
 </table>
 </section>
-<section id="Wegdeel.tijdstipRegistratie">
-<h3>tijdstipRegistratie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Dit attribuut wordt gevuld in het Centraal Instrument Monitoring Luchtkwaliteit.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-</table>
-</section>
 <section id="Wegdeel.geometrie">
 <h3>geometrie</h3>
 <table width=100%>
@@ -1987,7 +1847,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>stof IN ('NO2', 'PM10', 'PM2.5', 'EC')</td></tr>
 </table>
 </section>
 <section id="Correctieterm.correctie">
@@ -2122,7 +1981,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>voertuigtype IN ('b', 'l', 'm', 'z')</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.wegsoort">
@@ -2133,7 +1991,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>wegsoort IN ('b', 'c', 'd', 'e')</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.stof">
@@ -2144,7 +2001,6 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>stof IN ('NO2', 'PM10', 'PM2.5', 'EC')</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.schalingsfactor">
@@ -2159,51 +2015,6 @@
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
-</table>
-</section>
-</section>
-<section id="NEN3610ID">
-<h2>NEN3610ID</h1>
-<table>
-<tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatie van het object binnen het domein van NEN 3610.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een klasse met een attribuut met naam ‘identificatie’ en stereotype «identificatie» heeft een unieke objectidentificatie binnen het domein van NEN 3610.
-
-De objectidentificatie is voor identificatie van een object (een representatie van een fenomeen in de werkelijkheid). De objectidentificatie is niet voor identificatie van het fenomeen zelf. 
-
-Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar de objectidentificatie moet gelijk blijven.</td></tr>
-</table>
-<section id="NEN3610ID.namespace">
-<h3>namespace</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke verwijzing naar een registratie van objecten.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘namespace’ is een unieke verwijzing naar de registratie die de identificatie uitdeelt. Deze lijst van registraties wordt beheerd binnen de context van NEN 3610. Binnen Nederland zal deze namespace vrijwel altijd met ‘NL’ beginnen. De volgende karakters mogen in een namespaceaanduiding voorkomen: {“A”… “Z”, “a”… “z”, “0”… “9”, “_”, “-”, “,”, “.”}</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="NEN3610ID.lokaalID">
-<h3>lokaalID</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatiecode binnen een registratie.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>‘lokaalID’ is de identificatiecode die een object heeft binnen een (lokale) registratie.De volgende karakters mogen in een lokaal ID voorkomen: {“A”… “Z”, “a”… “z”, “0”… “9”, “_”, “-”, “,”, “.”}</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
-<section id="NEN3610ID.versie">
-<h3>versie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Versie-aanduiding van een object.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Het attribuut ‘versie’ maakt geen deel uit van de identificatie van het object maar kan worden gebruikt om verschillende versies van hetzelfde object te identificeren.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
 </section>
@@ -2536,7 +2347,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>identificatie</td>
 						<td>ID</td>
 						<td>
-							<a href="#Receptor.identificatie">Receptor.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -2544,7 +2355,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>wegdeelIdentificatie</td>
 						<td>wegdeelID</td>
 						<td>
-							<a href="#Wegdeel.identificatie">Wegdeel.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -2615,7 +2426,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>tijdstipRegistratie</td>
 						<td>tijdReg</td>
-						<td><a href="#Receptor.tijdstipRegistratie">Receptor.tijdstipRegistratie</a></td>
+						<td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -2641,7 +2452,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>identificatie</td>
 						<td>ID</td>
 						<td>
-							<a href="#Wegdeel.identificatie">Wegdeel.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -2765,7 +2576,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>maximumsnelheid</td>
-						<td>maximumsnlhd</td>
+						<td>maxsnlhd</td>
 						<td>
 							<a href="#Wegdeel.maximumsnelheid">Wegdeel.maximumsnelheid</a>
 						</td>
@@ -2862,7 +2673,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>tijdstipRegistratie</td>
 						<td>tijdReg</td>
-						<td><a href="#Wegdeel.tijdstipRegistratie">Wegdeel.tijdstipRegistratie</a></td>
+						<td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -2888,7 +2699,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>identificatie</td>
 						<td>ID</td>
 						<td>
-							<a href="#Maatregel.identificatie">Maatregel.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -2941,7 +2752,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>tijdstipRegistratie</td>
 						<td>tijdReg</td>
-						<td><a href="#Maatregel.tijdstipRegistratie">Maatregel.tijdstipRegistratie</a></td>
+						<td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -2967,7 +2778,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>identificatie</td>
 						<td>ID</td>
 						<td>
-							<a href="#Correctie.identificatie">Correctie.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -2975,7 +2786,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>receptorIdentificatie</td>
 						<td>receptorID</td>
 						<td>
-							<a href="#Receptor.identificatie">Receptor.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3012,7 +2823,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>tijdstipRegistratie</td>
 						<td>tijdReg</td>
-						<td><a href="#Correctie.tijdstipRegistratie">Correctie.tijdstipRegistratie</a></td>
+						<td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -3038,7 +2849,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td>receptorIdentificatie</td>
 						<td>receptorID</td>
 						<td>
-							<a href="#Receptor.identificatie">Receptor.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3216,7 +3027,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 					<tr>
 						<td></td>
 						<td>pm10HWNdubtelcorrectie</td>
-						<td>pm10HNWcor</td>
+						<td>pm10HWNcor</td>
 						<td><a href="#RekenresultaatWegverkeer.pm10HWNdubtelcorrectie">RekenresultaatWegverkeer.pm10HWNdubtelcorrectie</a></td>
 					</tr>
 					<tr>
@@ -3334,7 +3145,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>veehouderijIdentificatie</td>
 						<td>
-							<a href="#Veehouderij.identificatie">Veehouderij.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3369,7 +3180,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>stalIdentificatie</td>
 						<td>
-							<a href="#Stal.identificatie">Stal.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3425,7 +3236,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>bronIdentificatie</td>
 						<td>
-							<a href="#Veehouderijbron.identificatie">Veehouderijbron.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3467,14 +3278,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>huisvestingssysteem</td>
 						<td>
-							<a href="#Huisvestingssysteem.identificatie">Huisvestingssysteem.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>aanvullendeTechniek</td>
 						<td>
-							<a href="#AanvullendeTechniek.identificatie">AanvullendeTechniek.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3523,7 +3334,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>tijdstipRegistratie</td>
 						<td>
-							<a href="#Veehouderijbron.tijdstipRegistratie">Veehouderijbron.tijdstipRegistratie</a>
+						<td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
 						</td>
 					</tr>
 				</table>
@@ -3540,14 +3351,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>veehouderijIdentificatie</td>
 						<td>
-							<a href="#Veehouderij.identificatie">Veehouderij.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>identificatie</td>
 						<td>
-							<a href="#Receptor.identificatie">Receptor.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
@@ -3596,7 +3407,7 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>tijdstipRegistratie</td>
 						<td>
-							<a href="#Receptor.tijdstipRegistratie">Receptor.tijdstipRegistratie</a>
+						<td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
 						</td>
 					</tr>
 					<tr>
@@ -3627,14 +3438,14 @@ Objecten kunnen in hun levensloop (lifespan) van eigenschappen veranderen maar d
 						<td></td>
 						<td>receptorIdentificatie</td>
 						<td>
-							<a href="#Receptor.identificatie">Receptor.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>					
 					<tr>
 						<td></td>
 						<td>veehouderijIdentificatie</td>
 						<td>
-							<a href="#Veehouderij.identificatie">Veehouderij.identificatie</a>
+							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
 					</tr>
 					<tr>
