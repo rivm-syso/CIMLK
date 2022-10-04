@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">4 oktober 2022</h2>
+		<h2 id="subtitle">21 september 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -194,11 +194,11 @@
 			</section>
 			<section>
 				<h3>Uitwisselbestanden</h3>
-				<p>Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden. Op dit moment worden alleen CSV en Shape als uitwisselformaten ondersteund (voor veehouderijen alleen CSV). Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. Denk bijvoorbeeld aan het niet volledig uitschrijven van de NEN3610ID's; deze worden door het CIMLK zelf verrijkt bij het ontvangen van de gegevens.</p>
-				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel. Ook de NEN3610ID's zullen in dit formaat volledig moeten worden opgenomen. De GML-id's zullen overeenkomen met het NEN3610ID, waarbij de namespace en het lokaalID van elkaar gescheiden zijn door een punt (".").</p>
+				<p>Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden. Op dit moment worden alleen CSV en Shape als uitwisselformaten ondersteund (voor veehouderijen alleen CSV). Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. </p>
+				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel.</p>
 				<p>De beschrijving van het formaat van de uitwisselbestanden is opgenomen in een bijlage. De belangrijkste eigenschappen per formaat staan in de volgende paragrafen uitgeschreven.</p>
 				<h5>CSV</h5>
-				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum). Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). <div style="color:red">Let op: dit wijkt af van het standaard decimale scheidingsteksten in Microsoft Excel; dat is een komma.</div> Tekstuele attributen zijn bij voorkeur voorzien van een dubbele quote (") aan het begin en einde van de tekst. Deze dubbele quotes zijn verplicht als teksten zelf dubbele quote, puntkomma of newline karakters bevat. Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999.0) ingevuld.</p>
+				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum). Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). <span style="color:red">Let op: dit wijkt af van het standaard decimale scheidingsteksten in Microsoft Excel; dat is een komma.</span>Tekstuele attributen zijn bij voorkeur voorzien van een dubbele quote (") aan het begin en einde van de tekst. Deze dubbele quotes zijn verplicht als teksten zelf dubbele quote, puntkomma of newline karakters bevat. Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999.0) ingevuld.</p>
 				<h5>Shape</h5>
 				<p>Het Shape formaat is geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat deels hetzelfde als voor het CSV formaat. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (","). Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999,0) ingevuld. </p>
 				<p>Er wordt geadviseerd om niet zelf een Shape bestand te maken met de juiste eigenschappen, omdat dit foutgevoelig is en er een reële kans is dat de bestanden niet exact voldoet aan de specificaties (zoals datatypes en aantal decimalen). Het advies is om een in plaats daarvan een download te doen van de gegevens van vorig jaar en deze als basis te gebruiken. Als het de eerste aanlevering is dan is het advies om een download van een ander bevoegd gezag als basis te nemen, de aanwezige gegevens te verwijderen en de juiste gegevens toe te voegen.
@@ -326,6 +326,8 @@
 					Klik op het diagram om naar een specifiek objecttype toe te springen.
 					<map name="image-map3">
 						<area href="#Organisatie" coords="6,6,262,143" shape="rect"/>
+						<area href="#GeoObject" coords="6,210,193,305" shape="rect"/>
+						<area href="#Registratie" coords="464,210,660,305" shape="rect"/>						
 					</map>
 				</section>
 			</section>
@@ -428,7 +430,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatiecode van een informatieobject binnen de context van een registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -439,7 +440,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Aanduiding van het domein waarbinnen de identificatie uniek is.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
@@ -721,7 +721,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Tijdsaanduiding van het moment waarop deze versie van het informatieobject is opgenomen in de registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>DateTime</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
@@ -732,7 +731,6 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Versieaanduiding van een informatieobject.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
-<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
@@ -913,16 +911,6 @@
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De berekende concentraties van een luchtkwaliteitsberekening voor wegverkeer inclusief de concentratieopbouw en informatie over de gebruikte versie van de rekentool en het rekenjaar.</td></tr>
 </table>
-<section id="RekenresultaatWegverkeer.identificatie">
-<h3>identificatie</h3>
-<table width=100%>
-<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De unieke identificatie van een rekenresultaat.</td></tr>
-<tr border="0"><td width=200px><b>Type</b></td><td>NEN3610ID</td></tr>
-<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
-<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-</table>
-</section>
 <section id="RekenresultaatWegverkeer.rekentoolVersie">
 <h3>rekentoolVersie</h3>
 <table width=100%>
