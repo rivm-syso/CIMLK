@@ -379,6 +379,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een correctie te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..30</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -430,6 +431,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatiecode van een informatieobject binnen de context van een registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..25</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -499,6 +501,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een maatregel te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..80</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -548,6 +551,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De naam van de organisatie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..50</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -558,6 +562,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een code die aangeeft of de organisatie een gemeente, provincie, waterschap of rijksoverheidsorganisatie is.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Jurisdictietype">Jurisdictietype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -586,6 +591,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een verzameling woorden die praktisch worden gebruikt om een receptor te duiden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..80</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde NOT IN [2021, 2022]) DAN (naam != NULL)</td></tr>
 </table>
@@ -597,6 +603,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Opmerkingen die betrekking hebben op de ingevulde waarden.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..200</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
@@ -609,6 +616,7 @@
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{16}$</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>16 Cijfers waarbij voorloop nullen zijn toegestaan</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>16</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
@@ -1394,6 +1402,7 @@
 <tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{16}$</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td>16 Cijfers waarbij voorloop nullen zijn toegestaan.</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>16</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
@@ -1434,6 +1443,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Straatnaam en nummer van het bedrijf.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..50</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1551,6 +1561,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De straatnaam zoals als aangeduid in het NWB of een eigen beschrijving wanneer de straat in het NWB niet bestaat.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..30</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (wegnummer == NULL) DAN (straatnaam != NULL)</td></tr>
 </table>
@@ -1562,6 +1573,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het wegnummer zoals aangeduid in het NWB.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..7</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (straatnaam == NULL) DAN (wegnummer != NULL)</td></tr>
 </table>
@@ -1574,6 +1586,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Om een SRM1 berekening uit te kunnen voeren, is altijd een koppeling met een receptor vereist. De wettelijke onderlinge afstand tussen receptoren is gesteld op 100 meter. Voor wegdelen is geen minimale lengte vastgesteld en om deze reden zijn wegdelen met rekenmethode SRM1 waarbij een koppeling met een receptorontbreekt wel toegestaan.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Rekenmethode">Rekenmethode</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..40</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1584,6 +1597,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het soort weg vanuit het perspectief van snelheid en doorstroming.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..2</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (rekenmethode == 'SRM1') DAN (wegsoort IN ['b','c','d','e']) ANDERS (wegsoort IN ['92','93','94']).</td></tr>
 </table>
@@ -1662,6 +1676,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Een beschrijving van het wegdeel.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..30</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
 </table>
 </section>
@@ -1725,6 +1740,7 @@
 <tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Geeft aan op welke stof het correctiegebied betrekking heeft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..5</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1853,6 +1869,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Type voertuig waar schalingsfactor invloed op heeft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..2</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1863,6 +1880,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Het soort weg vanuit het perspectief van snelheid en doorstroming.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#Wegsoort">Wegsoort</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..2</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1873,6 +1891,7 @@
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>De stof waar de maatregel effect op heeft.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Lengte</b></td><td>1..5</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
