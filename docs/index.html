@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">3 november 2022</h2>
+		<h2 id="subtitle">15 november 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -2015,7 +2015,7 @@
 <tr border="0"><td width=200px><b>Type</b></td><td><a href="#WegverkeerVoertuigtype">WegverkeerVoertuigtype</a></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (wegdeel.rekenmethode == 'SRM2') DAN (voertuigtype != 'b'). ALS (voertuigtype == 'ld') DAN (wegdeel.maximumsnelheidDynamisch != NULL AND intensiteit > 0)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (wegdeel.rekenmethode == 'SRM2' AND wegdeel.wegsoort != "92") DAN (voertuigtype != 'b'). ALS (voertuigtype == 'ld') DAN (wegdeel.maximumsnelheidDynamisch != NULL AND intensiteit > 0)</td></tr>
 </table>
 </section>
 <section id="VerkeersgegevensWeg.stagnatiefactor">
