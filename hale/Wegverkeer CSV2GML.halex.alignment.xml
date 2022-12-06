@@ -93,7 +93,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.M_{identificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}maatregel/{identificatie}" name="pattern"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C896de552-6c6a-4800-ba40-2c40d78bd6d5" priority="normal">
         <source>
@@ -244,7 +244,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.M_{identificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}correctie/{identificatie}" name="pattern"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce7c8b20b-1f2a-41dd-acb5-3a04b633b76b" priority="normal">
         <source>
@@ -367,13 +367,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
         </target>
         <parameter value="dd-MM-yyyy HH:mm" name="dateFormat"/>
     </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C7629a547-c564-4609-8cc9-c4b5f25844d2" priority="normal">
-        <source name="var">
-            <property>
-                <type name="Correcties"/>
-                <child name="tijdstipRegistratie"/>
-            </property>
-        </source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C44230194-ae07-44a7-aeea-9b028571c941" priority="normal">
         <target name="result">
             <property>
                 <type name="MaatregelType" ns="http://cimlk.nl/1.0"/>
@@ -476,7 +470,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.RW_{identificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}receptorwegverkeer/{identificatie}" name="pattern"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Cea23aa67-aa95-4c27-b665-386d43191535" priority="normal">
         <source>
@@ -590,7 +584,7 @@ if (wegdeel) {&#xD;
 			bomenfactor bomenfactor&#xD;
 			bebouwingstype bebouwingstype&#xD;
 			wegdeel {&#xD;
-				href "#"+_project.vars.namespace+".W_"+wegdeel&#xD;
+				href _project.vars.namespace+"wegdeel/"+wegdeel&#xD;
 			}&#xD;
 		}&#xD;
 	}&#xD;
@@ -681,15 +675,14 @@ if (_project.vars.monitoringjaar) {&#xD;
         </target>
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+import java.text.SimpleDateFormat&#xD;
+&#xD;
 _target {&#xD;
-	def uuid = UUID.randomUUID().toString()&#xD;
-	id(_project.vars.namespace+".BW_"+uuid)&#xD;
-	identificatie {&#xD;
-		NEN3610ID {&#xD;
-			lokaalID("BW_"+uuid)&#xD;
-			namespace(_project.vars.namespace)&#xD;
-		}&#xD;
-	}&#xD;
+	def date = new Date()&#xD;
+	def sdf = new SimpleDateFormat("yyyyMMddHHmmss")&#xD;
+	newid = sdf.format(date)&#xD;
+	id(_project.vars.namespace+"rekenresultaatwegverkeer/"+newid)&#xD;
+	identificatie(newid)&#xD;
 	ecAchtergrondConcentratie(_source.p.ecAchtergrondConcentratie.value())&#xD;
 	ecConcentratie(_source.p.ecConcentratie.value())&#xD;
 	if (_source.p.ecGCN.value())&#xD;
@@ -735,7 +728,7 @@ _target {&#xD;
 	pm25SRM2(_source.p.pm25SRM2.value())&#xD;
 	if (_source.p.receptorIdentificatie.value()) {&#xD;
 		receptor {&#xD;
-			href("#"+_project.vars.namespace+".RW_"+_source.p.receptorIdentificatie.value())&#xD;
+			href(_project.vars.namespace+"receptorwegverkeer/"+_source.p.receptorIdentificatie.value())&#xD;
 		}&#xD;
 	}&#xD;
 	rekenjaar(_source.p.rekenjaar.value())&#xD;
@@ -832,7 +825,7 @@ if (hoogte)&#xD;
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.W_{identificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}wegdeel/{identificatie}" name="pattern"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C01a57750-9b00-4f1d-85eb-6498e86be17d" priority="normal">
         <source>
