@@ -61,7 +61,7 @@
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
-		<h2 id="subtitle">15 november 2022</h2>
+		<h2 id="subtitle">6 december 2022</h2>
 		<section id='abstract'>
 			<p>Dit informatiemodel is gericht op de ondersteuning van de monitoring van de luchtkwaliteit in het kader van de Omgevingswet en het Schone Lucht Akkoord. Het is een beschrijving van de gegevens die worden uitgewisseld met het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Deze wordt ontwikkeld door RIVM in opdracht van het ministerie van Infrastructuur en Waterstaat.</p>
 		</section>
@@ -244,7 +244,7 @@
 				<section>
 					<h4>Emissieobject</h4>
 					<p>Onderdeel van een luchtkwaliteitbron die stoffen emitteert.</p>
-					<p>Allerlei objecten stoten luchtverontreinigende stoffen uit. Voorbeelden hiervan zijn het verkeer op een weg of dieren in een stal van een veehouderij.</p>
+					<p>Allerlei objecten stoten luchtverontreinigende stoffen uit. Voorbeelden hiervan zijn het verkeer op een weg of dieren in een stal van een veehouderij. Voor wegverkeer zijn de emissieobjecten de wegdelen: een deel van een weg waarvan de eigenschappen, die van invloed zijn op de concentraties luchtverontreinigende stoffen, gelijk blijven. Voor veehouderijen zijn de emissieobjecten de veehouderijbronnen: een plaats aan of nabij een stal waar de emissies vanuit die stal in de buitenlucht komen.</p>
 				</section>
 				<section>
 					<h4>Receptor</h4>
@@ -269,12 +269,17 @@
 				<section>
 					<h4>Grootschalige concentratie</h4>
 					<p>De concentratie die is berekend met een algemene methode op een schaal van 1x1 kilometer en op basis van alle emissieobjecten in binnen- en buitenland.</p>
-					<p>De grootschalige concentraties en bijbehorende dubbeltellingscorrecties op 1x1 km2 worden jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat. Dubbeltelling kan ontstaan als de lokale invloed van een bestaand object apart wordt berekend en bij de grootschalige bijdrage wordt opgeteld.</p>
+					<p>De grootschalige concentraties en bijbehorende dubbeltellingscorrecties op 1x1 km2 worden jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat. Dubbeltelling kan ontstaan als de lokale invloed van een bestaand object apart wordt berekend en bij de grootschalige bijdrage wordt opgeteld. Bij de berekeningen in de Monitoring Luchtkwaliteit wordt de veehouderijbijdrage, respectievelijk de wegverkeersbijdrage, bij de grootschalige concentraties (GCN) opgeteld. Dit zorgt voor dubbeltellingen, omdat de concentratiebijdrage van de veehouderijsector, respectievelijk de sector verkeer en vervoer, al is meegenomen in de berekening van de grootschalige concentraties. De rekenresultaten in de Monitoring Luchtkwaliteit zijn gecorrigeerd voor deze dubbeltellingen. Alle correcties op dubbeltellingen in de concentratiebijdragen (inclusief HWN) worden bij de GCN opgeteld volgens vergelijking: GCN + correcties = achtergrondconcentratie. Een negatieve correctieterm heeft een lager eindresultaat tot gevolg.</p>
 				</section>
 				<section>
 					<h4>Emissiefactor</h4>
 					<p>De hoeveelheid luchtverontreiniging (van een bepaalde stof) die uitgeworpen wordt per eenheid van activiteit.</p>
 					<p>Voor emissies van verkeer worden emissiefactoren typisch in gram per voertuigtype per kilometer (g/km) weergegeven. Voor emissies van veehouderijen is dit typisch gram per dier per jaar (g/dier/jaar). De emissiefactoren worden jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat.</p>
+				</section>
+				<section>
+					<h4>Reductiefactor</h4>
+					<p>De fractie waarmee de PM10 emissies behorende bij aanvullende techniek worden verlaagd.</p>
+					<p>Reductiefactoren horen bij een aanvullende techniek. Er kan ook worden afgeweken van de standaard maatregelen, waarbij een zelfgedefinieerde reductiefactor van toepassing is.
 				</section>
 				<section>
 					<h4>Meteorologische gegevens</h4>
@@ -285,6 +290,16 @@
 					<h4>Ruwheid</h4>
 					<p>De grootheid om de mate van variatie in een oppervlakte met uitstekende delen, punten en onregelmatigheden uit te drukken.</p>
 					<p>De verspreiding van luchtverontreinigende stoffen tussen het emissieobject en de receptor wordt onder andere beïnvloed door de ruwheid van het landoppervlakte. De verspreiding over het open veld wijkt sterk af van die over een bosgebied of in een stad. De ruwheidskaart wordt jaarlijks vastgesteld door de minister van Infrastructuur en Waterstaat.</p>
+				</section>
+				<section>
+					<h4>Huisvestingssysteem</h4>
+					<p>Een systeem in een stal waarin dieren van dezelfde diercategorie zitten.</p>
+					<p>Het gaat bijvoorbeeld om hokinrichting, vloeren en mestkelders. In één stal kunnen meerdere huisvestingssystemen zitten. Bij elk huisvestingssysteem hoort een emissiefactor voor fijnstof, ammoniak en geur. Deze is nodig om de emissie van deze stoffen vanuit een stal te kunnen berekenen. In een systeembeschrijving staat een omschrijving van het systeem en waarom het systeem de emissies reduceert. De huisvestingssystemen en de nummers van de bijbehorende systeembeschrijvingen staan in bijlage V van de Omgevingsregeling. Let op: luchtwassers waren voorheen aangemerkt als huisvestingssysteem. Ze staan nu op de lijst met aanvullende technieken.</p>
+				</section>
+				<section>
+					<h4>Aanvullende techniek</h4>
+					<p>Een techniek die is bedoeld om de uitstoot van ammoniak, fijnstof of geur te reduceren.</p>
+					<p>Een aanvullende techniek is bijvoorbeeld een filter, warmtewisselaar of luchtwasser. Bij elke aanvullende techniek hoort een reductiepercentage voor fijnstof, ammoniak en geur. Deze is nodig om de emissie van deze stoffen vanuit een stal te kunnen berekenen. De lijst met aanvullende technieken en het nummer van bijbehorende systeembeschrijving staat in bijlage VI van de Omgevingsregeling.</p>
 				</section>
 			</section>
 		</section>
