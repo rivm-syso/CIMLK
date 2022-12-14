@@ -144,7 +144,7 @@ return _.geom.with(geometry:value, crs:"EPSG:28992")
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 if (receptorIdentificatie) &#xD;
-	return "#"+_project.vars.namespace+".RW_"+receptorIdentificatie
+	return _project.vars.namespace+"receptorwegverkeer/"+receptorIdentificatie
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>

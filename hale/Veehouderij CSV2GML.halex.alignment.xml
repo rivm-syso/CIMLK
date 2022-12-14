@@ -14,6 +14,15 @@
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb93573e5-fc5c-4af4-9ee1-5e4cc059796c" priority="normal">
+        <target>
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="domein" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="imlk" name="value"/>
+    </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C4c2fdaef-f9d5-4457-8c9e-9e160ee0b033" priority="normal">
         <source name="var">
             <property>
@@ -78,10 +87,10 @@ _.geom.with(geometry: "POINT(" + x + " " + y + ")", crs: "EPSG:28992")&#xD;
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.RV_{identificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}receptorveehouderij/{identificatie}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cc37b500f-fceb-4b2e-a39f-c4dc08071f34" priority="normal">
-        <source name="var">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cc37b500f-fceb-4b2e-a39f-c4dc08071f34" priority="normal">
+        <source>
             <property>
                 <type name="Veehouderij_receptoren"/>
                 <child name="identificatie"/>
@@ -91,42 +100,10 @@ _.geom.with(geometry: "POINT(" + x + " " + y + ")", crs: "EPSG:28992")&#xD;
             <property>
                 <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
                 <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="RV_{identificatie}" name="pattern"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cb93573e5-fc5c-4af4-9ee1-5e4cc059796c" priority="normal">
-        <target>
-            <property>
-                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="namespace" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <parameter value="{{project:namespace}}" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C6c25cda8-1732-4f40-a7e5-b495a8369c51" priority="normal">
-        <target name="result">
-            <property>
-                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="versie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-if (_project.vars.monitoringjaar) {&#xD;
-	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
-} else {&#xD;
-	return ""&#xD;
-}
-</core:text>
-        </complexParameter>
-        <parameter value="false" name="variablesAsInstances"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C3413e2d2-f064-4c73-8224-3ec669487009" priority="normal">
         <source name="var">
@@ -222,6 +199,8 @@ if (opmerking)&#xD;
         <target name="result">
             <property>
                 <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
                 <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
@@ -239,6 +218,26 @@ if (tijdstipRegistratie)&#xD;
                 </core:content>
             </core:message>
         </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C93de221b-c253-4c7c-ba87-86a9509e1846" priority="normal">
+        <target name="result">
+            <property>
+                <type name="ReceptorVeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
+                <child name="versie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (_project.vars.monitoringjaar) {&#xD;
+	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
+} else {&#xD;
+	return ""&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce484add1-8023-427b-bd28-e0edf9dd6c5f" priority="normal">
         <source>
@@ -270,7 +269,110 @@ if (tijdstipRegistratie)&#xD;
                 <child name="href" ns="http://www.w3.org/1999/xlink"/>
             </property>
         </target>
-        <parameter value="#{{project:namespace}}.V_{veehouderijIdentificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}veehouderij/{veehouderijIdentificatie}" name="pattern"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cc7e25176-12ff-4152-aba3-e462567e8374" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Veehouderijen"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </source>
+        <target name="result">
+            <property>
+                <type name="RegistratieType" ns="http://cimlk.nl/1.0"/>
+                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (tijdstipRegistratie)&#xD;
+	return tijdstipRegistratie
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C1dcc799b-cffa-487c-ba03-23c7f9bc299a" priority="normal">
+        <target name="result">
+            <property>
+                <type name="RegistratieType" ns="http://cimlk.nl/1.0"/>
+                <child name="versie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (_project.vars.monitoringjaar) {&#xD;
+	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
+} else {&#xD;
+	return ""&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C489f3ead-37d3-41b3-84d3-1c0f2f19fa21" priority="normal">
+        <target name="result">
+            <property>
+                <type name="RegistratieType" ns="http://cimlk.nl/1.0"/>
+                <child name="versie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (_project.vars.monitoringjaar) {&#xD;
+	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
+} else {&#xD;
+	return ""&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C6c25cda8-1732-4f40-a7e5-b495a8369c51" priority="normal">
+        <target name="result">
+            <property>
+                <type name="RegistratieType" ns="http://cimlk.nl/1.0"/>
+                <child name="versie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (_project.vars.monitoringjaar) {&#xD;
+	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
+} else {&#xD;
+	return ""&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy.retype" id="C9380fdca-da18-4507-a637-9e9f234c512c" priority="normal">
         <source>
@@ -285,15 +387,14 @@ if (tijdstipRegistratie)&#xD;
         </target>
         <complexParameter name="script">
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+import java.text.SimpleDateFormat&#xD;
+&#xD;
 _target {&#xD;
-	def uuid = UUID.randomUUID().toString()&#xD;
-	id(_project.vars.namespace+".BV_"+uuid)&#xD;
-	identificatie {&#xD;
-		NEN3610ID {&#xD;
-			lokaalID("BV_"+uuid)&#xD;
-			namespace(_project.vars.namespace)&#xD;
-		}&#xD;
-	}&#xD;
+	def date = new Date()&#xD;
+	def sdf = new SimpleDateFormat("yyyyMMddHHmmss")&#xD;
+	newid = sdf.format(date)&#xD;
+	id(_project.vars.namespace+"rekenresultaatwegverkeer/"+newid)&#xD;
+	identificatie(newid)&#xD;
 	pm10AchtergrondConcentratie(_source.p.pm10AchtergrondConcentratie.value())&#xD;
 	pm10AchtergrondOverschrijdingsdagen(_source.p.pm10AchtergrondOverschrijdingsdagen.value())&#xD;
 	pm10BronbijdrageConcentratie(_source.p.pm10BronbijdrageConcentratie.value())&#xD;
@@ -307,7 +408,7 @@ _target {&#xD;
 	rekenjaar(_source.p.rekenjaar.value())&#xD;
 	if (_source.p.receptorIdentificatie.value()) {&#xD;
 		receptor {&#xD;
-			href("#"+_project.vars.namespace+".RV_"+_source.p.receptorIdentificatie.value())&#xD;
+			href(_project.vars.namespace+"receptorveehouderij/"+_source.p.receptorIdentificatie.value())&#xD;
 		}&#xD;
 	}&#xD;
 	rekentoolVersie(_source.p.rekentoolVersie.value())&#xD;
@@ -345,6 +446,15 @@ _target {&#xD;
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cbd181a2d-f0d9-4332-8fcf-89fde962bd14" priority="normal">
+        <target>
+            <property>
+                <type name="StalType" ns="http://cimlk.nl/1.0"/>
+                <child name="domein" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="imlk" name="value"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cea89266b-76f2-42e6-b328-a7da29e828e4" priority="normal">
         <source name="var">
@@ -406,10 +516,10 @@ _target {&#xD;
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.S_{stalIdentificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}stal/{stalIdentificatie}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C625653a4-8284-486f-bcd2-1d7cecd468af" priority="normal">
-        <source name="var">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C625653a4-8284-486f-bcd2-1d7cecd468af" priority="normal">
+        <source>
             <property>
                 <type name="Veehouderijen"/>
                 <child name="stalIdentificatie"/>
@@ -419,42 +529,10 @@ _target {&#xD;
             <property>
                 <type name="StalType" ns="http://cimlk.nl/1.0"/>
                 <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="S_{stalIdentificatie}" name="pattern"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cbd181a2d-f0d9-4332-8fcf-89fde962bd14" priority="normal">
-        <target>
-            <property>
-                <type name="StalType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="namespace" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <parameter value="{{project:namespace}}" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C1dcc799b-cffa-487c-ba03-23c7f9bc299a" priority="normal">
-        <target name="result">
-            <property>
-                <type name="StalType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="versie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-if (_project.vars.monitoringjaar) {&#xD;
-	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
-} else {&#xD;
-	return ""&#xD;
-}
-</core:text>
-        </complexParameter>
-        <parameter value="false" name="variablesAsInstances"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C64f7d2f7-c03b-4a7e-b666-30da1e83a38a" priority="normal">
         <source name="var">
@@ -516,7 +594,7 @@ if (stalIdentificatiePandBAG)&#xD;
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cc7e25176-12ff-4152-aba3-e462567e8374" priority="normal">
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C5238aba6-169a-4434-aabd-6dba339a5588" priority="normal">
         <source name="var">
             <property>
                 <type name="Veehouderijen"/>
@@ -526,6 +604,8 @@ if (stalIdentificatiePandBAG)&#xD;
         <target name="result">
             <property>
                 <type name="StalType" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
                 <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
@@ -536,13 +616,26 @@ if (tijdstipRegistratie)&#xD;
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
-        <annotation type="message">
-            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
-                <core:content>
-                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
-                </core:content>
-            </core:message>
-        </annotation>
+    </cell>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C9817d667-43d3-4b0f-b7fa-c2dbfbd67b79" priority="normal">
+        <target name="result">
+            <property>
+                <type name="StalType" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
+                <child name="versie" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (_project.vars.monitoringjaar) {&#xD;
+	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
+} else {&#xD;
+	return ""&#xD;
+}
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cbea58f3f-874b-43b4-a298-21714808a46c" priority="normal">
         <source name="var">
@@ -558,7 +651,7 @@ if (tijdstipRegistratie)&#xD;
                 <child name="href" ns="http://www.w3.org/1999/xlink"/>
             </property>
         </target>
-        <parameter value="#{{project:namespace}}.V_{veehouderijIdentificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}veehouderij/{veehouderijIdentificatie}" name="pattern"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.merge" id="C1920c9a8-64cf-4e5a-be11-43f03d6ab852" priority="normal">
         <source>
@@ -605,6 +698,15 @@ if (tijdstipRegistratie)&#xD;
         </target>
         <parameter value="d-M-yyyy" name="dateFormat"/>
     </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cdfcf4c8d-6660-47f3-a8cb-052dcffe3ad9" priority="normal">
+        <target>
+            <property>
+                <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="domein" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="imlk" name="value"/>
+    </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C0e512609-231b-4393-9f36-ece398424856" priority="normal">
         <source name="var">
             <property>
@@ -618,10 +720,10 @@ if (tijdstipRegistratie)&#xD;
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.V_{veehouderijIdentificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}veehouderij/{veehouderijIdentificatie}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="Cd656f0f4-4eac-4a4c-a346-1874a1ebbf57" priority="normal">
-        <source name="var">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="Cd656f0f4-4eac-4a4c-a346-1874a1ebbf57" priority="normal">
+        <source>
             <property>
                 <type name="Veehouderijen"/>
                 <child name="veehouderijIdentificatie"/>
@@ -631,58 +733,33 @@ if (tijdstipRegistratie)&#xD;
             <property>
                 <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
                 <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="V_{veehouderijIdentificatie}" name="pattern"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cdfcf4c8d-6660-47f3-a8cb-052dcffe3ad9" priority="normal">
-        <target>
-            <property>
-                <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="namespace" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <parameter value="{{project:namespace}}" name="value"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C489f3ead-37d3-41b3-84d3-1c0f2f19fa21" priority="normal">
-        <target name="result">
-            <property>
-                <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="versie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <complexParameter name="script">
-            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
-if (_project.vars.monitoringjaar) {&#xD;
-	return _project.vars.monitoringronde+"_"+_project.vars.monitoringjaar&#xD;
-} else {&#xD;
-	return ""&#xD;
-}
-</core:text>
-        </complexParameter>
-        <parameter value="false" name="variablesAsInstances"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="Ce464fd0f-4605-4354-9840-623b0d937536" priority="normal">
-        <source>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Ce464fd0f-4605-4354-9840-623b0d937536" priority="normal">
+        <source name="var">
             <property>
                 <type name="Veehouderijen"/>
                 <child name="tijdstipRegistratie"/>
             </property>
         </source>
-        <target>
+        <target name="result">
             <property>
                 <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
                 <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (tijdstipRegistratie)&#xD;
+	return tijdstipRegistratie
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.merge" id="Cab072e59-6f55-4e8d-b205-f2a6ea6d90c8" priority="normal">
         <source>
@@ -721,6 +798,15 @@ if (_project.vars.monitoringjaar) {&#xD;
         </target>
         <parameter value="false" name="ignoreNamespaces"/>
         <parameter value="false" name="structuralRename"/>
+    </cell>
+    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cf4f03c41-c3cd-4fdf-8d45-a90787f4874e" priority="normal">
+        <target>
+            <property>
+                <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
+                <child name="domein" ns="http://cimlk.nl/1.0"/>
+            </property>
+        </target>
+        <parameter value="imlk" name="value"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C0eb9e5a0-1314-4072-a42f-4cdc2d8af817" priority="normal">
         <source name="var">
@@ -787,11 +873,11 @@ _target {&#xD;
 		}&#xD;
 		opmerking opmerking&#xD;
 		huisvestingssysteem {&#xD;
-			href '#'+huisvestingssysteem&#xD;
+			href _project.vars.namespace+'huisvestingssysteem/'+huisvestingssysteem&#xD;
 		}&#xD;
 		if (aanvullendeTechniek) {&#xD;
 			aanvullendeTechniek {&#xD;
-				href '#'+aanvullendeTechniek&#xD;
+				href _project.vars.namespace+'aanvullendetechniek/'+aanvullendeTechniek&#xD;
 			}&#xD;
 		}&#xD;
 	}&#xD;
@@ -867,10 +953,10 @@ _target {&#xD;
                 <child name="id" ns="http://www.opengis.net/gml/3.2"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}.B_{bronIdentificatie}" name="pattern"/>
+        <parameter value="{{project:namespace}}veehouderijbron/{bronIdentificatie}" name="pattern"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C3beb94f8-f954-46b7-9b08-366b487a1892" priority="normal">
-        <source name="var">
+    <cell relation="eu.esdihumboldt.hale.align.rename" id="C3beb94f8-f954-46b7-9b08-366b487a1892" priority="normal">
+        <source>
             <property>
                 <type name="Veehouderijen"/>
                 <child name="bronIdentificatie"/>
@@ -880,29 +966,40 @@ _target {&#xD;
             <property>
                 <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
                 <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="B_{bronIdentificatie}" name="pattern"/>
+        <parameter value="false" name="ignoreNamespaces"/>
+        <parameter value="false" name="structuralRename"/>
     </cell>
-    <cell relation="eu.esdihumboldt.hale.align.assign" id="Cf4f03c41-c3cd-4fdf-8d45-a90787f4874e" priority="normal">
-        <target>
+    <cell relation="eu.esdihumboldt.cst.functions.groovy" id="C65ffbdb5-2ae3-4428-9a2f-26c63b4f6c86" priority="normal">
+        <source name="var">
+            <property>
+                <type name="Veehouderijen"/>
+                <child name="tijdstipRegistratie"/>
+            </property>
+        </source>
+        <target name="result">
             <property>
                 <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="namespace" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
+                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
-        <parameter value="{{project:namespace}}" name="value"/>
+        <complexParameter name="script">
+            <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
+if (tijdstipRegistratie)&#xD;
+	return tijdstipRegistratie
+</core:text>
+        </complexParameter>
+        <parameter value="false" name="variablesAsInstances"/>
     </cell>
     <cell relation="eu.esdihumboldt.cst.functions.groovy" id="Cd0a04676-2e2e-43a1-870a-3014ddabe581" priority="normal">
         <target name="result">
             <property>
                 <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
-                <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
+                <child name="registratiegegevens" ns="http://cimlk.nl/1.0"/>
+                <child name="Registratie" ns="http://cimlk.nl/1.0"/>
                 <child name="versie" ns="http://cimlk.nl/1.0"/>
             </property>
         </target>
@@ -916,6 +1013,13 @@ if (_project.vars.monitoringjaar) {&#xD;
 </core:text>
         </complexParameter>
         <parameter value="false" name="variablesAsInstances"/>
+        <annotation type="message">
+            <core:message xmlns:core="http://www.esdi-humboldt.eu/hale/core" category="migration">
+                <core:content>
+                    <core:text xml:space="preserve">The cell's entities have been replaced, the new entities may have a different structure and/or names and may require updating the Groovy script accordingly</core:text>
+                </core:content>
+            </core:message>
+        </annotation>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.formattedstring" id="C483a5be4-cf6b-48ee-a46a-771bb1d56e86" priority="normal">
         <source name="var">
@@ -931,23 +1035,7 @@ if (_project.vars.monitoringjaar) {&#xD;
                 <child name="href" ns="http://www.w3.org/1999/xlink"/>
             </property>
         </target>
-        <parameter value="#{{project:namespace}}.S_{stalIdentificatie}" name="pattern"/>
-    </cell>
-    <cell relation="eu.esdihumboldt.hale.align.rename" id="C65ffbdb5-2ae3-4428-9a2f-26c63b4f6c86" priority="normal">
-        <source>
-            <property>
-                <type name="Veehouderijen"/>
-                <child name="tijdstipRegistratie"/>
-            </property>
-        </source>
-        <target>
-            <property>
-                <type name="VeehouderijbronType" ns="http://cimlk.nl/1.0"/>
-                <child name="tijdstipRegistratie" ns="http://cimlk.nl/1.0"/>
-            </property>
-        </target>
-        <parameter value="false" name="ignoreNamespaces"/>
-        <parameter value="false" name="structuralRename"/>
+        <parameter value="{{project:namespace}}stal/{stalIdentificatie}" name="pattern"/>
     </cell>
     <cell relation="eu.esdihumboldt.hale.align.rename" id="C832e8727-9080-429b-b88c-cde0e46a2f59" priority="normal">
         <source>
