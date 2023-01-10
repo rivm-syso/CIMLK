@@ -3,7 +3,7 @@
     <name>Wegverkeer GML2CSV</name>
     <author>dgree</author>
     <created>2022-03-14T08:35:04.128+01:00</created>
-    <modified>2022-05-27T13:43:33.220+02:00</modified>
+    <modified>2023-01-10T15:42:55.296+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -1437,7 +1437,7 @@
     </resource>
     <resource action-id="eu.esdihumboldt.hale.io.instance.read.source" provider-id="eu.esdihumboldt.hale.io.gml.reader">
         <setting name="charset">UTF-8</setting>
-        <setting name="resourceId">87ce95c2-6843-4b70-8cd1-5c8250fe669a</setting>
+        <setting name="resourceId">3e2ce387-297f-42b9-bc0b-08f798b7844e</setting>
         <setting name="source">file:/input/wegverkeer.gml</setting>
         <setting name="interpolation.maxError">0.1</setting>
         <setting name="interpolation.algorithm">segment</setting>
@@ -1525,6 +1525,12 @@
     <property name="defaultGeometry:{http://cimlk.nl/1.0}EmissiespecificatieType/3">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}EmissiespecificatieType/4">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}EmissiespecificatieType/count">4</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}FeatureCollectionIMLKType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}FeatureCollectionIMLKType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}FeatureCollectionIMLKType/count">2</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}GeoObjectType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}GeoObjectType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}GeoObjectType/count">2</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}HuisvestingssysteemType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}HuisvestingssysteemType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}HuisvestingssysteemType/count">2</property>
