@@ -15,18 +15,18 @@
             <core:text xmlns:core="http://www.esdi-humboldt.eu/hale/core" xml:space="preserve">
 withTransformationContext{&#xD;
 	def c = _.context.collector(it)&#xD;
-	c.stalIdentificatie[_source.p.id.value()] = _source.p.identificatie.NEN3610ID.lokaalID.value().substring(2)&#xD;
-	c.stalLengte[_source.p.id.value()] = _source.p.lengte.value()&#xD;
-	c.stalBreedte[_source.p.id.value()] = _source.p.breedte.value()&#xD;
-	c.stalHoogte[_source.p.id.value()] = _source.p.hoogte.value()&#xD;
-	c.stalOrientatie[_source.p.id.value()] = _source.p.orientatie.value()&#xD;
-	c.stalIdentificatiePandBAG[_source.p.id.value()] = _source.p.identificatiePandBAG.value()&#xD;
-	c.stalX[_source.p.id.value()] = _source.p.geometrie.Point.pos.value()[0]&#xD;
-	c.stalY[_source.p.id.value()] = _source.p.geometrie.Point.pos.value()[1]&#xD;
+	stalid = _source.p.id.value().substring(24)&#xD;
+	c.stalIdentificatie[stalid] = _source.p.identificatie.value()&#xD;
+	c.stalLengte[stalid] = _source.p.lengte.value()&#xD;
+	c.stalBreedte[stalid] = _source.p.breedte.value()&#xD;
+	c.stalHoogte[stalid] = _source.p.hoogte.value()&#xD;
+	c.stalOrientatie[stalid] = _source.p.orientatie.value()&#xD;
+	c.stalIdentificatiePandBAG[stalid] = _source.p.identificatiePandBAG.value()&#xD;
+	c.stalX[stalid] = _source.p.geometrie.Point.pos.value()[0]&#xD;
+	c.stalY[stalid] = _source.p.geometrie.Point.pos.value()[1]&#xD;
 	String veehouderijhref = _source.p.veehouderij.href.value()&#xD;
-	String veehouderijid = veehouderijhref.substring(1)&#xD;
-	c.veehouderijIdentificatie[_source.p.id.value()] = veehouderijid&#xD;
-	c.veehouderijId[_source.p.id.value()] = veehouderijid.substring(10)&#xD;
+	c.veehouderijIdentificatie[stalid] = veehouderijhref&#xD;
+	c.veehouderijId[stalid] = veehouderijhref.substring(31)&#xD;
 }&#xD;
 &#xD;
 
@@ -50,7 +50,6 @@ withTransformationContext{&#xD;
 	def c = _.context.collector(it)&#xD;
 	c.veehouderijAdres[_source.p.id.value()] = _source.p.adres.value()&#xD;
 	c.veehouderijDatumVergunning[_source.p.id.value()] = _source.p.datumVergunning.value()&#xD;
-	_log.info('PUT ' + _source.p.id.value() + '=' + _source.p.datumVergunning.value())&#xD;
 }
 </core:text>
         </complexParameter>
@@ -73,14 +72,14 @@ String wkt = geo.toText()&#xD;
 String href = _source.p.veehouderij.href.value()&#xD;
 &#xD;
 _target {&#xD;
-	identificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(3))&#xD;
+	identificatie(_source.p.identificatie.value())&#xD;
 	grondslag(_source.p.grondslag.value())&#xD;
 	identificatiePandBAG(_source.p.grondslag.value())&#xD;
 	naam(_source.p.naam.value())&#xD;
 	opmerking(_source.p.opmerking.value())&#xD;
 	tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
 	toetspuntSoort(_source.p.toetspuntSoort.value())&#xD;
-	veehouderijIdentificatie(href.substring(11))&#xD;
+	veehouderijIdentificatie(href.substring(31))&#xD;
 	x(_source.p.geometrie.Point.pos.value()[0])&#xD;
 	y(_source.p.geometrie.Point.pos.value()[1])&#xD;
 }&#xD;
@@ -93,7 +92,7 @@ withTransformationContext{&#xD;
 	c.opmerking[_source.p.id.value()] = _source.p.opmerking.value()&#xD;
 	c.grondslag[_source.p.id.value()] = _source.p.grondslag.value()&#xD;
 	c.toetspuntSoort[_source.p.id.value()] = _source.p.toetspuntSoort.value()&#xD;
-	c.veehouderijIdentificatie[_source.p.id.value()] = href.substring(11)&#xD;
+	c.veehouderijIdentificatie[_source.p.id.value()] = href.substring(31)&#xD;
 }&#xD;
 &#xD;
 	
@@ -118,8 +117,8 @@ def c = _.context.collector()&#xD;
 _target {&#xD;
 	String receptorhref = _source.p.receptor.href.value()&#xD;
 	if (receptorhref) {&#xD;
-		String receptorID = receptorhref.substring(1)&#xD;
-		receptorIdentificatie(receptorID.substring(11))&#xD;
+		String receptorID = receptorhref.substring(39)&#xD;
+		receptorIdentificatie(receptorID)&#xD;
 		naam(c.naam[receptorID].value())&#xD;
 		grondslag(c.grondslag[receptorID].value())&#xD;
 		x(c.x[receptorID].value())	&#xD;
@@ -166,16 +165,16 @@ _source.p.emissiespecificaties.each { maatregel -&gt;&#xD;
 		bronDiameter(_source.p.diameter.value())&#xD;
 		bronUittreesnelheid(_source.p.uittreesnelheid.value())&#xD;
 		tijdstipRegistratie(_source.p.tijdstipRegistratie.value())&#xD;
-		bronIdentificatie(_source.p.identificatie.NEN3610ID.lokaalID.value().substring(2))&#xD;
+		bronIdentificatie(_source.p.identificatie.value())&#xD;
 		aantalDieren(maatregel.p.Emissiespecificatie.aantalDieren.value())&#xD;
-		emissiefactorPM10(maatregel.p.Emissiespecificatie.eigenEmissiefactorPm10.value())&#xD;
-		reductiefactorPM10(maatregel.p.Emissiespecificatie.eigenReductiefactorPm10.value())&#xD;
+		emissiefactorPM10(maatregel.p.Emissiespecificatie.eigenEmissiefactorPM10.value())&#xD;
+		reductiefactorPM10(maatregel.p.Emissiespecificatie.eigenReductiefactorPM10.value())&#xD;
 		eigenFactorToelichting(maatregel.p.Emissiespecificatie.eigenFactorToelichting.value())&#xD;
 		opmerking(maatregel.p.Emissiespecificatie.opmerking.value())&#xD;
 		huisvestingssysteem(maatregel.p.Emissiespecificatie.huisvestingssysteem.href.value())&#xD;
 		aanvullendeTechniek(maatregel.p.Emissiespecificatie.aanvullendeTechniek.href.value())&#xD;
 		String stalhref = _source.p.stal.href.value()&#xD;
-		String stalid = stalhref.substring(1)&#xD;
+		String stalid = stalhref.substring(24)&#xD;
 		stalIdentificatie(c.stalIdentificatie[stalid].value())&#xD;
 		stalHoogte(c.stalHoogte[stalid].value())&#xD;
 		stalBreedte(c.stalBreedte[stalid].value())&#xD;
@@ -209,8 +208,6 @@ _source.p.emissiespecificaties.each { maatregel -&gt;&#xD;
             <property>
                 <type name="VeehouderijType" ns="http://cimlk.nl/1.0"/>
                 <child name="identificatie" ns="http://cimlk.nl/1.0"/>
-                <child name="NEN3610ID" ns="http://cimlk.nl/1.0"/>
-                <child name="lokaalID" ns="http://cimlk.nl/1.0"/>
             </property>
         </source>
         <target>
@@ -219,6 +216,6 @@ _source.p.emissiespecificaties.each { maatregel -&gt;&#xD;
                 <child name="veehouderijIdentificatie"/>
             </property>
         </target>
-        <parameter value="{lokaalID}" name="pattern"/>
+        <parameter value="{identificatie}" name="pattern"/>
     </cell>
 </alignment>

@@ -1,13 +1,15 @@
 <?xml version="1.0" ?>
-<gml:FeatureCollection xmlns:cimlk="http://cimlk.nl/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cimlk.nl/1.0 file:/C:/Users/dgree/OneDrive/Documenten/GitHub/CIMLK/docs/imlk.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd">
-  <gml:featureMember>
-    <cimlk:Correctie gml:id="NL.imlk.M_87654321_167427">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_87654321_167427</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+<cimlk:FeatureCollectionIMLK xmlns:cimlk="http://cimlk.nl/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cimlk.nl/1.0 file:/C:/Users/dgree/CIMLK/hale/../docs/imlk.xsd">
+  <cimlk:featureMember>
+    <cimlk:Correctie gml:id="http://cimlk.nl/id/maatregel/87654321_167427">
+      <cimlk:identificatie>87654321_167427</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>1990-01-01T11:38:00Z</cimlk:tijdstipRegistratie>
+          <cimlk:versie>2022_2021</cimlk:versie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>IJmond</cimlk:naam>
       <cimlk:correctietermen>
         <cimlk:Correctieterm>
@@ -15,7 +17,6 @@
           <cimlk:correctie>-0.21</cimlk:correctie>
         </cimlk:Correctieterm>
       </cimlk:correctietermen>
-      <cimlk:tijdstipRegistratie>1990-01-01T11:38:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:exterior>
@@ -26,29 +27,30 @@
         </gml:Polygon>
       </cimlk:geometrie>
     </cimlk:Correctie>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Correctie gml:id="NL.imlk.M_23456789_150369">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_23456789_150369</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Correctie gml:id="http://cimlk.nl/id/maatregel/23456789_150369">
+      <cimlk:identificatie>23456789_150369</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>1990-01-01T11:38:00Z</cimlk:tijdstipRegistratie>
+          <cimlk:versie>2022_2021</cimlk:versie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>Amsterdam IJtunnel</cimlk:naam>
-      <cimlk:correctietermen>
-        <cimlk:Correctieterm>
-          <cimlk:stof>NO2</cimlk:stof>
-          <cimlk:correctie>13.01</cimlk:correctie>
-        </cimlk:Correctieterm>
-      </cimlk:correctietermen>
       <cimlk:correctietermen>
         <cimlk:Correctieterm>
           <cimlk:stof>NOx</cimlk:stof>
           <cimlk:correctie>10.0</cimlk:correctie>
         </cimlk:Correctieterm>
       </cimlk:correctietermen>
-      <cimlk:tijdstipRegistratie>1990-01-01T11:38:00Z</cimlk:tijdstipRegistratie>
+      <cimlk:correctietermen>
+        <cimlk:Correctieterm>
+          <cimlk:stof>NO2</cimlk:stof>
+          <cimlk:correctie>13.01</cimlk:correctie>
+        </cimlk:Correctieterm>
+      </cimlk:correctietermen>
       <cimlk:geometrie>
         <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:exterior>
@@ -58,129 +60,26 @@
           </gml:exterior>
         </gml:Polygon>
       </cimlk:geometrie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_23456789_183659"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/23456789_183659"></cimlk:receptor>
     </cimlk:Correctie>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Maatregel gml:id="NL.imlk.M_09214908_750">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>M_09214908_750</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Maatregel gml:id="http://cimlk.nl/id/correctie/09214908_750">
+      <cimlk:identificatie>09214908_750</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>Milieuzone Arnhem</cimlk:naam>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>PM2.5</cimlk:stof>
-          <cimlk:schalingsfactor>0.848913021</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>PM2.5</cimlk:stof>
-          <cimlk:schalingsfactor>0.817435794</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>PM2.5</cimlk:stof>
-          <cimlk:schalingsfactor>0.785518255</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>PM2.5</cimlk:stof>
-          <cimlk:schalingsfactor>0.526764736</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>PM2.5</cimlk:stof>
-          <cimlk:schalingsfactor>0.682195785</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.944181617</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>PM2.5</cimlk:stof>
-          <cimlk:schalingsfactor>0.605909751</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.933129063</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.903979761</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.916422218</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.908267555</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>z</cimlk:voertuigtype>
           <cimlk:wegsoort>e</cimlk:wegsoort>
           <cimlk:stof>PM10</cimlk:stof>
           <cimlk:schalingsfactor>0.940042505</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.920777617</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>PM10</cimlk:stof>
-          <cimlk:schalingsfactor>0.914172504</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
@@ -193,10 +92,10 @@
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
           <cimlk:stof>PM10</cimlk:stof>
-          <cimlk:schalingsfactor>0.766736994</cimlk:schalingsfactor>
+          <cimlk:schalingsfactor>0.914172504</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
@@ -210,17 +109,97 @@
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.933129063</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
           <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>NO2</cimlk:stof>
-          <cimlk:schalingsfactor>0.881274372</cimlk:schalingsfactor>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.908267555</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.916422218</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>m</cimlk:voertuigtype>
           <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>PM10</cimlk:stof>
-          <cimlk:schalingsfactor>0.844459992</cimlk:schalingsfactor>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.920777617</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>PM2.5</cimlk:stof>
+          <cimlk:schalingsfactor>0.526764736</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:stof>PM2.5</cimlk:stof>
+          <cimlk:schalingsfactor>0.605909751</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>e</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.944181617</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.903979761</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>e</cimlk:wegsoort>
+          <cimlk:stof>PM2.5</cimlk:stof>
+          <cimlk:schalingsfactor>0.848913021</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>PM2.5</cimlk:stof>
+          <cimlk:schalingsfactor>0.785518255</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:stof>PM2.5</cimlk:stof>
+          <cimlk:schalingsfactor>0.817435794</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>e</cimlk:wegsoort>
+          <cimlk:stof>PM2.5</cimlk:stof>
+          <cimlk:schalingsfactor>0.682195785</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
@@ -229,22 +208,6 @@
           <cimlk:wegsoort>c</cimlk:wegsoort>
           <cimlk:stof>NO2</cimlk:stof>
           <cimlk:schalingsfactor>0.875788269</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>z</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>NO2</cimlk:stof>
-          <cimlk:schalingsfactor>0.859139737</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>m</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>NO2</cimlk:stof>
-          <cimlk:schalingsfactor>0.774844628</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
@@ -258,12 +221,51 @@
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>NO2</cimlk:stof>
+          <cimlk:schalingsfactor>0.774844628</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
           <cimlk:wegsoort>c</cimlk:wegsoort>
           <cimlk:stof>NO2</cimlk:stof>
           <cimlk:schalingsfactor>0.756325515</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>PM10</cimlk:stof>
+          <cimlk:schalingsfactor>0.766736994</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>m</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:stof>PM10</cimlk:stof>
+          <cimlk:schalingsfactor>0.844459992</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>e</cimlk:wegsoort>
+          <cimlk:stof>NO2</cimlk:stof>
+          <cimlk:schalingsfactor>0.881274372</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>z</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>NO2</cimlk:stof>
+          <cimlk:schalingsfactor>0.859139737</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
       <cimlk:geometrie>
         <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:exterior>
@@ -274,21 +276,22 @@
         </gml:Polygon>
       </cimlk:geometrie>
     </cimlk:Maatregel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Maatregel gml:id="NL.imlk.M_09214908_751">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>M_09214908_751</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Maatregel gml:id="http://cimlk.nl/id/correctie/09214908_751">
+      <cimlk:identificatie>09214908_751</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>Schone bussen Arnhem</cimlk:naam>
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:wegsoort>e</cimlk:wegsoort>
           <cimlk:stof>NO2</cimlk:stof>
           <cimlk:schalingsfactor>0.14</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
@@ -297,6 +300,14 @@
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>b</cimlk:voertuigtype>
           <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>NO2</cimlk:stof>
+          <cimlk:schalingsfactor>0.14</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>b</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
           <cimlk:stof>NO2</cimlk:stof>
           <cimlk:schalingsfactor>0.14</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
@@ -313,46 +324,6 @@
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>b</cimlk:voertuigtype>
           <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>d</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>PM10</cimlk:stof>
-          <cimlk:schalingsfactor>0.36</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>b</cimlk:wegsoort>
-          <cimlk:stof>NOx</cimlk:stof>
-          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
-        </cimlk:Maatregelfactor>
-      </cimlk:maatregelfactoren>
-      <cimlk:maatregelfactoren>
-        <cimlk:Maatregelfactor>
-          <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>c</cimlk:wegsoort>
           <cimlk:stof>PM10</cimlk:stof>
           <cimlk:schalingsfactor>0.36</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
@@ -368,9 +339,9 @@
       <cimlk:maatregelfactoren>
         <cimlk:Maatregelfactor>
           <cimlk:voertuigtype>b</cimlk:voertuigtype>
-          <cimlk:wegsoort>e</cimlk:wegsoort>
-          <cimlk:stof>NO2</cimlk:stof>
-          <cimlk:schalingsfactor>0.14</cimlk:schalingsfactor>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:stof>PM10</cimlk:stof>
+          <cimlk:schalingsfactor>0.36</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
       <cimlk:maatregelfactoren>
@@ -381,7 +352,38 @@
           <cimlk:schalingsfactor>0.36</cimlk:schalingsfactor>
         </cimlk:Maatregelfactor>
       </cimlk:maatregelfactoren>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>b</cimlk:voertuigtype>
+          <cimlk:wegsoort>e</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>b</cimlk:voertuigtype>
+          <cimlk:wegsoort>d</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>b</cimlk:voertuigtype>
+          <cimlk:wegsoort>c</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
+      <cimlk:maatregelfactoren>
+        <cimlk:Maatregelfactor>
+          <cimlk:voertuigtype>b</cimlk:voertuigtype>
+          <cimlk:wegsoort>b</cimlk:wegsoort>
+          <cimlk:stof>NOx</cimlk:stof>
+          <cimlk:schalingsfactor>0.26</cimlk:schalingsfactor>
+        </cimlk:Maatregelfactor>
+      </cimlk:maatregelfactoren>
       <cimlk:geometrie>
         <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:exterior>
@@ -392,18 +394,18 @@
         </gml:Polygon>
       </cimlk:geometrie>
     </cimlk:Maatregel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:ReceptorWegverkeer gml:id="NL.imlk.RW_27364178_682032">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>RW_27364178_682032</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:ReceptorWegverkeer gml:id="http://cimlk.nl/id/receptorwegverkeer/27364178_682032">
+      <cimlk:identificatie>27364178_682032</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>Rijkswaterstaat</cimlk:naam>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:pos>231468.0 557296.061</gml:pos>
@@ -412,18 +414,18 @@
       <cimlk:toetspuntSoort>Alle</cimlk:toetspuntSoort>
       <cimlk:grondslag>1</cimlk:grondslag>
     </cimlk:ReceptorWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:ReceptorWegverkeer gml:id="NL.imlk.RW_27364178_682030">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>RW_27364178_682030</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:ReceptorWegverkeer gml:id="http://cimlk.nl/id/receptorwegverkeer/27364178_682030">
+      <cimlk:identificatie>27364178_682030</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>Rijkswaterstaat</cimlk:naam>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:pos>231403.0 557295.825</gml:pos>
@@ -432,18 +434,18 @@
       <cimlk:toetspuntSoort>Alle</cimlk:toetspuntSoort>
       <cimlk:grondslag>0</cimlk:grondslag>
     </cimlk:ReceptorWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:ReceptorWegverkeer gml:id="NL.imlk.RW_01178692_80590">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>RW_01178692_80590</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:ReceptorWegverkeer gml:id="http://cimlk.nl/id/receptorwegverkeer/01178692_80590">
+      <cimlk:identificatie>01178692_80590</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:naam>Randweg, Meppel</cimlk:naam>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:pos>208218.928675997 522382.621511064</gml:pos>
@@ -455,19 +457,16 @@
         <cimlk:Overdrachtskenmerken>
           <cimlk:bebouwingstype>3</cimlk:bebouwingstype>
           <cimlk:bomenfactor>1</cimlk:bomenfactor>
-          <cimlk:wegdeel xlink:href="#NL.imlk.W_01178692_49257"></cimlk:wegdeel>
+          <cimlk:wegdeel xlink:href="http://cimlk.nl/id/wegdeel/01178692_49257"></cimlk:wegdeel>
         </cimlk:Overdrachtskenmerken>
       </cimlk:overdrachtskenmerken>
     </cimlk:ReceptorWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_da343398-cbb7-465e-ad61-65c64a2ad74e">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_da343398-cbb7-465e-ad61-65c64a2ad74e</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085919">
+      <cimlk:identificatie>20221214085919</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>12.591</cimlk:no2Concentratie>
@@ -499,17 +498,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1033409"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1033409"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_5223bfe5-492f-4f49-a9bf-815f95815eea">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_5223bfe5-492f-4f49-a9bf-815f95815eea</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085919">
+      <cimlk:identificatie>20221214085919</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>122.623</cimlk:no2Concentratie>
@@ -541,17 +537,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1033621"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1033621"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_afd590f7-8403-4e50-b50b-21872db891e2">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_afd590f7-8403-4e50-b50b-21872db891e2</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085919">
+      <cimlk:identificatie>20221214085919</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>111.795</cimlk:no2Concentratie>
@@ -583,17 +576,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1033713"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1033713"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_8b4a28c2-70e6-4284-b57d-930323321b56">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_8b4a28c2-70e6-4284-b57d-930323321b56</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085919">
+      <cimlk:identificatie>20221214085919</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>124.689</cimlk:no2Concentratie>
@@ -625,17 +615,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1033793"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1033793"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_a9ec0c45-78f7-42b7-8f9d-d95a5766ab4b">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_a9ec0c45-78f7-42b7-8f9d-d95a5766ab4b</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085919">
+      <cimlk:identificatie>20221214085919</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>12.336</cimlk:no2Concentratie>
@@ -667,17 +654,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034028"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034028"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_f2ba2d3a-a5e4-4162-85ce-277dd82d34a0">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_f2ba2d3a-a5e4-4162-85ce-277dd82d34a0</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085919">
+      <cimlk:identificatie>20221214085919</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>118.268</cimlk:no2Concentratie>
@@ -709,17 +693,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034204"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034204"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_60f25037-064b-4081-8920-fd25de59759c">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_60f25037-064b-4081-8920-fd25de59759c</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>123.044</cimlk:no2Concentratie>
@@ -751,17 +732,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034214"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034214"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_33aa8190-ca84-474e-987a-325b9fd45a50">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_33aa8190-ca84-474e-987a-325b9fd45a50</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>125.924</cimlk:no2Concentratie>
@@ -793,17 +771,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034321"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034321"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_2821fad1-6691-49d0-9ecf-c6d39f960ed8">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_2821fad1-6691-49d0-9ecf-c6d39f960ed8</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>121.366</cimlk:no2Concentratie>
@@ -835,17 +810,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034503"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034503"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_2c0e3015-963b-4d31-bd04-ec159fc0337e">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_2c0e3015-963b-4d31-bd04-ec159fc0337e</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>124.553</cimlk:no2Concentratie>
@@ -877,17 +849,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034665"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034665"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_c8511990-0326-4ce8-8d86-d4162883854c">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_c8511990-0326-4ce8-8d86-d4162883854c</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>118.372</cimlk:no2Concentratie>
@@ -919,17 +888,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1034963"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1034963"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_2a71b8d5-85e5-48e7-afd2-f893db59e93d">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_2a71b8d5-85e5-48e7-afd2-f893db59e93d</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>121.246</cimlk:no2Concentratie>
@@ -961,17 +927,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1035115"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1035115"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_5b54464a-f564-4b74-9481-4ec57ec1b5b1">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_5b54464a-f564-4b74-9481-4ec57ec1b5b1</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>112.863</cimlk:no2Concentratie>
@@ -1003,17 +966,14 @@
       <cimlk:ecAchtergrondConcentratie>0.258</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.017</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1035182"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1035182"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_6b4e1bbe-503d-4dfb-9ef9-da4c86e68b66">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_6b4e1bbe-503d-4dfb-9ef9-da4c86e68b66</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>15.623</cimlk:no2Concentratie>
@@ -1045,17 +1005,14 @@
       <cimlk:ecAchtergrondConcentratie>0.217</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.035</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1059222"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1059222"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_6f982f5c-80b3-430d-9381-3c0605772888">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_6f982f5c-80b3-430d-9381-3c0605772888</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>99.329</cimlk:no2Concentratie>
@@ -1087,17 +1044,14 @@
       <cimlk:ecAchtergrondConcentratie>0.227</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.025</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1060826"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1060826"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_8f321b87-9f38-4584-8bda-cc5bb759ab9e">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_8f321b87-9f38-4584-8bda-cc5bb759ab9e</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>109.776</cimlk:no2Concentratie>
@@ -1129,17 +1083,14 @@
       <cimlk:ecAchtergrondConcentratie>0.222</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.06</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1287868"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1287868"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_87c87597-463f-4d99-bdc0-e663f1008f55">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_87c87597-463f-4d99-bdc0-e663f1008f55</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>109.118</cimlk:no2Concentratie>
@@ -1171,17 +1122,14 @@
       <cimlk:ecAchtergrondConcentratie>0.222</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.06</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_1290166"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_1290166"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_7cefe99b-2044-4a94-918e-ea60ea890b58">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_7cefe99b-2044-4a94-918e-ea60ea890b58</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>133.017</cimlk:no2Concentratie>
@@ -1213,17 +1161,14 @@
       <cimlk:ecAchtergrondConcentratie>0.26</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.019</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15535646"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15535646"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_884636c7-1dd6-4f18-9044-310464b55ef0">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_884636c7-1dd6-4f18-9044-310464b55ef0</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>118.602</cimlk:no2Concentratie>
@@ -1255,17 +1200,14 @@
       <cimlk:ecAchtergrondConcentratie>0.313</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.045</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15535682"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15535682"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_e5873120-1c4c-4984-a931-69cd8cf2b6b8">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_e5873120-1c4c-4984-a931-69cd8cf2b6b8</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>15.726</cimlk:no2Concentratie>
@@ -1297,17 +1239,14 @@
       <cimlk:ecAchtergrondConcentratie>0.244</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.057</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15535714"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15535714"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_3384c690-4ee3-46ce-aaf2-b489fcc38107">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_3384c690-4ee3-46ce-aaf2-b489fcc38107</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085920">
+      <cimlk:identificatie>20221214085920</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>128.099</cimlk:no2Concentratie>
@@ -1339,17 +1278,14 @@
       <cimlk:ecAchtergrondConcentratie>0.227</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.049</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15535789"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15535789"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_5f46c24f-e59f-41c1-bc8d-70d9a7f3eb63">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_5f46c24f-e59f-41c1-bc8d-70d9a7f3eb63</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>122.116</cimlk:no2Concentratie>
@@ -1381,17 +1317,14 @@
       <cimlk:ecAchtergrondConcentratie>0.239</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.062</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15535955"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15535955"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_2dc18331-aec9-4f56-b8d5-363f4d52adb8">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_2dc18331-aec9-4f56-b8d5-363f4d52adb8</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>119.039</cimlk:no2Concentratie>
@@ -1423,17 +1356,14 @@
       <cimlk:ecAchtergrondConcentratie>0.26</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.019</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15535963"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15535963"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_693d7c9d-29f2-45c0-b198-374bc37bd458">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_693d7c9d-29f2-45c0-b198-374bc37bd458</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>126.416</cimlk:no2Concentratie>
@@ -1465,17 +1395,14 @@
       <cimlk:ecAchtergrondConcentratie>0.227</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.049</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15536005"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15536005"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_27fecb0d-c092-490f-8c78-ee2d63a7c4d2">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_27fecb0d-c092-490f-8c78-ee2d63a7c4d2</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>127.077</cimlk:no2Concentratie>
@@ -1507,17 +1434,14 @@
       <cimlk:ecAchtergrondConcentratie>0.26</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.019</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15536020"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15536020"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_80ed624d-31d7-4150-860e-2e900ba575bf">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_80ed624d-31d7-4150-860e-2e900ba575bf</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>131.009</cimlk:no2Concentratie>
@@ -1549,17 +1473,14 @@
       <cimlk:ecAchtergrondConcentratie>0.313</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.045</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15536102"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15536102"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_a551a18f-5a4c-43e1-a33b-c73e978c9b6d">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_a551a18f-5a4c-43e1-a33b-c73e978c9b6d</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>133.024</cimlk:no2Concentratie>
@@ -1591,17 +1512,14 @@
       <cimlk:ecAchtergrondConcentratie>0.26</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.019</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15536183"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15536183"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_91adbdae-0cb6-4049-8b76-fc080968f32c">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_91adbdae-0cb6-4049-8b76-fc080968f32c</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>120.454</cimlk:no2Concentratie>
@@ -1633,17 +1551,14 @@
       <cimlk:ecAchtergrondConcentratie>0.227</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.049</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_15536203"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_15536203"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_e27626a1-9c8e-447f-95a6-d24b8ccc1af1">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_e27626a1-9c8e-447f-95a6-d24b8ccc1af1</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>119.203</cimlk:no2Concentratie>
@@ -1675,17 +1590,14 @@
       <cimlk:ecAchtergrondConcentratie>0.313</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.045</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_682030"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_682030"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:RekenresultaatWegverkeer gml:id="NL.imlk.BB_13e5c5ca-53dc-4c88-9960-e536755e0cf0">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>BB_13e5c5ca-53dc-4c88-9960-e536755e0cf0</cimlk:lokaalID>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:RekenresultaatWegverkeer gml:id="http://cimlk.nl/id/rekenresultaatwegverkeer/20221214085921">
+      <cimlk:identificatie>20221214085921</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens/>
       <cimlk:rekentoolVersie>2021-rbl_20210416_b450dd4f12</cimlk:rekentoolVersie>
       <cimlk:rekenjaar>2020</cimlk:rekenjaar>
       <cimlk:no2Concentratie>125.109</cimlk:no2Concentratie>
@@ -1717,18 +1629,19 @@
       <cimlk:ecAchtergrondConcentratie>0.26</cimlk:ecAchtergrondConcentratie>
       <cimlk:ecHWNdubtelcorrectie>-0.019</cimlk:ecHWNdubtelcorrectie>
       <cimlk:ecGCNenEigenCorrectie>0.0</cimlk:ecGCNenEigenCorrectie>
-      <cimlk:receptor xlink:href="#NL.imlk.RW_27364178_682032"></cimlk:receptor>
+      <cimlk:receptor xlink:href="http://cimlk.nl/id/receptorwegverkeer/27364178_682032"></cimlk:receptor>
     </cimlk:RekenresultaatWegverkeer>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_20164548_0">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_20164548_0</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/20164548_0">
+      <cimlk:identificatie>20164548_0</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>Burg van Woelderenlaan</cimlk:straatnaam>
       <cimlk:rekenmethode>SRM1</cimlk:rekenmethode>
       <cimlk:wegsoort>c</cimlk:wegsoort>
@@ -1763,23 +1676,23 @@
           <cimlk:intensiteit>78</cimlk:intensiteit>
         </cimlk:VerkeersgegevensWeg>
       </cimlk:verkeersgegevens>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>27991.0 386249.0 28006.0 386229.0 28025.0 386201.0 28046.0 386170.0</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_20164548_1">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_20164548_1</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/20164548_1">
+      <cimlk:identificatie>20164548_1</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>Burg van Woelderenlaan</cimlk:straatnaam>
       <cimlk:rekenmethode>SRM1</cimlk:rekenmethode>
       <cimlk:wegsoort>c</cimlk:wegsoort>
@@ -1814,23 +1727,23 @@
           <cimlk:intensiteit>78</cimlk:intensiteit>
         </cimlk:VerkeersgegevensWeg>
       </cimlk:verkeersgegevens>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>27938.0 386312.0 27960.0 386288.0 27986.0 386256.0 27991.0 386249.0</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_20164548_26">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_20164548_26</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/20164548_26">
+      <cimlk:identificatie>20164548_26</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>Sloeweg</cimlk:straatnaam>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
       <cimlk:wegsoort>92</cimlk:wegsoort>
@@ -1866,23 +1779,23 @@
           <cimlk:intensiteit>124</cimlk:intensiteit>
         </cimlk:VerkeersgegevensWeg>
       </cimlk:verkeersgegevens>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>28018.0 387052.0 28090.0 387079.0 28113.7 387089.0</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_20164548_27">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_20164548_27</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/20164548_27">
+      <cimlk:identificatie>20164548_27</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>Sloeweg</cimlk:straatnaam>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
       <cimlk:wegsoort>92</cimlk:wegsoort>
@@ -1918,23 +1831,23 @@
           <cimlk:intensiteit>124</cimlk:intensiteit>
         </cimlk:VerkeersgegevensWeg>
       </cimlk:verkeersgegevens>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>28113.7 387089.0 28129.0 387095.0 28207.2 387130.0</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_20164548_28">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_20164548_28</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/20164548_28">
+      <cimlk:identificatie>20164548_28</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>Sloeweg</cimlk:straatnaam>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
       <cimlk:wegsoort>92</cimlk:wegsoort>
@@ -1970,23 +1883,23 @@
           <cimlk:intensiteit>124</cimlk:intensiteit>
         </cimlk:VerkeersgegevensWeg>
       </cimlk:verkeersgegevens>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>28207.2 387130.0 28300.6 387173.0</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_27364178_1517887">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_27364178_1517887</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/27364178_1517887">
+      <cimlk:identificatie>27364178_1517887</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>RYKSWG</cimlk:straatnaam>
       <cimlk:wegnummer>4</cimlk:wegnummer>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
@@ -2038,23 +1951,23 @@
           <cimlk:hoogte>0.715</cimlk:hoogte>
         </cimlk:Overdrachtsobject>
       </cimlk:overdrachtsobjectRechts>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>79128.8975999989 397124.878899999 79144.1559999995 397109.489 79169.5100000016 397081.713 79197.2859999985 397047.155000001 79198.9473999999 397044.798</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_27364178_1517888">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_27364178_1517888</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/27364178_1517888">
+      <cimlk:identificatie>27364178_1517888</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>RYKSWG</cimlk:straatnaam>
       <cimlk:wegnummer>4</cimlk:wegnummer>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
@@ -2106,23 +2019,23 @@
           <cimlk:hoogte>0.735</cimlk:hoogte>
         </cimlk:Overdrachtsobject>
       </cimlk:overdrachtsobjectRechts>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>79198.9473999999 397044.798 79225.061999999 397007.750999998 79243.4719999991 396978.359999999 79267.5340000018 396934.758000001 79284.9750000015 396898.908 79304.675999999 396849.815000001 79324.9780000001 396783.044 79335.1979999989 396733.543000001 79339.5890000015 396706.982999999 79343.5500000007 396676.087000001 79343.7230000012 396674.737 79344.8139999993 396658.197999999 79346.3399999999 396646.660999998 79346.9860000014 396609.842 79346.8249999993 396586.587000001 79344.2410000004 396532.649999999 79338.4270000011 396487.109999999 79330.1909999996 396436.726 79322.7899000011 396399.547600001</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_27364178_1517892">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_27364178_1517892</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/27364178_1517892">
+      <cimlk:identificatie>27364178_1517892</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>RYKSWG</cimlk:straatnaam>
       <cimlk:wegnummer>4</cimlk:wegnummer>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
@@ -2167,23 +2080,23 @@
           <cimlk:hoogte>1.205</cimlk:hoogte>
         </cimlk:Overdrachtsobject>
       </cimlk:overdrachtsobjectLinks>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>79210.0452000014 395791.910500001 79210.1451999992 395792.370700002 79231.3839000016 395890.118999999</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_27364178_1517893">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_27364178_1517893</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/27364178_1517893">
+      <cimlk:identificatie>27364178_1517893</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>RYKSWG</cimlk:straatnaam>
       <cimlk:wegnummer>4</cimlk:wegnummer>
       <cimlk:rekenmethode>SRM2</cimlk:rekenmethode>
@@ -2228,23 +2141,23 @@
           <cimlk:hoogte>1.295</cimlk:hoogte>
         </cimlk:Overdrachtsobject>
       </cimlk:overdrachtsobjectLinks>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>79231.3839000016 395890.118999999 79231.4838999994 395890.579100002 79296.2320000008 396188.574000001 79310.7329999991 396249.193 79320.5872000009 396298.978999998</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-  <gml:featureMember>
-    <cimlk:Wegdeel gml:id="NL.imlk.W_01178692_49257">
-      <cimlk:identificatie>
-        <cimlk:NEN3610ID>
-          <cimlk:namespace>NL.imlk</cimlk:namespace>
-          <cimlk:lokaalID>W_01178692_49257</cimlk:lokaalID>
+  </cimlk:featureMember>
+  <cimlk:featureMember>
+    <cimlk:Wegdeel gml:id="http://cimlk.nl/id/wegdeel/01178692_49257">
+      <cimlk:identificatie>01178692_49257</cimlk:identificatie>
+      <cimlk:domein>imlk</cimlk:domein>
+      <cimlk:registratiegegevens>
+        <cimlk:Registratie>
+          <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
           <cimlk:versie>2022_2021</cimlk:versie>
-        </cimlk:NEN3610ID>
-      </cimlk:identificatie>
+        </cimlk:Registratie>
+      </cimlk:registratiegegevens>
       <cimlk:straatnaam>Randweg</cimlk:straatnaam>
       <cimlk:rekenmethode>SRM1</cimlk:rekenmethode>
       <cimlk:wegsoort>c</cimlk:wegsoort>
@@ -2279,12 +2192,11 @@
           <cimlk:intensiteit>68</cimlk:intensiteit>
         </cimlk:VerkeersgegevensWeg>
       </cimlk:verkeersgegevens>
-      <cimlk:tijdstipRegistratie>2022-02-09T13:02:00Z</cimlk:tijdstipRegistratie>
       <cimlk:geometrie>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
           <gml:posList>208172.0 522419.0 208243.0 522329.0</gml:posList>
         </gml:LineString>
       </cimlk:geometrie>
     </cimlk:Wegdeel>
-  </gml:featureMember>
-</gml:FeatureCollection>
+  </cimlk:featureMember>
+</cimlk:FeatureCollectionIMLK>
