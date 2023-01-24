@@ -393,7 +393,7 @@ _target {&#xD;
 	def date = new Date()&#xD;
 	def sdf = new SimpleDateFormat("yyyyMMddHHmmss")&#xD;
 	newid = sdf.format(date)&#xD;
-	id(_project.vars.namespace+"rekenresultaatwegverkeer/"+newid)&#xD;
+	id(_project.vars.namespace+"rekenresultaatveehouderij/"+newid)&#xD;
 	identificatie(newid)&#xD;
 	pm10AchtergrondConcentratie(_source.p.pm10AchtergrondConcentratie.value())&#xD;
 	pm10AchtergrondOverschrijdingsdagen(_source.p.pm10AchtergrondOverschrijdingsdagen.value())&#xD;

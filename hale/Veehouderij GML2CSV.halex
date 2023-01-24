@@ -3,7 +3,7 @@
     <name>Veehouderij GML2CSV</name>
     <author>dgree</author>
     <created>2022-03-16T09:32:10.080+01:00</created>
-    <modified>2022-05-27T15:27:01.363+02:00</modified>
+    <modified>2023-01-24T09:35:43.812+01:00</modified>
     <save-config action-id="project.save" provider-id="eu.esdihumboldt.hale.io.project.hale25.xml.writer">
         <setting name="charset">UTF-8</setting>
         <setting name="projectFiles.separate">false</setting>
@@ -876,6 +876,12 @@
     <property name="defaultGeometry:{http://cimlk.nl/1.0}EmissiespecificatieType/3">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}EmissiespecificatieType/4">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}EmissiespecificatieType/count">4</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}FeatureCollectionIMLKType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}FeatureCollectionIMLKType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}FeatureCollectionIMLKType/count">2</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}GeoObjectType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}GeoObjectType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
+    <property name="defaultGeometry:{http://cimlk.nl/1.0}GeoObjectType/count">2</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}HuisvestingssysteemType/1">{http://www.opengis.net/gml/3.2}boundedBy</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}HuisvestingssysteemType/2">{http://www.opengis.net/gml/3.2/BoundingShapeType}choice_1</property>
     <property name="defaultGeometry:{http://cimlk.nl/1.0}HuisvestingssysteemType/count">2</property>
