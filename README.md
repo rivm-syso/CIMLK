@@ -107,13 +107,19 @@ Het XML Schema bestand moet handmatig worden aangepast, omdat hier standaard nie
 ### Aanpassen transformaties in HALE
 Er zijn transformaties van en naar SHP en GML gemaakt in HALE studio. De transformaties van en naar SHP zijn inmiddels niet meer relevant, omdat is gekozen om gebruik te maken van OGR2OGR. Van de transformaties van en naar GML moet nog worden bepaald of ze ook gebruikt zullen worden in CIMLK of dat ze zelf ontwikkeld worden in Java. In dat laatste geval kunnen de HALE transformaties of de daarin gegenereerde voorbeeldbestanden worden gebruikt als basis en controlemechanisme.
 
+De transformaties zijn ontwikkeld in een voorloper van versie 5.0 (SNAPSHOT versie 4.2) van HALE Studio. Inmiddels is HALE Studio versie 5.0 beschikbaar. De projecten zijn echter nog niet getest met deze versie.
+
 Er zijn vier HALE studio projecten beschikbaar voor de conversie van en naar GML:
 - Wegverkeer CSV2GML.halex - converteert gegevens voor wegverkeer van CSV naar GML
 - Wegverkeer GML2CSV.halex - converteert gegevens voor wegverkeer van GML naar CSV
 - Veehouderij CSV2GML.halex - converteert gegevens voor veehouderijen van CSV naar GML
 - Veehouderij GML2CSV.halex - converteert gegevens voor veehouderijen van GML naar CSV
 
-Voor elk project zijn er ook batch files en testdata bestanden beschikbaar om het bijbehorende project te testen. De testdata bestanden zijn opgenomen in de map `/hale/input/`.
+De projecten voor wegverkeer zijn relatief eenvoud van opzet, omdat velden in de bronbestanden grotendeels één-op-één kunnen worden overgezet naar doelbestanden. De projecten voor de veehouderij bestanden zijn complexer, omdat het veehouderij CSV formaat een gedenormaliseerde structuur is waarin allerlei gegevens redundant aanwezig zijn. Dat betekent dat het converteren van CSV naar GML vraagt om het samenvoegen van dubbele gegevens. Hiervoor wordt de Merge operatie van HALE Studio gebruikt. Het converteren van GML naar CSV vraagt om het negeren van dubbele gegevens. Voor die laatste wordt gebruik gemaakt van Groovy scripts die gebruik maken van een zogenaamde collector in HALE studio. Een dergelijke collector kun je zien als een soort globale variabele, waarin gegevens kunnen worden verzameld.
+
+In alle projecten die converteren van CSV naar GML zijn projectvariabelen opgenomen voor de namespace, monitoringjaar en monitoringronde. De eerste zorgt ervoor dat de namespace niet hard gecodeerd hoeft te worden op allerlei plaatsen. De laatste twee zijn gegevens die niet in de originele CSV bestanden aanwezig zijn en dus moeten worden meegegeven als command-line argument om ze op te kunnen nemen in het GML bestand.
+
+Voor elk project zijn er ook batch files en testdata bestanden beschikbaar om het bijbehorende project te testen. De testdata bestanden zijn opgenomen in de map `/hale/input/`. De uitvoer van die batch files wordt geplaatst in de map `/hale/output/`.
 
 Het GML applicatieschema wordt gebruikt in de vier genoemde HALE Studio projecten. 
 Op het moment dat dit applicatieschema wijzigt dan dienen deze projecten ook te worden bijgewerkt.
@@ -121,8 +127,3 @@ Dat betekent dat er minimaal `Reload and update schemas` moet worden geselecteer
 Daarnaast zullen inhoudelijke wijzigingen in het schema moeten worden doorgevoerd in de transformaties zelf.
 
 De HALE studio projectbestanden bevatten standaard absolute paden naar de computer van de gebruiker die de projecten heeft aangepast. Deze absolute paden moeten handmatig worden vervangen door relatieve paden. Hiervoor kan een zoek-en-vervang functie in een teksteditor worden gebruikt. Na aanpassing zou de prefix voor de bestandsnamen alleen nog `file:/` moeten zijn.
-
-transformaties en validaties uit te voeren.
-Wanneer het XSD schema is veranderd dan dienen de HALE Studio projecten in de map `hale` geupdate te worden.
-Start hiervoor elk HALE Studio project in de map op en update de referenties naar het nieuwe schema.
-Voeg daarna eventuele verdere aanpassingen toe waarop gecontroleerd moet worden.
