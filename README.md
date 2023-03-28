@@ -17,6 +17,7 @@ De volgende stappen dienen hiervoor te worden gevolgd:
 - Aanpassen model in Sparx Enterprise Architect
 - Genereren Respec HTML document
 - Aanpassen afbeeldingen van diagrammen
+- Publiceren en versioneren informatiemodel
 - Genereren CSV bestanden van informatiemodel
 - Genereren GML applicationschema met SchapeChange
 - Aanpassen transformaties in HALE
@@ -39,17 +40,17 @@ De visualisatie van het informatiemodel vindt plaats met ReSpec.
 Dit is een open source tool die ervoor zorgt dat (HTML) documenten er op een standaard manier uitzien.
 ReSpec werkt door een HTML document te verrijken met extra informatie, zoals welke hoofdstukken en paragrafen erin zitten.
 Dit verrijkte HTML document wordt voor CIMLK gegenereerd met een script in Sparx Enterprise Architect.
-Het document wordt op Github opgeslagen in `docs/index.html` en automatisch gepubliceerd als webpagina.
-Voordat je begint met genereren moet je de datum in het bestand `informatiemodel/respec-basis.html` wijzigen in de huidige datum.
+Het document wordt op Github opgeslagen in `index.html` en automatisch gepubliceerd als webpagina.
+Voordat je begint met genereren moet je de datum in het bestand `respec-basis.html` wijzigen in de huidige datum.
 Het genereren van het ReSpec HTML document vindt plaats met een script. 
 Ga hiervoor met je muis in de treeview van Sparx Enterprise Architect naar de map `CIMLK` in het informatiemodel.
 Druk op je rechtermuisknop en selecteer in het pop-up menu `Specialize -> Scripts -> Export to Respec`.
 Het script voert de volgende stappen uit en voegt informatie uit verschillende bestanden samen:
-- Creëren Respec HTML document inclusief inleidende teksten op basis van `informatiemodel/respec-basis.html`
+- Creëren Respec HTML document inclusief inleidende teksten op basis van `respec-basis.html`
 - Toevoegen van informatie over de objectypen en attributen vanuit Sparx Enterprise Architect
-- Toevoegen van bijlagen over de uitwisselbestanden op basis van `informatiemodel/bijlagen.html`
+- Toevoegen van bijlagen over de uitwisselbestanden op basis van `bijlagen.html`
 
-Het resultaat van het script wordt opgeslagen onder `docs/index.html`. Merk op dat dit alleen succesvol werkt als Sparx Enterprise Architect is geopend door het modelbestand aan te klikken en niet door het te openen vanuit Sparx Enterprise Architect. In het laatste geval staat de huidige directory niet goed ingesteld en dan kunnen de scripts de relevante bestanden niet lokaliseren.
+Het resultaat van het script wordt opgeslagen als `index.html`. Merk op dat dit alleen succesvol werkt als Sparx Enterprise Architect is geopend door het modelbestand aan te klikken en niet door het te openen vanuit Sparx Enterprise Architect. In het laatste geval staat de huidige directory niet goed ingesteld en dan kunnen de scripts de relevante bestanden niet lokaliseren.
 
 Er blijken problemen te zijn met het weergeven van het informatiemodel in de RIVM desktopomgeving als gebruik wordt gemaakt van de laatste versie van ReSpec (het menu scrollt mee met de inhoud). Om die reden wordt een kopie van het `index.html` gemaakt naar `rivm.html` waarin de verwijzing naar de respec JavaScript bibliotheel wordt aangepast naar een eigen aangepaste kopie van een oude versie van de ReSpec bibliotheek (`rivm-respec-w3c-v26.13.4.js`). Dat document is dus specifiek bedoeld door gebruik binnen de RIVM desktopomgeving.
 
@@ -60,6 +61,14 @@ Als er op wijzigingen in het diagram zijn dan moeten de afbeeldingen van (delen 
 Kopieer hiervoor de relevante diagramdelen uit Sparx Enterprise Architect naar een bitmap met bijvoorbeeld IrfanView en sla deze op onder de naam van het originele afbeeldingsbestand. 
 Als de locaties of omvang van de objecttypes zijn aangepast, dan moeten ook de image maps in het HTML document worden aangepast. 
 De in de image map gebruikte coördinaten kun je in bijvoorbeeld IrfanView zien. 
+
+### Publiceren en versioneren informatiemodel
+Om het informatiemodel te publiceren dienen de wijzigingen gecommit en gepushed te worden naar GitHub. Wijzigingen worden standaard aangebracht op de werkversie van het informatiemodel die staat in de map `werkversie`. Het script in Sparx Enterprise Architect dat de ReSpec HTML genereert, zet het bestand ook standaard in die map neer. Wijzigingen in de werkversie van het informatiemodel hebben veelal weinig impact, omdat ze typisch niet direct worden geïncorporeerd in de software.
+
+Wijzigingen die meer formeel moeten worden behandeld moeten worden voorzien van een versienummer. Dit soort wijzigingen leiden ertoe dat de voorheen formeel gepubliceerde versie wordt gearchiveerd en de nieuwe versie de actieve formele versie wordt. Dit vraagt een aantal stappen:
+- Alle bestanden in de hoofdmap `doc` worden verplaatst naar een map met de naam van het oude versienummer (bijvoorbeeld `doc/1.0`)
+- Alle bestanden in de map `werkversie` worden verplaatst naar de hoofdmap
+- Het bestand `respec-basis.html` (en daarmee indirect het bestand `index.html`) wordt aangepast met de bijgewerkte paden (`thisVersion` en `latestVersion`) en versienummer (`subtitle`).
 
 ### Genereren CSV bestanden van informatiemodel
 Naast het Respec document wordt informatie over de objecttypen en attributen ook als CSV bestand beschikbaar gesteld. 
