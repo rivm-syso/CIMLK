@@ -135,6 +135,16 @@ ReSpec is een standaard JavaScript bibliotheek die het mogelijk maakt om HTML do
 
 Om het profiel aan te passen, lokaal te testen en een deployment versie te genereren is het nodig om zelf een clone van de ReSpec repository (`https://github.com/w3c/respec`) te maken en daar het profiel in te kopiëren. Dat betekent dat de bestanden in `respec/src` en `respec/profiles` naar de mappenstructuur van ReSpec moeten worden gekopieerd. Na het clonen van de ReSpec repository kan met het commando `npm install` ReSpec lokaal worden geinitialiseerd. 
 
-Het starten van de ReSpec testomgeving gaat met het commando `npm start -- --browser Chrome`. Als de aanpassingen in het profiel na testen goed zijn dan kan een build van ReSpec met daarin het RIVM profiel worden gemaakt met het commando `node ./tools/builder.js rivm`. Het resulterende JavaScript bestand staat vervolgens in de `builds` map. Het bestand `builds/respec-rivm.js` moet vervolgens worden gekopieerd naar de map `docs/`.
+Het starten van de ReSpec testomgeving gaat met het commando
+```cmd
+npm start -- --browser Chrome
+```
+
+Als de aanpassingen in het profiel na testen goed zijn dan kan een build van ReSpec met daarin het RIVM profiel worden gemaakt met het commando 
+```cmd
+node ./tools/builder.js rivm
+```
+
+Het resulterende JavaScript bestand staat vervolgens in de `builds` map. Het bestand `builds/respec-rivm.js` moet vervolgens worden gekopieerd naar de map `docs/`.
 
 Er is voor gekozen om het W3C profiel als basis te gebruiken en niet een geheel nieuw eigen profiel op te zetten. Praktisch zitten er daarmee in het profiel ook nog allerlei W3C specifieke elementen, die alleen niet gebruikt worden voor RIVM.
