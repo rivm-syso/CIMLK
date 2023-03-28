@@ -30,7 +30,7 @@ Het informatiemodel wordt beheerd in Sparx Enterprise Architect. Het is gemaakt 
 
 Er zijn ook allerlei scripts ontwikkeld in Sparx Enterprise Architect. Er heeft geen uitgebreide test plaats gevonden of al deze scripts ook nog goed werken in versie 16.
 
-Het informatiemodel is gebaseerd op het Metamodel voor Informatiemodellering. Ter ondersteuning van dit metamodel moet je een toolbox installleren in Sparx Enterprise Architect. Er is gebruik gemaakt van versie 1.1 van de toolbox die je kunt downloaden op `https://register.geostandaarden.nl/informatiemodel/mim/`. 
+Het informatiemodel is gebaseerd op het Metamodel voor Informatiemodellering (zie `https://docs.geostandaarden.nl/mim/mim/`). Ter ondersteuning van dit metamodel moet je een toolbox installleren in Sparx Enterprise Architect. Er is gebruik gemaakt van versie 1.1 van de toolbox die je kunt downloaden op `https://register.geostandaarden.nl/informatiemodel/mim/`. 
 
 In de desktop omgeving van RIVM is versie 16 (32-bit) aanwezig en is versie 1.1 van de toolbox geïnstalleerd. Toegang tot het tool kan worden aangevraagd. 
 
@@ -51,6 +51,8 @@ Het script voert de volgende stappen uit en voegt informatie uit verschillende b
 
 Het resultaat van het script wordt opgeslagen onder `docs/index.html`. Merk op dat dit alleen succesvol werkt als Sparx Enterprise Architect is geopend door het modelbestand aan te klikken en niet door het te openen vanuit Sparx Enterprise Architect. In het laatste geval staat de huidige directory niet goed ingesteld en dan kunnen de scripts de relevante bestanden niet lokaliseren.
 
+Er blijken problemen te zijn met het weergeven van het informatiemodel in de RIVM desktopomgeving als gebruik wordt gemaakt van de laatste versie van ReSpec (het menu scrollt mee met de inhoud). Om die reden wordt een kopie van het `index.html` gemaakt naar `rivm.html` waarin de verwijzing naar de respec JavaScript bibliotheel wordt aangepast naar een eigen aangepaste kopie van een oude versie van de ReSpec bibliotheek (`rivm-respec-w3c-v26.13.4.js`). Dat document is dus specifiek bedoeld door gebruik binnen de RIVM desktopomgeving.
+
 ### Aanpassen afbeeldingen van diagrammen
 In het ReSpec HTML bestand wordt op een aantal plaatsen verwezen naar afbeeldingen van stukken van het informatiemodel.
 Deze zijn opgeslagen in de map `docs`.
@@ -65,7 +67,7 @@ Dit is voor bijvoorbeeld de ontwikkelaars een praktische manier om het informati
 Er zijn twee scripts beschikbaar in het informatiemodel om de CSV bestanden te raadplegen. 
 Deze scripts zijn te starten via `Specialize -> Scripts -> Export attributes` en `Specialize -> Scripts -> Export objecttypes`.
 
-### Genereren applicationschema met ShapeChange
+### Genereren GML applicationschema met ShapeChange
 Naast documentatie over de inhoud van het informatiemodel wordt ook een XSD schema gegenereerd ter ondersteuning van de GML uitwisselstandaard.
 Dit schema moet na aanpassingen in het informatiemodel ook aangepast worden.
 
@@ -115,7 +117,7 @@ Er zijn vier HALE studio projecten beschikbaar voor de conversie van en naar GML
 - Veehouderij CSV2GML.halex - converteert gegevens voor veehouderijen van CSV naar GML
 - Veehouderij GML2CSV.halex - converteert gegevens voor veehouderijen van GML naar CSV
 
-De projecten voor wegverkeer zijn relatief eenvoud van opzet, omdat velden in de bronbestanden grotendeels één-op-één kunnen worden overgezet naar doelbestanden. De projecten voor de veehouderij bestanden zijn complexer, omdat het veehouderij CSV formaat een gedenormaliseerde structuur is waarin allerlei gegevens redundant aanwezig zijn. Dat betekent dat het converteren van CSV naar GML vraagt om het samenvoegen van dubbele gegevens. Hiervoor wordt de Merge operatie van HALE Studio gebruikt. Het converteren van GML naar CSV vraagt om het negeren van dubbele gegevens. Voor die laatste wordt gebruik gemaakt van Groovy scripts die gebruik maken van een zogenaamde collector in HALE studio. Een dergelijke collector kun je zien als een soort globale variabele, waarin gegevens kunnen worden verzameld.
+De projecten voor wegverkeer zijn relatief eenvoudig van opzet, omdat velden in de bronbestanden grotendeels één-op-één kunnen worden overgezet naar doelbestanden. De projecten voor de veehouderij bestanden zijn complexer, omdat het veehouderij CSV formaat een gedenormaliseerde structuur is waarin allerlei gegevens redundant aanwezig zijn. Dat betekent dat het converteren van CSV naar GML vraagt om het samenvoegen van dubbele gegevens. Hiervoor wordt de Merge operatie van HALE Studio gebruikt. Het converteren van GML naar CSV vraagt om het negeren van dubbele gegevens. Voor die laatste wordt gebruik gemaakt van Groovy scripts die gebruik maken van een zogenaamde collector in HALE studio. Een dergelijke collector kun je zien als een soort globale variabele, waarin gegevens kunnen worden verzameld.
 
 In alle projecten die converteren van CSV naar GML zijn projectvariabelen opgenomen voor de namespace, monitoringjaar en monitoringronde. De eerste zorgt ervoor dat de namespace niet hard gecodeerd hoeft te worden op allerlei plaatsen. De laatste twee zijn gegevens die niet in de originele CSV bestanden aanwezig zijn en dus moeten worden meegegeven als command-line argument om ze op te kunnen nemen in het GML bestand.
 
@@ -127,3 +129,12 @@ Dat betekent dat er minimaal `Reload and update schemas` moet worden geselecteer
 Daarnaast zullen inhoudelijke wijzigingen in het schema moeten worden doorgevoerd in de transformaties zelf.
 
 De HALE studio projectbestanden bevatten standaard absolute paden naar de computer van de gebruiker die de projecten heeft aangepast. Deze absolute paden moeten handmatig worden vervangen door relatieve paden. Hiervoor kan een zoek-en-vervang functie in een teksteditor worden gebruikt. Na aanpassing zou de prefix voor de bestandsnamen alleen nog `file:/` moeten zijn.
+
+### Beheren ReSpec profiel
+ReSpec is een standaard JavaScript bibliotheek die het mogelijk maakt om HTML documenten in een standaard opmaak te laten zien. Het is afkomstig van de W3C organisatie die het gebruikt om haar eigen standaarden mee te publiceren. Omdat de standaard opmaak niet goed past is er een eigen profiel gemaakt. Dit profiel is te vinden in de `respec/` map op GitHub. 
+
+Om het profiel aan te passen, lokaal te testen en een deployment versie te genereren is het nodig om zelf een clone van de ReSpec repository (`https://github.com/w3c/respec`) te maken en daar het profiel in te kopiëren. Dat betekent dat de bestanden in `respec/src` en `respec/profiles` naar de mappenstructuur van ReSpec moeten worden gekopieerd. Na het clonen van de ReSpec repository kan met het commando `npm install` ReSpec lokaal worden geinitialiseerd. 
+
+Het starten van de ReSpec testomgeving gaat met het commando `npm start -- --browser Chrome`. Als de aanpassingen in het profiel na testen goed zijn dan kan een build van ReSpec met daarin het RIVM profiel worden gemaakt met het commando `node ./tools/builder.js rivm`. Het resulterende JavaScript bestand staat vervolgens in de `builds` map. Het bestand `builds/respec-rivm.js` moet vervolgens worden gekopieerd naar de map `docs/`.
+
+Er is voor gekozen om het W3C profiel als basis te gebruiken en niet een geheel nieuw eigen profiel op te zetten. Praktisch zitten er daarmee in het profiel ook nog allerlei W3C specifieke elementen, die alleen niet gebruikt worden voor RIVM.
