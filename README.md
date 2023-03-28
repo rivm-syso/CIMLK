@@ -14,18 +14,18 @@ Wanneer al deze stappen zijn uitgevoerd kunnen op Github worden gezet.
 De wijzigingen worden vervolgens automatisch gepubliceerd wanneer deze op `main` branch worden doorgevoerd.
 
 De volgende stappen dienen hiervoor te worden gevolgd:
-- Wijzigen model in Sparx Enterprise Architect
+- Aanpassen model in Sparx Enterprise Architect
 - Genereren Respec HTML document
 - Aanpassen afbeeldingen van diagrammen
 - Genereren CSV bestanden van informatiemodel
-- Genereren XML schema
-- Updaten van transformaties en validaties in HALE
+- Genereren GML applicationschema met SchapeChange
+- Aanpassen transformaties in HALE
 
 Bovenstaande stappen worden hieronder verder toegelicht.
 
 Er wordt ook ingegaan op het aanpassen van het ReSpec profiel.
 
-### Wijzigingen model in Sparx Enterprise Architect
+### Aanpassen model in Sparx Enterprise Architect
 Het informatiemodel wordt beheerd in Sparx Enterprise Architect. Het is gemaakt in versie 15.2 van Sparx Enterprise Architect en is ook in te lezen in de 32-bit versie van versie 16.x. Merk op dat Sparx Enterprise Architect is overgegaan op een ander bestandsformaat in versie 16, maar dat de 32-bits versie ook nog in staat is bestanden in het oude formaat in te lezen. 
 
 Er zijn ook allerlei scripts ontwikkeld in Sparx Enterprise Architect. Er heeft geen uitgebreide test plaats gevonden of al deze scripts ook nog goed werken in versie 16.
@@ -65,22 +65,31 @@ Dit is voor bijvoorbeeld de ontwikkelaars een praktische manier om het informati
 Er zijn twee scripts beschikbaar in het informatiemodel om de CSV bestanden te raadplegen. 
 Deze scripts zijn te starten via `Specialize -> Scripts -> Export attributes` en `Specialize -> Scripts -> Export objecttypes`.
 
-### Genereren XML schema
-Naast documentatie over de inhoud van het informatiemodel wordt ook een XSD schema gegenereerd.
-Dit schema wordt gebruikt voor validatie en transformatie en moet na wijzigingen in het informatiemodel ook geupdate worden.
+### Genereren applicationschema met ShapeChange
+Naast documentatie over de inhoud van het informatiemodel wordt ook een XSD schema gegenereerd ter ondersteuning van de GML uitwisselstandaard.
+Dit schema moet na aanpassingen in het informatiemodel ook aangepast worden.
+
+Het informatiemodel is specifiek geschik gemaakt voor de ondersteuning van GML. Hiervoor zijn bij verschillende modelelementen aanvullend mappings op GML stereotypen aangebracht:
+- De map van het informatiemodel zelf heeft stereotype `GML::ApplicationSchema` gekregen.
+- Objecttypes hebben het stereotype `GML::FeatureType` gekregen.
+- Gegevensgroeptypes hebben het stereotype `GML::DataType` gekregen.
+- Enumeraties hebben het stereotype `GML::Enumeration` gekregen.
+
+De map van het informatiemodel is tevens voorzien van een aantal extra eigenschappen (`xsdDocument`, `targetNamespace` en `xmlns`).
 
 Om het XSD schema te genereren wordt gebruik van gemaakt van ShapeChange.
-Installeer ShapeChange: https://shapechange.net/get-started/
+Installeer ShapeChange: https://shapechange.net/get-started/ .
 Test de installatie zoals aangegeven op website.
 
-Het script in dit project haalt de locatie van de java jar uit een bestand.
+De script voor het starten van ShapeChange haalt de locatie van de java jar uit een bestand.
 Maak hiervoor in de `shapechange` map van dit project het volgende bestand aan: `shapechange_java.txt`.
 Zet in het bestand het pad naar de locatie van het ShapeChange jar bestand (bijv. `N:\data\ShapeChange\ShapeChange-2.11.0.jar`).
 
-Het XSD schema kan vervolgens met behulp van de volgende stappen 
+Het XML Schema kan vervolgens worden gegenereerd met de volgende stappen.
+
 Start de command line en navigeer naar de `shapechange` map van dit project.
 
-Op de Campus omgeving moet je zorgen dat de juiste java versie wordt gebruikt:
+Op de RIVM omgeving moet je zorgen dat de juiste java versie wordt gebruikt:
 ```cmd
 cmd.exe /appvve:8b3b135f-5502-49b9-8c32-b75904c64222_242a68da-ee02-4478-a72d-1fe21f33dd76
 ```
@@ -90,9 +99,13 @@ Start het script met het volgende commando:
 cimlk.bat
 ```
 
-Dit script genereert een nieuwe XSD op basis van het informatiemodel en slaat deze op in `shapechange/imlk.xsd`.
+Dit script genereert een nieuw XML Schema op basis van het informatiemodel en slaat deze op in `shapechange/imlk.xsd`.
 
-### HALE Studio transformaties en validaties
+Het XML Schema bestand moet handmatig worden aangepast, omdat hier standaard niet de juiste XML referenties en FeatureCollection in zit. Hiertoe moet alles voorafgaand aan het eerste inhoudelijke element worden overschreven met de inhoud van het bestand `schemaheader.txt`.
+
+### Aanpassen transformaties in HALE
+Er zijn transformaties van en naar SHP en GML gemaakt in HALE studio. De transformaties van en naar SHP zijn inmiddels niet meer relevant, omdat is gekozen om gebruik te maken van OGR2OGR. Van de transformaties van en naar GML moet nog worden bepaald of ze ook gebruikt zullen worden in CIMLK of dat ze zelf ontwikkeld worden in Java. In dat laatste geval kunnen de HALE transformaties of de daarin gegenereerde voorbeeldbestanden worden gebruikt als basis en controlemechanisme.
+
 Het XSD bestand wordt gebruikt om met behulp van HALE Studio transformaties en validaties uit te voeren.
 Wanneer het XSD schema is veranderd dan dienen de HALE Studio projecten in de map `hale` geupdate te worden.
 Start hiervoor elk HALE Studio project in de map op en update de referenties naar het nieuwe schema.
