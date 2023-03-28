@@ -1,4 +1,4 @@
 set /p SHAPECHANGE_JAVA=<shapechange_java.txt
 java -jar %SHAPECHANGE_JAVA% -Dfile.encoding=UTF-8 -c cimlk.xml
-copy results\INPUT\imlk.xsd .
+copy results\INPUT\imlk.xsd ..\doc\imlk.xsd
 rmdir /s /q results
