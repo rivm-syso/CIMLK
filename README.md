@@ -80,12 +80,13 @@ De map van het informatiemodel is tevens voorzien van een aantal extra eigenscha
 Om het XSD schema te genereren wordt gebruik van gemaakt van ShapeChange.
 Installeer ShapeChange: https://shapechange.net/get-started/ .
 Test de installatie zoals aangegeven op website.
+Er is een configuratie van ShapeChange gemaakt voor CIMLK in het bestand `cimlk.xml`
 
-De script voor het starten van ShapeChange haalt de locatie van de java jar uit een bestand.
+Het script voor het starten van ShapeChange haalt de locatie van de java jar uit een bestand.
 Maak hiervoor in de `shapechange` map van dit project het volgende bestand aan: `shapechange_java.txt`.
 Zet in het bestand het pad naar de locatie van het ShapeChange jar bestand (bijv. `N:\data\ShapeChange\ShapeChange-2.11.0.jar`).
 
-Het XML Schema kan vervolgens worden gegenereerd met de volgende stappen.
+Het XML Schema kan worden gegenereerd met de volgende stappen.
 
 Start de command line en navigeer naar de `shapechange` map van dit project.
 
@@ -99,14 +100,29 @@ Start het script met het volgende commando:
 cimlk.bat
 ```
 
-Dit script genereert een nieuw XML Schema op basis van het informatiemodel en slaat deze op in `shapechange/imlk.xsd`.
+Dit script genereert een nieuw XML Schema op basis van het informatiemodel en slaat deze op in `doc/imlk.xsd`.
 
-Het XML Schema bestand moet handmatig worden aangepast, omdat hier standaard niet de juiste XML referenties en FeatureCollection in zit. Hiertoe moet alles voorafgaand aan het eerste inhoudelijke element worden overschreven met de inhoud van het bestand `schemaheader.txt`.
+Het XML Schema bestand moet handmatig worden aangepast, omdat hier standaard niet de juiste XML namespaces en FeatureCollection definitie in zit. Hiertoe moet alles voorafgaand aan het eerste inhoudelijke element worden overschreven met de inhoud van het bestand `schemaheader.txt`.
 
 ### Aanpassen transformaties in HALE
 Er zijn transformaties van en naar SHP en GML gemaakt in HALE studio. De transformaties van en naar SHP zijn inmiddels niet meer relevant, omdat is gekozen om gebruik te maken van OGR2OGR. Van de transformaties van en naar GML moet nog worden bepaald of ze ook gebruikt zullen worden in CIMLK of dat ze zelf ontwikkeld worden in Java. In dat laatste geval kunnen de HALE transformaties of de daarin gegenereerde voorbeeldbestanden worden gebruikt als basis en controlemechanisme.
 
-Het XSD bestand wordt gebruikt om met behulp van HALE Studio transformaties en validaties uit te voeren.
+Er zijn vier HALE studio projecten beschikbaar voor de conversie van en naar GML:
+- Wegverkeer CSV2GML.halex - converteert gegevens voor wegverkeer van CSV naar GML
+- Wegverkeer GML2CSV.halex - converteert gegevens voor wegverkeer van GML naar CSV
+- Veehouderij CSV2GML.halex - converteert gegevens voor veehouderijen van CSV naar GML
+- Veehouderij GML2CSV.halex - converteert gegevens voor veehouderijen van GML naar CSV
+
+Voor elk project zijn er ook batch files en testdata bestanden beschikbaar om het bijbehorende project te testen. De testdata bestanden zijn opgenomen in de map `/hale/input/`.
+
+Het GML applicatieschema wordt gebruikt in de vier genoemde HALE Studio projecten. 
+Op het moment dat dit applicatieschema wijzigt dan dienen deze projecten ook te worden bijgewerkt.
+Dat betekent dat er minimaal `Reload and update schemas` moet worden geselecteerd om het nieuwe schema in te lezen.
+Daarnaast zullen inhoudelijke wijzigingen in het schema moeten worden doorgevoerd in de transformaties zelf.
+
+De HALE studio projectbestanden bevatten standaard absolute paden naar de computer van de gebruiker die de projecten heeft aangepast. Deze absolute paden moeten handmatig worden vervangen door relatieve paden. Hiervoor kan een zoek-en-vervang functie in een teksteditor worden gebruikt. Na aanpassing zou de prefix voor de bestandsnamen alleen nog `file:/` moeten zijn.
+
+transformaties en validaties uit te voeren.
 Wanneer het XSD schema is veranderd dan dienen de HALE Studio projecten in de map `hale` geupdate te worden.
 Start hiervoor elk HALE Studio project in de map op en update de referenties naar het nieuwe schema.
 Voeg daarna eventuele verdere aanpassingen toe waarop gecontroleerd moet worden.
