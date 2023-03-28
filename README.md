@@ -23,7 +23,7 @@ De volgende stappen dienen hiervoor te worden gevolgd:
 
 Bovenstaande stappen worden hieronder verder toegelicht.
 
-Er wordt ook ingegaan op het aanpassen van het ReSpec profiel.
+Er wordt ook ingegaan op het aanpassen van het ReSpec profiel en het omgaan met verschillende versies van het informatiemodel.
 
 ### Aanpassen model in Sparx Enterprise Architect
 Het informatiemodel wordt beheerd in Sparx Enterprise Architect. Het is gemaakt in versie 15.2 van Sparx Enterprise Architect en is ook in te lezen in de 32-bit versie van versie 16.x. Merk op dat Sparx Enterprise Architect is overgegaan op een ander bestandsformaat in versie 16, maar dat de 32-bits versie ook nog in staat is bestanden in het oude formaat in te lezen. 
