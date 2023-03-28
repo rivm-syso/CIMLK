@@ -19,7 +19,7 @@ De volgende stappen dienen hiervoor te worden gevolgd:
 - Aanpassen afbeeldingen van diagrammen
 - Publiceren en versioneren informatiemodel
 - Genereren CSV bestanden van informatiemodel
-- Genereren GML applicationschema met SchapeChange
+- Genereren GML application schema met SchapeChange
 - Aanpassen transformaties in HALE
 
 Bovenstaande stappen worden hieronder verder toegelicht.
@@ -76,8 +76,8 @@ Dit is voor bijvoorbeeld de ontwikkelaars een praktische manier om het informati
 Er zijn twee scripts beschikbaar in het informatiemodel om de CSV bestanden te raadplegen. 
 Deze scripts zijn te starten via `Specialize -> Scripts -> Export attributes` en `Specialize -> Scripts -> Export objecttypes`.
 
-### Genereren GML applicationschema met ShapeChange
-Naast documentatie over de inhoud van het informatiemodel wordt ook een XSD schema gegenereerd ter ondersteuning van de GML uitwisselstandaard.
+### Genereren GML application schema met ShapeChange
+Naast documentatie over de inhoud van het informatiemodel wordt ook een XML/GML schema gegenereerd ter ondersteuning van de GML uitwisselstandaard.
 Dit schema moet na aanpassingen in het informatiemodel ook aangepast worden.
 
 Het informatiemodel is specifiek geschik gemaakt voor de ondersteuning van GML. Hiervoor zijn bij verschillende modelelementen aanvullend mappings op GML stereotypen aangebracht:
@@ -88,7 +88,7 @@ Het informatiemodel is specifiek geschik gemaakt voor de ondersteuning van GML. 
 
 De map van het informatiemodel is tevens voorzien van een aantal extra eigenschappen (`xsdDocument`, `targetNamespace` en `xmlns`).
 
-Om het XSD schema te genereren wordt gebruik van gemaakt van ShapeChange.
+Om het XML/GML schema te genereren wordt gebruik van gemaakt van ShapeChange.
 Installeer ShapeChange: https://shapechange.net/get-started/ .
 Test de installatie zoals aangegeven op website.
 Er is een configuratie van ShapeChange gemaakt voor CIMLK in het bestand `cimlk.xml`
@@ -97,7 +97,7 @@ Het script voor het starten van ShapeChange haalt de locatie van de java jar uit
 Maak hiervoor in de `shapechange` map van dit project het volgende bestand aan: `shapechange_java.txt`.
 Zet in het bestand het pad naar de locatie van het ShapeChange jar bestand (bijv. `N:\data\ShapeChange\ShapeChange-2.11.0.jar`).
 
-Het XML Schema kan worden gegenereerd met de volgende stappen.
+Het XML/GML Schema kan worden gegenereerd met de volgende stappen.
 
 Start de command line en navigeer naar de `shapechange` map van dit project.
 
@@ -111,9 +111,9 @@ Start het script met het volgende commando:
 cimlk.bat
 ```
 
-Dit script genereert een nieuw XML Schema op basis van het informatiemodel en slaat deze op in `doc/imlk.xsd`.
+Dit script genereert een nieuw XML/GML Schema op basis van het informatiemodel en slaat deze op in `doc/imlk.xsd`.
 
-Het XML Schema bestand moet handmatig worden aangepast, omdat hier standaard niet de juiste XML namespaces en FeatureCollection definitie in zit. Hiertoe moet alles voorafgaand aan het eerste inhoudelijke element worden overschreven met de inhoud van het bestand `schemaheader.txt`.
+Het XML/GML Schema bestand moet handmatig worden aangepast, omdat hier standaard niet de juiste XML namespaces en FeatureCollection definitie in zit. Hiertoe moet alles voorafgaand aan het eerste inhoudelijke element worden overschreven met de inhoud van het bestand `schemaheader.txt`.
 
 ### Aanpassen transformaties in HALE
 Er zijn transformaties van en naar SHP en GML gemaakt in HALE studio. De transformaties van en naar SHP zijn inmiddels niet meer relevant, omdat is gekozen om gebruik te maken van OGR2OGR. Van de transformaties van en naar GML moet nog worden bepaald of ze ook gebruikt zullen worden in CIMLK of dat ze zelf ontwikkeld worden in Java. In dat laatste geval kunnen de HALE transformaties of de daarin gegenereerde voorbeeldbestanden worden gebruikt als basis en controlemechanisme.
