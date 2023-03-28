@@ -31,7 +31,7 @@ Het informatiemodel wordt beheerd in Sparx Enterprise Architect. Het is gemaakt 
 
 Er zijn ook allerlei scripts ontwikkeld in Sparx Enterprise Architect. Er heeft geen uitgebreide test plaats gevonden of al deze scripts ook nog goed werken in versie 16.
 
-Het informatiemodel is gebaseerd op het Metamodel voor Informatiemodellering (zie `https://docs.geostandaarden.nl/mim/mim/`). Ter ondersteuning van dit metamodel moet je een toolbox installleren in Sparx Enterprise Architect. Er is gebruik gemaakt van versie 1.1 van de toolbox die je kunt downloaden op `https://register.geostandaarden.nl/informatiemodel/mim/`. 
+Het informatiemodel is gebaseerd op het Metamodel voor Informatiemodellering (zie https://docs.geostandaarden.nl/mim/mim/). Ter ondersteuning van dit metamodel moet je een toolbox installleren in Sparx Enterprise Architect. Er is gebruik gemaakt van versie 1.1 van de toolbox die je kunt downloaden op https://register.geostandaarden.nl/informatiemodel/mim/. 
 
 In de desktop omgeving van RIVM is versie 16 (32-bit) aanwezig en is versie 1.1 van de toolbox geïnstalleerd. Toegang tot het tool kan worden aangevraagd. 
 
