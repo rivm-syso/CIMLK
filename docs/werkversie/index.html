@@ -619,7 +619,7 @@
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Lengte</b></td><td>1..80</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>0..1</td></tr>
-<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS (monitoringsronde NOT IN [2021, 2022]) DAN (naam != NULL)</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>ALS ((type == ReceptorWegverkeer) && (monitoringsronde NOT IN [2021, 2022])) DAN (naam != NULL)</td></tr>
 </table>
 </section>
 <section id="Receptor.opmerking">
