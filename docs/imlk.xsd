@@ -98,10 +98,20 @@
               <documentation>Een verzameling woorden die praktisch worden gebruikt om een correctie te duiden.</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="correctietermen" type="cimlk:CorrectietermPropertyType">
+          <element maxOccurs="unbounded" name="correctietermen">
             <annotation>
               <documentation>Numerieke waardes voor de correcties voor specifieke stoffen.</documentation>
             </annotation>
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="cimlk:Correctieterm"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
           </element>
           <element minOccurs="0" name="geometrie" type="gml:SurfacePropertyType">
             <annotation>
@@ -120,29 +130,35 @@
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
-  <element name="Correctieterm" substitutionGroup="gml:AbstractObject" type="cimlk:CorrectietermType">
+  <element name="Correctieterm" substitutionGroup="gml:AbstractGML" type="cimlk:CorrectietermType">
     <annotation>
       <documentation>Een numerieke waarde voor de correctie voor een specifieke stof.</documentation>
     </annotation>
   </element>
   <complexType name="CorrectietermType">
-    <sequence>
-      <element name="stof" type="cimlk:WegverkeerStofType">
-        <annotation>
-          <documentation>De stof waar de correctie effect op heeft.</documentation>
-        </annotation>
-      </element>
-      <element name="correctie" type="double">
-        <annotation>
-          <documentation>Absolute correctie van de berekende concentratie.</documentation>
-        </annotation>
-      </element>
-    </sequence>
+    <complexContent>
+      <extension base="gml:AbstractGMLType">
+        <sequence>
+          <element name="stof" type="cimlk:WegverkeerStofType">
+            <annotation>
+              <documentation>De stof waar de correctie effect op heeft.</documentation>
+            </annotation>
+          </element>
+          <element name="correctie" type="double">
+            <annotation>
+              <documentation>Absolute correctie van de berekende concentratie.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
   </complexType>
   <complexType name="CorrectietermPropertyType">
-    <sequence>
+    <sequence minOccurs="0">
       <element ref="cimlk:Correctieterm"/>
     </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="Emissiespecificatie" substitutionGroup="gml:AbstractObject" type="cimlk:EmissiespecificatieType">
     <annotation>
@@ -276,10 +292,20 @@
               <documentation>Een verzameling woorden die praktisch worden gebruikt om een maatregel te duiden.</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" name="maatregelfactoren" type="cimlk:MaatregelfactorPropertyType">
+          <element maxOccurs="unbounded" name="maatregelfactoren">
             <annotation>
               <documentation>Specificatie van de combinaties van voertuigtype en snelheidstype waarvoor een maatregel geldt.</documentation>
             </annotation>
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="cimlk:Maatregelfactor"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
           </element>
           <element name="geometrie" type="gml:SurfacePropertyType">
             <annotation>
@@ -297,39 +323,45 @@
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
-  <element name="Maatregelfactor" substitutionGroup="gml:AbstractObject" type="cimlk:MaatregelfactorType">
+  <element name="Maatregelfactor" substitutionGroup="gml:AbstractFeature" type="cimlk:MaatregelfactorType">
     <annotation>
       <documentation>Specificatie van de combinatie van een stof, voertuigtype en snelheidstype waarvoor emissies met een opgegeven factor worden geschaald.</documentation>
     </annotation>
   </element>
   <complexType name="MaatregelfactorType">
-    <sequence>
-      <element name="voertuigtype" type="cimlk:WegverkeerVoertuigtypeType">
-        <annotation>
-          <documentation>Type voertuig waar schalingsfactor invloed op heeft.</documentation>
-        </annotation>
-      </element>
-      <element name="wegsoort" type="cimlk:WegsoortType">
-        <annotation>
-          <documentation>Het soort weg vanuit het perspectief van snelheid en doorstroming.</documentation>
-        </annotation>
-      </element>
-      <element name="stof" type="cimlk:WegverkeerStofType">
-        <annotation>
-          <documentation>De stof waar de maatregel effect op heeft.</documentation>
-        </annotation>
-      </element>
-      <element name="schalingsfactor" type="double">
-        <annotation>
-          <documentation>De factor waarmee de emissies worden vermenigvuldigd binnen het maatregelgebied.</documentation>
-        </annotation>
-      </element>
-    </sequence>
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="voertuigtype" type="cimlk:WegverkeerVoertuigtypeType">
+            <annotation>
+              <documentation>Type voertuig waar schalingsfactor invloed op heeft.</documentation>
+            </annotation>
+          </element>
+          <element name="wegsoort" type="cimlk:WegsoortType">
+            <annotation>
+              <documentation>Het soort weg vanuit het perspectief van snelheid en doorstroming.</documentation>
+            </annotation>
+          </element>
+          <element name="stof" type="cimlk:WegverkeerStofType">
+            <annotation>
+              <documentation>De stof waar de maatregel effect op heeft.</documentation>
+            </annotation>
+          </element>
+          <element name="schalingsfactor" type="double">
+            <annotation>
+              <documentation>De factor waarmee de emissies worden vermenigvuldigd binnen het maatregelgebied.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
   </complexType>
   <complexType name="MaatregelfactorPropertyType">
-    <sequence>
+    <sequence minOccurs="0">
       <element ref="cimlk:Maatregelfactor"/>
     </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="Organisatie" substitutionGroup="gml:AbstractFeature" type="cimlk:OrganisatieType">
     <annotation>

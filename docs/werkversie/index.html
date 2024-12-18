@@ -11,17 +11,22 @@
 				group: "webapps", 
 				github: "https://github.com/rivm-syso/CIMLK",
 				edDraftURI: "https://rivm-syso.github.io/CIMLK/werkversie/index.html",
-				thisVersion: "https://rivm-syso.github.io/CIMLK/werkversie/index.html",
-				latestVersion: "https://rivm-syso.github.io/CIMLK/",
-				publishDate: "2023-01-31",
-				specStatus: "unofficial",
+				thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
+				latestVersion: "https://rivm-syso.github.io/CIMLK/1.0/index.html",
+				subtitle: "Versie 1.1",
+				publishDate: "2024-12-18",
+				specStatus: "base",
 				shortName: "IMLK",
 				inLanguage: "nl",
 				editors: [{
-					name: "Danny Greefhorst",
+					name: "Jennifer Oldfield",
 					company: "RIVM",
 				}],
 				authors: [
+									{
+					name: "Danny Greefhorst",
+					company: "RIVM",
+					},
 					{
 					name: "Michiel Geijer",
 					company: "RIVM",
@@ -216,7 +221,7 @@
 				<p>Er wordt geadviseerd om niet zelf een Shape bestand te maken met de juiste eigenschappen, omdat dit foutgevoelig is en er een reële kans is dat de bestanden niet exact voldoet aan de specificaties (zoals datatypes en aantal decimalen). Het advies is om een in plaats daarvan een download te doen van de gegevens van vorig jaar en deze als basis te gebruiken. Als het de eerste aanlevering is dan is het advies om een download van een ander bevoegd gezag als basis te nemen, de aanwezige gegevens te verwijderen en de juiste gegevens toe te voegen.
 				</p>
 				<h5>Geography Markup Language (GML)</h5>
-				<p>GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. In GML worden feature members uniek geïdentificeerd op basis van het GML-id. Het GML-id is gebaseerd op de identificatie, maar is vormgegeven als een URL. Het formaat van de URL is http://cimlk.nl/id/&lt;objecttype&gt;/&lt;identificatie&gt;.
+				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. In GML worden feature members uniek geïdentificeerd op basis van het GML-id. Het GML-id is gebaseerd op de identificatie, maar is vormgegeven als een URL. Het formaat van de URL is http://cimlk.nl/id/&lt;objecttype&gt;/&lt;identificatie&gt;.
 				</p>
 			</section>
 		</section>
@@ -441,6 +446,7 @@
 <tr border="0"><td width=200px><b>Doel</b></td><td><a href="#ReceptorWegverkeer">ReceptorWegverkeer</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>receptor</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200px><b>Constraints</b></td><td>ALS (geometrie == NULL) DAN (receptor != NULL) ANDERS (receptor == NULL).</td></tr>
 </table>
 </section>
 </section>
@@ -456,6 +462,7 @@
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Unieke identificatiecode van een informatieobject binnen de context van een registratie.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>CharacterString</td></tr>
+<tr border="0"><td width=200px><b>Formeel patroon</b></td><td>^\d{8}_\d{1,25}$</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Lengte</b></td><td>1..25</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
@@ -697,6 +704,7 @@
 <tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Veehouderij">Veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Constraints</b></td><td>kvkNummer == veehouderij.kvkNummer</td></tr>
 </table>
 </section>
 </section>
@@ -902,6 +910,18 @@
 <tr border="0"><td width=200px><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>dag / jaar</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
+</table>
+</section>
+<section id="RekenresultaatVeehouderij.isCluster">
+<h3>isCluster</h3>
+<table width=100%>
+<tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>of het een cluster berekening is of niet</td></tr>
+<tr border="0"><td width=200px valign=top><b></b></td><td></td></tr>
+<tr border="0"><td width=200px><b>Type</b></td><td>boolean</td></tr>
+<tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
+<tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 </table>
 </section>
@@ -1452,6 +1472,7 @@
 <tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Veehouderij">Veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>veehouderij</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Constraints</b></td><td>kvkNummer == veehouderij.kvkNummer</td></tr>
 </table>
 </section>
 </section>
@@ -1571,6 +1592,7 @@
 <tr border="0"><td width=200px><b>Doel</b></td><td><a href="#Stal">Stal</td></tr>
 <tr border="0"><td width=200px><b>Rol doel</b></td><td>stal</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit doel</b></td><td>1</td></tr>
+<tr border="0"><td width=200px><b>Constraints</b></td><td>kvkNummer == stal.kvkNummer</td></tr>
 </table>
 </section>
 </section>
@@ -1667,6 +1689,7 @@
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200px><b>Kardinaliteit<b></td><td>1</td></tr>
 <tr border="0"><td width=200px><b>Minimale waarde</b></td><td>0</td></tr>
+<tr border="0"><td width=200px valign=top><b>Constraints</b></td><td>tunnelfactor = 0 OR 1 =< tunnelfactor =< 999.9</td></tr>
 </table>
 </section>
 <section id="Wegdeel.hoogte">
@@ -1886,7 +1909,7 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van de combinatie van een stof, voertuigtype en snelheidstype waarvoor emissies met een opgegeven factor worden geschaald.</td></tr>
-<tr border="0"><td width=200px valign=top><b>Toelichting</b></td><td>Een maatregel reduceert emissies.</td></tr>
+<tr border="0"><td width=200px valign=top><b></b></td><td></td></tr>
 </table>
 <section id="Maatregelfactor.voertuigtype">
 <h3>voertuigtype</h3>
@@ -1996,7 +2019,7 @@
 <h3>afstand</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft de afstand aan tussen het overdrachtsobject en de wegas.</td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Geeft de afstand aan tussen het overdrachtsobject en de wegrand.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>Integer</td></tr>
 <tr border="0"><td width=200px><b>Eenheid</b></td><td>meter</td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>nee</td></tr>
