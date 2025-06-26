@@ -20,3 +20,4 @@ ogr2ogr/output/wegverkeer_shape_maatregel.shp
 ogr2ogr/output/wegverkeer_shape_maatregel.shx
 ogr2ogr/output/wegverkeer_shape_maatregel.dbf
 ogr2ogr/output/wegverkeer_shape_maatregel.shp
+.idea/
