@@ -11,7 +11,6 @@ const localizationStrings = {
     archives: "archives",
     author: "Author:",
     authors: "Authors:",
-    changelog: "Changelog",
     commit_history: "Commit history",
     edited_in_place: "edited in place",
     editor: "Editor:",
@@ -43,14 +42,13 @@ const localizationStrings = {
   nl: {
     author: "Auteur:",
     authors: "Auteurs:",
-    changelog: "Veranderingslogboek",
     editor: "Redacteur:",
     editors: "Redacteurs:",
     latest_editors_draft: "Laatste werkversie:",
     latest_published_version: "Laatst gepubliceerde versie:",
     this_version: "Deze versie:",
     history: "Geschiedenis:",
-    commit_history: "Commit-geschiedenis",
+    commit_history: "Geschiedenis",
     more_details_about_this_doc: "Meer details over dit document",
     feedback: "Wijzigingsverzoeken:",
   },
@@ -115,17 +113,12 @@ export default (conf, options) => {
               <dd><a href="${conf.edDraftURI}">${conf.edDraftURI}</a></dd>
             `
           : ""}
-        ${conf.historyURI || conf.changelogUri || conf.github
+        ${conf.historyURI || conf.github
           ? html`<dt>${l10n.history}</dt>
               ${conf.historyURI
                 ? html`<dd>
                     <a href="${conf.historyURI}">${conf.historyURI}</a>
                   </dd>`
-                : ""}
-              ${conf.changelogUri
-                ? html`<dd>
-                    <a href="${conf.changelogUri}">${l10n.changelog}</a>
-                  </dd>` 
                 : ""}
               ${conf.github
                 ? html`<dd>
