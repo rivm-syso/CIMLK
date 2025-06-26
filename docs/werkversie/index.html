@@ -8,14 +8,28 @@
 			// All config options at https://respec.org/docs/
 			var respecConfig = {
 				// Working Groups ids at https://respec.org/w3c/groups/
-				group: "webapps", 
-				github: "https://github.com/rivm-syso/CIMLK",
+				group: "webapps",
 				edDraftURI: "https://rivm-syso.github.io/CIMLK/werkversie/index.html",
 				thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
 				latestVersion: "https://rivm-syso.github.io/CIMLK/1.0/index.html",
+				otherLinks: [
+					{
+						key: "Geschiedenis",
+						data: [
+							{
+								value: "Logboek van wijzigingen",
+								href: "#logboek-van-wijzigingen"
+							},
+							{
+								value: "Commitgeschiedenis",
+								href: "https://github.com/rivm-syso/CIMLK/commits/main/"
+							}
+						]
+					}
+				],
 				subtitle: "Versie 1.1",
 				publishDate: "2024-12-18",
-				specStatus: "base",
+				specStatus: "unofficial",
 				shortName: "IMLK",
 				inLanguage: "nl",
 				editors: [{
@@ -917,8 +931,7 @@
 <h3>isCluster</h3>
 <table width=100%>
 <tr border="0"><td width=200px><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>of het een cluster berekening is of niet</td></tr>
-<tr border="0"><td width=200px valign=top><b></b></td><td></td></tr>
+<tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Of het een cluster berekening is of niet.</td></tr>
 <tr border="0"><td width=200px><b>Type</b></td><td>boolean</td></tr>
 <tr border="0"><td width=200px><b>Patroon</b></td><td><memo></td></tr>
 <tr border="0"><td width=200px><b>Identificerend</b></td><td>ja</td></tr>
@@ -1909,7 +1922,6 @@
 <table>
 <tr border="0"><td width=200px valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
 <tr border="0"><td width=200px valign=top><b>Definitie</b></td><td>Specificatie van de combinatie van een stof, voertuigtype en snelheidstype waarvoor emissies met een opgegeven factor worden geschaald.</td></tr>
-<tr border="0"><td width=200px valign=top><b></b></td><td></td></tr>
 </table>
 <section id="Maatregelfactor.voertuigtype">
 <h3>voertuigtype</h3>
@@ -3511,9 +3523,44 @@
 							Y-coordinaat van <a href="#Receptor.geometrie">Receptor.geometrie</a>
 						</td>
 					</tr>
+					<tr>
+						<td></td>
+						<td>isCluster</td>
+						<td>
+							<a href="#RekenresultaatVeehouderij.isCluster">RekenresultaatVeehouderij.isCluster</a>
+						</td>
+					</tr>
 				</table>
 			</section>
 		</section>
 	</section>
+</section>
+<section id="logboek-van-wijzigingen">
+    <h2>Logboek van wijzigingen</h2>
+    <p>Dit is de lijst van wijzigingen die per nieuwe versie van het Informatiemodel Monitoring Luchtkwaliteit
+        gepubliceerd zijn.</p>
+    <section>
+        <h3>Versie 1.1 (huidige versie)</h3>
+        <ul>
+            <li>Constraint bij <a href="#GeoObject.identificatie">GeoObject.identificatie</a> toegevoegd.</li>
+            <li>Constraint bij <a href="#Wegdeel.tunnelfactor">Wegdeel.tunnelfactor</a> toegevoegd.</li>
+            <li>Constraint bij <a href="#veehouderij-0">Stal.veehouderij</a> toegevoegd: Stal en Veehouderij
+                moeten van dezelfde bronhouder zijn.
+            </li>
+            <li>Constraint bij <a href="#stal">Veehouderijbron.stal</a>: Veehouderijbron en Stal
+                moeten van dezelfde bronhouder zijn.
+            </li>
+            <li>Constraint bij <a href="#veehouderij">ReceptorVeehouderij.veehouderij</a>
+                toegevoegd: ReceptorVeehouderij en Veehouderij moeten van dezelfde bronhouder zijn.
+            </li>
+            <li>Attribuut <a href="#RekenresultaatVeehouderij.isCluster">RekenresultaatVeehouderij.isCluster</a>
+                toegevoegd.
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3><a href="https://rivm-syso.github.io/CIMLK/1.0/index.html">Versie 1.0</a></h3>
+        Initi&euml;le versie
+    </section>
 </section>
 </body></html>
