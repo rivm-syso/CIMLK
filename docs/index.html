@@ -8,9 +8,9 @@
 			// All config options at https://respec.org/docs/
 			var respecConfig = {
 				// Working Groups ids at https://respec.org/w3c/groups/
-				group: "webapps", 
+				group: "webapps",
 				github: "https://github.com/rivm-syso/CIMLK",
-                historyURI: "#versiegeschiedenis",
+				historyURI: "#versiegeschiedenis",
 				edDraftURI: "https://rivm-syso.github.io/CIMLK/werkversie/index.html",
 				thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
 				latestVersion: "https://rivm-syso.github.io/CIMLK/1.0/index.html",
@@ -57,7 +57,7 @@
 				// See https://respec.org/docs/#xref for usage.
 				xref: "web-platform",
 			};
-		</script>		
+		</script>
 		<style>
 		  * {
 			--heading-text: #154273;
@@ -66,7 +66,7 @@
 		  code {
 			color: orange;
 		  }
-		</style>		
+		</style>
 		<script src='respec-rivm.js' class='remove'></script>
 	</head>
 	<body>
@@ -98,7 +98,7 @@
 				<h3>Gebruik van het informatiemodel</h3>
 				<p>Het informatiemodel geeft vooral inzicht in de betekenis van de gegevens in CIMLK. Je kunt erin opzoeken wat een gegeven precies betekent en welke regels het aan moet voldoen. Denk bijvoorbeeld aan het datatype van het gegeven, de mogelijke waarden die het aan kan nemen of meer specifieke regels die eraan gesteld worden. Je kunt ook zien hoe het gegeven zich verhoudt tot andere gegevens. Het geeft inzicht in de structuur van de gegevens; hoe ze zijn gegroepeerd en hoe ze aan elkaar zijn gerelateerd.</p>
 				<p>Het informatiemodel geeft ook een praktisch inzicht in de <a href="#bijlagen">structuur van de uitwisselbestanden</a> die moeten worden uitgewisseld. De CSV en Shape bestanden hebben een plattere structuur dan het informatiemodel om ze eenvoudiger in bestandsvorm te kunnen aanleveren. In de bijlagen staat in tabelvorm per bestand aangegeven welke velden, in welke volgorde moeten worden aangeleverd. Er staat bij elk veld ook een link naar de definitie in het informatiemodel.</p>
-				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Onder het kopje <a href="#Bebouwingstype">enumeraties</a> zijn waardelijsten beschreven, waaruit een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven. 
+				<p>Het informatiemodel geeft ook informatie over de mogelijke waarden die een bepaald gegeven kan aannemen. Onder het kopje <a href="#Bebouwingstype">enumeraties</a> zijn waardelijsten beschreven, waaruit een waarde (typisch een getal of code) kan worden gekozen. In het informatiemodel wordt bij de waarden soms ook een functionele naam en/of een definitie gegeven.
 			</section>
 			<section>
 				<h3>Conventies</h3>
@@ -117,7 +117,7 @@
 						<li>
 							<b>Lengte:</b>
 							het exact of minimaal en maximaal aantal karakters dat een waarde kan aannemen.
-						</li>					
+						</li>
 						<li>
 							<b>Kardinaliteit:</b>
 							het minimaal en maximaal aantal voorkomens van het attribuut. De kardinaliteit is weergegeven tussen vierkante haken en bevat “..” tussen de ondergrens en bovengrens. Het teken ”*” betekent “nul of meer”.
@@ -192,12 +192,12 @@
 			</section>
 			<section>
 				<h3>NEN3610</h3>
-				<p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen om ze uniek te identificeren: 
+				<p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen om ze uniek te identificeren:
 					<ul>
 						<li><b>identificatie:</b> Unieke identificatiecode van een informatieobject binnen de context van een registratie.</li>
 						<li><b>domein:</b> Aanduiding van het domein waarbinnen de identificatie uniek is.</li>
 					</ul>
-					<p>De identificatie is een samenstelling het KVK nummer van de bronhouder, een underscore ("_") en een lokaal unieke identifcatie bij de bronhouder. De identificatie heeft daarmee de volgende structuur:<br><i>&lt;KVK&gt;_&lt;lokale identificatie&gt;</i>. De identificatie kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Het domein zal altijd de waarde “imlk” bevatten. 
+					<p>De identificatie is een samenstelling het KVK nummer van de bronhouder, een underscore ("_") en een lokaal unieke identifcatie bij de bronhouder. De identificatie heeft daarmee de volgende structuur:<br><i>&lt;KVK&gt;_&lt;lokale identificatie&gt;</i>. De identificatie kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"… "9", "_", “-”}'. Het domein zal altijd de waarde “imlk” bevatten.
 					</p>
 					<p>Naast de attributen voor het identificeren zijn er ook een aantal attributen die specifiek zijn gericht op het beschrijven van een versie van een object en die in NEN3610:2022 onderdeel zijn van het objecttype Registratie:
 					<ul>
@@ -329,7 +329,7 @@
 						<area href="#ReceptorWegverkeer" coords="8,600,310,705" shape="rect"/>
 						<area href="#Receptor" coords="423,600,730,760" shape="rect"/>
 						<area href="#RekenresultaatWegverkeer" coords="8,900,310,1660" shape="rect"/>
-						<area href="#Correctie" coords="423,900,730,1030" shape="rect"/>						
+						<area href="#Correctie" coords="423,900,730,1030" shape="rect"/>
 						<area href="#Correctieterm" coords="423,1100,730,1190" shape="rect"/>
 						<area href="#Maatregel" coords="423,1345,730,1480" shape="rect"/>
 						<area href="#Maatregelfactor" coords="423,1540,730,1660" shape="rect"/>
@@ -360,7 +360,7 @@
 					<map name="image-map3">
 						<area href="#Organisatie" coords="6,6,262,143" shape="rect"/>
 						<area href="#GeoObject" coords="6,210,193,305" shape="rect"/>
-						<area href="#Registratie" coords="464,210,660,305" shape="rect"/>						
+						<area href="#Registratie" coords="464,210,660,305" shape="rect"/>
 					</map>
 				</section>
 			</section>
@@ -3190,7 +3190,7 @@
 						<td>
 							<a href="#Veehouderijbron.diameter">Veehouderijbron.diameter</a>
 						</td>
-					</tr>					
+					</tr>
 					<tr>
 						<td></td>
 						<td>bronUittreesnelheid</td>
@@ -3378,7 +3378,7 @@
 						<td>
 							<a href="#GeoObject.identificatie">GeoObject.identificatie</a>
 						</td>
-					</tr>					
+					</tr>
 					<tr>
 						<td></td>
 						<td>veehouderijIdentificatie</td>
