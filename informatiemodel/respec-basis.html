@@ -117,7 +117,7 @@
 				<h3>Conventies</h3>
 				<p>Deze paragraaf beschrijft een aantal conventies zoals deze worden gehanteerd in het informatiemodel, zoals de gebruikte modelleertechnieken en wijze van beschrijving. Het informatiemodel is beschreven en gevisualiseerd in de <a href="https://www.omg.org/spec/UML/" target="_blank">Unified Modeling Language (UML)</a>. Verder wordt aangesloten bij het <a href="https://docs.geostandaarden.nl/mim/mim/" target="_blank">Metamodel voor Informatiemodellering 1.1</a>. Dat betekent dat de terminologie en metadata-eigenschappen uit die standaard zijn overgenomen. Er is wel gekozen voor het beperken van de eigenschappen, om de leesbaarheid te maximaliseren.</p>
 				<p>Het logisch model beschrijft op het hoogste niveau de objecttypen, gegevensgroeptypen, enumeraties en referentielijsten. Attributen worden getoond bij de objecttypen en gegevensgroeptypen waarbij ze gebruikt worden.</p>
-				<p>Voor alle elementen zijn er bepaalde metadata-eigenschappen, gebaseerd op het Metamodel voor Informatiemodellering. Elementen zijn zoveel mogelijk voorzien van een definitie die een duiding geeft van de betekenis en waar relevant ook van een verdere toelichting. Attributen zijn het meest uitgebreid beschreven en hebben aanvullend de volgende metadata-eigenschappen:
+				<p>Voor alle elementen zijn er bepaalde metadata-eigenschappen, gebaseerd op het Metamodel voor Informatiemodellering. Elementen zijn zoveel mogelijk voorzien van een definitie die een duiding geeft van de betekenis en waar relevant ook van een verdere toelichting. Attributen zijn het meest uitgebreid beschreven en hebben aanvullend de volgende metadata-eigenschappen:</p>
 					<ul>
 						<li>
 							<b>Type:</b>
@@ -164,9 +164,8 @@
 							de beperkingen die gelden voor de mogelijke waarden. Daarbij worden algemene woorden zoals "ALS" "DAN" en "ANDERS" gebruikt om aan te geven in welke omstandigheden, welke beperkingen gelden of wat anders geldt. De syntax is verder geïnspireerd door programmeertalen en gebruikt operatoren zoals "==" (gelijk aan), "!=" (niet gelijk aan) en "IN" (zit in verzameling).
 						</li>
 					</ul>
-				</p>
 				<p>Voor een aantal enumeraties zijn voor bepaalde waarden ook functionele namen tussen haakjes weergegeven en in een aantal gevallen zijn er ook definities opgenomen van de waarden. Deze functionele namen en definities zijn alleen bedoeld om de waarden beter te begrijpen; de codes die ervoor staan zijn de waarden die moeten worden ingevuld. Referentielijsten zijn opgevoerd als aparte datatypes en hebben een locatie eigenschap die verwijst naar de plaats waar de lijst te vinden is.</p>
-				<p>Er wordt in het informatiemodel gebruik gemaakt van de volgende datatypen:
+				<p>Er wordt in het informatiemodel gebruik gemaakt van de volgende datatypen:</p>
 					<ul>
 						<li>
 							<b>Integer:</b>
@@ -201,11 +200,10 @@
 							een geografisch gedefinieerd vlak
 						</li>
 					</ul>
-				</p>
 			</section>
 			<section>
 				<h3>NEN3610</h3>
-				<p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen om ze uniek te identificeren: 
+				<p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen om ze uniek te identificeren:</p>
 					<ul>
 						<li><b>identificatie:</b> Unieke identificatiecode van een informatieobject binnen de context van een registratie.</li>
 						<li><b>domein:</b> Aanduiding van het domein waarbinnen de identificatie uniek is.</li>
@@ -217,25 +215,25 @@
 						<li><b>versie:</b> Versieaanduiding van een informatieobject.</li>
 						<li><b>tijdstipRegistratie:</b> Tijdsaanduiding van het moment waarop deze versie van het informatieobject is opgenomen in de registratie.</li>
 					</ul>
-					Alle gegevens in het informatiemodel zijn gelinkt aan een specifieke monitoringsronde en een specifiek monitoringsjaar. Het versienummer wordt gebruikt om ervoor te zorgen dat de objecten over de monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. Het versienummer heeft de volgende opbouw: <i>&lt;monitoringsronde&gt;_&lt;monitoringsjaar&gt;</i>. Het attribuut tijdstipRegistratie wordt geautomatiseerd gevuld in CIMLK.</p>
+					<p>Alle gegevens in het informatiemodel zijn gelinkt aan een specifieke monitoringsronde en een specifiek monitoringsjaar. Het versienummer wordt gebruikt om ervoor te zorgen dat de objecten over de monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. Het versienummer heeft de volgende opbouw: <i>&lt;monitoringsronde&gt;_&lt;monitoringsjaar&gt;</i>. Het attribuut tijdstipRegistratie wordt geautomatiseerd gevuld in CIMLK.</p>
 			</section>
 			<section>
 				<h3>Coördinaatreferentiesyteem</h3>
-				Er wordt vooralsnog uitgegaan van het CRS RD New (EPSG:28992). RD New is een geprojecteerd CRS dat voor het laatst is herzien op 26 oktober 2019. Het is geschikt voor gebruik in Nederland, op land inclusief de Waddenzee, de Waddeneilanden en 12 mijl uit de kust. RD New vervangt EPSG28991 (RD Oud).
+				<p>Er wordt vooralsnog uitgegaan van het CRS RD New (EPSG:28992). RD New is een geprojecteerd CRS dat voor het laatst is herzien op 26 oktober 2019. Het is geschikt voor gebruik in Nederland, op land inclusief de Waddenzee, de Waddeneilanden en 12 mijl uit de kust. RD New vervangt EPSG28991 (RD Oud).</p>
 			</section>
 			<section>
 				<h3>Uitwisselbestanden</h3>
 				<p>Gegevens worden met het CIMLK uitgewisseld in de vorm van bestanden. Op dit moment worden alleen CSV en Shape als uitwisselformaten ondersteund (voor veehouderijen alleen CSV). Het informatiemodel is leidend in het beschrijven van de gegevenselementen die worden uitgewisseld. Omdat er echter verschillende uitwisselformaten zijn, met ieder hun eigen overwegingen, is de structuur van uitwisselbestanden niet per definitie 1-1 met het informatiemodel. In het bijzonder geldt dat CSV-bestanden en Shape-bestanden niet hiërarchisch van aard zijn en dat om die reden er gegevens uit meerdere objecttypen gebundeld worden in één type uitwisselbestand. Daarnaast zijn de CSV en Shape uitwisselformaten ook erg gericht op het zo laagdrempelig mogelijk invoeren en uitwisselen van de gegevens, waardoor er ook andere vereenvoudigingen in zitten. </p>
 				<p>Er zullen ook andere formaten worden ondersteund door het CIMLK. In het bijzonder zal het GML formaat worden ondersteund. De intentie is om het GML Application Schema volledig overeen te laten komen met het informatiemodel.</p>
 				<p>De beschrijving van het formaat van de uitwisselbestanden is opgenomen in een bijlage. De belangrijkste eigenschappen per formaat staan in de volgende paragrafen uitgeschreven.</p>
-				<h5>CSV</h5>
+				<h4>CSV</h4>
 				<p>Het CSV formaat is geoptimaliseerd voor eenvoudige invoer door eindgebruikers in Excel. CSV bestanden zijn gescheiden met een puntkomma (";") en voldoen aan de UTF-8 standaard. De eerste regel van de CSV bestanden bestaat uit de attribuut/kolomnamen. Datum/tijd attributen hanteren het formaat: d-m-jjjj uu:mm (geen voorloopnullen in datum). Tijd is altijd in Nederlandse tijd inclusief correctie voor zomer/wintertijd. Als decimaal scheidingsteken wordt gebruik gemaakt van een punt ("."). <span style="color:red">Let op: dit wijkt af van het standaard decimale scheidingsteksten in Microsoft Excel; dat is een komma.</span>Tekstuele attributen zijn bij voorkeur voorzien van een dubbele quote (") aan het begin en einde van de tekst. Op dit moment is het niet toegestaan om speciale karakters zoals een dubbele quote, puntkomma of newline karakters in teksten te gebruiken, door beperkingen in de achterliggende systemen. Geometrieën hanteren het WKT formaat. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999.0) ingevuld.</p>
-				<h5>Shape</h5>
+				<h4>Shape</h4>
 				<p>Het Shape formaat is geoptimaliseerd voor invoer en gebruik in GIS pakketten. Voor het Shape formaat geldt deels hetzelfde als voor het CSV formaat. De naamgeving van de attributen wijkt echter af van die van de CSV bestanden, doordat namen in Shape bestanden maar 10 karakters lang kunnen zijn. Als decimaal scheidingsteken wordt gebruik gemaakt van een komma (","). Op dit moment is het niet toegestaan om speciale karakters zoals een dubbele quote, puntkomma of newline karakters in teksten te gebruiken, door beperkingen in de achterliggende systemen. Voor optionele attributen die een getal kunnen bevatten, maar die geen waarde hebben wordt het getal -999 (of -999,0) ingevuld. Reële getallen worden gerepresenteerd met een lengte van 18 karakters en een precisie van 10 decimalen.</p>
 				<p>Er wordt geadviseerd om niet zelf een Shape bestand te maken met de juiste eigenschappen, omdat dit foutgevoelig is en er een reële kans is dat de bestanden niet exact voldoet aan de specificaties (zoals datatypes en aantal decimalen). Het advies is om een in plaats daarvan een download te doen van de gegevens van vorig jaar en deze als basis te gebruiken. Als het de eerste aanlevering is dan is het advies om een download van een ander bevoegd gezag als basis te nemen, de aanwezige gegevens te verwijderen en de juiste gegevens toe te voegen.
 				</p>
-				<h5>Geography Markup Language (GML)</h5>
-				GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. In GML worden feature members uniek geïdentificeerd op basis van het GML-id. Het GML-id is gebaseerd op de identificatie, maar is vormgegeven als een URL. Het formaat van de URL is http://cimlk.nl/id/&lt;objecttype&gt;/&lt;identificatie&gt;.
+				<h4>Geography Markup Language (GML)</h4>
+				<p>GML is een formaat dat is geoptimaliseerd voor de uitwisseling van geodata. Het is een XML-gebaseerd formaat, met specifieke conventies voor geografische aspecten. Bij de toekomstige ondersteuning van het GML formaat zal gebruik worden gemaakt van GML versie 3.2.2 met simple features level 2. In GML worden feature members uniek geïdentificeerd op basis van het GML-id. Het GML-id is gebaseerd op de identificatie, maar is vormgegeven als een URL. Het formaat van de URL is http://cimlk.nl/id/&lt;objecttype&gt;/&lt;identificatie&gt;.
 				</p>
 			</section>
 		</section>
