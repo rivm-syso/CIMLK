@@ -5,10 +5,7 @@
 		<title>Informatiemodel Monitoring Luchtkwaliteit</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		<script class='remove'>
-			// All config options at https://respec.org/docs/
 			var respecConfig = {
-				// Working Groups ids at https://respec.org/w3c/groups/
-				group: "webapps",
 				edDraftURI: "https://rivm-syso.github.io/CIMLK/werkversie/index.html",
 				thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
 				latestVersion: "https://rivm-syso.github.io/CIMLK/1.0/index.html",
@@ -29,7 +26,7 @@
 				],
 				subtitle: "Versie 1.1",
 				publishDate: "2024-12-18",
-				specStatus: "unofficial",
+				specStatus: "unofficial", // Remove specStatus when releasing IML
 				shortName: "IMLK",
 				inLanguage: "nl",
 				editors: [{
@@ -37,40 +34,49 @@
 					company: "RIVM",
 				}],
 				authors: [
-									{
-					name: "Danny Greefhorst",
-					company: "RIVM",
+					{
+						name: "Danny Greefhorst",
+						company: "RIVM",
 					},
 					{
-					name: "Michiel Geijer",
-					company: "RIVM",
+						name: "Michiel Geijer",
+						company: "RIVM",
 					},
 					{
-					name: "Suzanne Visser",
-					company: "RIVM",
+						name: "Suzanne Visser",
+						company: "RIVM",
 					},
 					{
-					name: "Joost Wesseling",
-					company: "RIVM",
+						name: "Joost Wesseling",
+						company: "RIVM",
 					}
 				],
-				license: "cc0",
-				isPreview: false,
-				lint: true,
-				logos: [
-				  {
+				logos: [{
 					src: "data:image/png;base64,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",
 					url: "https://rivm.nl",
 					alt: "RIVM",
 					width: 300,
 					height: 150,
 					id: "rivm-logo",
-				  },
-				],
-				// See https://respec.org/docs/#xref for usage.
-				xref: "web-platform",
+				}],
+				preProcess: [(config) => {
+					// Only show warnings and errors when it's a werkversie
+					if (config.specStatus === "unofficial") {
+						// Override default value of true for required-sections, because w3c does not provide required sections for lang=nl
+						config.lint = { "required-sections": false };
+					} else {
+						config.lint = false;
+					}
+				}],
+				postProcess: [(config, doc) => {
+					const summary = doc.querySelector("details summary");
+					if (summary) {
+						// Translate, since the base respec does not provide a Dutch translation
+						summary.textContent = "Meer details over dit document";
+					}
+				}]
 			};
-		</script>		
+		</script>
 		<style>
 		  * {
 			--heading-text: #154273;
@@ -79,8 +85,15 @@
 		  code {
 			color: orange;
 		  }
+
+		  /* Respec disables the fixed sidebar for prefers-reduced-motion, which is activated by default within rivm campus pro. We don't want that to happen, so override them */
+		  body:not(.toc-inline) #toc {
+			position: fixed !important;
+			bottom: 0 !important;
+			overflow: auto !important;
+		  }
 		</style>		
-		<script src='respec-rivm.js' class='remove'></script>
+		<script src='respec-w3c-35.4.1.js' class='remove'></script>
 	</head>
 	<body>
 		<h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
