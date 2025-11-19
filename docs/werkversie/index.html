@@ -2131,17 +2131,6 @@
 <tr border="0"><td width=200 valign=top><b>Stereotype</b></td><td>Gegevensgroeptype</td></tr>
 <tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Specificatie van de combinatie van een stof, voertuigtype en snelheidstype waarvoor emissies met een opgegeven factor worden geschaald.</td></tr>
 </table>
-<section id="Maatregelfactor.stof">
-<h4>stof</h4>
-<table width=100%>
-<tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De stof waar de maatregel effect op heeft.</td></tr>
-<tr border="0"><td width=200><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
-<tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200><b>Lengte</b></td><td>1..5</td></tr>
-<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
-</table>
-</section>
 <section id="Maatregelfactor.voertuigtype">
 <h4>voertuigtype</h4>
 <table width=100%>
@@ -2151,18 +2140,6 @@
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Lengte</b></td><td>1..2</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
-</table>
-</section>
-<section id="Maatregelfactor.schalingsfactor">
-<h4>schalingsfactor</h4>
-<table width=100%>
-<tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De factor waarmee de emissies worden vermenigvuldigd binnen het maatregelgebied.</td></tr>
-<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Deze factor wordt gebruikt voor emissies van de genoemde stof, voertuigen en snelheid.</td></tr>
-<tr border="0"><td width=200><b>Type</b></td><td>Real</td></tr>
-<tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
-<tr border="0"><td width=200><b>Minimale waarde</b></td><td>0</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.wegsoort">
@@ -2176,14 +2153,36 @@
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
 </table>
 </section>
+<section id="Maatregelfactor.stof">
+<h4>stof</h4>
+<table width=100%>
+<tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De stof waar de maatregel effect op heeft.</td></tr>
+<tr border="0"><td width=200><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
+<tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200><b>Lengte</b></td><td>1..5</td></tr>
+<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+</table>
+</section>
+<section id="Maatregelfactor.schalingsfactor">
+<h4>schalingsfactor</h4>
+<table width=100%>
+<tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De factor waarmee de emissies worden vermenigvuldigd binnen het maatregelgebied.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Deze factor wordt gebruikt voor emissies van de genoemde stof, voertuigen en snelheid.</td></tr>
+<tr border="0"><td width=200><b>Type</b></td><td>Real</td></tr>
+<tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200><b>Minimale waarde</b></td><td>0</td></tr>
+</table>
+</section>
 <section id="Maatregelfactor.standaardSchalingsfactor">
 <h4>standaardSchalingsfactor</h4>
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Het soort weg vanuit het perspectief van snelheid en doorstroming.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Of er gebruik gemaakt wordt van een standaard schalingsfactor in plaats van een zelf opgegeven schalingsfactor. De standaard schalingsfactor wordt geselecteerd op basis van opgegeven stof, voertuigtype en wegsoort.</td></tr>
 <tr border="0"><td width=200><b>Type</b></td><td>boolean</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200><b>Lengte</b></td><td>1..2</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
 </table>
 </section>
