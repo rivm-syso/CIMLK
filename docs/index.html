@@ -7,7 +7,7 @@
     <script class='remove'>
         var respecConfig = {
             thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
-            latestVersion: "https://rivm-syso.github.io/CIMLK/1.0/index.html",
+            latestVersion: "https://rivm-syso.github.io/CIMLK/1.1/index.html",
             otherLinks: [
                 {
                     key: "Geschiedenis",
@@ -23,8 +23,8 @@
                     ]
                 }
             ],
-            subtitle: "Versie 1.1",
-            publishDate: "2024-12-18",
+            subtitle: "Versie 1.2",
+            publishDate: "2025-11-19",
             shortName: "IMLK",
             inLanguage: "nl",
             editors: [
@@ -82,7 +82,7 @@
             overflow: auto !important;
         }
     </style>
-    <script src='respec-w3c-35.4.1.js' class='remove'></script>
+    <script src='respec-w3c-35.6.0.js' class='remove'></script>
 </head>
 <body>
 <h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
@@ -586,7 +586,8 @@
             </map>
         </section>
     </section>
-</section><section><h2>Objecttypen</h2>
+</section>
+<section><h2>Objecttypen</h2>
 <section id="AanvullendeTechniek">
 <h3>AanvullendeTechniek</h3>
 <table>
@@ -2171,8 +2172,20 @@
 <tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Deze factor wordt gebruikt voor emissies van de genoemde stof, voertuigen en snelheid.</td></tr>
 <tr border="0"><td width=200><b>Type</b></td><td>Real</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
-<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
 <tr border="0"><td width=200><b>Minimale waarde</b></td><td>0</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS (standaardSchalingsfactor == 'nee' OF standaardSchalingsfactor == NULL) DAN (schalingsfactor != NULL)</td></tr>
+</table>
+</section>
+<section id="Maatregelfactor.standaardSchalingsfactor">
+<h4>standaardSchalingsfactor</h4>
+<table width=100%>
+<tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Of er gebruik gemaakt wordt van een standaard schalingsfactor in plaats van een zelf opgegeven schalingsfactor. De standaard schalingsfactor wordt geselecteerd op basis van opgegeven stof, voertuigtype en wegsoort.</td></tr>
+<tr border="0"><td width=200><b>Type</b></td><td>boolean</td></tr>
+<tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS (schalingsfactor == NULL) DAN (standaardSchalingsfactor == 'ja')</td></tr>
 </table>
 </section>
 </section>
@@ -3797,7 +3810,16 @@
     <p>Dit is de lijst van wijzigingen die per nieuwe versie van het Informatiemodel Monitoring Luchtkwaliteit
         gepubliceerd zijn.</p>
     <section>
-        <h3>Versie 1.1 (huidige versie)</h3>
+        <h3>Versie 1.2 (huidige versie)</h3>
+        <ul>
+            <li>Attribuut <a
+                href="#Maatregelfactor.standaardSchalingsfactor">Maatregelfactor.standaardSchalingsfactor</a>
+                toegevoegd.
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3><a href="https://rivm-syso.github.io/CIMLK/1.1/index.html">Versie 1.1</a></h3>
         <ul>
             <li>Constraint bij <a href="#GeoObject.identificatie">GeoObject.identificatie</a> toegevoegd.</li>
             <li>Constraint bij <a href="#Wegdeel.tunnelfactor">Wegdeel.tunnelfactor</a> toegevoegd.</li>
