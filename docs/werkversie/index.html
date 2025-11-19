@@ -587,7 +587,8 @@
             </map>
         </section>
     </section>
-</section><section><h2>Objecttypen</h2>
+</section>
+<section><h2>Objecttypen</h2>
 <section id="AanvullendeTechniek">
 <h3>AanvullendeTechniek</h3>
 <table>
@@ -2174,6 +2175,7 @@
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
 <tr border="0"><td width=200><b>Minimale waarde</b></td><td>0</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS (standaardSchalingsfactor == 'nee' OF standaardSchalingsfactor == NULL) DAN (schalingsfactor != NULL)</td></tr>
 </table>
 </section>
 <section id="Maatregelfactor.standaardSchalingsfactor">
@@ -2184,6 +2186,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>boolean</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS (schalingsfactor == NULL) DAN (standaardSchalingsfactor == 'ja')</td></tr>
 </table>
 </section>
 </section>
