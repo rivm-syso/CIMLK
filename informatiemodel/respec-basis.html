@@ -283,33 +283,12 @@
         <h3>NEN3610</h3>
         <p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is
             specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als
-            specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen
-            om ze uniek te identificeren:</p>
-        <ul>
-            <li><b>identificatie:</b> Unieke identificatiecode van een informatieobject binnen de context van een
-                registratie.
-            </li>
-            <li><b>domein:</b> Aanduiding van het domein waarbinnen de identificatie uniek is.</li>
-        </ul>
-        <p>De identificatie is een samenstelling het KVK nummer van de bronhouder, een underscore ("_") en een lokaal
-            unieke identifcatie bij de bronhouder. De identificatie heeft daarmee de volgende structuur:<br><i>&lt;KVK&gt;_&lt;lokale
-                identificatie&gt;</i>. De identificatie kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"…
-            "9", "_", “-”}'. Het domein zal altijd de waarde “imlk” bevatten.
+            specialisatie van het objecttype GeoObject. Alle objecttypen hebben een unieke identificatiecode binnen de
+            context van een registratie.</p>
+        <p>De identificatie is een samenstelling het KVK-nummer van de bronhouder, een underscore ("_") en een lokaal
+            unieke identifcatie bij de bronhouder. Zie <a href="#GeoObject.identificatie">GeoObject.identificatie</a>
+            voor uitleg over de structuur.
         </p>
-        <p>Naast de attributen voor het identificeren zijn er ook een aantal attributen die specifiek zijn gericht op
-            het beschrijven van een versie van een object en die in NEN3610:2022 onderdeel zijn van het objecttype
-            Registratie:
-        <ul>
-            <li><b>versie:</b> Versieaanduiding van een informatieobject.</li>
-            <li><b>tijdstipRegistratie:</b> Tijdsaanduiding van het moment waarop deze versie van het informatieobject
-                is opgenomen in de registratie.
-            </li>
-        </ul>
-        <p>Alle gegevens in het informatiemodel zijn gelinkt aan een specifieke monitoringsronde en een specifiek
-            monitoringsjaar. Het versienummer wordt gebruikt om ervoor te zorgen dat de objecten over de
-            monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. Het
-            versienummer heeft de volgende opbouw: <i>&lt;monitoringsronde&gt;_&lt;monitoringsjaar&gt;</i>. Het
-            attribuut tijdstipRegistratie wordt geautomatiseerd gevuld in CIMLK.</p>
     </section>
     <section>
         <h3>Coördinaatreferentiesyteem</h3>
