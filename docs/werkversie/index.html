@@ -794,9 +794,9 @@
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Het KVK-nummer van de overheidsorganisatie die bronhouder is van de gegevens.</td></tr>
-<tr border="0"><td width=200><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200><b>Formeel patroon</b></td><td>^\d{8}$</td></tr>
-<tr border="0"><td width=200><b>Patroon</b></td><td>8 Cijfers</td></tr>
+<tr border="0"><td width=200><b>Patroon</b></td><td>8 cijfers</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
 </table>
@@ -885,6 +885,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS ((type == ReceptorVeehouderij) DAN (geometrie IS IN Nederland))</td></tr>
 </table>
 </section>
 </section>
@@ -1141,7 +1142,7 @@
 <h4>isCluster</h4>
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Of het een cluster berekening is of niet.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Bij de berekening van het resultaat op een receptor is gekeken of in de nabijheid van de receptor bronnen van meerdere veehouderijen aanwezig waren om door te rekenen.</td></tr>
 <tr border="0"><td width=200><b>Type</b></td><td>boolean</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
@@ -1682,6 +1683,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>geometrie IS IN Nederland</td></tr>
 </table>
 </section>
 <section>
@@ -1802,6 +1804,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>geometrie IS IN Nederland</td></tr>
 </table>
 </section>
 <section>
@@ -1911,7 +1914,7 @@
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
 <tr border="0"><td width=200><b>Minimale waarde</b></td><td>0</td></tr>
-<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>tunnelfactor = 0 OR 1 =< tunnelfactor =< 999.9</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>tunnelfactor = 0 OR tunnelfactor = 1 OR tunnelfactor >= 2</td></tr>
 </table>
 </section>
 <section id="Wegdeel.hoogte">
@@ -2007,8 +2010,8 @@
 <h4>stof</h4>
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De stof waar de correctie effect op heeft.</td></tr>
-<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Geeft aan op welke stof het correctiegebied betrekking heeft.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De stof waarop de correctie van het resultaat wordt toegepast.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Geeft de stof aan waarop de correctie op het totaal resultaat van individuele receptoren of receptoren in een correctiegebied wordt uitgevoerd.</td></tr>
 <tr border="0"><td width=200><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Lengte</b></td><td>1..5</td></tr>
