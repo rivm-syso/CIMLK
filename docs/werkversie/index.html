@@ -23,8 +23,8 @@
                     ]
                 }
             ],
-            subtitle: "Versie 1.2",
-            publishDate: "2025-11-19",
+            subtitle: "Versie 1.4",
+            publishDate: "2026-??-??",
             specStatus: "unofficial", // Remove specStatus when releasing IML
             shortName: "IMLK",
             inLanguage: "nl",
@@ -83,7 +83,7 @@
             overflow: auto !important;
         }
     </style>
-    <script src='respec-w3c-35.6.0.js' class='remove'></script>
+    <script src='respec-w3c-35.6.1.js' class='remove'></script>
 </head>
 <body>
 <h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
@@ -283,33 +283,12 @@
         <h3>NEN3610</h3>
         <p>Er is voor gekozen om aan te sluiten bij de NEN3610:2022 standaard voor informatiemodellering. Deze is
             specifiek gericht op geografische informatie. Alle objecttypen zijn om die reden gemodelleerd als
-            specialisatie van het objecttype GeoObject. Hierdoor hebben alle objecttypen een aantal standaard attributen
-            om ze uniek te identificeren:</p>
-        <ul>
-            <li><b>identificatie:</b> Unieke identificatiecode van een informatieobject binnen de context van een
-                registratie.
-            </li>
-            <li><b>domein:</b> Aanduiding van het domein waarbinnen de identificatie uniek is.</li>
-        </ul>
-        <p>De identificatie is een samenstelling het KVK nummer van de bronhouder, een underscore ("_") en een lokaal
-            unieke identifcatie bij de bronhouder. De identificatie heeft daarmee de volgende structuur:<br><i>&lt;KVK&gt;_&lt;lokale
-                identificatie&gt;</i>. De identificatie kan de volgende karakters bevatten: '{"A"… "Z", "a"… "z", "0"…
-            "9", "_", “-”}'. Het domein zal altijd de waarde “imlk” bevatten.
+            specialisatie van het objecttype GeoObject. Alle objecttypen hebben een unieke identificatiecode binnen de
+            context van een registratie.</p>
+        <p>De identificatie is een samenstelling het KVK-nummer van de bronhouder, een underscore ("_") en een lokaal
+            unieke identifcatie bij de bronhouder. Zie <a href="#GeoObject.identificatie">GeoObject.identificatie</a>
+            voor uitleg over de structuur.
         </p>
-        <p>Naast de attributen voor het identificeren zijn er ook een aantal attributen die specifiek zijn gericht op
-            het beschrijven van een versie van een object en die in NEN3610:2022 onderdeel zijn van het objecttype
-            Registratie:
-        <ul>
-            <li><b>versie:</b> Versieaanduiding van een informatieobject.</li>
-            <li><b>tijdstipRegistratie:</b> Tijdsaanduiding van het moment waarop deze versie van het informatieobject
-                is opgenomen in de registratie.
-            </li>
-        </ul>
-        <p>Alle gegevens in het informatiemodel zijn gelinkt aan een specifieke monitoringsronde en een specifiek
-            monitoringsjaar. Het versienummer wordt gebruikt om ervoor te zorgen dat de objecten over de
-            monitoringsrondes en monitoringsjaren heen gevolgd kunnen worden en een unieke aanduiding hebben. Het
-            versienummer heeft de volgende opbouw: <i>&lt;monitoringsronde&gt;_&lt;monitoringsjaar&gt;</i>. Het
-            attribuut tijdstipRegistratie wordt geautomatiseerd gevuld in CIMLK.</p>
     </section>
     <section>
         <h3>Coördinaatreferentiesyteem</h3>
@@ -794,9 +773,9 @@
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
 <tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Het KVK-nummer van de overheidsorganisatie die bronhouder is van de gegevens.</td></tr>
-<tr border="0"><td width=200><b>Type</b></td><td>Integer</td></tr>
+<tr border="0"><td width=200><b>Type</b></td><td>CharacterString</td></tr>
 <tr border="0"><td width=200><b>Formeel patroon</b></td><td>^\d{8}$</td></tr>
-<tr border="0"><td width=200><b>Patroon</b></td><td>8 Cijfers</td></tr>
+<tr border="0"><td width=200><b>Patroon</b></td><td>8 cijfers</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
 </table>
@@ -885,6 +864,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS ((type == ReceptorVeehouderij) DAN (geometrie IS IN Nederland))</td></tr>
 </table>
 </section>
 </section>
@@ -1141,7 +1121,7 @@
 <h4>isCluster</h4>
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Of het een cluster berekening is of niet.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Bij de berekening van het resultaat op een receptor is gekeken of in de nabijheid van de receptor bronnen van meerdere veehouderijen aanwezig waren om door te rekenen.</td></tr>
 <tr border="0"><td width=200><b>Type</b></td><td>boolean</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>ja</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
@@ -1682,6 +1662,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>geometrie IS IN Nederland</td></tr>
 </table>
 </section>
 <section>
@@ -1802,6 +1783,7 @@
 <tr border="0"><td width=200><b>Type</b></td><td>GM_Point</td></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>geometrie IS IN Nederland</td></tr>
 </table>
 </section>
 <section>
@@ -1911,7 +1893,7 @@
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1</td></tr>
 <tr border="0"><td width=200><b>Minimale waarde</b></td><td>0</td></tr>
-<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>tunnelfactor = 0 OR 1 =< tunnelfactor =< 999.9</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>tunnelfactor = 0 OR tunnelfactor = 1 OR tunnelfactor >= 2</td></tr>
 </table>
 </section>
 <section id="Wegdeel.hoogte">
@@ -2007,8 +1989,8 @@
 <h4>stof</h4>
 <table width=100%>
 <tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
-<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De stof waar de correctie effect op heeft.</td></tr>
-<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Geeft aan op welke stof het correctiegebied betrekking heeft.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>De stof waarop de correctie van het resultaat wordt toegepast.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Geeft de stof aan waarop de correctie op het totaal resultaat van individuele receptoren of receptoren in een correctiegebied wordt uitgevoerd.</td></tr>
 <tr border="0"><td width=200><b>Type</b></td><td><a href="#WegverkeerStof">WegverkeerStof</a></tr>
 <tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
 <tr border="0"><td width=200><b>Lengte</b></td><td>1..5</td></tr>
@@ -3811,7 +3793,25 @@
     <p>Dit is de lijst van wijzigingen die per nieuwe versie van het Informatiemodel Monitoring Luchtkwaliteit
         gepubliceerd zijn.</p>
     <section>
-        <h3>Versie 1.2 (huidige versie)</h3>
+        <h3>Versie 1.3 (huidige versie)</h3>
+        <ul>
+            <li>Tekst bij <a href="#nen3610">NEN3610 en identificatie</a> versimpeld.</li>
+            <li>Type bij <a href="#Organisatie.kvkNummer">Organisatie.kvkNummer</a> aangepast van Integer naar
+                CharacterString.
+            </li>
+            <li>Definitie bij <a href="#RekenresultaatVeehouderij.isCluster">RekenresultaatVeehouderij.isCluster</a>
+                verduidelijkt.
+            </li>
+            <li>Definitie en toelichting bij <a href="#Correctieterm.stof">Correctieterm.stof</a> verduidelijkt.</li>
+            <li>Constraint toegevoegd die aangeeft dat de geometrie van <a href="#Receptor.geometrie">ReceptorVeehouderij</a>,
+                <a href="#Stal.geometrie">Stal</a> en <a href="#Veehouderijbron.geometrie">Veehouderijbron</a> zich
+                binnen Nederland moet bevinden.
+            </li>
+            <li>Constraint bij <a href="#Wegdeel.tunnelfactor">Wegdeel.tunnelfactor</a> gecorrigeerd.</li>
+        </ul>
+    </section>
+    <section>
+        <h3><a href="https://rivm-syso.github.io/CIMLK/1.2/index.html">Versie 1.2</a></h3>
         <ul>
             <li>Attribuut <a
                 href="#Maatregelfactor.standaardSchalingsfactor">Maatregelfactor.standaardSchalingsfactor</a>
