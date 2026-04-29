@@ -7,7 +7,7 @@
     <script class='remove'>
         var respecConfig = {
             thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
-            latestVersion: "https://rivm-syso.github.io/CIMLK/1.1/index.html",
+            latestVersion: "https://rivm-syso.github.io/CIMLK/1.4/index.html",
             otherLinks: [
                 {
                     key: "Geschiedenis",
@@ -23,8 +23,8 @@
                     ]
                 }
             ],
-            subtitle: "Versie 1.2",
-            publishDate: "2025-11-19",
+            subtitle: "Versie 1.4",
+            publishDate: "2026-04-29",
             specStatus: "unofficial", // Remove specStatus when releasing IML
             shortName: "IMLK",
             inLanguage: "nl",
@@ -83,7 +83,7 @@
             overflow: auto !important;
         }
     </style>
-    <script src='respec-w3c-35.6.0.js' class='remove'></script>
+    <script src='respec-w3c-35.6.1.js' class='remove'></script>
 </head>
 <body>
 <h1 id="title">Informatiemodel Monitoring Luchtkwaliteit</h1>
@@ -120,14 +120,7 @@
             in Nederland te verbeteren. Binnen het SLA zal de gezondheidswinst, ontwikkeling van de luchtkwaliteit en de
             voortgang van SLA- maatregelen gemonitord worden. De SLA-deelnemers doen om het jaar mee met de monitoring
             van luchtkwaliteit.</p>
-        <p>Het NSL-monitoringtool fungert sinds 2013 als centraal punt waarop overheden de benodigde gegevens voor
-            verkeer, veehouderijen en voortgangsformulieren kunnen inzien, doorrekenen en bijwerken. Omdat het tool
-            technisch is verouderd zal het worden vervangen door een nieuw systeem: het Centraal Instrument Monitoring
-            Luchtkwaliteit (CIMLK). Het maakt de monitoring van en rekenen aan luchtkwaliteit mogelijk, en ondersteunt
-            de wet- en regelgeving voor luchtkwaliteit . Het zorgt dat de uitwisseling van monitoringsgegevens
-            luchtkwaliteit eenvoudig blijft. Het zorgt dat gegevens over voor de luchtkwaliteit relevante bronnen
-            beschikbaar zijn ten behoeve van luchtkwaliteitonderzoeken en dat monitoringsgegevens eenvoudig zijn in te
-            zien.</p>
+		<p>De NSL-monitoringstool gebruikt vanaf 2013 is in 2021 vervangen door het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Het maakt de monitoring van én rekenen aan luchtkwaliteit mogelijk, en ondersteunt de wet- en regelgeving voor luchtkwaliteit. Het zorgt dat de uitwisseling van monitoringsgegevens van verkeer en veehouderijen eenvoudig blijft. Daarnaast blijven de gegevens voor de luchtkwaliteit over relevante bronnen beschikbaar voor luchtkwaliteitonderzoeken en is het eenvoudig monitoringsgegevens in te zien.</p>
     </section>
     <section>
         <h3>Informatiemodel</h3>
@@ -367,7 +360,7 @@
             <p>In een luchtkwaliteitberekening worden alle objecten meegenomen die invloed hebben op de verspreiding van
                 de emissies van de emissieobjecten, zoals meteo, ruwheid en emissiefactoren, en op het berekende niveau
                 van de luchtkwaliteit op de locatie waarvoor de berekening uitgevoerd wordt, zoals grootschalige
-                concentraties, correctiegebieden en relevante maatregelen. Het resultaat van een berekening is de
+                concentraties, correcties en relevante maatregelen. Het resultaat van een berekening is de
                 jaargemiddelde concentratie per stof op de receptoren die door de gebruiker in het betreffende project
                 aangegeven zijn. Voor PM10 worden ook aantallen overschrijdingsdagen berekend. In een monitoringsronde
                 worden emissieobjecten en alle gegevens voor een luchtkwaliteitberekening geactualiseerd voor het
@@ -393,8 +386,7 @@
                 emissies verspreiden zich minder naar de omgeving dan zonder het scherm het geval is. Een milieuzone
                 sluit bepaalde voertuigtypen uit, waardoor de emissiefactoren in dit gebied afwijken van de landelijk
                 vastgestelde emissiefactoren. Dit heeft effect op de hoeveelheid emissie in dit gebied en daarmee op de
-                concentraties luchtverontreinigende stoffen die op locaties bepaald worden met een berekening. Binnen
-                een monitoringronde wordt de voortgang van SLA-maatregelen in beeld gebracht.</p>
+                concentraties luchtverontreinigende stoffen die op locaties bepaald worden met een berekening.</p>
         </section>
         <section>
             <h4>Emissieobject</h4>
@@ -426,13 +418,7 @@
         <section>
             <h4>Correctie</h4>
             <p>Een correctie op de totale concentratie.</p>
-            <p>Correcties kunnen betrekking hebben op één of enkele receptoren of op een geografisch afgebakend gebied
-                waar aangepaste achtergrondconcentraties toegepast worden in een berekening. Een voorbeeld van een
-                correctiegebied is het IJmondgebied. De grootschalige achtergrondconcentraties worden normaal gesproken
-                op 1x1 km2 in een luchtkwaliteitberekening meegenomen. In dit gebied is echter sprake van specifieke
-                emissies van luchtverontreinigende stoffen op een kleiner schaalniveau. Een correctiegebied met
-                achtergrondconcentraties op een kleiner schaalniveau maakt een gedetailleerdere berekening van
-                luchtverontreinigende stoffen mogelijk. Bij correcties op één of enkele receptoren is sprake van een
+            <p>Een correctie heeft betrekking op één receptor waar aangepaste achtergrondconcentraties toegepast worden in een berekening. Bij correcties is sprake van een
                 bijzondere situatie waar de standaard rekenmethoden beperkt op van toepassing zijn. Aan de hand van
                 windtunnelonderzoek wordt een gedetailleerdere analyse uitgevoerd van de concentraties
                 luchtverontreinigende stoffen. De berekende concentraties worden hierop gecorrigeerd.</p>
