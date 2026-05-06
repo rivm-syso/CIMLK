@@ -52,8 +52,6 @@ Het script voert de volgende stappen uit en voegt informatie uit verschillende b
 
 Het resultaat van het script wordt opgeslagen als `index.html`. Merk op dat dit alleen succesvol werkt als Sparx Enterprise Architect is geopend door het modelbestand aan te klikken en niet door het te openen vanuit Sparx Enterprise Architect. In het laatste geval staat de huidige directory niet goed ingesteld en dan kunnen de scripts de relevante bestanden niet lokaliseren.
 
-Er blijken problemen te zijn met het weergeven van het informatiemodel in de RIVM desktopomgeving als gebruik wordt gemaakt van de laatste versie van ReSpec (het menu scrollt mee met de inhoud). Om die reden wordt een kopie van het `index.html` gemaakt naar `rivm.html` waarin de verwijzing naar de respec JavaScript bibliotheel wordt aangepast naar een eigen aangepaste kopie van een oude versie van de ReSpec bibliotheek (`rivm-respec-w3c-v26.13.4.js`). Dat document is dus specifiek bedoeld door gebruik binnen de RIVM desktopomgeving.
-
 ### Aanpassen afbeeldingen van diagrammen
 In het ReSpec HTML bestand wordt op een aantal plaatsen verwezen naar afbeeldingen van stukken van het informatiemodel.
 Deze zijn opgeslagen in de map `docs`.

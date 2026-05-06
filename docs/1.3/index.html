@@ -7,7 +7,7 @@
     <script class='remove'>
         var respecConfig = {
             thisVersion: "https://rivm-syso.github.io/CIMLK/index.html",
-            latestVersion: "https://rivm-syso.github.io/CIMLK/1.4/index.html",
+            latestVersion: "https://rivm-syso.github.io/CIMLK/1.2/index.html",
             otherLinks: [
                 {
                     key: "Geschiedenis",
@@ -23,9 +23,8 @@
                     ]
                 }
             ],
-            subtitle: "Versie 1.4",
-            publishDate: "2026-04-29",
-            specStatus: "unofficial", // Remove specStatus when releasing IML
+            subtitle: "Versie 1.3",
+            publishDate: "2026-01-26",
             shortName: "IMLK",
             inLanguage: "nl",
             editors: [
@@ -120,7 +119,14 @@
             in Nederland te verbeteren. Binnen het SLA zal de gezondheidswinst, ontwikkeling van de luchtkwaliteit en de
             voortgang van SLA- maatregelen gemonitord worden. De SLA-deelnemers doen om het jaar mee met de monitoring
             van luchtkwaliteit.</p>
-		<p>De NSL-monitoringstool gebruikt vanaf 2013 is in 2021 vervangen door het Centraal Instrument Monitoring Luchtkwaliteit (CIMLK). Het maakt de monitoring van én rekenen aan luchtkwaliteit mogelijk, en ondersteunt de wet- en regelgeving voor luchtkwaliteit. Het zorgt dat de uitwisseling van monitoringsgegevens van verkeer en veehouderijen eenvoudig blijft. Daarnaast blijven de gegevens voor de luchtkwaliteit over relevante bronnen beschikbaar voor luchtkwaliteitonderzoeken en is het eenvoudig monitoringsgegevens in te zien.</p>
+        <p>Het NSL-monitoringtool fungert sinds 2013 als centraal punt waarop overheden de benodigde gegevens voor
+            verkeer, veehouderijen en voortgangsformulieren kunnen inzien, doorrekenen en bijwerken. Omdat het tool
+            technisch is verouderd zal het worden vervangen door een nieuw systeem: het Centraal Instrument Monitoring
+            Luchtkwaliteit (CIMLK). Het maakt de monitoring van en rekenen aan luchtkwaliteit mogelijk, en ondersteunt
+            de wet- en regelgeving voor luchtkwaliteit . Het zorgt dat de uitwisseling van monitoringsgegevens
+            luchtkwaliteit eenvoudig blijft. Het zorgt dat gegevens over voor de luchtkwaliteit relevante bronnen
+            beschikbaar zijn ten behoeve van luchtkwaliteitonderzoeken en dat monitoringsgegevens eenvoudig zijn in te
+            zien.</p>
     </section>
     <section>
         <h3>Informatiemodel</h3>
@@ -360,7 +366,7 @@
             <p>In een luchtkwaliteitberekening worden alle objecten meegenomen die invloed hebben op de verspreiding van
                 de emissies van de emissieobjecten, zoals meteo, ruwheid en emissiefactoren, en op het berekende niveau
                 van de luchtkwaliteit op de locatie waarvoor de berekening uitgevoerd wordt, zoals grootschalige
-                concentraties, correcties en relevante maatregelen. Het resultaat van een berekening is de
+                concentraties, correctiegebieden en relevante maatregelen. Het resultaat van een berekening is de
                 jaargemiddelde concentratie per stof op de receptoren die door de gebruiker in het betreffende project
                 aangegeven zijn. Voor PM10 worden ook aantallen overschrijdingsdagen berekend. In een monitoringsronde
                 worden emissieobjecten en alle gegevens voor een luchtkwaliteitberekening geactualiseerd voor het
@@ -386,7 +392,8 @@
                 emissies verspreiden zich minder naar de omgeving dan zonder het scherm het geval is. Een milieuzone
                 sluit bepaalde voertuigtypen uit, waardoor de emissiefactoren in dit gebied afwijken van de landelijk
                 vastgestelde emissiefactoren. Dit heeft effect op de hoeveelheid emissie in dit gebied en daarmee op de
-                concentraties luchtverontreinigende stoffen die op locaties bepaald worden met een berekening.</p>
+                concentraties luchtverontreinigende stoffen die op locaties bepaald worden met een berekening. Binnen
+                een monitoringronde wordt de voortgang van SLA-maatregelen in beeld gebracht.</p>
         </section>
         <section>
             <h4>Emissieobject</h4>
@@ -418,7 +425,13 @@
         <section>
             <h4>Correctie</h4>
             <p>Een correctie op de totale concentratie.</p>
-            <p>Een correctie heeft betrekking op één receptor waar aangepaste achtergrondconcentraties toegepast worden in een berekening. Bij correcties is sprake van een
+            <p>Correcties kunnen betrekking hebben op één of enkele receptoren of op een geografisch afgebakend gebied
+                waar aangepaste achtergrondconcentraties toegepast worden in een berekening. Een voorbeeld van een
+                correctiegebied is het IJmondgebied. De grootschalige achtergrondconcentraties worden normaal gesproken
+                op 1x1 km2 in een luchtkwaliteitberekening meegenomen. In dit gebied is echter sprake van specifieke
+                emissies van luchtverontreinigende stoffen op een kleiner schaalniveau. Een correctiegebied met
+                achtergrondconcentraties op een kleiner schaalniveau maakt een gedetailleerdere berekening van
+                luchtverontreinigende stoffen mogelijk. Bij correcties op één of enkele receptoren is sprake van een
                 bijzondere situatie waar de standaard rekenmethoden beperkt op van toepassing zijn. Aan de hand van
                 windtunnelonderzoek wordt een gedetailleerdere analyse uitgevoerd van de concentraties
                 luchtverontreinigende stoffen. De berekende concentraties worden hierop gecorrigeerd.</p>
@@ -590,7 +603,7 @@
 <table>
 <tr border="0"><td width=200 valign=top><b>Stereotype</b></td><td>Objecttype</td></tr>
 <tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Een bestuurlijke beslissing waarin een correctie op concentraties is gedefinieerd.</td></tr>
-<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>De berekende concentraties op een locatie kunnen worden gecorrigeerd door middel van een absolute correctieterm. De term wordt toegekend aan een specifieke locatie.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>De berekende concentraties op een locatie kunnen worden gecorrigeerd door middel van een absolute correctieterm. De term kan toegekend worden aan een specifieke locatie of aan een gebied.</td></tr>
 </table>
 <section id="Correctie.naam">
 <h4>naam</h4>
@@ -613,6 +626,18 @@
 <tr border="0"><td width=200><b>Kardinaliteit</b></td><td>1..*</td></tr>
 </table>
 </section>
+<section id="Correctie.geometrie">
+<h4>geometrie</h4>
+<table width=100%>
+<tr border="0"><td width=200><b>Stereotype</b></td><td>Attribuutsoort</td></tr>
+<tr border="0"><td width=200 valign=top><b>Definitie</b></td><td>Geometrie die de ligging en vorm van het correctiegebied beschrijft.</td></tr>
+<tr border="0"><td width=200 valign=top><b>Toelichting</b></td><td>Als de correctie is gerelateerd aan een receptor dan is de geometrie van de correctie een polygoon die is afgeleid van de locatie van de receptor.</td></tr>
+<tr border="0"><td width=200><b>Type</b></td><td>GM_Surface</td></tr>
+<tr border="0"><td width=200><b>Identificerend</b></td><td>nee</td></tr>
+<tr border="0"><td width=200><b>Kardinaliteit</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200 valign=top><b>Constraints</b></td><td>ALS (receptor == NULL) DAN (geometrie != NULL) ANDERS (geometrie == NULL).</td></tr>
+</table>
+</section>
 <section>
 <h3>receptor</h3>
 <table width=100%>
@@ -622,7 +647,8 @@
 <tr border="0"><td width=200><b>Kardinaliteit bron</b></td><td>0..*</td></tr>
 <tr border="0"><td width=200><b>Doel</b></td><td><a href="#ReceptorWegverkeer">ReceptorWegverkeer</a></td></tr>
 <tr border="0"><td width=200><b>Rol doel</b></td><td>receptor</td></tr>
-<tr border="0"><td width=200><b>Kardinaliteit doel</b></td><td>1</td></tr>
+<tr border="0"><td width=200><b>Kardinaliteit doel</b></td><td>0..1</td></tr>
+<tr border="0"><td width=200><b>Constraints</b></td><td>ALS (geometrie == NULL) DAN (receptor != NULL) ANDERS (receptor == NULL).</td></tr>
 </table>
 </section>
 </section>
@@ -2920,7 +2946,7 @@
                         <th>Link met informatiemodel</th>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td>1</td>
                         <td>identificatie</td>
                         <td>ID</td>
                         <td>
@@ -2970,6 +2996,14 @@
                         <td>tijdstipRegistratie</td>
                         <td>tijdReg</td>
                         <td><a href="#Registratie.tijdstipRegistratie">Registratie.tijdstipRegistratie</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>geometrie</td>
+                        <td>the_geom</td>
+                        <td>
+                            <a href="#Correctie.geometrie">Correctie.geometrie</a>
+                        </td>
                     </tr>
                 </table>
             </section>
@@ -3758,15 +3792,7 @@
     <p>Dit is de lijst van wijzigingen die per nieuwe versie van het Informatiemodel Monitoring Luchtkwaliteit
         gepubliceerd zijn.</p>
     <section>
-		<h3>Versie 1.4 (huidige versie)</h3>
-		<ul>
-			<li>Correctiegebieden verwijderd.</li>
-			<li>Tekst gewijzigd m.b.t. vervanging NSL-monitoringtool.</li>
-			<li>Referentie naar SLA-maatregelen weggehaald uit Maatregel beschrijving.</li>
-		</ul>
-	</section>
-	<section>
-        <h3><a href="https://rivm-syso.github.io/CIMLK/1.3/index.html">Versie 1.3</a></h3>
+        <h3>Versie 1.3 (huidige versie)</h3>
         <ul>
             <li>Tekst bij <a href="#nen3610">NEN3610 en identificatie</a> versimpeld.</li>
             <li>Type bij <a href="#Organisatie.kvkNummer">Organisatie.kvkNummer</a> aangepast van Integer naar
