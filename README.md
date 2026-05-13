@@ -93,7 +93,7 @@ Er is een configuratie van ShapeChange gemaakt voor CIMLK in het bestand `cimlk.
 
 Het script voor het starten van ShapeChange haalt de locatie van de java jar uit een bestand.
 Maak hiervoor in de `shapechange` map van dit project het volgende bestand aan: `shapechange_java.txt`.
-Zet in het bestand het pad naar de locatie van het ShapeChange jar bestand (bijv. `**REMOVED**`).
+Zet in het bestand het pad naar de locatie van het ShapeChange jar bestand.
 
 Het XML/GML Schema kan worden gegenereerd met de volgende stappen.
 
